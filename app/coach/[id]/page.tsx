@@ -66,7 +66,7 @@ export default async function MemberDetail({ params }: { params: Promise<{ id: s
 
           <div>
             <div className="eyebrow mb-2" style={{ color: "var(--sage)" }}>Chat con {m.name.split(" ")[0]}</div>
-            <ChatThread initial={thread.messages} peerId={thread.peerId} peerName={m.name.split(" ")[0]} canSend memberId={m.id} accent="sage" />
+            <ChatThread initial={thread.messages} peerId={thread.peerId} peerName={m.name.split(" ")[0]} canSend memberId={m.id} accent="sage" L={{ writeTo: "Escribe a", desdePro: "", noCoach: "", firstMsg: "Escribe el primer mensaje a", enviar: "Enviar" }} />
             <p className="fine mt-2">El miembro ve tus mensajes en su Chat. Si su plan es gratis o Básico, puede leerte pero no responder hasta Pro.</p>
           </div>
         </div>
