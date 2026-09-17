@@ -39,7 +39,9 @@ export async function POST(req: NextRequest) {
     db().query("select routine_id, note from assignments where user_id=$1", [user.id]),
   ]);
   const routine = assign.rows[0]?.routine_id ? demoRoutines.find((r) => r.id === assign.rows[0].routine_id)?.name : null;
-  const context = `Member context — name: ${user.name}; goal: ${user.goal}; plan: ${user.plan}; calories logged today: ${kcal.rows[0].kcal}; weight: ${user.weight ?? "unknown"} kg; assigned routine: ${routine ?? "none"}; coach note: ${assign.rows[0]?.note ?? "none"}. Reply in ${LANG_NAME[lang]}.`;
+  const goalKcal: Record<string, number> = { "Perder peso": 1500, Tonificar: 1800, "Ganar fuerza": 2600, Resistencia: 2200, Flexibilidad: 1900, "Salud integral": 1900 };
+  const target = goalKcal[user.goal] ?? 1800;
+  const context = `Member context — name: ${user.name}; goal: ${user.goal}; plan: ${user.plan}; daily calorie target (app default for this goal, the coach may adjust): ${target} kcal; calories logged today: ${kcal.rows[0].kcal}; weight: ${user.weight ?? "unknown"} kg; assigned routine: ${routine ?? "none"}; coach note: ${assign.rows[0]?.note ?? "none"}. Reply in ${LANG_NAME[lang]}.`;
 
   const client = new Anthropic();
   const messages: Anthropic.Beta.BetaMessageParam[] = [];
