@@ -2,7 +2,7 @@ import { AppShell, Locked } from "@/components/AppShell";
 import { HeroVideo } from "@/components/HeroVideo";
 import { requireUser } from "@/lib/auth";
 import { tr } from "@/lib/i18n";
-import { stats } from "@/app/actions/food";
+import { stats, logWeight } from "@/app/actions/food";
 import { wearableStatus } from "@/app/actions/wearables";
 import Link from "next/link";
 
@@ -38,7 +38,14 @@ export default async function Progress() {
         <div className="absolute bottom-5 left-6"><span className="pill pill-f">{L.progress.racha} {s.activeDays}</span><h2 className="text-3xl mt-2">{L.progress.banner}</h2></div>
       </div>
       <div className="grid grid-cols-3 gap-3 mb-5">
-        <div className="card p-5"><div className="eyebrow">{L.progress.peso}</div><div className="num text-3xl mt-1" style={{ color: "var(--sage)" }}>{user.weight ?? "—"}</div><div className="faint text-xs">kg</div></div>
+        <form action={logWeight} className="card p-5">
+          <div className="eyebrow">{L.progress.peso}</div>
+          <div className="flex items-end gap-2 mt-1">
+            <input id="w-today" name="weight" type="number" step="0.1" min="30" max="300" defaultValue={user.weight ?? ""} className="input input-s !w-24 num text-2xl !py-1" />
+            <span className="faint text-xs pb-2">kg</span>
+          </div>
+          <button className="btn btn-balance btn-sm w-full mt-2">{L.balance.pesarme}</button>
+        </form>
         <div className="card p-5"><div className="eyebrow">{L.dash.diasActivos}</div><div className="num text-3xl mt-1" style={{ color: "var(--fucsia)" }}>{s.activeDays}</div><div className="faint text-xs">{L.dash.ult30}</div></div>
         <div className="card p-5"><div className="eyebrow">{L.progress.entrenos}</div><div className="num text-3xl mt-1">{s.workoutsWeek}</div><div className="faint text-xs">{L.dash.estaSemana}</div></div>
       </div>

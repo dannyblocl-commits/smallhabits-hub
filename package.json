@@ -11,6 +11,7 @@
   "dependencies": {
     "@anthropic-ai/sdk": "^0.126.0",
     "@supabase/supabase-js": "^2.116.0",
+    "@vercel/blob": "^2.8.0",
     "bcryptjs": "^3.0.3",
     "dotenv-local": "^1.0.3",
     "jose": "^6.2.12",

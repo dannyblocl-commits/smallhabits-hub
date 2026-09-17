@@ -53,7 +53,7 @@ export default async function Dashboard() {
         ) : (
           <div className="card p-5"><div className="eyebrow">{L.dash.peso}</div><div className="num text-3xl mt-1" style={{ color: "var(--sage)" }}>{user.weight ?? "—"}</div><div className="faint text-xs">{user.weight ? L.dash.kg : L.dash.addProfile}</div></div>
         )}
-        <div className="card p-5"><div className="eyebrow">{L.dash.entrenos}</div><div className="num text-3xl mt-1">{s.workoutsWeek}/4</div><div className="faint text-xs">{L.dash.estaSemana}</div></div>
+        <div className="card p-5"><div className="eyebrow">{L.balance.neto}</div><div className="num text-3xl mt-1" style={{ color: s.kcalToday - s.burnedToday > goal ? "var(--warn)" : "var(--text)" }}>{s.kcalToday - s.burnedToday}</div><div className="faint text-xs">{s.kcalToday} − {s.burnedToday} {L.balance.quemadas}</div></div>
         <div className="card p-5"><div className="eyebrow">{L.dash.diasActivos}</div><div className="num text-3xl mt-1" style={{ color: "var(--fucsia)" }}>{s.activeDays}</div><div className="faint text-xs">{L.dash.ult30}</div></div>
       </div>
 

@@ -42,6 +42,25 @@ export function ensureSchema() {
         routine_id text not null,
         at timestamptz default now()
       );
+      alter table workouts_done add column if not exists minutes int;
+      alter table workouts_done add column if not exists kcal int;
+      create table if not exists photos (
+        id uuid primary key default gen_random_uuid(),
+        user_id uuid references users(id) on delete cascade,
+        url text not null, pathname text not null,
+        kind text not null default 'progress',
+        weight numeric, note text,
+        at timestamptz default now()
+      );
+      create index if not exists photos_user_at on photos(user_id, at desc);
+      create table if not exists user_menus (
+        id uuid primary key default gen_random_uuid(),
+        user_id uuid references users(id) on delete cascade,
+        name text not null,
+        items jsonb not null default '[]',
+        kcal int not null default 0,
+        at timestamptz default now()
+      );
       alter table users add column if not exists role text not null default 'member';
       alter table users add column if not exists coach_id uuid references users(id) on delete set null;
       alter table users add column if not exists bio text;

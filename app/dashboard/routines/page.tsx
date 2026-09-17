@@ -44,7 +44,7 @@ export default async function Routines({ searchParams }: { searchParams: Promise
               <div className="mt-5"><VideoCard src={`/videos/${sel.id}.mp4`} title={`${L.routines.demo} · ${name(sel.id)}`} emoji="▶" /></div>
             </div>
 
-            <Timer steps={steps} routineId={sel.id} tone={calm ? "sage" : "fucsia"} labels={L.routines} />
+            <Timer steps={steps} routineId={sel.id} routineType={sel.type} tone={calm ? "sage" : "fucsia"} labels={L.routines} />
 
             <div className="card p-6">
               <div className="eyebrow mb-3">{L.routines.ejercicios}</div>

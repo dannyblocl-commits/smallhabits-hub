@@ -8,11 +8,12 @@ export type TimerLabels = { trabajo: string; descansoT: string; pausa: string; r
 
 function fmt(s: number) { return `${String(Math.floor(s / 60)).padStart(2, "0")}:${String(s % 60).padStart(2, "0")}`; }
 
-export function Timer({ steps, tone = "fucsia", routineId, labels }: { steps: Step[]; tone?: "fucsia" | "sage"; routineId?: string; labels: TimerLabels }) {
+export function Timer({ steps, tone = "fucsia", routineId, routineType, labels }: { steps: Step[]; tone?: "fucsia" | "sage"; routineId?: string; routineType?: string; labels: TimerLabels }) {
   const [i, setI] = useState(0);
   const [left, setLeft] = useState(steps[0]?.seconds ?? 0);
   const [run, setRun] = useState(false);
   const [done, setDone] = useState(false);
+  const [burned, setBurned] = useState<number | null>(null);
   const tick = useRef<ReturnType<typeof setInterval> | null>(null);
 
   useEffect(() => {
@@ -27,7 +28,11 @@ export function Timer({ steps, tone = "fucsia", routineId, labels }: { steps: St
     return () => { if (tick.current) clearInterval(tick.current); };
   }, [run, i, steps]);
 
-  useEffect(() => { if (done && routineId) markWorkoutDone(routineId).catch(() => {}); }, [done, routineId]);
+  useEffect(() => {
+    if (!done || !routineId) return;
+    const minutes = Math.max(1, Math.round(steps.reduce((a, s) => a + s.seconds, 0) / 60));
+    markWorkoutDone(routineId, minutes, routineType).then((k) => setBurned(k)).catch(() => {});
+  }, [done, routineId, routineType, steps]);
 
   const step = steps[i];
   const total = steps.reduce((a, s) => a + s.seconds, 0);
@@ -40,6 +45,7 @@ export function Timer({ steps, tone = "fucsia", routineId, labels }: { steps: St
       <div className="card lift-sage p-8 text-center fade-in">
         <div className="eyebrow" style={{ color: "var(--sage)" }}>{labels.completada}</div>
         <div className="timer sage text-6xl mt-2">✓</div>
+        {burned !== null && <div className="num text-3xl mt-3" style={{ color: "var(--fucsia)" }}>−{burned} <span className="text-sm muted font-normal">kcal</span></div>}
         <p className="muted mt-3">{labels.completadaText}</p>
         <button onClick={reset} className="btn btn-ghost btn-sm mt-4">{labels.repetir}</button>
       </div>
