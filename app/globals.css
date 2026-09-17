@@ -30,7 +30,7 @@ h3 { font-weight: 600; }
 .lift { box-shadow: var(--shadow), 0 0 40px -10px var(--fucsia-glow); }
 .lift-sage { box-shadow: var(--shadow), 0 0 40px -10px rgba(127,194,155,.4); }
 .row { background: var(--surface-2); border: 1px solid var(--line); border-radius: var(--r-sm); }
-.veil { background: linear-gradient(180deg, rgba(11,11,15,0) 30%, rgba(11,11,15,.85) 100%); }
+.veil { background: linear-gradient(180deg, rgba(11,11,15,.35) 0%, rgba(11,11,15,.62) 40%, rgba(11,11,15,.94) 100%); }
 
 .btn { font-family: var(--font-d); font-weight: 600; font-size: .9rem; letter-spacing: .02em; border-radius: 999px; padding: 13px 24px; min-height: 48px; display: inline-flex; align-items: center; justify-content: center; gap: 8px; color: var(--text); background: var(--surface-3); transition: transform .16s var(--ease), box-shadow .2s, background .2s; cursor: pointer; text-decoration: none; }
 .btn:hover { transform: translateY(-1px); } .btn:active { transform: scale(.97); }
