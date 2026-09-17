@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { hasPlan, Plan, PLANS } from "@/lib/plan";
-import { requireUser } from "@/lib/auth";
+import { requireUser, isAdmin } from "@/lib/auth";
 import { logout } from "@/app/actions/auth";
 import { Logo, Glow } from "@/components/Leaves";
 
@@ -15,6 +15,7 @@ const more = [
   { href: "/dashboard/nutrition", label: "Menús" },
   { href: "/dashboard/chat", label: "Chat" },
   { href: "/dashboard/tickets", label: "Soporte" },
+  { href: "/dashboard/coaches", label: "Mi coach" },
   { href: "/dashboard/upgrade", label: "Planes" },
   { href: "/dashboard/profile", label: "Perfil" },
 ];
@@ -37,6 +38,7 @@ export async function AppShell({ children, title, kicker, requires }: { children
               ))}
             </nav>
             {user.role === "coach" && <Link href="/coach" className="pill pill-s">Panel coach</Link>}
+            {isAdmin(user) && <Link href="/admin" className="pill pill-g">Admin</Link>}
             <Link href="/dashboard/upgrade" className={`pill ${plan === "free" ? "" : "pill-f"}`}>{planLabel}</Link>
             <Link href="/dashboard/profile" className="w-8 h-8 rounded-full grid place-items-center display text-sm" style={{ background: "var(--fucsia-soft)", color: "var(--fucsia)" }} title={user.name}>{user.name.trim()[0]?.toUpperCase()}</Link>
             <form action={logout}><button className="faint text-xs px-1">Salir</button></form>

@@ -43,6 +43,9 @@ export function ensureSchema() {
         at timestamptz default now()
       );
       alter table users add column if not exists role text not null default 'member';
+      alter table users add column if not exists coach_id uuid references users(id) on delete set null;
+      alter table users add column if not exists bio text;
+      alter table users add column if not exists specialties text;
       create table if not exists messages (
         id uuid primary key default gen_random_uuid(),
         from_user uuid references users(id) on delete cascade,

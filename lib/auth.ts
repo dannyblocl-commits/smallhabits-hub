@@ -43,5 +43,17 @@ export async function requireCoach(): Promise<User> {
   return u;
 }
 
+export function isAdmin(u: User | null) {
+  if (!u) return false;
+  const list = (process.env.ADMIN_EMAILS || "").split(",").map((s) => s.trim().toLowerCase()).filter(Boolean);
+  return list.includes(u.email.toLowerCase());
+}
+
+export async function requireAdmin(): Promise<User> {
+  const u = await requireUser();
+  if (!isAdmin(u)) redirect("/dashboard");
+  return u;
+}
+
 export const hashPassword = (p: string) => bcrypt.hash(p, 10);
 export const verifyPassword = (p: string, h: string) => bcrypt.compare(p, h);

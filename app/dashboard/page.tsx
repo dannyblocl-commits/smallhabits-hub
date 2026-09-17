@@ -6,13 +6,14 @@ import { requireUser } from "@/lib/auth";
 import { stats } from "@/app/actions/food";
 import { getAssignment } from "@/app/actions/assign";
 import { unreadCount } from "@/app/actions/chat";
+import { myCoach } from "@/app/actions/coaches";
 import { demoRoutines } from "@/data/routines";
 
 const goalKcal: Record<string, number> = { "Perder peso": 1500, Tonificar: 1800, "Ganar fuerza": 2600, Resistencia: 2200, Flexibilidad: 1900, "Salud integral": 1900 };
 
 export default async function Dashboard() {
   const user = await requireUser();
-  const [s, a, unread] = await Promise.all([stats(), getAssignment(), unreadCount()]);
+  const [s, a, unread, coach] = await Promise.all([stats(), getAssignment(), unreadCount(), myCoach()]);
   const assigned = a?.routine_id ? demoRoutines.find((r) => r.id === a.routine_id) : undefined;
   const todayRoutine = assigned ?? (s.workoutsWeek === 0 ? demoRoutines[0] : demoRoutines[1]);
   const goal = goalKcal[user.goal] ?? 1800;
@@ -63,7 +64,7 @@ export default async function Dashboard() {
 
       <Link href="/dashboard/chat" className="card p-5 flex items-center gap-4 hover:border-[var(--line-strong)] transition">
         <div className="relative w-14 h-14 rounded-full overflow-hidden ring-2 ring-[var(--fucsia)] shrink-0"><Image src="/img/miphoto.jpg" alt="Maleja" fill className="object-cover object-top" sizes="56px" /></div>
-        <div className="flex-1"><div className="display">{a?.coach_name ?? "Tu coach"}</div><div className="muted text-sm">{unread > 0 ? `Tienes ${unread} mensaje${unread > 1 ? "s" : ""} sin leer.` : `Bienvenida, ${first}. Cuéntame cómo te sientes hoy y armamos tu semana.`}</div></div>
+        <div className="flex-1"><div className="display">{coach?.name ?? a?.coach_name ?? "Elige tu coach"}</div><div className="muted text-sm">{unread > 0 ? `Tienes ${unread} mensaje${unread > 1 ? "s" : ""} sin leer.` : `Bienvenida, ${first}. Cuéntame cómo te sientes hoy y armamos tu semana.`}</div></div>
         <span className={`pill ${unread > 0 ? "pill-f" : ""}`}>{unread > 0 ? `${unread} nuevo${unread > 1 ? "s" : ""}` : "Chat"}</span>
       </Link>
     </AppShell>

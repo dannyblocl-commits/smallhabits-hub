@@ -5,8 +5,11 @@ import { requireUser } from "@/lib/auth";
 
 export type Msg = { id: string; from_user: string; to_user: string; body: string; at: string; mine: boolean };
 
-async function coachId(): Promise<string | null> {
-  const r = await db().query("select id from users where role='coach' order by created_at asc limit 1");
+async function coachId(memberId: string): Promise<string | null> {
+  const r = await db().query(
+    "select coalesce((select coach_id from users where id=$1), (select id from users where role='coach' order by created_at asc limit 1)) as id",
+    [memberId]
+  );
   return r.rows[0]?.id ?? null;
 }
 
@@ -15,7 +18,7 @@ export async function listThread(memberId?: string): Promise<{ peerId: string | 
   const me = await requireUser();
   let peer: string | null;
   if (me.role === "coach") { if (!memberId) throw new Error("memberId requerido"); peer = memberId; }
-  else peer = await coachId();
+  else peer = await coachId(me.id);
   if (!peer) return { peerId: null, peerName: "Coach", messages: [] };
   const [name, rows] = await Promise.all([
     db().query("select name from users where id=$1", [peer]),
@@ -29,7 +32,7 @@ export async function sendMessage(body: string, toUserId?: string): Promise<Msg>
   const me = await requireUser();
   const text = body.trim().slice(0, 2000);
   if (!text) throw new Error("Mensaje vacío");
-  const to = me.role === "coach" ? toUserId : await coachId();
+  const to = me.role === "coach" ? toUserId : await coachId(me.id);
   if (!to) throw new Error("No hay coach disponible todavía");
   const r = await db().query("insert into messages (from_user, to_user, body) values ($1,$2,$3) returning id, from_user, to_user, body, at", [me.id, to, text]);
   return { ...r.rows[0], at: new Date(r.rows[0].at).toISOString(), mine: true };

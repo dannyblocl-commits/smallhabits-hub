@@ -30,13 +30,13 @@ export async function assign(form: FormData) {
 }
 
 export async function getMember(id: string) {
-  await requireCoach();
+  const coach = await requireCoach();
   const r = await db().query(`
-    select u.id, u.name, u.email, u.goal, u.plan, u.weight, u.height, u.created_at,
+    select u.id, u.name, u.email, u.goal, u.plan, u.weight, u.height, u.created_at, (u.coach_id = $2) as mine,
       coalesce((select sum(kcal) from food_entries f where f.user_id=u.id and f.at >= date_trunc('day', now())),0)::int as kcal_today,
       (select count(*) from workouts_done w where w.user_id=u.id and w.at >= date_trunc('week', now()))::int as workouts_week,
       (select count(*) from workouts_done w where w.user_id=u.id)::int as workouts_total
-    from users u where u.id=$1 and u.role='member'`, [id]);
+    from users u where u.id=$1 and u.role='member' and (u.coach_id=$2 or u.coach_id is null)`, [id, coach.id]);
   const m = r.rows[0];
   if (!m) return null;
   const [foods, weights] = await Promise.all([

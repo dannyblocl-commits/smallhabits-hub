@@ -25,7 +25,7 @@ export async function signup(_: AuthState, form: FormData): Promise<AuthState> {
   }
   const r = await db().query("insert into users (email, password_hash, name, goal, role) values ($1,$2,$3,$4,$5) returning id", [email, await hashPassword(password), name, goal, role]);
   await createSession(r.rows[0].id);
-  redirect(role === "coach" ? "/coach" : "/dashboard");
+  redirect(role === "coach" ? "/coach" : "/dashboard/coaches");
 }
 
 export async function login(_: AuthState, form: FormData): Promise<AuthState> {
