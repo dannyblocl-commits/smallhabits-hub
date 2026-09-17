@@ -41,7 +41,7 @@ export default async function Nutrition({ searchParams }: { searchParams: Promis
               <span className="pill pill-s">{L.home.balance}</span>
               <h2 className="text-3xl mt-2">{name(sel.id)}</h2>
               <p className="muted text-sm">{sel.kcal} {L.nutrition.kcalDia} · {sel.macros}</p>
-              <div className="mt-4"><VideoCard src={`/videos/${sel.id}.mp4`} title={`${L.nutrition.avatar} · ${name(sel.id)}`} emoji="◐" /></div>
+              <div className="mt-4"><VideoCard src={`/videos/${sel.id}.mp4`} fallback="/videos/comer-bien.mp4" title={name(sel.id)} emoji="◐" /></div>
               <div className="eyebrow mt-6 mb-2">{L.nutrition.planDia}</div>
               <div className="space-y-2">
                 {sel.meals.map(([t, d, k]) => (
