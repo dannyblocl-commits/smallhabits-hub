@@ -47,7 +47,7 @@ export default async function CoachPanel() {
 
   return (
     <div className="min-h-screen" style={{ background: "var(--obsidian)" }}>
-      <header className="sticky top-0 z-40 border-b" style={{ background: "var(--surface-1)", borderColor: "var(--line)" }}>
+      <header className="sticky top-0 z-40 border-b" style={{ background: "var(--surface-1)", borderColor: "var(--line)", paddingTop: "env(safe-area-inset-top, 0px)" }}>
         <div className="max-w-7xl mx-auto px-5 py-3 flex items-center justify-between">
           <div className="flex items-center gap-3"><Logo /><span className="pill pill-s">Panel coach</span>{isAdmin(coach) && <Link href="/admin" className="pill pill-g">Admin</Link>}</div>
           <div className="flex items-center gap-3 text-sm">

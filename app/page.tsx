@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <div className="min-h-screen relative overflow-hidden" style={{ background: "var(--obsidian)" }}>
       <Glow />
-      <header className="sticky top-0 z-40 glass !rounded-none !border-x-0 !border-t-0 !shadow-none">
+      <header className="sticky top-0 z-40 glass !rounded-none !border-x-0 !border-t-0 !shadow-none" style={{ paddingTop: "env(safe-area-inset-top, 0px)" }}>
         <div className="max-w-6xl mx-auto px-5 py-3 flex items-center justify-between">
           <Logo />
           <nav className="flex items-center gap-2">
