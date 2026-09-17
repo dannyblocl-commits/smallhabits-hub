@@ -34,6 +34,7 @@ export async function login(_: AuthState, form: FormData): Promise<AuthState> {
   await ensureSchema();
   const r = await db().query("select id, password_hash, role from users where email = $1", [email]);
   const u = r.rows[0];
+  if (u && !u.password_hash) return { error: "Esta cuenta entra con Google. Usa el botón \"Continuar con Google\"." };
   if (!u || !(await verifyPassword(password, u.password_hash))) return { error: "Email o contraseña incorrectos." };
   await createSession(u.id);
   redirect(u.role === "coach" ? "/coach" : "/dashboard");

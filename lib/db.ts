@@ -63,6 +63,9 @@ export function ensureSchema() {
       );
       alter table users add column if not exists role text not null default 'member';
       alter table users add column if not exists coach_id uuid references users(id) on delete set null;
+      alter table users add column if not exists google_sub text unique;
+      alter table users add column if not exists avatar_url text;
+      alter table users alter column password_hash drop not null;
       alter table users add column if not exists bio text;
       alter table users add column if not exists specialties text;
       create table if not exists messages (
