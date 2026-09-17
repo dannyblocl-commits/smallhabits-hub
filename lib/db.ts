@@ -61,6 +61,14 @@ export function ensureSchema() {
         by_coach uuid references users(id),
         at timestamptz default now()
       );
+      create table if not exists ai_usage (
+        id uuid primary key default gen_random_uuid(),
+        user_id uuid references users(id) on delete cascade,
+        kind text not null,
+        tokens_in int default 0, tokens_out int default 0,
+        at timestamptz default now()
+      );
+      create index if not exists ai_usage_user_at on ai_usage(user_id, at desc);
       create index if not exists food_user_at on food_entries(user_id, at desc);
       create index if not exists progress_user_at on progress_entries(user_id, at desc);
     `).then(() => undefined);
