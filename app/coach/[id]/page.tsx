@@ -3,6 +3,8 @@ import { notFound } from "next/navigation";
 import { requireCoach } from "@/lib/auth";
 import { getMember, getAssignment, assign } from "@/app/actions/assign";
 import { listThread } from "@/app/actions/chat";
+import { listPhotos } from "@/app/actions/photos";
+import { listMyMenus } from "@/app/actions/menus";
 import { ChatThread } from "@/components/ChatThread";
 import { Logo } from "@/components/Leaves";
 import { demoRoutines } from "@/data/routines";
@@ -13,8 +15,9 @@ const fmt = (iso: string) => new Date(iso).toLocaleDateString("es", { day: "nume
 export default async function MemberDetail({ params }: { params: Promise<{ id: string }> }) {
   await requireCoach();
   const { id } = await params;
-  const [m, a, thread] = await Promise.all([getMember(id), getAssignment(id), listThread(id)]);
+  const [m, a, thread, photos, menus] = await Promise.all([getMember(id), getAssignment(id), listThread(id), listPhotos(id), listMyMenus(id)]);
   if (!m) notFound();
+  const firstPhoto = photos[0], lastPhoto = photos.length > 1 ? photos[photos.length - 1] : null;
 
   return (
     <div className="min-h-screen" style={{ background: "var(--obsidian)" }}>
@@ -55,6 +58,35 @@ export default async function MemberDetail({ params }: { params: Promise<{ id: s
               <div className="eyebrow mb-2">Últimas comidas</div>
               {m.foods.length === 0 && <p className="muted text-sm">Sin registros todavía.</p>}
               {m.foods.map((f: { name: string; kcal: number; at: string }, i: number) => (<div key={i} className="flex justify-between text-sm py-1.5" style={{ borderTop: i ? "1px solid var(--line)" : undefined }}><span className="muted">{fmt(f.at)} · {f.name}</span><span className="num">{f.kcal}</span></div>))}
+            </div>
+
+            <div className="card p-5">
+              <div className="eyebrow mb-2" style={{ color: "var(--fucsia)" }}>Antes y después</div>
+              {photos.length === 0 && <p className="muted text-sm">Sin fotos todavía.</p>}
+              {firstPhoto && (
+                <div className="grid grid-cols-2 gap-2">
+                  {[firstPhoto, lastPhoto ?? firstPhoto].map((p, i) => (
+                    <div key={`${p.id}-${i}`} className="relative rounded-[12px] overflow-hidden" style={{ aspectRatio: "3/4" }}>
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img src={p.url} alt="" className="absolute inset-0 w-full h-full object-cover" />
+                      <div className="absolute inset-0 veil" />
+                      <div className="absolute bottom-2 left-2 text-xs"><span className={`pill ${i === 0 ? "" : "pill-f"}`}>{i === 0 ? "Antes" : "Ahora"}</span><div className="mt-1">{fmt(p.at)}{p.weight != null ? ` · ${p.weight} kg` : ""}</div></div>
+                    </div>
+                  ))}
+                </div>
+              )}
+              {photos.length > 2 && <p className="faint text-xs mt-2">{photos.length} fotos en total</p>}
+            </div>
+
+            <div className="card p-5">
+              <div className="eyebrow mb-2" style={{ color: "var(--sage)" }}>Sus menús</div>
+              {menus.length === 0 && <p className="muted text-sm">Aún no ha creado menús.</p>}
+              {menus.map((mn) => (
+                <div key={mn.id} className="row p-3 mb-2">
+                  <div className="flex justify-between"><span className="display text-sm">{mn.name}</span><span className="num text-sm" style={{ color: "var(--sage)" }}>{mn.kcal} kcal</span></div>
+                  <div className="faint text-xs mt-1">{mn.items.map((it) => `${it.name} (${it.kcal})`).join(" · ")}</div>
+                </div>
+              ))}
             </div>
 
             <div className="card p-5">
