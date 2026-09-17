@@ -40,7 +40,7 @@ export default async function Routines({ searchParams }: { searchParams: Promise
               <div className="mt-5"><VideoCard src={`/videos/${sel.id}.mp4`} title={`Demo avatar · ${sel.name}`} emoji="▶" /></div>
             </div>
 
-            <Timer steps={steps} tone={sel.type === "estiramientos" || sel.type === "yoga" || sel.type === "pilates" ? "sage" : "fucsia"} />
+            <Timer steps={steps} routineId={sel.id} tone={sel.type === "estiramientos" || sel.type === "yoga" || sel.type === "pilates" ? "sage" : "fucsia"} />
 
             <div className="card p-6">
               <div className="eyebrow mb-3">Ejercicios</div>

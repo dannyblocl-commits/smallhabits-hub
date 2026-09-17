@@ -1,5 +1,7 @@
 import Link from "next/link";
-import { getPlan, hasPlan, Plan, PLANS } from "@/lib/plan";
+import { hasPlan, Plan, PLANS } from "@/lib/plan";
+import { requireUser } from "@/lib/auth";
+import { logout } from "@/app/actions/auth";
 import { Logo, Glow } from "@/components/Leaves";
 
 const nav = [
@@ -14,10 +16,12 @@ const more = [
   { href: "/dashboard/chat", label: "Chat" },
   { href: "/dashboard/tickets", label: "Soporte" },
   { href: "/dashboard/upgrade", label: "Planes" },
+  { href: "/dashboard/profile", label: "Perfil" },
 ];
 
 export async function AppShell({ children, title, kicker, requires }: { children: React.ReactNode; title: string; kicker?: string; requires?: Plan }) {
-  const plan = await getPlan();
+  const user = await requireUser();
+  const plan = user.plan;
   const planLabel = plan === "free" ? "Gratis" : PLANS[plan].name;
 
   return (
@@ -33,7 +37,8 @@ export async function AppShell({ children, title, kicker, requires }: { children
               ))}
             </nav>
             <Link href="/dashboard/upgrade" className={`pill ${plan === "free" ? "" : "pill-f"}`}>{planLabel}</Link>
-            <Link href="/" className="faint text-xs px-2">Salir</Link>
+            <Link href="/dashboard/profile" className="w-8 h-8 rounded-full grid place-items-center display text-sm" style={{ background: "var(--fucsia-soft)", color: "var(--fucsia)" }} title={user.name}>{user.name.trim()[0]?.toUpperCase()}</Link>
+            <form action={logout}><button className="faint text-xs px-1">Salir</button></form>
           </div>
         </div>
         <nav className="md:hidden max-w-6xl mx-auto px-5 pb-2 flex gap-1 overflow-x-auto text-[.75rem]">

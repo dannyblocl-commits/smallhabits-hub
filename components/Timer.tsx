@@ -1,12 +1,13 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { markWorkoutDone } from "@/app/actions/food";
 
 type Step = { name: string; seconds: number; kind: "work" | "rest" };
 
 function fmt(s: number) { return `${String(Math.floor(s / 60)).padStart(2, "0")}:${String(s % 60).padStart(2, "0")}`; }
 
-export function Timer({ steps, tone = "fucsia" }: { steps: Step[]; tone?: "fucsia" | "sage" }) {
+export function Timer({ steps, tone = "fucsia", routineId }: { steps: Step[]; tone?: "fucsia" | "sage"; routineId?: string }) {
   const [i, setI] = useState(0);
   const [left, setLeft] = useState(steps[0]?.seconds ?? 0);
   const [run, setRun] = useState(false);
@@ -24,6 +25,10 @@ export function Timer({ steps, tone = "fucsia" }: { steps: Step[]; tone?: "fucsi
     }, 1000);
     return () => { if (tick.current) clearInterval(tick.current); };
   }, [run, i, steps]);
+
+  useEffect(() => {
+    if (done && routineId) markWorkoutDone(routineId).catch(() => {});
+  }, [done, routineId]);
 
   const step = steps[i];
   const total = steps.reduce((a, s) => a + s.seconds, 0);

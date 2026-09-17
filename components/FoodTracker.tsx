@@ -1,25 +1,32 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useTransition } from "react";
+import { addFoodEntry, deleteFoodEntry, type FoodEntry } from "@/app/actions/food";
 
-type Entry = { time: string; name: string; kcal: number; p: number; c: number; f: number; photo: string };
-const seed: Entry[] = [
-  { time: "07:30", name: "Huevos revueltos + pan integral + aguacate", kcal: 490, p: 27, c: 36, f: 28, photo: "🍳" },
-  { time: "12:45", name: "Pollo a la plancha + arroz integral + verduras", kcal: 600, p: 70, c: 57, f: 9, photo: "🍗" },
-  { time: "16:00", name: "Batido de proteína + plátano", kcal: 225, p: 26, c: 29, f: 2, photo: "🥤" },
-];
+const hhmm = (iso: string) => new Date(iso).toLocaleTimeString("es", { hour: "2-digit", minute: "2-digit" });
 
-export function FoodTracker({ aiEnabled }: { aiEnabled: boolean }) {
-  const [log, setLog] = useState<Entry[]>(seed);
+export function FoodTracker({ aiEnabled, initial, goal }: { aiEnabled: boolean; initial: FoodEntry[]; goal: number }) {
+  const [log, setLog] = useState<FoodEntry[]>(initial);
   const [analyzing, setAnalyzing] = useState(false);
-  const [result, setResult] = useState<Entry | null>(null);
+  const [result, setResult] = useState<{ name: string; kcal: number; p: number; c: number; f: number; photo: string } | null>(null);
   const [manual, setManual] = useState({ name: "", kcal: "" });
-  const total = log.reduce((a, m) => ({ kcal: a.kcal + m.kcal, p: a.p + m.p, c: a.c + m.c, f: a.f + m.f }), { kcal: 0, p: 0, c: 0, f: 0 });
-  const goal = 1800, pct = Math.min(100, Math.round((total.kcal / goal) * 100));
-  const now = () => new Date().toTimeString().slice(0, 5);
+  const [pending, start] = useTransition();
+  const [err, setErr] = useState("");
 
-  function analyze() { if (!aiEnabled) return; setAnalyzing(true); setResult(null); setTimeout(() => { setResult({ time: now(), name: "Salmón + camote + espinaca", kcal: 450, p: 40, c: 37, f: 15, photo: "🐟" }); setAnalyzing(false); }, 1600); }
-  function addManual(e: React.FormEvent) { e.preventDefault(); const k = parseInt(manual.kcal, 10); if (!manual.name.trim() || !k) return; setLog((l) => [...l, { time: now(), name: manual.name, kcal: k, p: 0, c: 0, f: 0, photo: "◐" }]); setManual({ name: "", kcal: "" }); }
+  const total = log.reduce((a, m) => ({ kcal: a.kcal + m.kcal, p: a.p + m.protein, c: a.c + m.carbs, f: a.f + m.fat }), { kcal: 0, p: 0, c: 0, f: 0 });
+  const pct = Math.min(100, Math.round((total.kcal / goal) * 100));
+
+  function analyze() { if (!aiEnabled) return; setAnalyzing(true); setResult(null); setTimeout(() => { setResult({ name: "Salmón + camote + espinaca", kcal: 450, p: 40, c: 37, f: 15, photo: "🐟" }); setAnalyzing(false); }, 1600); }
+
+  function save(e: { name: string; kcal: number; protein?: number; carbs?: number; fat?: number; photo?: string }) {
+    setErr("");
+    start(async () => {
+      try { const saved = await addFoodEntry(e); setLog((l) => [...l, saved]); }
+      catch { setErr("No se pudo guardar. Revisa tu conexión e inténtalo de nuevo."); }
+    });
+  }
+  function remove(id: string) { setLog((l) => l.filter((x) => x.id !== id)); start(() => deleteFoodEntry(id).catch(() => {})); }
+  function addManual(ev: React.FormEvent) { ev.preventDefault(); const k = parseInt(manual.kcal, 10); if (!manual.name.trim() || !k) return; save({ name: manual.name, kcal: k }); setManual({ name: "", kcal: "" }); }
 
   return (
     <div className="grid lg:grid-cols-[340px_1fr] gap-4">
@@ -34,14 +41,16 @@ export function FoodTracker({ aiEnabled }: { aiEnabled: boolean }) {
           {aiEnabled && <button onClick={analyze} className="btn btn-balance btn-sm w-full mt-3">Probar con foto de ejemplo</button>}
           {analyzing && <p className="text-center text-sm mt-3 animate-pulse" style={{ color: "var(--sage)" }}>Analizando tu comida…</p>}
           {result && (
-            <div className="row p-3 mt-3 fade-in"><div className="display text-sm">{result.photo} {result.name}</div><div className="num text-2xl" style={{ color: "var(--sage)" }}>{result.kcal} <span className="text-xs muted font-normal">kcal</span></div><div className="faint text-xs">P {result.p}g · C {result.c}g · G {result.f}g</div><button onClick={() => { setLog((l) => [...l, result]); setResult(null); }} className="btn btn-balance btn-sm w-full mt-2">Agregar</button></div>
+            <div className="row p-3 mt-3 fade-in"><div className="display text-sm">{result.photo} {result.name}</div><div className="num text-2xl" style={{ color: "var(--sage)" }}>{result.kcal} <span className="text-xs muted font-normal">kcal</span></div><div className="faint text-xs">P {result.p}g · C {result.c}g · G {result.f}g</div>
+              <button onClick={() => { save({ name: result.name, kcal: result.kcal, protein: result.p, carbs: result.c, fat: result.f, photo: result.photo }); setResult(null); }} className="btn btn-balance btn-sm w-full mt-2">Agregar</button></div>
           )}
         </div>
         <form onSubmit={addManual} className="card p-5">
           <div className="flex justify-between items-center mb-3"><div className="eyebrow">Registro manual</div><span className="pill pill-s">Gratis</span></div>
           <input id="food-name" value={manual.name} onChange={(e) => setManual({ ...manual, name: e.target.value })} placeholder="¿Qué comiste?" className="input input-s mb-2" />
           <input id="food-kcal" value={manual.kcal} onChange={(e) => setManual({ ...manual, kcal: e.target.value })} placeholder="Calorías aprox." type="number" className="input input-s mb-3" />
-          <button className="btn btn-sm w-full">Agregar</button>
+          <button disabled={pending} className="btn btn-sm w-full">{pending ? "Guardando…" : "Agregar"}</button>
+          {err && <p className="text-xs mt-2" style={{ color: "#FF8A8A" }}>{err}</p>}
         </form>
       </div>
 
@@ -52,12 +61,18 @@ export function FoodTracker({ aiEnabled }: { aiEnabled: boolean }) {
             <div className="eyebrow">Hoy</div>
             <div className="num text-3xl">{total.kcal} <span className="text-sm muted font-normal">/ {goal} kcal</span></div>
             <div className="grid grid-cols-3 gap-2 mt-2 text-xs">
-              {[["Proteína", total.p, 135], ["Carbos", total.c, 225], ["Grasas", total.f, 60]].map(([l, v, g]) => (<div key={l as string}><div className="faint">{l}</div><div className="num">{v}g <span className="faint font-normal">/ {g}</span></div></div>))}
+              {[["Proteína", total.p], ["Carbos", total.c], ["Grasas", total.f]].map(([l, v]) => (<div key={l as string}><div className="faint">{l}</div><div className="num">{v}g</div></div>))}
             </div>
           </div>
         </div>
-        {log.map((m, i) => (
-          <div key={i} className="row p-4 flex items-center gap-4 fade-in"><div className="text-2xl">{m.photo}</div><div className="flex-1"><div className="faint text-xs">{m.time}</div><div className="display text-sm">{m.name}</div>{m.p > 0 && <div className="faint text-xs">P {m.p}g · C {m.c}g · G {m.f}g</div>}</div><div className="num text-lg" style={{ color: "var(--sage)" }}>{m.kcal}</div></div>
+        {log.length === 0 && <div className="row p-6 text-center muted text-sm">Todavía no hay comidas hoy. Registra la primera arriba.</div>}
+        {log.map((m) => (
+          <div key={m.id} className="row p-4 flex items-center gap-4 fade-in">
+            <div className="text-2xl">{m.photo}</div>
+            <div className="flex-1"><div className="faint text-xs">{hhmm(m.at)}</div><div className="display text-sm">{m.name}</div>{m.protein > 0 && <div className="faint text-xs">P {m.protein}g · C {m.carbs}g · G {m.fat}g</div>}</div>
+            <div className="num text-lg" style={{ color: "var(--sage)" }}>{m.kcal}</div>
+            <button onClick={() => remove(m.id)} className="faint text-xs px-2" aria-label="Eliminar">✕</button>
+          </div>
         ))}
       </div>
     </div>

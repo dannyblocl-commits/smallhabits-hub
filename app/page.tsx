@@ -12,8 +12,8 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-5 py-3 flex items-center justify-between">
           <Logo />
           <nav className="flex items-center gap-2">
-            <Link href="/login" className="hidden sm:inline px-3 text-sm muted hover:text-[var(--text)]">Iniciar sesión</Link>
-            <Link href="/dashboard" className="btn btn-go btn-sm">Entrar</Link>
+            <Link href="/login" className="px-3 text-sm muted hover:text-[var(--text)]">Iniciar sesión</Link>
+            <Link href="/signup" className="btn btn-go btn-sm">Crear cuenta</Link>
           </nav>
         </div>
       </header>
@@ -28,7 +28,7 @@ export default function Home() {
             <h1 className="text-5xl md:text-7xl mt-4">Energía para moverte.<br /><span style={{ color: "var(--sage)" }}>Calma para quedarte.</span></h1>
             <p className="muted mt-4 max-w-lg">Entrena con cronómetro y guía en video, registra tus comidas con una foto, conecta tu Apple Watch y cuida tu mente con reflexión y worship. Con Maleja como coach.</p>
             <div className="flex flex-wrap gap-3 mt-6">
-              <Link href="/dashboard" className="btn btn-go text-base">GO · Empezar gratis</Link>
+              <Link href="/signup" className="btn btn-go text-base">GO · Empezar gratis</Link>
               <Link href="/dashboard/upgrade" className="btn btn-ghost">Ver planes</Link>
             </div>
           </div>
@@ -89,7 +89,7 @@ export default function Home() {
             <h3 className="text-2xl">Gratis</h3>
             <div className="num text-3xl my-3" style={{ color: "var(--sage)" }}>$0</div>
             <ul className="text-sm space-y-2 muted">{["2 rutinas con cronómetro", "1 menú con recetas", "Reflexión + worship", "Registro manual de comidas", "Asistente IA (5/día)", "Soporte"].map((f) => <li key={f}>· {f}</li>)}</ul>
-            <Link href="/dashboard" className="btn btn-ghost w-full mt-6">Entrar</Link>
+            <Link href="/signup" className="btn btn-ghost w-full mt-6">Crear cuenta gratis</Link>
           </div>
           {(["basico", "pro", "elite"] as const).map((k) => {
             const p = PLANS[k]; const hl = k === "pro";
