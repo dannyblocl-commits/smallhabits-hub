@@ -1,0 +1,223 @@
+import { NutritionPlan } from "@/lib/types";
+
+export const demoNutritionPlans: NutritionPlan[] = [
+  {
+    id: "plan_1",
+    client_id: "client_1",
+    name: "Plan Tonificación María",
+    daily_calories: 1800,
+    macros: {
+      protein: 135, // 30%
+      carbs: 225, // 50%
+      fat: 60, // 20%
+    },
+    meals: [
+      {
+        id: "meal_1",
+        name: "Desayuno",
+        time: "07:00",
+        calories: 450,
+        foods: [
+          {
+            id: "food_1",
+            name: "Huevos revueltos",
+            quantity: 3,
+            unit: "unidades",
+            calories: 210,
+            protein: 18,
+            carbs: 2,
+            fat: 15,
+          },
+          {
+            id: "food_2",
+            name: "Pan integral",
+            quantity: 2,
+            unit: "rebanadas",
+            calories: 160,
+            protein: 8,
+            carbs: 28,
+            fat: 2,
+          },
+          {
+            id: "food_3",
+            name: "Aguacate",
+            quantity: 0.5,
+            unit: "unidad",
+            calories: 120,
+            protein: 1.5,
+            carbs: 6,
+            fat: 11,
+          },
+        ],
+      },
+      {
+        id: "meal_2",
+        name: "Almuerzo",
+        time: "12:30",
+        calories: 600,
+        foods: [
+          {
+            id: "food_4",
+            name: "Pechuga de pollo",
+            quantity: 200,
+            unit: "g",
+            calories: 330,
+            protein: 62,
+            carbs: 0,
+            fat: 7,
+          },
+          {
+            id: "food_5",
+            name: "Arroz integral",
+            quantity: 150,
+            unit: "g",
+            calories: 195,
+            protein: 4.5,
+            carbs: 43,
+            fat: 1.5,
+          },
+          {
+            id: "food_6",
+            name: "Verduras mixtas",
+            quantity: 200,
+            unit: "g",
+            calories: 75,
+            protein: 4,
+            carbs: 14,
+            fat: 0.5,
+          },
+        ],
+      },
+      {
+        id: "meal_3",
+        name: "Merienda",
+        time: "15:30",
+        calories: 250,
+        foods: [
+          {
+            id: "food_7",
+            name: "Proteína en polvo",
+            quantity: 30,
+            unit: "g",
+            calories: 120,
+            protein: 25,
+            carbs: 2,
+            fat: 1.5,
+          },
+          {
+            id: "food_8",
+            name: "Plátano",
+            quantity: 1,
+            unit: "unidad",
+            calories: 105,
+            protein: 1,
+            carbs: 27,
+            fat: 0.3,
+          },
+        ],
+      },
+      {
+        id: "meal_4",
+        name: "Cena",
+        time: "19:30",
+        calories: 500,
+        foods: [
+          {
+            id: "food_9",
+            name: "Salmón",
+            quantity: 150,
+            unit: "g",
+            calories: 280,
+            protein: 35,
+            carbs: 0,
+            fat: 14,
+          },
+          {
+            id: "food_10",
+            name: "Camote",
+            quantity: 200,
+            unit: "g",
+            calories: 132,
+            protein: 2,
+            carbs: 30,
+            fat: 0.1,
+          },
+          {
+            id: "food_11",
+            name: "Espinaca",
+            quantity: 150,
+            unit: "g",
+            calories: 38,
+            protein: 3,
+            carbs: 7,
+            fat: 0.4,
+          },
+        ],
+      },
+    ],
+    created_at: new Date().toISOString(),
+  },
+  {
+    id: "plan_2",
+    client_id: "client_4",
+    name: "Plan Pérdida de Peso Carlos",
+    daily_calories: 2000,
+    macros: {
+      protein: 160, // 32%
+      carbs: 200, // 40%
+      fat: 67, // 27%
+    },
+    meals: [
+      {
+        id: "meal_5",
+        name: "Desayuno",
+        time: "07:00",
+        calories: 400,
+        foods: [
+          {
+            id: "food_12",
+            name: "Avena",
+            quantity: 50,
+            unit: "g",
+            calories: 190,
+            protein: 5,
+            carbs: 34,
+            fat: 3,
+          },
+          {
+            id: "food_13",
+            name: "Leche desnatada",
+            quantity: 200,
+            unit: "ml",
+            calories: 66,
+            protein: 6.6,
+            carbs: 4.8,
+            fat: 0.2,
+          },
+          {
+            id: "food_14",
+            name: "Fresas",
+            quantity: 150,
+            unit: "g",
+            calories: 48,
+            protein: 0.8,
+            carbs: 11,
+            fat: 0.3,
+          },
+        ],
+      },
+    ],
+    created_at: new Date().toISOString(),
+  },
+];
+
+export const mockFoodDatabase = [
+  { name: "Pechuga de pollo", calories_per_100g: 165, protein: 31, carbs: 0, fat: 3.6 },
+  { name: "Salmón", calories_per_100g: 208, protein: 20, carbs: 0, fat: 13 },
+  { name: "Huevo", calories_per_100g: 155, protein: 13, carbs: 1.1, fat: 11 },
+  { name: "Arroz blanco", calories_per_100g: 130, protein: 2.7, carbs: 28, fat: 0.3 },
+  { name: "Brócoli", calories_per_100g: 34, protein: 2.8, carbs: 7, fat: 0.4 },
+  { name: "Plátano", calories_per_100g: 89, protein: 1.1, carbs: 23, fat: 0.3 },
+  { name: "Almendras", calories_per_100g: 579, protein: 21, carbs: 22, fat: 50 },
+  { name: "Yogurt griego", calories_per_100g: 59, protein: 10, carbs: 3.3, fat: 0.4 },
+];
