@@ -57,7 +57,7 @@ export default async function CoachPanel() {
                   const warn = stale(m.last_workout);
                   return (
                     <tr key={m.id} style={{ borderTop: "1px solid var(--line)" }}>
-                      <td className="px-4 py-3"><div className="display">{m.name}</div><div className="faint text-xs">{m.email}</div></td>
+                      <td className="px-4 py-3"><Link href={`/coach/${m.id}`} className="display hover:underline" style={{ color: "var(--sage-soft)" }}>{m.name}</Link><div className="faint text-xs">{m.email}</div></td>
                       <td className="px-4 py-3 muted">{m.goal}</td>
                       <td className="px-4 py-3"><span className={`pill ${m.plan === "free" ? "" : "pill-f"}`}>{m.plan}</span></td>
                       <td className="px-4 py-3 num">{m.kcal_today}</td>

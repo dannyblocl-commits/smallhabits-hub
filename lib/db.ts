@@ -43,6 +43,21 @@ export function ensureSchema() {
         at timestamptz default now()
       );
       alter table users add column if not exists role text not null default 'member';
+      create table if not exists messages (
+        id uuid primary key default gen_random_uuid(),
+        from_user uuid references users(id) on delete cascade,
+        to_user uuid references users(id) on delete cascade,
+        body text not null,
+        at timestamptz default now(),
+        read_at timestamptz
+      );
+      create index if not exists messages_pair on messages(to_user, from_user, at desc);
+      create table if not exists assignments (
+        user_id uuid primary key references users(id) on delete cascade,
+        routine_id text, menu_id text, note text,
+        by_coach uuid references users(id),
+        at timestamptz default now()
+      );
       create index if not exists food_user_at on food_entries(user_id, at desc);
       create index if not exists progress_user_at on progress_entries(user_id, at desc);
     `).then(() => undefined);

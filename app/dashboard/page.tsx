@@ -4,12 +4,17 @@ import { AppShell, Badge } from "@/components/AppShell";
 import { HeroVideo } from "@/components/HeroVideo";
 import { requireUser } from "@/lib/auth";
 import { stats } from "@/app/actions/food";
+import { getAssignment } from "@/app/actions/assign";
+import { unreadCount } from "@/app/actions/chat";
+import { demoRoutines } from "@/data/routines";
 
 const goalKcal: Record<string, number> = { "Perder peso": 1500, Tonificar: 1800, "Ganar fuerza": 2600, Resistencia: 2200, Flexibilidad: 1900, "Salud integral": 1900 };
 
 export default async function Dashboard() {
   const user = await requireUser();
-  const s = await stats();
+  const [s, a, unread] = await Promise.all([stats(), getAssignment(), unreadCount()]);
+  const assigned = a?.routine_id ? demoRoutines.find((r) => r.id === a.routine_id) : undefined;
+  const todayRoutine = assigned ?? (s.workoutsWeek === 0 ? demoRoutines[0] : demoRoutines[1]);
   const goal = goalKcal[user.goal] ?? 1800;
   const pct = Math.min(100, Math.round((s.kcalToday / goal) * 100));
   const first = user.name.trim().split(" ")[0];
@@ -24,11 +29,11 @@ export default async function Dashboard() {
         <div className="absolute inset-0 veil" />
         <div className="relative p-6 w-full flex flex-wrap items-end justify-between gap-4">
           <div>
-            <span className="pill pill-f">Hoy toca</span>
-            <h2 className="text-3xl mt-2">{s.workoutsWeek === 0 ? "Calistenia para principiantes · 30 min" : "HIIT Funcional · 20 min"}</h2>
-            <p className="muted text-sm">{s.workoutsWeek === 0 ? "Empieza suave. Lo importante es empezar." : "4 rondas · 3 ejercicios · descanso 30s"}</p>
+            <span className="pill pill-f">{assigned ? `Asignado por ${a?.coach_name ?? "tu coach"}` : "Hoy toca"}</span>
+            <h2 className="text-3xl mt-2">{todayRoutine.name} · {todayRoutine.duration_minutes} min</h2>
+            <p className="muted text-sm">{a?.note ?? (s.workoutsWeek === 0 ? "Empieza suave. Lo importante es empezar." : `${todayRoutine.exercises.length} ejercicios · ${todayRoutine.type}`)}</p>
           </div>
-          <Link href={s.workoutsWeek === 0 ? "/dashboard/routines?r=routine_1" : "/dashboard/routines?r=routine_2"} className="btn btn-go text-lg px-8">GO ▶</Link>
+          <Link href={`/dashboard/routines?r=${todayRoutine.id}`} className="btn btn-go text-lg px-8">GO ▶</Link>
         </div>
       </div>
 
@@ -58,8 +63,8 @@ export default async function Dashboard() {
 
       <Link href="/dashboard/chat" className="card p-5 flex items-center gap-4 hover:border-[var(--line-strong)] transition">
         <div className="relative w-14 h-14 rounded-full overflow-hidden ring-2 ring-[var(--fucsia)] shrink-0"><Image src="/img/miphoto.jpg" alt="Maleja" fill className="object-cover object-top" sizes="56px" /></div>
-        <div className="flex-1"><div className="display">Maleja</div><div className="muted text-sm">Bienvenida, {first}. Cuéntame cómo te sientes hoy y armamos tu semana.</div></div>
-        <span className="pill pill-f">Chat</span>
+        <div className="flex-1"><div className="display">{a?.coach_name ?? "Tu coach"}</div><div className="muted text-sm">{unread > 0 ? `Tienes ${unread} mensaje${unread > 1 ? "s" : ""} sin leer.` : `Bienvenida, ${first}. Cuéntame cómo te sientes hoy y armamos tu semana.`}</div></div>
+        <span className={`pill ${unread > 0 ? "pill-f" : ""}`}>{unread > 0 ? `${unread} nuevo${unread > 1 ? "s" : ""}` : "Chat"}</span>
       </Link>
     </AppShell>
   );
