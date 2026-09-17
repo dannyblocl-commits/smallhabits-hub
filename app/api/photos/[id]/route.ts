@@ -14,6 +14,8 @@ export async function GET(_req: NextRequest, ctx: { params: Promise<{ id: string
   const allowed = p.user_id === me.id || (me.role === "coach" && (p.coach_id === me.id || p.coach_id === null));
   if (!allowed) return new NextResponse(null, { status: 403 });
   const b = await get(p.pathname, { access: "private" });
-  if (b.statusCode !== 200 || !b.stream) return new NextResponse(null, { status: 404 });
-  return new NextResponse(b.stream, { headers: { "Content-Type": b.blob.contentType, "Cache-Control": "private, max-age=3600", "Content-Length": String(b.blob.size) } });
+  if (!b || b.statusCode !== 200 || !b.stream) return new NextResponse(null, { status: 404 });
+  const headers: Record<string, string> = { "Content-Type": b.blob.contentType || "image/jpeg", "Cache-Control": "private, max-age=3600" };
+  if (b.blob.size) headers["Content-Length"] = String(b.blob.size);
+  return new NextResponse(b.stream, { headers });
 }

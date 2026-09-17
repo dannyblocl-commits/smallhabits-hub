@@ -15,7 +15,7 @@ const fmt = (iso: string) => new Date(iso).toLocaleDateString("es", { day: "nume
 export default async function MemberDetail({ params }: { params: Promise<{ id: string }> }) {
   await requireCoach();
   const { id } = await params;
-  const [m, a, thread, photos, menus] = await Promise.all([getMember(id), getAssignment(id), listThread(id), listPhotos(id), listMyMenus(id)]);
+  const [m, a, thread, photos, userMenus] = await Promise.all([getMember(id), getAssignment(id), listThread(id), listPhotos(id), listMyMenus(id)]);
   if (!m) notFound();
   const firstPhoto = photos[0], lastPhoto = photos.length > 1 ? photos[photos.length - 1] : null;
 
@@ -80,8 +80,8 @@ export default async function MemberDetail({ params }: { params: Promise<{ id: s
 
             <div className="card p-5">
               <div className="eyebrow mb-2" style={{ color: "var(--sage)" }}>Sus menús</div>
-              {menus.length === 0 && <p className="muted text-sm">Aún no ha creado menús.</p>}
-              {menus.map((mn) => (
+              {userMenus.length === 0 && <p className="muted text-sm">Aún no ha creado menús.</p>}
+              {userMenus.map((mn) => (
                 <div key={mn.id} className="row p-3 mb-2">
                   <div className="flex justify-between"><span className="display text-sm">{mn.name}</span><span className="num text-sm" style={{ color: "var(--sage)" }}>{mn.kcal} kcal</span></div>
                   <div className="faint text-xs mt-1">{mn.items.map((it) => `${it.name} (${it.kcal})`).join(" · ")}</div>
