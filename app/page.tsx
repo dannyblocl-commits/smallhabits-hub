@@ -43,7 +43,9 @@ export default function Home() {
       {/* Dos temperaturas */}
       <section className="relative max-w-6xl mx-auto px-5 py-12">
         <div className="grid md:grid-cols-2 gap-5">
-          <div className="card lift p-7 relative overflow-hidden">
+          <div className="card lift p-7 relative overflow-hidden isolate">
+            <HeroVideo src="/videos/entrenar.mp4" poster="/img/gal_fuerza.jpg" className="absolute inset-0 w-full h-full object-cover opacity-30 -z-10" label="" />
+            <div className="absolute inset-0 veil -z-10" />
             <div className="absolute -right-10 -top-10 w-48 h-48 rounded-full" style={{ background: "radial-gradient(circle, rgba(255,45,138,.3), transparent 65%)" }} />
             <div className="eyebrow" style={{ color: "var(--fucsia)" }}>Energía</div>
             <h2 className="text-3xl mt-1">Entrenar</h2>
@@ -51,7 +53,9 @@ export default function Home() {
             <div className="timer mt-4 text-5xl">00:42</div>
             <Link href="/dashboard/routines" className="btn btn-go btn-sm mt-5">Ver rutinas</Link>
           </div>
-          <div className="card lift-sage p-7 relative overflow-hidden">
+          <div className="card lift-sage p-7 relative overflow-hidden isolate">
+            <HeroVideo src="/videos/comer-bien.mp4" poster="/img/gal_display.jpg" className="absolute inset-0 w-full h-full object-cover opacity-30 -z-10" label="" />
+            <div className="absolute inset-0 veil -z-10" />
             <div className="absolute -right-10 -top-10 w-48 h-48 rounded-full" style={{ background: "radial-gradient(circle, rgba(127,194,155,.28), transparent 65%)" }} />
             <div className="eyebrow" style={{ color: "var(--sage)" }}>Balance</div>
             <h2 className="text-3xl mt-1">Comer bien y estar en paz</h2>

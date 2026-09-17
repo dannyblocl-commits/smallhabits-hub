@@ -1,5 +1,6 @@
 import { AppShell, Locked } from "@/components/AppShell";
 import { getPlan } from "@/lib/plan";
+import { HeroVideo } from "@/components/HeroVideo";
 
 const weight = [66.2, 66.0, 65.8, 65.9, 65.5, 65.3, 65.0, 64.8];
 const kcal = [1720, 1650, 1810, 1590, 1700, 1760, 1680];
@@ -22,6 +23,11 @@ export default async function Progress() {
   const plan = await getPlan();
   return (
     <AppShell title="Progreso" kicker="8 semanas contigo">
+      <div className="relative rounded-[28px] overflow-hidden h-44 md:h-56 mb-5 lift">
+        <HeroVideo src="/videos/progreso.mp4" poster="/img/gal_parque.jpg" className="absolute inset-0 w-full h-full object-cover" label="Maleja corriendo al amanecer" />
+        <div className="absolute inset-0 veil" />
+        <div className="absolute bottom-5 left-6"><span className="pill pill-f">Racha 12 días</span><h2 className="text-3xl mt-2">Cada día suma.</h2></div>
+      </div>
       <div className="grid grid-cols-3 gap-3 mb-5">
         {[["Peso", "64.8", "kg · −1.4", "var(--sage)"], ["Racha", "12", "días · mejor 19", "var(--fucsia)"], ["Entrenos", "27", "totales", "var(--text)"]].map(([l, v, s, c]) => (
           <div key={l} className="card p-5"><div className="eyebrow">{l}</div><div className="num text-3xl mt-1" style={{ color: c }}>{v}</div><div className="faint text-xs">{s}</div></div>

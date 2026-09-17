@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { AppShell, Badge } from "@/components/AppShell";
 import { demoClients } from "@/data/clients";
+import { HeroVideo } from "@/components/HeroVideo";
 
 export default function Dashboard() {
   const me = demoClients[0];
@@ -13,7 +14,7 @@ export default function Dashboard() {
 
       {/* Hero del día: GO */}
       <div className="relative rounded-[28px] overflow-hidden min-h-[260px] flex items-end mb-5 lift">
-        <Image src="/img/gal_display.jpg" alt="" fill className="object-cover object-[center_30%]" sizes="100vw" />
+        <HeroVideo src="/videos/entrenar.mp4" poster="/img/gal_fuerza.jpg" className="absolute inset-0 w-full h-full object-cover object-[center_30%]" label="Maleja en el gym" />
         <div className="absolute inset-0 veil" />
         <div className="relative p-6 w-full flex flex-wrap items-end justify-between gap-4">
           <div>

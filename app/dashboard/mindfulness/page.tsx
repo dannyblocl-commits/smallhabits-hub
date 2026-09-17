@@ -2,6 +2,7 @@ import { AppShell, Badge, Locked } from "@/components/AppShell";
 import { VideoCard } from "@/components/VideoCard";
 import { Timer } from "@/components/Timer";
 import { getPlan } from "@/lib/plan";
+import { HeroVideo } from "@/components/HeroVideo";
 
 const sessions = [
   { id: "m_1", free: true, type: "Reflexión", title: "Pequeños hábitos, grandes cambios", min: 5, text: "¿Qué hábito pequeño cumpliste hoy? Anótalo. No importa el tamaño: importa la repetición. Mañana, repítelo una vez más." },
@@ -20,6 +21,11 @@ export default async function Mindfulness({ searchParams }: { searchParams: Prom
 
   return (
     <AppShell title="Paz mental" kicker="Reflexión y worship gratis · meditación y journal desde Básico">
+      <div className="relative rounded-[28px] overflow-hidden h-44 md:h-56 mb-5 lift-sage">
+        <HeroVideo src="/videos/paz-mental.mp4" poster="/img/gal_campo.jpg" className="absolute inset-0 w-full h-full object-cover" label="Maleja en calma al aire libre" />
+        <div className="absolute inset-0 veil" />
+        <p className="quote absolute bottom-5 left-6 right-6 text-2xl" style={{ color: "var(--sage-soft)" }}>Respira. Hoy también cuenta.</p>
+      </div>
       <div className="grid lg:grid-cols-[300px_1fr] gap-5">
         <aside className="space-y-2">
           {sessions.map((x) => (
