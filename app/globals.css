@@ -1,26 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500;700&display=swap');
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --white:    #FAFAF7;
+  --beige:    #EDE6DC;
+  --beige2:   #E0D5C8;
+  --sage:     #C8D5C0;
+  --sage-d:   #6B8F71;
+  --earth:    #A67C5B;
+  --earth-l:  #C9A882;
+  --text:     #2C2C2C;
+  --text-m:   #6B6560;
+  --gold:     #B8956A;
+  --rosab:    #F2E4E1;
+  --rosas:    #E8C8D0;
+  --rosaM:    #C06080;
+  --fucsiaP:  #9B3A5A;
+
+  --background: var(--white);
+  --foreground: var(--text);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.disclaimer-bar {
+  background: linear-gradient(to right, var(--rosab), var(--beige));
+  border-bottom: 2px solid var(--earth);
+  padding: 12px 16px;
+  font-size: 12px;
+  color: var(--text);
+  text-align: center;
+  font-weight: 600;
+  line-height: 1.4;
 }
