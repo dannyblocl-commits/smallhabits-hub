@@ -17,20 +17,26 @@ export async function signup(_: AuthState, form: FormData): Promise<AuthState> {
   await ensureSchema();
   const exists = await db().query("select 1 from users where email = $1", [email]);
   if (exists.rowCount) return { error: "Ya existe una cuenta con ese email. Inicia sesión." };
-  const r = await db().query("insert into users (email, password_hash, name, goal) values ($1,$2,$3,$4) returning id", [email, await hashPassword(password), name, goal]);
+  const code = String(form.get("coach_code") || "").trim().toUpperCase();
+  let role = "member";
+  if (code) {
+    if (process.env.COACH_INVITE_CODE && code === process.env.COACH_INVITE_CODE.toUpperCase()) role = "coach";
+    else return { error: "El código de coach no es válido. Déjalo vacío si eres miembro." };
+  }
+  const r = await db().query("insert into users (email, password_hash, name, goal, role) values ($1,$2,$3,$4,$5) returning id", [email, await hashPassword(password), name, goal, role]);
   await createSession(r.rows[0].id);
-  redirect("/dashboard");
+  redirect(role === "coach" ? "/coach" : "/dashboard");
 }
 
 export async function login(_: AuthState, form: FormData): Promise<AuthState> {
   const email = String(form.get("email") || "").trim().toLowerCase();
   const password = String(form.get("password") || "");
   await ensureSchema();
-  const r = await db().query("select id, password_hash from users where email = $1", [email]);
+  const r = await db().query("select id, password_hash, role from users where email = $1", [email]);
   const u = r.rows[0];
   if (!u || !(await verifyPassword(password, u.password_hash))) return { error: "Email o contraseña incorrectos." };
   await createSession(u.id);
-  redirect("/dashboard");
+  redirect(u.role === "coach" ? "/coach" : "/dashboard");
 }
 
 export async function logout() { await destroySession(); redirect("/"); }

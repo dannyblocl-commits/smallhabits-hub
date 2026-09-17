@@ -5,7 +5,8 @@ import bcrypt from "bcryptjs";
 import { db, ensureSchema } from "@/lib/db";
 import type { Plan } from "@/lib/plan";
 
-export type User = { id: string; email: string; name: string; goal: string; weight: number | null; height: number | null; plan: Plan; created_at: string };
+export type Role = "member" | "coach";
+export type User = { id: string; email: string; name: string; goal: string; weight: number | null; height: number | null; plan: Plan; role: Role; created_at: string };
 
 const COOKIE = "sh_session";
 const secret = () => new TextEncoder().encode(process.env.AUTH_SECRET || "dev-secret-change-me");
@@ -23,7 +24,7 @@ export async function getUser(): Promise<User | null> {
   try {
     const { payload } = await jwtVerify(token, secret());
     await ensureSchema();
-    const r = await db().query("select id, email, name, goal, weight, height, plan, created_at from users where id = $1", [payload.uid]);
+    const r = await db().query("select id, email, name, goal, weight, height, plan, role, created_at from users where id = $1", [payload.uid]);
     if (!r.rows[0]) return null;
     const u = r.rows[0];
     return { ...u, weight: u.weight === null ? null : Number(u.weight), height: u.height === null ? null : Number(u.height) };
@@ -33,6 +34,12 @@ export async function getUser(): Promise<User | null> {
 export async function requireUser(): Promise<User> {
   const u = await getUser();
   if (!u) redirect("/login");
+  return u;
+}
+
+export async function requireCoach(): Promise<User> {
+  const u = await requireUser();
+  if (u.role !== "coach") redirect("/dashboard");
   return u;
 }
 

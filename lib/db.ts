@@ -42,6 +42,7 @@ export function ensureSchema() {
         routine_id text not null,
         at timestamptz default now()
       );
+      alter table users add column if not exists role text not null default 'member';
       create index if not exists food_user_at on food_entries(user_id, at desc);
       create index if not exists progress_user_at on progress_entries(user_id, at desc);
     `).then(() => undefined);

@@ -36,6 +36,7 @@ export async function AppShell({ children, title, kicker, requires }: { children
                 <Link key={n.href} href={n.href} className="px-3 py-1.5 rounded-full text-[.8rem] muted hover:text-[var(--text)] hover:bg-[var(--surface-2)] transition">{n.label}</Link>
               ))}
             </nav>
+            {user.role === "coach" && <Link href="/coach" className="pill pill-s">Panel coach</Link>}
             <Link href="/dashboard/upgrade" className={`pill ${plan === "free" ? "" : "pill-f"}`}>{planLabel}</Link>
             <Link href="/dashboard/profile" className="w-8 h-8 rounded-full grid place-items-center display text-sm" style={{ background: "var(--fucsia-soft)", color: "var(--fucsia)" }} title={user.name}>{user.name.trim()[0]?.toUpperCase()}</Link>
             <form action={logout}><button className="faint text-xs px-1">Salir</button></form>

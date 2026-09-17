@@ -19,6 +19,13 @@ export function AuthForm({ mode }: { mode: "login" | "signup" }) {
           <select id="goal" name="goal" className="input">{["Tonificar", "Perder peso", "Ganar fuerza", "Resistencia", "Flexibilidad", "Salud integral"].map((g) => <option key={g}>{g}</option>)}</select>
         </div>
       )}
+      {isSignup && (
+        <details className="row p-3">
+          <summary className="text-xs muted cursor-pointer">¿Eres coach? Ingresa tu código</summary>
+          <input id="coach_code" name="coach_code" placeholder="Código de coach" className="input input-s mt-2" autoCapitalize="characters" />
+          <p className="faint text-[.65rem] mt-1">Solo para coaches invitadas por Small Habits. Los miembros lo dejan vacío.</p>
+        </details>
+      )}
       {state?.error && <p className="text-sm rounded-[12px] px-4 py-3" style={{ background: "rgba(255,90,90,.12)", color: "#FF8A8A" }}>{state.error}</p>}
       <button type="submit" disabled={pending} className="btn btn-go w-full">{pending ? "Un momento…" : isSignup ? "Crear mi cuenta" : "Entrar"}</button>
       <p className="text-center text-xs muted">
