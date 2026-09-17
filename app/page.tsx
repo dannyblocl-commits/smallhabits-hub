@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { PLANS } from "@/lib/plan";
 import { Logo, Glow } from "@/components/Leaves";
+import { HeroVideo } from "@/components/HeroVideo";
 
 export default function Home() {
   return (
@@ -20,7 +21,7 @@ export default function Home() {
       {/* Hero con foto a sangre */}
       <section className="relative max-w-6xl mx-auto px-5 pt-8 pb-10">
         <div className="relative rounded-[28px] overflow-hidden min-h-[520px] md:min-h-[600px] flex items-end">
-          <video src="/videos/hero.mp4" poster="/img/gal_fuerza.jpg" autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover object-[center_20%]" aria-label="Maleja preparándose para entrenar" />
+          <HeroVideo src="/videos/hero.mp4" poster="/img/gal_fuerza.jpg" className="absolute inset-0 w-full h-full object-cover object-[center_20%]" label="Maleja preparándose para entrenar" />
           <div className="absolute inset-0 veil" />
           <div className="relative p-6 md:p-12 max-w-2xl">
             <span className="pill pill-f">Gimnasio · Nutrición · Paz mental</span>
