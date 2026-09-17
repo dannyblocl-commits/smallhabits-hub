@@ -15,7 +15,7 @@ const sessions = [
 ];
 
 export default async function Mindfulness({ searchParams }: { searchParams: Promise<{ s?: string }> }) {
-  const [user, { L }] = await Promise.all([requireUser(), tr()]);
+  const [user, { lang, L }] = await Promise.all([requireUser(), tr()]);
   const { s } = await searchParams;
   const sel = sessions.find((x) => x.id === s) || sessions[0];
   const c = (id: string) => L.content.sessions[id as keyof typeof L.content.sessions] ?? ["", id, ""];
