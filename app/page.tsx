@@ -1,99 +1,110 @@
 import Link from "next/link";
 import Image from "next/image";
 import { PLANS } from "@/lib/plan";
-import { Leaves, Logo } from "@/components/Leaves";
+import { Logo, Glow } from "@/components/Leaves";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-hero relative">
-      <Leaves />
-
-      <header className="sticky top-0 z-40 bg-[rgba(250,250,247,0.8)] backdrop-blur border-b border-[#E0D5C8]">
-        <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+    <div className="min-h-screen relative overflow-hidden" style={{ background: "var(--obsidian)" }}>
+      <Glow />
+      <header className="sticky top-0 z-40 glass !rounded-none !border-x-0 !border-t-0 !shadow-none">
+        <div className="max-w-6xl mx-auto px-5 py-3 flex items-center justify-between">
           <Logo />
-          <nav className="flex items-center gap-5 text-sm">
-            <Link href="/login" className="hidden sm:inline text-[#6B6560] hover:text-[#6B8F71] tracking-wide">INICIAR SESIÓN</Link>
-            <Link href="/dashboard" className="btn btn-sage !py-2 !px-5">Entrar</Link>
+          <nav className="flex items-center gap-2">
+            <Link href="/login" className="hidden sm:inline px-3 text-sm muted hover:text-[var(--text)]">Iniciar sesión</Link>
+            <Link href="/dashboard" className="btn btn-go btn-sm">Entrar</Link>
           </nav>
         </div>
       </header>
 
-      {/* Hero */}
-      <section className="relative max-w-6xl mx-auto px-6 pt-20 pb-16 text-center">
-        <span className="pill">✦ Gimnasio · Nutrición · Paz mental</span>
-        <h1 className="text-5xl md:text-7xl text-[#2C2C2C] mt-6 mb-4">Tu bienestar, en una sola app</h1>
-        <p className="text-[#6B6560] max-w-xl mx-auto leading-relaxed">
-          Entrena con rutinas guiadas, registra tus comidas con una foto, conecta tu Apple Watch o Garmin y cuida tu mente con reflexión y worship.
-        </p>
-        <p className="quote text-2xl md:text-3xl text-[#2C2C2C] mt-8">Because when we feel good inside, everything flourishes outside.</p>
-
-        <div className="flex flex-wrap justify-center gap-3 mt-8">
-          <Link href="/dashboard" className="btn btn-sage">Empezar gratis</Link>
-          <Link href="/dashboard/upgrade" className="btn btn-ghost">Ver planes</Link>
+      {/* Hero con foto a sangre */}
+      <section className="relative max-w-6xl mx-auto px-5 pt-8 pb-10">
+        <div className="relative rounded-[28px] overflow-hidden min-h-[520px] md:min-h-[600px] flex items-end">
+          <Image src="/img/gal_fuerza.jpg" alt="Maleja entrenando" fill priority className="object-cover object-[center_20%]" sizes="100vw" />
+          <div className="absolute inset-0 veil" />
+          <div className="relative p-6 md:p-12 max-w-2xl">
+            <span className="pill pill-f">Gimnasio · Nutrición · Paz mental</span>
+            <h1 className="text-5xl md:text-7xl mt-4">Energía para moverte.<br /><span style={{ color: "var(--sage)" }}>Calma para quedarte.</span></h1>
+            <p className="muted mt-4 max-w-lg">Entrena con cronómetro y guía en video, registra tus comidas con una foto, conecta tu Apple Watch y cuida tu mente con reflexión y worship. Con Maleja como coach.</p>
+            <div className="flex flex-wrap gap-3 mt-6">
+              <Link href="/dashboard" className="btn btn-go text-base">GO · Empezar gratis</Link>
+              <Link href="/dashboard/upgrade" className="btn btn-ghost">Ver planes</Link>
+            </div>
+          </div>
         </div>
-
-        <div className="relative mx-auto mt-12 w-64 h-64 md:w-80 md:h-80">
-          <div className="absolute inset-0 rounded-full bg-soft" />
-          <Image src="/img/miphoto.jpg" alt="Maleja" fill priority className="rounded-full object-cover object-top p-3" sizes="320px" />
-        </div>
-
-        <div className="flex justify-center gap-10 mt-10 pt-8 border-t border-[#E0D5C8] max-w-md mx-auto">
-          {[["200+", "Miembros"], ["3+", "Años"], ["1K+", "Transformaciones"]].map(([n, l]) => (
-            <div key={l} className="text-center"><div className="stat-num text-3xl">{n}</div><div className="text-[0.7rem] tracking-[0.1em] uppercase text-[#6B6560] mt-1">{l}</div></div>
+        <div className="grid grid-cols-3 gap-3 mt-4 max-w-lg">
+          {[["200+", "miembros"], ["3+", "años"], ["1K+", "transformaciones"]].map(([n, l]) => (
+            <div key={l} className="text-center"><div className="num text-3xl" style={{ color: "var(--sage)" }}>{n}</div><div className="eyebrow mt-1">{l}</div></div>
           ))}
         </div>
       </section>
 
-      {/* Features con fotos */}
-      <section className="relative max-w-6xl mx-auto px-6 py-16">
-        <h2 className="text-4xl md:text-5xl text-center mb-12">Lo que vas a vivir</h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
-          {[
-            ["/img/gal_fuerza.jpg", "Entrenar", "Funcional, calistenia, pilates, yoga y estiramientos con guía en video."],
-            ["/img/gal_display.jpg", "Comer bien", "Menús y recetas por objetivo. Foto del plato → calorías con IA."],
-            ["/img/gal_campo.jpg", "Paz mental", "Reflexión diaria, worship, meditación guiada y journal."],
-            ["/img/gal_parque.jpg", "Tu reloj y tu coach", "Apple Watch y Garmin sincronizados. Chat con Maleja."],
-          ].map(([img, t, d]) => (
-            <div key={t} className="card overflow-hidden">
-              <div className="relative h-44"><Image src={img} alt={t} fill className="object-cover" sizes="(max-width:768px) 100vw, 25vw" /></div>
-              <div className="p-5"><h3 className="text-2xl mb-1">{t}</h3><p className="text-sm text-[#6B6560]">{d}</p></div>
-            </div>
-          ))}
+      {/* Dos temperaturas */}
+      <section className="relative max-w-6xl mx-auto px-5 py-12">
+        <div className="grid md:grid-cols-2 gap-5">
+          <div className="card lift p-7 relative overflow-hidden">
+            <div className="absolute -right-10 -top-10 w-48 h-48 rounded-full" style={{ background: "radial-gradient(circle, rgba(255,45,138,.3), transparent 65%)" }} />
+            <div className="eyebrow" style={{ color: "var(--fucsia)" }}>Energía</div>
+            <h2 className="text-3xl mt-1">Entrenar</h2>
+            <p className="muted mt-2">Funcional, calistenia, HIIT. Cronómetro por intervalos, series y descansos guiados, demo en video.</p>
+            <div className="timer mt-4 text-5xl">00:42</div>
+            <Link href="/dashboard/routines" className="btn btn-go btn-sm mt-5">Ver rutinas</Link>
+          </div>
+          <div className="card lift-sage p-7 relative overflow-hidden">
+            <div className="absolute -right-10 -top-10 w-48 h-48 rounded-full" style={{ background: "radial-gradient(circle, rgba(127,194,155,.28), transparent 65%)" }} />
+            <div className="eyebrow" style={{ color: "var(--sage)" }}>Balance</div>
+            <h2 className="text-3xl mt-1">Comer bien y estar en paz</h2>
+            <p className="muted mt-2">Menús por objetivo, foto del plato → calorías con IA, pilates, yoga, reflexión diaria y worship.</p>
+            <p className="quote text-2xl mt-4" style={{ color: "var(--sage-soft)" }}>Because when we feel good inside, everything flourishes outside.</p>
+            <Link href="/dashboard/mindfulness" className="btn btn-balance btn-sm mt-5">Explorar</Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Coach */}
+      <section className="relative max-w-6xl mx-auto px-5 py-8">
+        <div className="card p-6 md:p-8 grid md:grid-cols-[auto_1fr] gap-6 items-center">
+          <div className="relative w-36 h-36 rounded-full overflow-hidden ring-2 ring-[var(--fucsia)] shadow-[0_0_40px_-10px_var(--fucsia-glow)] mx-auto">
+            <Image src="/img/miphoto.jpg" alt="Maleja" fill className="object-cover object-top" sizes="144px" />
+          </div>
+          <div className="text-center md:text-left">
+            <div className="eyebrow">Tu coach</div>
+            <h2 className="text-4xl mt-1">Maleja</h2>
+            <p className="muted mt-2">Coach de transformación física y mental. Nutrición, entrenamiento funcional, calistenia y estiramientos. Chat 1:1 y sesiones en vivo desde el plan Pro.</p>
+          </div>
         </div>
       </section>
 
       {/* Planes */}
-      <section className="relative max-w-6xl mx-auto px-6 py-16">
-        <h2 className="text-4xl md:text-5xl text-center mb-2">Planes</h2>
-        <p className="text-center text-[#6B6560] mb-10">Empieza gratis. Sube cuando quieras más.</p>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
+      <section className="relative max-w-6xl mx-auto px-5 py-12">
+        <div className="eyebrow">Planes</div>
+        <h2 className="text-4xl mt-1 mb-8">Empieza gratis. Sube cuando quieras más.</h2>
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
           <div className="card p-6">
-            <h3 className="text-3xl">Gratis</h3>
-            <div className="stat-num text-3xl my-3">$0</div>
-            <ul className="text-sm space-y-2 text-[#2C2C2C]">
-              {["2 rutinas completas", "1 menú con recetas", "Reflexión diaria + worship", "Registro manual de comidas", "Asistente IA (5/día)", "Soporte"].map((f) => <li key={f}>✦ {f}</li>)}
-            </ul>
+            <h3 className="text-2xl">Gratis</h3>
+            <div className="num text-3xl my-3" style={{ color: "var(--sage)" }}>$0</div>
+            <ul className="text-sm space-y-2 muted">{["2 rutinas con cronómetro", "1 menú con recetas", "Reflexión + worship", "Registro manual de comidas", "Asistente IA (5/día)", "Soporte"].map((f) => <li key={f}>· {f}</li>)}</ul>
             <Link href="/dashboard" className="btn btn-ghost w-full mt-6">Entrar</Link>
           </div>
           {(["basico", "pro", "elite"] as const).map((k) => {
             const p = PLANS[k]; const hl = k === "pro";
             return (
-              <div key={k} className={`card p-6 relative ${hl ? "ring-2 ring-[#C06080]" : ""}`}>
-                {hl && <span className="absolute -top-3 left-5 bg-rosa text-white text-[0.65rem] tracking-[0.12em] px-3 py-1 rounded-full">MÁS ELEGIDO</span>}
-                <h3 className="text-3xl">{p.name}</h3>
-                <div className="stat-num text-3xl my-3" style={{ color: hl ? "#9B3A5A" : undefined }}>{p.price}<span className="text-sm text-[#6B6560] font-normal"> /mes</span></div>
-                <ul className="text-sm space-y-2 text-[#2C2C2C]">{p.features.map((f) => <li key={f}>✦ {f}</li>)}</ul>
-                <Link href="/dashboard/upgrade" className={`btn w-full mt-6 ${hl ? "btn-rosa" : "btn-sage"}`}>Elegir {p.name}</Link>
+              <div key={k} className={`card p-6 relative ${hl ? "lift ring-1 ring-[var(--fucsia)]" : ""}`}>
+                {hl && <span className="pill pill-f absolute -top-3 left-5">Más elegido</span>}
+                <h3 className="text-2xl">{p.name}</h3>
+                <div className="num text-3xl my-3" style={{ color: hl ? "var(--fucsia)" : "var(--text)" }}>{p.price}<span className="text-sm muted font-normal"> /mes</span></div>
+                <ul className="text-sm space-y-2 muted">{p.features.map((f) => <li key={f}>· {f}</li>)}</ul>
+                <Link href="/dashboard/upgrade" className={`btn w-full mt-6 ${hl ? "btn-go" : "btn-balance"}`}>Elegir {p.name}</Link>
               </div>
             );
           })}
         </div>
       </section>
 
-      <footer className="relative max-w-6xl mx-auto px-6 py-10 text-center">
-        <Logo size="text-xl" />
-        <p className="text-xs text-[#6B6560] mt-2">© 2026 Small Habits by Maleja · smallhabitsbymaleja.com</p>
-        <p className="fine mt-3 max-w-xl mx-auto">Contenido con fines educativos. Cada persona lo practica bajo su propia responsabilidad; consulta a un profesional de salud antes de iniciar un programa.</p>
+      <footer className="relative max-w-6xl mx-auto px-5 py-10 text-center">
+        <Logo size="text-lg" />
+        <p className="faint text-xs mt-2">© 2026 Small Habits by Maleja · smallhabitsbymaleja.com</p>
+        <p className="fine mt-3 max-w-xl mx-auto">Contenido educativo. Cada persona lo practica bajo su propia responsabilidad; consulta a un profesional de salud antes de iniciar un programa.</p>
       </footer>
     </div>
   );

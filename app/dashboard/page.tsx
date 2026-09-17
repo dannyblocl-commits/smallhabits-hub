@@ -1,53 +1,62 @@
 import Link from "next/link";
 import Image from "next/image";
 import { AppShell, Badge } from "@/components/AppShell";
-import { demoClients, maleja } from "@/data/clients";
+import { demoClients } from "@/data/clients";
 
 export default function Dashboard() {
   const me = demoClients[0];
+  const kcal = 1240, goal = 1800, pct = Math.round((kcal / goal) * 100);
 
   return (
-    <AppShell title={`Hola, ${me.name.split(" ")[0]}`}>
-      <p className="quote text-xl text-[#6B6560] -mt-4 mb-8">Un pequeño hábito hoy. Uno más mañana.</p>
+    <AppShell title={`Hola, ${me.name.split(" ")[0]}`} kicker="Martes · día 12 de racha">
+      <p className="quote text-xl muted -mt-3 mb-6">Un pequeño hábito hoy. Uno más mañana.</p>
 
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-        {[["Calorías hoy", "1.240", "de 1.800 kcal", "#A67C5B"], ["Pasos", "6.842", "Apple Watch", "#6B8F71"], ["Entrenos", "3/4", "esta semana", "#B8956A"], ["Racha", "12", "días seguidos", "#C06080"]].map(([l, v, s, c]) => (
-          <div key={l} className="card p-5">
-            <div className="text-[0.65rem] tracking-[0.12em] uppercase text-[#6B6560]">{l}</div>
-            <div className="stat-num text-4xl mt-1" style={{ color: c }}>{v}</div>
-            <div className="text-xs text-[#6B6560] mt-1">{s}</div>
+      {/* Hero del día: GO */}
+      <div className="relative rounded-[28px] overflow-hidden min-h-[260px] flex items-end mb-5 lift">
+        <Image src="/img/gal_display.jpg" alt="" fill className="object-cover object-[center_30%]" sizes="100vw" />
+        <div className="absolute inset-0 veil" />
+        <div className="relative p-6 w-full flex flex-wrap items-end justify-between gap-4">
+          <div>
+            <span className="pill pill-f">Hoy toca</span>
+            <h2 className="text-3xl mt-2">HIIT Funcional · 20 min</h2>
+            <p className="muted text-sm">4 rondas · 3 ejercicios · descanso 30s</p>
           </div>
+          <Link href="/dashboard/routines?r=routine_2" className="btn btn-go text-lg px-8">GO ▶</Link>
+        </div>
+      </div>
+
+      {/* KPIs */}
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-5">
+        <div className="card p-5 flex items-center gap-4">
+          <div className="ring w-20 h-20" style={{ background: `conic-gradient(var(--fucsia) 0 ${pct}%, var(--surface-3) ${pct}% 100%)` }}><span className="num text-base">{pct}%</span></div>
+          <div><div className="eyebrow">Calorías</div><div className="num text-2xl">{kcal}</div><div className="faint text-xs">de {goal}</div></div>
+        </div>
+        {[["Pasos", "6.842", "Apple Watch", "var(--sage)"], ["Entrenos", "3/4", "esta semana", "var(--text)"], ["Racha", "12", "días", "var(--fucsia)"]].map(([l, v, s, c]) => (
+          <div key={l} className="card p-5"><div className="eyebrow">{l}</div><div className="num text-3xl mt-1" style={{ color: c }}>{v}</div><div className="faint text-xs">{s}</div></div>
         ))}
       </div>
 
-      <div className="card p-6 mb-8 flex flex-col sm:flex-row items-center gap-6">
-        <div className="relative w-28 h-28 shrink-0">
-          <div className="absolute inset-0 rounded-full bg-soft" />
-          <Image src="/img/miphoto.jpg" alt="Maleja" fill className="rounded-full object-cover object-top p-1.5" sizes="112px" />
+      {/* Balance del día */}
+      <div className="grid md:grid-cols-2 gap-4 mb-5">
+        <div className="card lift-sage p-5">
+          <div className="flex justify-between items-center"><div className="eyebrow" style={{ color: "var(--sage)" }}>Nutrición</div><Badge free={false} /></div>
+          <h3 className="text-xl mt-1">Te quedan {goal - kcal} kcal</h3>
+          <div className="progress mt-3"><i style={{ width: `${pct}%` }} /></div>
+          <div className="flex gap-2 mt-4"><Link href="/dashboard/food" className="btn btn-balance btn-sm">Registrar comida</Link><Link href="/dashboard/nutrition" className="btn btn-ghost btn-sm">Ver menú</Link></div>
         </div>
-        <div className="flex-1 text-center sm:text-left">
-          <h2 className="text-3xl">Tu coach, {maleja.name}</h2>
-          <p className="text-sm text-[#6B6560] mt-1">{maleja.bio}</p>
-          <p className="text-[0.7rem] tracking-[0.1em] uppercase text-[#A67C5B] mt-2">{maleja.specialties.join(" · ")}</p>
+        <div className="card p-5">
+          <div className="flex justify-between items-center"><div className="eyebrow" style={{ color: "var(--sage)" }}>Paz mental</div><Badge free /></div>
+          <p className="quote text-lg mt-2" style={{ color: "var(--sage-soft)" }}>Respira. Agradece por tu cuerpo, que hoy se movió.</p>
+          <Link href="/dashboard/mindfulness" className="btn btn-balance btn-sm mt-4">Reflexión de hoy · 5 min</Link>
         </div>
-        <Link href="/dashboard/chat" className="btn btn-rosa">Escribirle</Link>
       </div>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-        {[
-          ["/dashboard/routines", "/img/gal_fuerza.jpg", "Entrenar hoy", "Funcional, calistenia y estiramientos. 2 rutinas gratis.", true],
-          ["/dashboard/food", "/img/gal_display.jpg", "Registrar comida", "Foto del plato y la IA calcula calorías y macros.", false],
-          ["/dashboard/nutrition", "/img/gal_display.jpg", "Menús y recetas", "Planes de alimentación por objetivo. 1 menú gratis.", true],
-          ["/dashboard/mindfulness", "/img/gal_campo.jpg", "Paz mental", "Reflexión, worship y meditación. Sesión diaria gratis.", true],
-          ["/dashboard/progress", "/img/gal_parque.jpg", "Mi progreso", "Peso, calorías, entrenos y datos del reloj.", false],
-          ["/dashboard/tickets", "/img/gal_campo.jpg", "Soporte", "Abre un ticket y Maleja te responde.", true],
-        ].map(([href, img, t, d, free]) => (
-          <Link key={t as string} href={href as string} className="card overflow-hidden block">
-            <div className="relative h-36"><Image src={img as string} alt="" fill className="object-cover" sizes="(max-width:768px) 100vw, 33vw" /><span className="absolute top-3 right-3"><Badge free={free as boolean} /></span></div>
-            <div className="p-5"><h3 className="text-2xl">{t}</h3><p className="text-sm text-[#6B6560] mt-1">{d}</p></div>
-          </Link>
-        ))}
-      </div>
+      {/* Coach */}
+      <Link href="/dashboard/chat" className="card p-5 flex items-center gap-4 hover:border-[var(--line-strong)] transition">
+        <div className="relative w-14 h-14 rounded-full overflow-hidden ring-2 ring-[var(--fucsia)] shrink-0"><Image src="/img/miphoto.jpg" alt="Maleja" fill className="object-cover object-top" sizes="56px" /></div>
+        <div className="flex-1"><div className="display">Maleja</div><div className="muted text-sm">Vi tu racha de 12 días. ¿Cómo vas con las flexiones?</div></div>
+        <span className="pill pill-f">1 nuevo</span>
+      </Link>
     </AppShell>
   );
 }
