@@ -6,7 +6,7 @@ import { db, ensureSchema } from "@/lib/db";
 import type { Plan } from "@/lib/plan";
 
 export type Role = "member" | "coach";
-export type User = { id: string; email: string; name: string; goal: string; weight: number | null; height: number | null; plan: Plan; role: Role; created_at: string };
+export type User = { id: string; email: string; name: string; goal: string; weight: number | null; height: number | null; plan: Plan; role: Role; coach_id: string | null; created_at: string };
 
 const COOKIE = "sh_session";
 const secret = () => new TextEncoder().encode(process.env.AUTH_SECRET || "dev-secret-change-me");
@@ -24,7 +24,7 @@ export async function getUser(): Promise<User | null> {
   try {
     const { payload } = await jwtVerify(token, secret());
     await ensureSchema();
-    const r = await db().query("select id, email, name, goal, weight, height, plan, role, created_at from users where id = $1", [payload.uid]);
+    const r = await db().query("select id, email, name, goal, weight, height, plan, role, coach_id, created_at from users where id = $1", [payload.uid]);
     if (!r.rows[0]) return null;
     const u = r.rows[0];
     return { ...u, weight: u.weight === null ? null : Number(u.weight), height: u.height === null ? null : Number(u.height) };
