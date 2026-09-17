@@ -20,7 +20,7 @@ export default function Home() {
       {/* Hero con foto a sangre */}
       <section className="relative max-w-6xl mx-auto px-5 pt-8 pb-10">
         <div className="relative rounded-[28px] overflow-hidden min-h-[520px] md:min-h-[600px] flex items-end">
-          <Image src="/img/gal_fuerza.jpg" alt="Maleja entrenando" fill priority className="object-cover object-[center_20%]" sizes="100vw" />
+          <video src="/videos/hero.mp4" poster="/img/gal_fuerza.jpg" autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover object-[center_20%]" aria-label="Maleja preparándose para entrenar" />
           <div className="absolute inset-0 veil" />
           <div className="relative p-6 md:p-12 max-w-2xl">
             <span className="pill pill-f">Gimnasio · Nutrición · Paz mental</span>
