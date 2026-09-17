@@ -1,13 +1,13 @@
 import { AppShell, Badge, Locked } from "@/components/AppShell";
-import { VideoCard } from "@/components/VideoCard";
+import { AudioCard } from "@/components/AudioCard";
 import { Timer } from "@/components/Timer";
 import { HeroVideo } from "@/components/HeroVideo";
 import { requireUser } from "@/lib/auth";
 import { tr } from "@/lib/i18n";
 
 const sessions = [
-  { id: "m_1", free: true, icon: "💭", min: 5, journal: false },
-  { id: "m_2", free: true, icon: "🙏", min: 8, journal: false },
+  { id: "m_1", free: true, icon: "💭", min: 2, journal: false },
+  { id: "m_2", free: true, icon: "🙏", min: 2, journal: false },
   { id: "m_3", free: false, icon: "🧘", min: 5, journal: false },
   { id: "m_4", free: false, icon: "☮️", min: 8, journal: false },
   { id: "m_5", free: false, icon: "📔", min: 10, journal: true },
@@ -42,7 +42,7 @@ export default async function Mindfulness({ searchParams }: { searchParams: Prom
             <div className="card lift-sage p-8 text-center">
               <span className="pill pill-s">{type} · {sel.min} {L.common.min}</span>
               <h2 className="text-3xl mt-3">{title}</h2>
-              <div className="mt-5"><VideoCard src={`/videos/${sel.id}.mp4`} title={`${L.mind.avatar} · ${title}`} emoji="◌" /></div>
+              <div className="mt-5 text-left"><AudioCard src={`/audio/${sel.id}.${lang}.mp3`} title={`${L.mind.guiada} · ${title}`} labels={{ play: L.mind.play, pause: L.mind.pause, missing: L.mind.missing }} /></div>
               <p className="quote text-2xl mt-6 max-w-xl mx-auto" style={{ color: "var(--sage-soft)" }}>“{text}”</p>
               {sel.journal && <textarea rows={5} placeholder={L.mind.journalPh} className="input input-s mt-6" />}
               <div className="flex gap-3 justify-center mt-6"><button className="btn btn-balance">{L.mind.completar}</button><button className="btn btn-ghost">{L.mind.guardar}</button></div>
