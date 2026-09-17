@@ -54,13 +54,13 @@ export default async function MemberDetail({ params }: { params: Promise<{ id: s
             <div className="card p-5">
               <div className="eyebrow mb-2">Últimas comidas</div>
               {m.foods.length === 0 && <p className="muted text-sm">Sin registros todavía.</p>}
-              {m.foods.map((f, i) => (<div key={i} className="flex justify-between text-sm py-1.5" style={{ borderTop: i ? "1px solid var(--line)" : undefined }}><span className="muted">{fmt(f.at)} · {f.name}</span><span className="num">{f.kcal}</span></div>))}
+              {m.foods.map((f: { name: string; kcal: number; at: string }, i: number) => (<div key={i} className="flex justify-between text-sm py-1.5" style={{ borderTop: i ? "1px solid var(--line)" : undefined }}><span className="muted">{fmt(f.at)} · {f.name}</span><span className="num">{f.kcal}</span></div>))}
             </div>
 
             <div className="card p-5">
               <div className="eyebrow mb-2">Historial de peso</div>
               {m.weights.length === 0 && <p className="muted text-sm">Sin registros todavía.</p>}
-              <div className="flex flex-wrap gap-2">{m.weights.map((w, i) => <span key={i} className="pill">{fmt(w.at)} · {w.weight} kg</span>)}</div>
+              <div className="flex flex-wrap gap-2">{m.weights.map((w: { weight: number; at: string }, i: number) => <span key={i} className="pill">{fmt(w.at)} · {w.weight} kg</span>)}</div>
             </div>
           </div>
 
