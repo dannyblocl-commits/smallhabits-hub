@@ -8,13 +8,15 @@ import { stats } from "@/app/actions/food";
 import { getAssignment } from "@/app/actions/assign";
 import { unreadCount } from "@/app/actions/chat";
 import { myCoach } from "@/app/actions/coaches";
+import { wearableStatus } from "@/app/actions/wearables";
 import { demoRoutines } from "@/data/routines";
 
 const goalKcal: Record<string, number> = { "Perder peso": 1500, Tonificar: 1800, "Ganar fuerza": 2600, Resistencia: 2200, Flexibilidad: 1900, "Salud integral": 1900 };
 
 export default async function Dashboard() {
   const [user, { lang, L }] = await Promise.all([requireUser(), tr()]);
-  const [s, a, unread, coach] = await Promise.all([stats(), getAssignment(), unreadCount(), myCoach()]);
+  const [s, a, unread, coach, w] = await Promise.all([stats(), getAssignment(), unreadCount(), myCoach(), wearableStatus()]);
+  const steps = w.today?.steps ?? null;
   const assigned = a?.routine_id ? demoRoutines.find((r) => r.id === a.routine_id) : undefined;
   const todayRoutine = assigned ?? (s.workoutsWeek === 0 ? demoRoutines[0] : demoRoutines[1]);
   const rt = L.content.routines[todayRoutine.id as keyof typeof L.content.routines];
@@ -46,7 +48,11 @@ export default async function Dashboard() {
           <div className="ring w-20 h-20" style={{ background: `conic-gradient(var(--fucsia) 0 ${pct}%, var(--surface-3) ${pct}% 100%)` }}><span className="num text-base">{pct}%</span></div>
           <div><div className="eyebrow">{L.dash.calorias}</div><div className="num text-2xl">{s.kcalToday}</div><div className="faint text-xs">{L.dash.de} {goal}</div></div>
         </div>
-        <div className="card p-5"><div className="eyebrow">{L.dash.peso}</div><div className="num text-3xl mt-1" style={{ color: "var(--sage)" }}>{user.weight ?? "—"}</div><div className="faint text-xs">{user.weight ? L.dash.kg : L.dash.addProfile}</div></div>
+        {steps !== null ? (
+          <div className="card p-5"><div className="eyebrow">{L.progress.pasos}</div><div className="num text-3xl mt-1" style={{ color: "var(--sage)" }}>{steps.toLocaleString(locale(lang))}</div><div className="faint text-xs">Google Health</div></div>
+        ) : (
+          <div className="card p-5"><div className="eyebrow">{L.dash.peso}</div><div className="num text-3xl mt-1" style={{ color: "var(--sage)" }}>{user.weight ?? "—"}</div><div className="faint text-xs">{user.weight ? L.dash.kg : L.dash.addProfile}</div></div>
+        )}
         <div className="card p-5"><div className="eyebrow">{L.dash.entrenos}</div><div className="num text-3xl mt-1">{s.workoutsWeek}/4</div><div className="faint text-xs">{L.dash.estaSemana}</div></div>
         <div className="card p-5"><div className="eyebrow">{L.dash.diasActivos}</div><div className="num text-3xl mt-1" style={{ color: "var(--fucsia)" }}>{s.activeDays}</div><div className="faint text-xs">{L.dash.ult30}</div></div>
       </div>

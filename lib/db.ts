@@ -61,6 +61,20 @@ export function ensureSchema() {
         by_coach uuid references users(id),
         at timestamptz default now()
       );
+      create table if not exists wearable_connections (
+        user_id uuid references users(id) on delete cascade,
+        provider text not null,
+        access_token text not null, refresh_token text, expires_at timestamptz,
+        scope text, connected_at timestamptz default now(), last_sync timestamptz,
+        primary key (user_id, provider)
+      );
+      create table if not exists wearable_daily (
+        user_id uuid references users(id) on delete cascade,
+        day date not null, provider text not null,
+        steps int, resting_hr int, active_kcal int, sleep_min int, workouts int, workout_min int,
+        updated_at timestamptz default now(),
+        primary key (user_id, day, provider)
+      );
       create table if not exists ai_usage (
         id uuid primary key default gen_random_uuid(),
         user_id uuid references users(id) on delete cascade,

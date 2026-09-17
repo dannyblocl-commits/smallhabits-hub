@@ -3,6 +3,8 @@ import { HeroVideo } from "@/components/HeroVideo";
 import { requireUser } from "@/lib/auth";
 import { tr } from "@/lib/i18n";
 import { stats } from "@/app/actions/food";
+import { wearableStatus } from "@/app/actions/wearables";
+import Link from "next/link";
 
 const kcal = [1720, 1650, 1810, 1590, 1700, 1760, 1680];
 
@@ -21,7 +23,9 @@ function Bars({ data, min, max, color, labels }: { data: number[]; min: number; 
 
 export default async function Progress() {
   const [user, { L, lang }] = await Promise.all([requireUser(), tr()]);
-  const s = await stats();
+  const [s, w] = await Promise.all([stats(), wearableStatus()]);
+  const t = w.today;
+  const h = (m: number | null | undefined) => (m == null ? "—" : `${Math.floor(m / 60)}h ${m % 60}m`);
   const weights = s.weights.length ? s.weights : user.weight ? [user.weight] : [];
   const wmin = weights.length ? Math.min(...weights) - 1 : 0, wmax = weights.length ? Math.max(...weights) + 1 : 1;
   const days = lang === "en" ? ["M", "T", "W", "T", "F", "S", "S"] : lang === "pt" ? ["S", "T", "Q", "Q", "S", "S", "D"] : ["L", "M", "X", "J", "V", "S", "D"];
@@ -46,11 +50,15 @@ export default async function Progress() {
       </div>
       <Locked plan={user.plan} requires="pro" feature={L.progress.relojFeature} L={L}>
         <div className="card lift-sage p-5">
-          <div className="flex items-center justify-between flex-wrap gap-3 mb-4"><div className="eyebrow" style={{ color: "var(--sage)" }}>{L.progress.reloj}</div><div className="flex gap-2"><span className="pill pill-s">Apple Watch · {L.progress.sync}</span><span className="pill">Garmin</span></div></div>
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-            {[[L.progress.pasos, "6.842"], [L.progress.bpm, "68"], [L.progress.kcalAct, "412"], [L.progress.sueno, "7h 20m"]].map(([l, v]) => (<div key={l} className="row p-4 text-center"><div className="num text-2xl">{v}</div><div className="faint text-xs mt-1">{l}</div></div>))}
-          </div>
-          <p className="faint text-xs mt-3">{L.progress.via}</p>
+          <div className="flex items-center justify-between flex-wrap gap-3 mb-4"><div className="eyebrow" style={{ color: "var(--sage)" }}>{L.progress.reloj}</div>{w.google ? <span className="pill pill-s">Google Health · {L.progress.sync}</span> : <Link href="/dashboard/wearables" className="btn btn-balance btn-sm">{L.wearables.feature}</Link>}</div>
+          {t ? (
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+              {[[L.progress.pasos, t.steps ?? "—"], [L.progress.bpm, t.resting_hr ?? "—"], [L.progress.kcalAct, t.active_kcal ?? "—"], [L.progress.sueno, h(t.sleep_min)]].map(([l, v]) => (<div key={l as string} className="row p-4 text-center"><div className="num text-2xl">{v}</div><div className="faint text-xs mt-1">{l}</div></div>))}
+            </div>
+          ) : (
+            <p className="muted text-sm">{w.google ? L.wearables.noDataYet : L.wearables.googleText}</p>
+          )}
+          <p className="faint text-xs mt-3"><Link href="/dashboard/wearables" className="underline">{L.wearables.title}</Link> · {L.wearables.privacy}</p>
         </div>
       </Locked>
     </AppShell>
