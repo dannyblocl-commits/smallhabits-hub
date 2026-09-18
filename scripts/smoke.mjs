@@ -13,7 +13,7 @@ await pool.query(schema);
 
 const users = [
   { email: "prueba@smallhabits.com", name: "Prueba Miembro", role: "member", goal: "Tonificar", weight: 64.8 },
-  { email: "coach@smallhabits.com", name: "Maleja (coach)", role: "coach", goal: "Salud integral", weight: null },
+  { email: "coach@smallhabits.com", name: "Coach Demo", role: "coach", goal: "Salud integral", weight: null },
 ];
 const hash = await bcrypt.hash("demo1234", 10);
 const secret = new TextEncoder().encode(process.env.AUTH_SECRET);
