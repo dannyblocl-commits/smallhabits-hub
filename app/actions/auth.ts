@@ -53,3 +53,13 @@ export async function updateProfile(_: AuthState, form: FormData): Promise<AuthS
   if (weight) await db().query("insert into progress_entries (user_id, weight) values ($1,$2)", [user.id, weight]);
   redirect("/dashboard");
 }
+
+// Cuentas creadas con Google no pasan por el formulario de registro: aquí una coach canjea su código desde su perfil.
+export async function becomeCoach(form: FormData) {
+  const user = await requireUser();
+  const code = String(form.get("coach_code") || "").trim().toUpperCase();
+  const ok = !!process.env.COACH_INVITE_CODE && code === process.env.COACH_INVITE_CODE.toUpperCase();
+  if (!ok) redirect("/dashboard/profile?coach=bad");
+  await db().query("update users set role='coach', coach_id=null where id=$1 and role<>'coach'", [user.id]);
+  redirect("/coach");
+}
