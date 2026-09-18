@@ -109,6 +109,25 @@ export function ensureSchema() {
         free boolean not null default false, sort int not null default 100,
         updated_by uuid references users(id), updated_at timestamptz default now()
       );
+      alter table routines add column if not exists name text not null default '';
+      alter table routines add column if not exists description text default '';
+      alter table routines add column if not exists type text not null default 'funcional';
+      alter table routines add column if not exists duration_minutes int not null default 20;
+      alter table routines add column if not exists difficulty text not null default 'beginner';
+      alter table routines add column if not exists exercises jsonb not null default '[]';
+      alter table routines add column if not exists free boolean not null default false;
+      alter table routines add column if not exists sort int not null default 100;
+      alter table routines add column if not exists updated_at timestamptz default now();
+      alter table menus add column if not exists name text not null default '';
+      alter table menus add column if not exists kcal int not null default 1800;
+      alter table menus add column if not exists macros text default '';
+      alter table menus add column if not exists goal text default 'Salud integral';
+      alter table menus add column if not exists meals jsonb not null default '[]';
+      alter table menus add column if not exists recipes jsonb not null default '[]';
+      alter table menus add column if not exists brands text default '';
+      alter table menus add column if not exists free boolean not null default false;
+      alter table menus add column if not exists sort int not null default 100;
+      alter table menus add column if not exists updated_at timestamptz default now();
       create table if not exists recommendations (
         id uuid primary key default gen_random_uuid(),
         user_id uuid references users(id) on delete cascade,
