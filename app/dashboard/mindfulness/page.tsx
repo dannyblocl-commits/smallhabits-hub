@@ -25,7 +25,7 @@ export default async function Mindfulness({ searchParams }: { searchParams: Prom
   return (
     <AppShell title={L.mind.title} kicker={L.mind.kicker}>
       <div className="relative rounded-[28px] overflow-hidden h-44 md:h-56 mb-5 lift-sage">
-        <HeroVideo src="/videos/paz-mental.mp4" poster="/img/gal_campo.jpg" className="absolute inset-0 w-full h-full object-cover" label="Maleja" />
+        <HeroVideo src="/api/content/video/paz-mental" poster="/img/gal_campo.jpg" className="absolute inset-0 w-full h-full object-cover" label="Maleja" />
         <div className="absolute inset-0 veil" />
         <p className="quote absolute bottom-5 left-6 right-6 text-2xl" style={{ color: "var(--sage-soft)" }}>{L.mind.banner}</p>
       </div>

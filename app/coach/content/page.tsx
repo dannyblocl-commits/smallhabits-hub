@@ -5,6 +5,7 @@ import { Logo } from "@/components/Leaves";
 import { listRoutines, listMenus } from "@/lib/library";
 const sessions = [["m_1", "Reflexión: pequeños hábitos"], ["m_2", "Worship: gratitud y propósito"], ["m_3", "Meditación: antes de entrenar"], ["m_4", "Meditación: recuperación"], ["m_5", "Journal de la noche"], ["m_6", "Worship: paz en el presente"]];
 const langs = [["es", "ES"], ["en", "EN"], ["pt", "PT"]];
+const clips = [["hero", "Portada · gimnasio (inicio de la app)"], ["entrenar", "Entrenar · fondo de “Hoy” y rutinas de fuerza"], ["comer-bien", "Comer bien · cocina, fondo de los menús"], ["paz-mental", "Paz mental · campo, fondo de Mente y estiramientos"], ["progreso", "Progreso · caminata al amanecer"], ["ad", "Anuncio · para redes (no sale en la app)"]];
 const fmt = (iso: string) => new Date(iso).toLocaleString("es", { day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" });
 const mb = (n: number | null) => (n ? `${(n / 1_000_000).toFixed(1)} MB` : "");
 
@@ -18,7 +19,7 @@ export default async function CoachContent({ searchParams }: { searchParams: Pro
     const src = `/api/content/${k.replace(":", "/")}`;
     return (
       <div className="row p-4 flex flex-col md:flex-row md:items-center gap-3">
-        <div className="md:w-64"><div className="display text-sm">{label}</div><div className="faint text-xs">{r ? `Subido ${fmt(r.at)} · ${mb(r.size)}` : "Sin video propio: se muestra el clip de IA de ambiente (o el audio por defecto)"}</div></div>
+        <div className="md:w-64"><div className="display text-sm">{label}</div><div className="faint text-xs">{r ? `Subido ${fmt(r.at)} · ${mb(r.size)}` : "Sin archivo propio: se muestra el que trae la app"}</div></div>
         <div className="flex-1">{kind === "video" ? <video src={src} controls preload="metadata" className="h-28 rounded-[8px] bg-black" /> : <audio src={src} controls preload="metadata" className="w-full max-w-sm" />}</div>
         <form action={uploadContent} className="flex items-center gap-2">
           <input type="hidden" name="key" value={k} />
@@ -44,7 +45,11 @@ export default async function CoachContent({ searchParams }: { searchParams: Pro
         <p className="muted text-sm mb-6 max-w-2xl">Sube tus propios videos de cada rutina y menú, y los audios de cada sesión. Se reemplazan al instante para todas las miembros; el anterior se borra. Formato recomendado: video vertical 1080×1920 MP4 (máx. 200 MB), audio MP3 o M4A.</p>
         {sp.ok && <div className="row p-3 mb-5 text-sm" style={{ borderColor: "var(--sage)" }}>Listo: <b className="display">{sp.ok.replace(":", " · ")}</b> actualizado.</div>}
 
-        <h2 className="text-2xl mt-6 mb-3">Rutinas</h2>
+        <h2 className="text-2xl mt-6 mb-1">Clips de la app (hechos con IA)</h2>
+        <p className="muted text-sm mb-3">Son los seis clips de ambiente que aparecen en la portada, en “Hoy”, en Mente y en Progreso, y de respaldo en rutinas y menús sin video propio. Puedes reemplazar cualquiera por una grabación tuya.</p>
+        <div className="space-y-2">{clips.map(([id, n]) => <Row key={id} k={`video:${id}`} label={n} accept="video/*" kind="video" />)}</div>
+
+        <h2 className="text-2xl mt-8 mb-3">Rutinas</h2>
         <div className="space-y-2">{demoRoutines.map((r) => <Row key={r.id} k={`video:${r.id}`} label={`${r.name} · ${r.duration_minutes} min`} accept="video/*" kind="video" />)}</div>
 
         <h2 className="text-2xl mt-8 mb-3">Menús</h2>

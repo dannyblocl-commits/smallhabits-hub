@@ -6,7 +6,7 @@ import { db } from "@/lib/db";
 import { requireCoach } from "@/lib/auth";
 
 // Claves válidas: video:<id de rutina o menú> · audio:<id de sesión>.<idioma>
-const VIDEO_IDS = ["routine_1", "routine_2", "routine_3", "routine_4", "routine_5", "menu_1", "menu_2", "menu_3", "menu_4"];
+const VIDEO_IDS = ["routine_1", "routine_2", "routine_3", "routine_4", "routine_5", "menu_1", "menu_2", "menu_3", "menu_4", "hero", "ad", "entrenar", "comer-bien", "paz-mental", "progreso"];
 const AUDIO_IDS = ["m_1", "m_2", "m_3", "m_4", "m_5", "m_6"];
 const LANGS = ["es", "en", "pt"];
 

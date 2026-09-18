@@ -32,7 +32,7 @@ export default async function Dashboard() {
       <p className="quote text-xl muted -mt-3 mb-6">{L.dash.quote}</p>
 
       <div className="relative rounded-[28px] overflow-hidden min-h-[260px] flex items-end mb-5 lift">
-        <HeroVideo src="/videos/entrenar.mp4" poster="/img/gal_fuerza.jpg" className="absolute inset-0 w-full h-full object-cover object-[center_30%]" label="Maleja" />
+        <HeroVideo src="/api/content/video/entrenar" poster="/img/gal_fuerza.jpg" className="absolute inset-0 w-full h-full object-cover object-[center_30%]" label="Maleja" />
         <div className="absolute inset-0 veil" />
         <div className="relative p-6 w-full flex flex-wrap items-end justify-between gap-4">
           <div>

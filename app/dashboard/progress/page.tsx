@@ -33,7 +33,7 @@ export default async function Progress() {
   return (
     <AppShell title={L.progress.title} kicker={L.progress.kicker}>
       <div className="relative rounded-[28px] overflow-hidden h-44 md:h-56 mb-5 lift">
-        <HeroVideo src="/videos/progreso.mp4" poster="/img/gal_parque.jpg" className="absolute inset-0 w-full h-full object-cover" label="Maleja" />
+        <HeroVideo src="/api/content/video/progreso" poster="/img/gal_parque.jpg" className="absolute inset-0 w-full h-full object-cover" label="Maleja" />
         <div className="absolute inset-0 veil" />
         <div className="absolute bottom-5 left-6"><span className="pill pill-f">{L.progress.racha} {s.activeDays}</span><h2 className="text-3xl mt-2">{L.progress.banner}</h2></div>
       </div>
