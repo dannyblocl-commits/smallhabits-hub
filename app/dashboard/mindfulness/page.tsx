@@ -42,7 +42,7 @@ export default async function Mindfulness({ searchParams }: { searchParams: Prom
             <div className="card lift-sage p-8 text-center">
               <span className="pill pill-s">{type} · {sel.min} {L.common.min}</span>
               <h2 className="text-3xl mt-3">{title}</h2>
-              <div className="mt-5 text-left"><AudioCard src={`/audio/${sel.id}.${lang}.mp3`} title={`${L.mind.guiada} · ${title}`} labels={{ play: L.mind.play, pause: L.mind.pause, missing: L.mind.missing }} /></div>
+              <div className="mt-5 text-left"><AudioCard src={`/api/content/audio/${sel.id}.${lang}`} title={`${L.mind.guiada} · ${title}`} labels={{ play: L.mind.play, pause: L.mind.pause, missing: L.mind.missing }} /></div>
               <p className="quote text-2xl mt-6 max-w-xl mx-auto" style={{ color: "var(--sage-soft)" }}>“{text}”</p>
               {sel.journal && <textarea rows={5} placeholder={L.mind.journalPh} className="input input-s mt-6" />}
               <div className="flex gap-3 justify-center mt-6"><button className="btn btn-balance">{L.mind.completar}</button><button className="btn btn-ghost">{L.mind.guardar}</button></div>

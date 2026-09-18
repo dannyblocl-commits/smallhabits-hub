@@ -53,6 +53,11 @@ export function ensureSchema() {
         at timestamptz default now()
       );
       create index if not exists photos_user_at on photos(user_id, at desc);
+      create table if not exists content_media (
+        key text primary key,
+        pathname text not null, content_type text not null, size int,
+        uploaded_by uuid references users(id), at timestamptz default now()
+      );
       create table if not exists user_menus (
         id uuid primary key default gen_random_uuid(),
         user_id uuid references users(id) on delete cascade,

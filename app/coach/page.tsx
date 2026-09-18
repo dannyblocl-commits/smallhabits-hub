@@ -61,9 +61,9 @@ export default async function CoachPanel() {
       <div className="max-w-7xl mx-auto px-5 py-6 grid lg:grid-cols-[220px_1fr] gap-6">
         <aside className="space-y-4">
           <div className="hidden lg:block text-sm space-y-1">
-            {[["Miembros", true], ["Rutinas", false], ["Menús", false], ["Sesiones 1:1", false], ["Ingresos", false]].map(([l, on]) => (
-              <div key={l as string} className={`px-3 py-2 rounded-[12px] ${on ? "row" : "faint"}`} style={on ? { color: "var(--sage)" } : undefined}>{l}</div>
-            ))}
+            <div className="px-3 py-2 rounded-[12px] row" style={{ color: "var(--sage)" }}>Miembros</div>
+            <Link href="/coach/content" className="block px-3 py-2 rounded-[12px] muted hover:text-[var(--text)]">Videos y audios</Link>
+            {["Sesiones 1:1", "Ingresos"].map((l) => <div key={l} className="px-3 py-2 rounded-[12px] faint">{l}</div>)}
           </div>
           <form action={updateCoachProfile} className="card p-4 space-y-2">
             <div className="eyebrow" style={{ color: "var(--sage)" }}>Mi perfil público</div>

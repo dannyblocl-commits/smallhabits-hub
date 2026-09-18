@@ -41,7 +41,7 @@ export default async function Routines({ searchParams }: { searchParams: Promise
                 <div><span className={`pill ${calm ? "pill-s" : "pill-f"}`}>{sel.type}</span><h2 className="text-3xl mt-2">{name(sel.id)}</h2><p className="muted text-sm mt-1">{desc(sel.id)}</p></div>
                 <span className="pill">{sel.difficulty}</span>
               </div>
-              <div className="mt-5"><VideoCard src={`/videos/${sel.id}.mp4`} fallback={calm ? "/videos/paz-mental.mp4" : "/videos/entrenar.mp4"} title={`${L.routines.demo} · ${name(sel.id)}`} emoji="▶" /></div>
+              <div className="mt-5"><VideoCard src={`/api/content/video/${sel.id}`} fallback={calm ? "/videos/paz-mental.mp4" : "/videos/entrenar.mp4"} title={`${L.routines.demo} · ${name(sel.id)}`} emoji="▶" /></div>
             </div>
 
             <Timer steps={steps} routineId={sel.id} routineType={sel.type} tone={calm ? "sage" : "fucsia"} labels={L.routines} />
