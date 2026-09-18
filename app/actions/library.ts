@@ -76,3 +76,52 @@ export async function deleteRecommendation(form: FormData) {
   await db().query("delete from recommendations where id=$1 and coach_id=$2", [id, coach.id]);
   redirect(`/coach/${userId}`);
 }
+
+// ---------- Recetario y hacks (la coach edita en español; la app traduce sola a EN/PT) ----------
+import { seedRecetario, getRecipe, getLesson, RECIPE_CATEGORIES } from "@/lib/library";
+import { translateContent } from "@/lib/translate";
+
+const lines = (v: FormDataEntryValue | null, max = 40, each = 240) => String(v ?? "").split("\n").map((s) => s.trim().replace(/^[-•]\s*/, "")).filter(Boolean).slice(0, max).map((s) => s.slice(0, each));
+
+export async function saveRecipe(form: FormData) {
+  const coach = await requireCoach(); await seedRecetario();
+  const id = clean(form.get("id"), 80) || null;
+  const name = clean(form.get("name"), 120); if (!name) return;
+  const category = RECIPE_CATEGORIES.some((c) => c.id === form.get("category")) ? String(form.get("category")) : "desayunos";
+  const ingredients = lines(form.get("ingredients")); const steps = clean(form.get("steps"), 3000); const tips = clean(form.get("tips"), 800);
+  const tags = clean(form.get("tags"), 200).split(",").map((s) => s.trim()).filter(Boolean).slice(0, 8);
+  const prev = id ? await getRecipe(id) : null;
+  const same = prev && prev.name === name && prev.steps === steps && prev.tips === tips && JSON.stringify(prev.ingredients) === JSON.stringify(ingredients);
+  const i18n = same ? prev.i18n : (await translateContent({ name, ingredients, steps, tips })) ?? {};
+  const vals = [category, name, JSON.stringify(ingredients), steps, tips, JSON.stringify(tags), JSON.stringify(i18n), form.get("free") === "on", int(form.get("sort"), 100, 0, 999), coach.id];
+  if (id) await db().query("update recipes set category=$1, name=$2, ingredients=$3, steps=$4, tips=$5, tags=$6, i18n=$7, free=$8, sort=$9, updated_by=$10, updated_at=now() where id=$11", [...vals, id]);
+  else await db().query("insert into recipes (category, name, ingredients, steps, tips, tags, i18n, free, sort, updated_by) values ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10)", vals);
+  redirect(`/coach/recipes?c=${category}&ok=1${same ? "" : "&tr=" + (Object.keys(i18n).length ? "ok" : "no")}`);
+}
+
+export async function deleteRecipe(form: FormData) {
+  await requireCoach();
+  const id = clean(form.get("id"), 80);
+  const r = await db().query("delete from recipes where id=$1 returning category", [id]);
+  redirect(`/coach/recipes?c=${r.rows[0]?.category ?? ""}`);
+}
+
+export async function saveLesson(form: FormData) {
+  const coach = await requireCoach(); await seedRecetario();
+  const id = clean(form.get("id"), 80) || null;
+  const title = clean(form.get("title"), 120); if (!title) return;
+  const body = clean(form.get("body"), 6000);
+  const prev = id ? await getLesson(id) : null;
+  const same = prev && prev.title === title && prev.body === body;
+  const i18n = same ? prev.i18n : (await translateContent({ title, body })) ?? {};
+  const vals = [title, body, JSON.stringify(i18n), form.get("free") === "on", int(form.get("sort"), 100, 0, 999), coach.id];
+  if (id) await db().query("update lessons set title=$1, body=$2, i18n=$3, free=$4, sort=$5, updated_by=$6, updated_at=now() where id=$7", [...vals, id]);
+  else await db().query("insert into lessons (title, body, i18n, free, sort, updated_by) values ($1,$2,$3,$4,$5,$6)", vals);
+  redirect(`/coach/learn?ok=1${same ? "" : "&tr=" + (Object.keys(i18n).length ? "ok" : "no")}`);
+}
+
+export async function deleteLesson(form: FormData) {
+  await requireCoach();
+  await db().query("delete from lessons where id=$1", [clean(form.get("id"), 80)]);
+  redirect("/coach/learn");
+}

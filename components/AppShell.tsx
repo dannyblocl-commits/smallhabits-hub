@@ -19,6 +19,8 @@ export async function AppShell({ children, title, kicker, requires }: { children
   ];
   const more = [
     { href: "/dashboard/nutrition", label: L.nav.menus },
+    { href: "/dashboard/recipes", label: L.nav.recetas },
+    { href: "/dashboard/learn", label: L.nav.aprende },
     { href: "/dashboard/menus", label: L.menus.title },
     { href: "/dashboard/photos", label: L.photos.title },
     { href: "/dashboard/chat", label: L.nav.chat },

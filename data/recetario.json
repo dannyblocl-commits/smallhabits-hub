@@ -1,0 +1,651 @@
+{
+  "categories": [
+    { "id": "bebidas", "name": "Infusiones y bebidas", "free": true },
+    { "id": "desayunos", "name": "Desayunos", "free": true },
+    { "id": "snacks", "name": "Snacks", "free": true },
+    { "id": "smoothies", "name": "Smoothies y batidos", "free": true },
+    { "id": "toppings", "name": "Toppings, salsas y vinagretas", "free": false },
+    { "id": "mealprep", "name": "Meal prep y panes", "free": false },
+    { "id": "postres", "name": "Postres express", "free": false },
+    { "id": "almuerzos", "name": "Almuerzos y cenas", "free": false },
+    { "id": "ensaladas", "name": "Bowls y ensaladas", "free": false },
+    { "id": "sopas", "name": "Cremas y sopas", "free": false }
+  ],
+  "recipes": [
+    {
+      "id": "r_aguas_saborizadas", "category": "bebidas", "name": "Aguas saborizadas e infusiones (reemplazan los jugos)",
+      "ingredients": [
+        "Agua, zumo de limón, stevia, menta o albahaca (o ambas). ¡Prometo que sabe delicioso!",
+        "Agua y flor de jamaica",
+        "Agua, limón y jengibre",
+        "Agua, limón, menta y abajo unas rodajas de naranja o cerezas",
+        "Agua, sandía en rodajas abajo, menta y pepino",
+        "Agua, fresas abajo, menta y limón",
+        "Agua, sandía, menta y albahaca o romero",
+        "Agua, rodajas de naranja abajo, jengibre y albahaca"
+      ],
+      "steps": "Al ser una infusión y no un batido, las cantidades de fruta deben ser pocas.\nPon la fruta o el vegetal en un recipiente y machácalo con una cuchara de madera si quieres más sabor; si quieres menos sabor, solo corta rodajas y déjalas en el fondo de la jarra. Quita cáscara y semillas si hace falta.\nAgrega un poco de la hierba o especia elegida. Si es aromática, mejor la hoja al natural: apriétala un poco para que suelte aroma y zumo.\nAñade agua y, si la quieres más fría, hielo justo al tomarla (así la jarra no se queda aguada en la nevera). En jarra de vidrio dura hasta 1 semana con sabor y propiedades.",
+      "tips": "Si te gustan dulces, ponle stevia líquida (yo las tomo así). Beneficios: sin azúcar añadida, ayudan con la retención de líquidos, suben las defensas y te hidratan; piel, pelo y uñas se ven mejor. Personaliza con: frutas (cítricos, frutos rojos, mango, kiwi, papaya, melón, sandía, pera, manzana, melocotón), vegetales (pepino, zanahoria, apio), hierbas (menta, salvia, albahaca, romero, lavanda, tomillo, diente de león, flor de jamaica, té verde, negro o rojo, moringa) y especias (canela, jengibre, pimienta negra).",
+      "tags": ["sin azúcar", "hidratación"]
+    },
+    {
+      "id": "r_infusiones_dormir", "category": "bebidas", "name": "Infusiones para dormir mejor",
+      "ingredients": ["Manzanilla", "Valeriana", "Toronjil", "Cúrcuma", "Pasionaria", "Té de ashwagandha", "Té BedTime (@NatMatStore)", "Vinagre de sidra de manzana (diluido en agua)"],
+      "steps": "Elige una y prepárala caliente en la noche.\nEn la cena incluye vegetales en cualquier presentación.\nEvita carnes rojas, procesados, alimentos altos en azúcar, café o estimulantes en la noche.\nOjalá puedas cenar antes de las 7:30–8:00 PM.\nLa fruta y los carbohidratos en la noche no engordan, pero te dan energía y pueden afectar el sueño: mejor en desayuno, snack o almuerzo.\nComer grasas buenas en la noche ayuda a conciliar el sueño: un bowl de verduras, proteína y grasas buenas es buena opción (mide la porción de grasas).",
+      "tips": "", "tags": ["sueño", "noche"]
+    },
+    {
+      "id": "r_jugos_verdes", "category": "bebidas", "name": "Jugos verdes (bonus)",
+      "ingredients": [
+        "Extracto de apio solo (en extractor, o en licuadora con un poco de agua y zumo de limón)",
+        "Media manzana, medio pepino, 4 hojas de espinaca, sábila, 1 cdita de semillas de chía y medio vaso grande de agua",
+        "Media rodaja de piña, espinaca o acelga, sábila y medio pepino",
+        "Zumo de limón, espinaca o acelga, medio pepino y 1 cdita de linaza"
+      ],
+      "steps": "Ideal antes del desayuno. Combina como quieras, pero solo UNA fruta con 3 o 4 verduras. Licúa y disfruta.",
+      "tips": "Están llenos de fibra: bajan colesterol y glucosa, dan saciedad y regulan la limpieza del cuerpo. El primer día quizás no te guste tanto; luego lo vas a amar. No es obligatorio todos los días: es una forma de consentirte y empezar bien el día.",
+      "tags": ["fibra", "mañana"]
+    },
+
+    {
+      "id": "r_desayuno_tradicional", "category": "desayunos", "name": "Desayuno tradicional",
+      "ingredients": ["2 claras + 1 huevo entero", "Vegetales: champiñones, espinaca, zucchini, berenjena, tomate, cebolla, pimentón o rúgula", "Aceite de aguacate, ghee o aceite de coco", "Sal marina o rosada y pimienta negra", "1 arepa de yuca, arroz integral o maíz 100% artesanal"],
+      "steps": "Revuelve los huevos con los vegetales en un poco de aceite de aguacate, ghee o coco.\nAcompaña con una arepa artesanal (revisa siempre su tabla nutricional e ingredientes).",
+      "tips": "En @NatMatStore hay gran variedad de arepas artesanales; en supermercados también, pero lee la etiqueta.",
+      "tags": ["huevos", "proteína"]
+    },
+    {
+      "id": "r_avotoast", "category": "desayunos", "name": "Avotoast",
+      "ingredients": ["2 claras + 1 huevo", "1 tostada de pan de avena o 100% integral", "Rodajas de aguacate", "Limón, pimienta negra, cebolla roja", "Vinagre de manzana (opcional)"],
+      "steps": "Revuelve los huevos con los vegetales que quieras o solos.\nSobre la tostada pon el aguacate con limón, vinagre de manzana, pimienta negra y cebolla roja.",
+      "tips": "", "tags": ["huevos", "aguacate"]
+    },
+    {
+      "id": "r_patacones_desayuno", "category": "desayunos", "name": "Patacones al desayuno",
+      "ingredients": ["1 huevo entero + 2 claras", "Tomate y cebolla", "Plátano verde tajado", "Un poco de aceite (con servilleta) y pizca de sal", "Queso de almendras o feta (opcional)"],
+      "steps": "Revuelve los huevos con tomate y cebolla.\nPatacones no fritos: pon el plátano tajado con un poco de aceite y sal en el airfryer a 380 °F por 2 minutos, voltea y 2 minutos más. Aplasta con la tostonera, vuelve al airfryer y dora al gusto.\nSirve los huevos sobre los patacones con un poco de queso de almendras o feta.",
+      "tips": "Haz el primer paso de los patacones en tu meal prep y al desayuno solo doras.",
+      "tags": ["huevos", "colombiano"]
+    },
+    {
+      "id": "r_keto_cheese_waffles", "category": "desayunos", "name": "Keto cheese waffles",
+      "ingredients": ["2/3 taza de harina de almendras", "2 tajadas de queso de almendras en trozos", "1 huevo", "1/3 taza de leche de coco", "1/2 cda de ghee derretido", "1/4 cdita de sal", "Para acompañar: 1 huevo frito en ghee, tomate, rúgula y aguacate (opcional)"],
+      "steps": "Calienta la wafflera o sartén a máxima temperatura.\nMezcla todos los ingredientes en un bowl.\nEngrasa muy bien la wafflera, vierte la mezcla y cocina 8 minutos.\nPonle los toppings saludables que quieras.",
+      "tips": "Bajo en carbohidrato, rico en proteína y grasas buenas.", "tags": ["keto", "low carb"]
+    },
+    {
+      "id": "r_huevos_pomodoro", "category": "desayunos", "name": "Huevitos pomodoro en cacerola",
+      "ingredients": ["1 huevo + 2 claras", "Tomate y ajo", "Hierbas secas: laurel, orégano, tomillo", "1 cda de albahaca picada (al final)", "Queso de almendras o mozzarella de búfala", "Aceite de oliva, coco o aguacate", "Sal"],
+      "steps": "Haz la salsa: pica tomate y ajo, sofríe en un poco de aceite hasta que el tomate esté blando, agrega hierbas secas y tritura hasta tener una pasta.\nLleva la salsa a un sartén dejándola en los bordes, como un nido, y agrega los huevos en el centro.\nCocina a fuego muy bajo, tapando y destapando para que se cocinen parejo sin secarse. La sal va solo encima del huevo.\nAntes de retirar agrega un poco de queso; al servir, la albahaca picada (si la pones antes se pone negra).\nDisfruta con un carbohidrato de la lista recomendada.",
+      "tips": "", "tags": ["huevos"]
+    },
+    {
+      "id": "r_huevos_hogao", "category": "desayunos", "name": "Huevos con hogao saludable (típico colombiano)",
+      "ingredients": ["2 tomates", "1/2 berenjena mediana", "1 cebolla pequeña en cuadritos", "1 huevo + 2 claras", "Aceite recomendado, sal y pimienta"],
+      "steps": "Sofríe tomate, berenjena y cebolla a fuego medio bajo con sal y pimienta hasta que todo esté blandito, como un hogao.\nAgrega los huevos y cocina.\nDisfruta con un carbohidrato de la lista recomendada.",
+      "tips": "El hogao no debe quedar seco: si hace falta ponle un tris de agua. Puedes guardar hogao para otra porción u otra preparación.",
+      "tags": ["huevos", "colombiano"]
+    },
+    {
+      "id": "r_huevos_espinaca_cremosa", "category": "desayunos", "name": "Huevos con espinaca cremosa",
+      "ingredients": ["Un poco de cebolla y 1/2 diente de ajo", "Ghee", "2 puñados de espinaca", "4 cdas de yogurt griego sin sabor", "Un chorrito de leche de almendras", "Huevos", "Levadura nutricional o queso parmesano", "Sal y pimienta"],
+      "steps": "Sofríe la cebolla con el ajo en ghee, agrega la espinaca (se ve mucha y queda enana), el yogurt y la leche de almendras. Revuelve y agrega media cda más de ghee.\nPon encima los huevos, la levadura nutricional o parmesano, sal y pimienta.\nTapa y deja 3 minutos a fuego medio.\nDisfruta con un carbohidrato de la lista recomendada.",
+      "tips": "", "tags": ["huevos"]
+    },
+    {
+      "id": "r_maduro_huevo", "category": "desayunos", "name": "Maduro con huevo",
+      "ingredients": ["1 plátano maduro mediano", "Guacamole casero (aguacate, limón, vinagre de manzana, pimienta, cebolla, tomate)", "Huevos revueltos", "Queso tipo mozzarella de almendras (opcional)"],
+      "steps": "Cocina el maduro con cáscara en el microondas unos minutos.\nPártelo en dos, ábrelo y rellena con guacamole y huevos revueltos. Un toque de queso de almendras es opcional.",
+      "tips": "Porción recomendada: 1 maduro mediano.", "tags": ["huevos", "colombiano"]
+    },
+    {
+      "id": "r_huevos_zucchini_noodles", "category": "desayunos", "name": "Huevos con zucchini noodles (low carb)",
+      "ingredients": ["1 zucchini en noodles o julianas", "Huevos", "Queso de almendras (opcional)", "Salsa picante o salsa de tomate casera (opcional)"],
+      "steps": "Pon los noodles en un sartén, abre un hueco en el medio y agrega los huevos.\nCocina tapado, como un huevo frito.\nSi quieres carbohidrato complejo acompaña con media arepa o 1 rebanada de pan integral.",
+      "tips": "La maquinita de noodles es súper económica; si no la tienes, corta julianas largas.", "tags": ["low carb", "huevos"]
+    },
+    {
+      "id": "r_arepa_choclo", "category": "desayunos", "name": "Arepa de choclo sin choclo",
+      "ingredients": ["1 huevo + 1 clara", "2 cdas de harina de coco", "2 cdas de yogurt griego", "1 o 2 tajadas de queso de almendras o mozzarella baja en grasa", "Pizca de sal marina o rosada", "1/2 cdita de polvo para hornear", "Stevia líquida (le da el sabor dulce)", "3 cdas de agua"],
+      "steps": "Mezcla todos los ingredientes menos el queso. Prueba la mezcla antes de cocinarla para ajustar el dulce.\nEn un sartén engrasado pon la mitad de la mezcla bien esparcida y tapa 1 minuto.\nDestapa, pon el queso y vierte la otra mitad cubriéndolo bien para que quede en el centro.\nTapa, deja cocinar un poco y voltea para dorar el otro lado.",
+      "tips": "", "tags": ["colombiano", "sin gluten"]
+    },
+    {
+      "id": "r_desayuno_dulce_salado", "category": "desayunos", "name": "Desayuno dulce y salado",
+      "ingredients": ["1 huevo + 2 claras revueltos con ghee", "Germinados (encima de los huevos)", "1 pan tostado 100% integral o de avena", "1 cdita de crema de maní", "Rodajas de fruta", "Yogurt griego con fruta"],
+      "steps": "Revuelve los huevos con ghee y ponles germinados encima: sabe rico y es alto en nutrientes.\nAl lado, la tostada con crema de maní y fruta.\nAcompaña con yogurt griego revuelto con fruta para más saciedad y proteína.",
+      "tips": "", "tags": ["huevos"]
+    },
+    {
+      "id": "r_tostadas_francesas", "category": "desayunos", "name": "Tostadas francesas",
+      "ingredients": ["Pan integral, de avena o de almendras", "1 huevo", "1/3 taza de leche vegetal", "1 cdita de stevia y esencia de vainilla", "Toppings: fruta, mermelada casera, yogurt griego o mantequilla de maní"],
+      "steps": "Mezcla huevo, leche, stevia y vainilla en un bowl.\nBaña las tostadas en el líquido y llévalas al sartén; dora por ambos lados.\nSirve con los toppings que más te gusten.",
+      "tips": "", "tags": ["dulce"]
+    },
+    {
+      "id": "r_waffles_tocineta_fit", "category": "desayunos", "name": "Waffles con tocineta fit",
+      "ingredients": ["1 scoop de mix de waffles (@NatMatStore: banano, brownie o vainilla)", "2 cdas de leche vegetal o yogurt griego", "Toppings: queso cuajada o cottage, arándanos, trocitos de jamón de pavo bajo en sodio hecho tocineta, y miel"],
+      "steps": "Mezcla el mix con la leche o yogurt (no necesita huevo).\nCocina en sartén a fuego medio bajo por lado y lado.\nSirve con los toppings.",
+      "tips": "La tocineta healthy está en Toppings.", "tags": ["dulce"]
+    },
+    {
+      "id": "r_pancakes_avena", "category": "desayunos", "name": "Pancakes o waffles de avena",
+      "ingredients": ["40 g de harina de avena (aprox. 4 cdas)", "1 huevo", "3 cdas de yogurt griego", "Stevia líquida", "Canela (o cacao en polvo para versión chocolate)", "Toppings: fruta y miel 100% pura o yogurt griego"],
+      "steps": "Revuelve todo y vierte en un sartén a fuego medio bajo.\nCuando salgan burbujitas, voltea.\nLo que varía entre pancake y waffle es si lo haces en sartén o wafflera.",
+      "tips": "Versión chocolate: cacao en polvo en vez de canela. Queda delicioso.", "tags": ["dulce", "avena"]
+    },
+    {
+      "id": "r_pancakes_arandanos", "category": "desayunos", "name": "Pancakes o waffles con arándanos",
+      "ingredients": ["2 huevos", "40 g de avena en hojuelas (1/3 taza aprox.)", "1/2 taza de arándanos", "2 cditas de semillas de chía", "1/4 cdita de polvo para hornear", "Stevia al gusto", "Toppings: arándanos, mantequilla de maní o marañón, semillas de calabaza"],
+      "steps": "Mezcla todos los ingredientes menos los arándanos.\nEn un sartén engrasado a fuego medio haz los pancakes y pon 5–6 arándanos sobre cada uno.\nCuando salgan burbujas, voltea.\nHazlos pequeños para una torre o grandes si quieres algo más práctico. Monta la torre y pon los toppings.",
+      "tips": "", "tags": ["dulce", "avena"]
+    },
+    {
+      "id": "r_porridge_clasico", "category": "desayunos", "name": "Porridge clásico",
+      "ingredients": ["4 o 5 cdas de avena en hojuelas", "Medio vaso de agua", "Medio vaso de leche vegetal", "Canela y stevia al gusto"],
+      "steps": "Hierve el agua o la leche; cuando empiece a hervir añade la avena y remueve a fuego lento.\nAguada o espesa, según tu gusto. Cuando esté como te gusta, tapa y deja reposar.\nAñade los toppings que quieras.",
+      "tips": "Para que rinda más: cocínala en agua la noche anterior, déjala en la nevera y en la mañana agrégale agua o leche de almendras y calienta unos minutos en el microondas. Queda con más volumen.",
+      "tags": ["avena"]
+    },
+    {
+      "id": "r_avena_proteica_express", "category": "desayunos", "name": "Avena proteica express",
+      "ingredients": ["4 cdas de avena", "40 g de frutos rojos", "4 rodajas de banano", "Canela", "1/2 taza de agua", "1 scoop de proteína", "1/2 taza de leche vegetal (coco o avena)", "Stevia líquida"],
+      "steps": "Pon todo menos la proteína en una olla y deja hervir sin dejar de mover para que no se pegue.\nAparte mezcla el scoop de proteína con la leche vegetal y stevia; revuelve muy bien y agrégalo.\nSi quieres, frutos secos encima.",
+      "tips": "", "tags": ["avena", "proteína"]
+    },
+    {
+      "id": "r_avena_chocolate", "category": "desayunos", "name": "Avena de chocolate",
+      "ingredients": ["4 cdas o 1/2 taza de avena", "1/2 taza de agua", "1/2 taza de leche", "1 cdita de cacao en polvo sin azúcar", "Canela y stevia", "Topping: 1 kiwi y coco rallado"],
+      "steps": "Junta todos los ingredientes y llévalos al microondas unos 2 minutos.\nSirve con kiwi y coco rallado: queda delicioso.",
+      "tips": "", "tags": ["avena", "cacao"]
+    },
+    {
+      "id": "r_avena_cacao_cafe", "category": "desayunos", "name": "Avena de cacao, café y peanut butter",
+      "ingredients": ["4 o 5 cdas de avena remojada la noche anterior", "1 pocillo de leche vegetal", "1 astilla de canela y canela en polvo", "Stevia", "1/4 taza de cacao en polvo", "2 cdas de mantequilla de maní", "Stevia o miel", "1 shot de café"],
+      "steps": "Cocina la avena con la leche y la canela a fuego medio por 7 minutos.\nAgrega el cacao, la mantequilla de maní y stevia o miel. Apaga y reposa 2 minutos.\nSirve con un shot de café y revuelve.",
+      "tips": "", "tags": ["avena", "cacao", "café"]
+    },
+    {
+      "id": "r_bowl_proteico", "category": "desayunos", "name": "Bowl proteico",
+      "ingredients": ["150 g de yogurt griego o de coco", "Granola artesanal sin azúcar, keto o avena", "1 cdita de semillas de chía (opcional)", "Fruta según tu porción sugerida", "1 scoop o medio de proteína (opcional)", "1 cdita de crema de maní o frutos secos para más saciedad"],
+      "steps": "Sirve el yogurt de base, agrega granola, chía y fruta.\nSi quieres más proteína, mezcla el scoop en el yogurt: queda delicioso.",
+      "tips": "", "tags": ["proteína", "sin cocinar"]
+    },
+    {
+      "id": "r_crumble_arandanos", "category": "desayunos", "name": "Crumble de arándanos saludable",
+      "ingredients": ["3 o 4 cdas de avena en hojuelas", "2 cdas de harina de avena", "2 cdas de miel de abejas o maple", "1 cdita de canela en polvo", "1 taza de arándanos frescos o congelados", "Topping: 3 cdas de yogurt griego con 1 cdita de maple o canela"],
+      "steps": "Revuelve avena, harina, miel y canela.\nPon los arándanos en una refractaria y encima la mezcla de avena.\nHorno a 180 °C por 20 minutos o hasta que dore; en airfryer 360 °F por 15 minutos aprox.\nAcompaña con proteína, por ejemplo huevos.",
+      "tips": "", "tags": ["dulce", "avena"]
+    },
+
+    {
+      "id": "r_galletas_arroz", "category": "snacks", "name": "Galletas de arroz inflado: dulce y salada",
+      "ingredients": ["2 galletas de arroz inflado", "Dulce: mermelada casera sin azúcar + 2 fresas, o Nutella saludable + banano o fresas", "Salada: guacamole, tomate cherry, rúgula, orégano y semillas", "Tu bebida favorita"],
+      "steps": "Arma la dulce y la salada, y acompáñalas con tu bebida favorita.",
+      "tips": "La mermelada, el guacamole y la Nutella saludable están en Toppings y Postres.", "tags": ["express"]
+    },
+    {
+      "id": "r_snack_citrico", "category": "snacks", "name": "Snack cítrico",
+      "ingredients": ["Manzana o fresas en rodajas", "Pepino en rodajas", "Limón", "Tajín bajo en sodio (picante opcional) o vinagre de manzana con stevia y limón", "Frutos secos"],
+      "steps": "Pon la fruta y el pepino con limón y tajín (o el aderezo de vinagre, stevia y limón). Acompaña con frutos secos.",
+      "tips": "", "tags": ["express", "fruta"]
+    },
+    {
+      "id": "r_yogurt_manzana_caramelizada", "category": "snacks", "name": "Yogurt griego con manzana caramelizada",
+      "ingredients": ["1/2 manzana pelada en cuadritos", "Agua, stevia y mucha canela", "150 g de yogurt griego", "Stevia, canela y esencia de vainilla", "Frutos secos (para más saciedad)"],
+      "steps": "Pon la manzana en un sartén casi cubierta con agua, stevia y canela. Cocina revolviendo; si el agua se seca agrega más, hasta que esté blandita.\nMezcla el yogurt con stevia, canela y vainilla.\nSirve la manzana sobre el yogurt y agrega más canela.",
+      "tips": "", "tags": ["dulce"]
+    },
+    {
+      "id": "r_snacks_frutas", "category": "snacks", "name": "Snacks express con frutas (7 ideas)",
+      "ingredients": [
+        "Banano partido a la mitad untado con Nutella saludable, crema de maní o arequipe de almendras sin azúcar, con frutos secos o granola artesanal encima (o en rodajas tipo mini sándwich)",
+        "Manzana en rodajas delgadas bañadas en chocolate derretido al baño maría; deja secar o refrigera",
+        "1 kiwi + 1 puñado de almendras + crispetas de aire sin aceite",
+        "1 taza de fresas revueltas con Nutella saludable y yogurt",
+        "Parfait: capas de yogurt, un tris de granola sin azúcar (o cereal integral o avena) y fruta (yo amo fresas y arándanos)",
+        "Sándwich de manzana con crema de maní y granola",
+        "1 tostada de pan integral con crema de maní y fruta"
+      ],
+      "steps": "Elige una según tu porción recomendada.",
+      "tips": "", "tags": ["express", "fruta"]
+    },
+    {
+      "id": "r_chips_papas_saladas", "category": "snacks", "name": "Chips de papa saladas (microondas)",
+      "ingredients": ["2 papas", "Sal y pimienta", "Agua"],
+      "steps": "Pela y lava las papas y córtalas muy finas (un par de milímetros) con cuchillo, mandolina o pelapapas.\nRemójalas 15 minutos en agua con sal y pimienta.\nCuela y seca presionando entre dos paños, sin encimarlas.\nPonlas separadas en un plato apto para microondas, 2 minutos a potencia máxima. Voltea y repite 4 o 5 veces hasta que estén doradas.",
+      "tips": "Los paquetes ultraprocesados no aportan nada; reemplazar es una opción deliciosa y nutritiva.", "tags": ["crujiente"]
+    },
+    {
+      "id": "r_chips_papas_mostaza", "category": "snacks", "name": "Chips de papa con mostaza y hierbas",
+      "ingredients": ["2 papas", "Sal, orégano, mostaza, ajo en polvo, albahaca y pimentón"],
+      "steps": "Mismo procedimiento de las chips saladas: cortar muy fino, remojar 15 minutos, secar bien y microondas de 2 en 2 minutos, volteando, hasta que doren.\nSazona con la mostaza y las hierbas antes de llevarlas al microondas.",
+      "tips": "", "tags": ["crujiente"]
+    },
+    {
+      "id": "r_chips_vegetales", "category": "snacks", "name": "Chips de vegetales (2 porciones)",
+      "ingredients": ["1 berenjena", "1 calabacín", "1 zanahoria", "Aceite de oliva o aguacate", "Sal, pimienta y perejil", "1 chorrito de limón"],
+      "steps": "Corta los vegetales en rodajas muy finas (mandolina si tienes): el corte parejo es la clave de lo crujiente.\nPonlas sobre papel de horno con un poco de aceite para que no se peguen.\nHorno precalentado a 180 °C por 15–20 minutos, volteando a la mitad.",
+      "tips": "", "tags": ["crujiente", "vegetales"]
+    },
+
+    {
+      "id": "r_batido_proteico", "category": "smoothies", "name": "Batido proteico",
+      "ingredients": ["1 scoop de proteína", "Medio vaso de leche vegetal", "Medio vaso de agua", "Canela y stevia al gusto"],
+      "steps": "Licúa todo.",
+      "tips": "Para que quede tipo malteada: congela zucchini y ponlo en la licuadora, o mucho hielo, o yogurt griego con gelatina sin sabor.", "tags": ["proteína"]
+    },
+    {
+      "id": "r_batido_cafe_chocolate", "category": "smoothies", "name": "Batido proteico con café o chocolate",
+      "ingredients": ["1 scoop de proteína", "1 o 2 shots de café (o café granulado), o 1 cda de chocolate en polvo", "Medio vaso de leche vegetal", "Stevia", "1 cdita de mantequilla de maní para más saciedad"],
+      "steps": "Licúa todo y disfruta.",
+      "tips": "", "tags": ["proteína", "café"]
+    },
+    {
+      "id": "r_batido_malteada_postre", "category": "smoothies", "name": "Batido malteada postre",
+      "ingredients": ["1 scoop de proteína", "Medio banano congelado", "1 cda de mantequilla de maní", "Hielo", "Cacao en polvo si lo quieres más dulce"],
+      "steps": "Licúa muy bien y disfruta.",
+      "tips": "", "tags": ["proteína", "dulce"]
+    },
+    {
+      "id": "r_malteada_frutos_rojos", "category": "smoothies", "name": "Malteada de frutos rojos",
+      "ingredients": ["1 scoop de proteína", "Mix de frutos rojos congelados", "Puñado pequeño de nueces o 1 cdita de crema de maní", "Media taza de leche vegetal o yogurt", "Espinaca", "Linaza (opcional)", "1/2 taza de agua", "Hielo (opcional)"],
+      "steps": "Licúa muy bien y disfruta.",
+      "tips": "", "tags": ["proteína", "fruta"]
+    },
+    {
+      "id": "r_vanilla_pumpkin_pie", "category": "smoothies", "name": "Vanilla pumpkin pie",
+      "ingredients": ["1 scoop de proteína", "Media taza de ahuyama cocida", "Puñado pequeño de nueces o crema de maní", "Linaza (opcional)", "3 cdas de avena en hojuelas", "Canela en polvo", "Extracto de vainilla (opcional)", "Media taza de agua, leche o yogurt", "Hielo"],
+      "steps": "Licúa todo hasta que quede cremoso.",
+      "tips": "", "tags": ["proteína"]
+    },
+    {
+      "id": "r_snickers_smoothie", "category": "smoothies", "name": "Snickers smoothie",
+      "ingredients": ["1 banano congelado", "1 pocillo de leche vegetal, o yogurt griego con agua", "2 dátiles", "1 cdita de cacao en polvo", "1 cdita de mantequilla de maní"],
+      "steps": "Licúa muy bien y disfruta.",
+      "tips": "", "tags": ["dulce"]
+    },
+
+    {
+      "id": "r_tocineta_healthy", "category": "toppings", "name": "Tocineta healthy express",
+      "ingredients": ["Jamón de pavo bajo en sodio en trozos pequeños", "Ghee o aceite de aguacate", "Canela y stevia", "Un poco de miel"],
+      "steps": "En un sartén pon el ghee o aceite con canela y stevia, agrega el jamón de pavo y revuelve bien.\nAgrega un poco de miel y revuelve hasta lograr el sabor dulce-salado.",
+      "tips": "Ten los toppings listos en la nevera: duran varios días. La clave es anticiparnos.", "tags": ["meal prep"]
+    },
+    {
+      "id": "r_mermelada_frutos_rojos", "category": "toppings", "name": "Mermelada casera de frutos rojos",
+      "ingredients": ["Fresas, arándanos y moras (o solo una)", "Agua y zumo de limón", "Vinagre de manzana", "Canela y stevia", "Semillas de chía"],
+      "steps": "Cocina la fruta en una ollita con agua, limón, vinagre, canela, stevia y chía unos minutos.\nCuando tenga consistencia de mermelada apaga, deja enfriar y envasa en vidrio. Dura días en la nevera.",
+      "tips": "Funciona con otras frutas: así tienes varias opciones.", "tags": ["sin azúcar", "meal prep"]
+    },
+    {
+      "id": "r_guacamole", "category": "toppings", "name": "Guacamole",
+      "ingredients": ["Aguacate", "Pizca de ajo finamente picado", "Cebolla morada finamente picada", "Cilantro al gusto", "Limón", "Sal marina y pimienta negra"],
+      "steps": "Tritura el aguacate, agrega el resto y prueba para ajustar sal y limón.",
+      "tips": "", "tags": ["grasas buenas"]
+    },
+    {
+      "id": "r_pure_coliflor", "category": "toppings", "name": "Puré de coliflor",
+      "ingredients": ["3 tazas de coliflor al vapor o hervida", "2 tallos de ajo porro en rueditas", "1/4 taza de caldo vegetal o agua con sal y pimienta", "Sal rosada o marina y pimienta", "Un poco de aceite"],
+      "steps": "Precalienta el horno a 375 °F o el airfryer. Rocía un sartén con aceite y blanquea el ajo porro.\nLicúa el ajo porro con la coliflor, el caldo, sal y pimienta. Si lo quieres espeso, menos líquido.\nPon en un molde refractario y hornea hasta que dore.",
+      "tips": "Para almuerzos y cenas.", "tags": ["low carb"]
+    },
+    {
+      "id": "r_batatas_horneadas", "category": "toppings", "name": "Batatas o papas “fritas” horneadas",
+      "ingredients": ["4 batatas medianas con piel, bien lavadas", "1 cdita de sal marina o rosada", "1 cdita de polvo de chile", "Pimienta molida", "Aceite en spray o con servilleta"],
+      "steps": "Precalienta el horno a 350 °F o el airfryer.\nCorta las batatas con piel en palitos de 1 cm.\nPonlas en una bolsa con sal, pimienta y chile; cierra y sacude.\nRocía una bandeja con spray, distribuye y hornea 30 minutos.",
+      "tips": "Más bajo en carbohidrato: usa ahuyama en vez de batata o papa.", "tags": ["almuerzo"]
+    },
+    {
+      "id": "r_pure_papas_rostizadas", "category": "toppings", "name": "Puré de papas rostizadas (2–3 porciones)",
+      "ingredients": ["4 papas", "3 ajos enteros", "2 cdas de cebollín", "Un chorrito de aceite de oliva", "6 cdas de caldo de vegetales o agua con sal y pimienta"],
+      "steps": "Hornea las papas enteras 35–45 minutos a 375 °F o en airfryer; pélalas después.\nHornea los ajos y el cebollín con el aceite 20 minutos hasta que estén dorados y suaves.\nHierve el caldo. Aplasta las papas, agrega ajos y cebollín, y ve añadiendo caldo hasta la consistencia de puré. Sal y pimienta.\nPasa a un refractario y hornea hasta que dore por arriba.",
+      "tips": "", "tags": ["almuerzo"]
+    },
+    {
+      "id": "r_salsa_tomate", "category": "toppings", "name": "Salsa de tomate casera",
+      "ingredients": ["2 tomates medianos (350 g aprox.)", "1 cebolla mediana (160 g aprox.)", "1 trozo de pimentón rojo", "3 ramitas de perejil o cilantro fresco", "1/2 cdita de orégano seco y 1/2 cdita de albahaca seca", "1 cdita de aceite de oliva o aguacate", "Pimienta negra molida y sal"],
+      "steps": "Corta tomate, cebolla pelada y pimentón en trozos de 1–2 cm.\nEn un sartén a fuego medio con el aceite, sofríe las verduras con sal y pimienta 10–15 minutos hasta que cojan color y el tomate esté blando.\nLicúa con perejil o cilantro, orégano y albahaca. Ajusta sal. Deja enfriar y guarda en la nevera.",
+      "tips": "", "tags": ["sin azúcar", "meal prep"]
+    },
+    {
+      "id": "r_salsa_bbq", "category": "toppings", "name": "Salsa BBQ casera",
+      "ingredients": ["Salsa de tomate casera", "1/4 taza de cebolla picada", "1/2 taza de agua", "1/4 taza de jugo de limón", "2 cdas de vinagre de manzana", "2 cdas de mostaza sin azúcar", "1 cda de stevia", "1/2 cdita de sal marina", "1/4 cdita de pimienta cayena o negra"],
+      "steps": "Mezcla todo en una olla pequeña y calienta 10–15 minutos. Deja enfriar y envasa: dura varios días en la nevera.",
+      "tips": "", "tags": ["sin azúcar", "meal prep"]
+    },
+    {
+      "id": "r_vinagreta_balsamico_miel", "category": "toppings", "name": "Vinagreta de balsámico y miel",
+      "ingredients": ["1 cdita de mostaza Dijon", "2 cdas de miel", "1/3 taza de vinagre balsámico", "1/3 taza de aceite de oliva", "Pizca de sal y pimienta"],
+      "steps": "Revuelve todo y listo. Sale buena cantidad: dura hasta un mes en la nevera.",
+      "tips": "", "tags": ["ensaladas"]
+    },
+    {
+      "id": "r_sriracha_mayo", "category": "toppings", "name": "Sriracha mayo",
+      "ingredients": ["2 cdas de yogurt griego", "1 cdita de sriracha", "2 gotitas de stevia líquida pura"],
+      "steps": "Mezcla y listo.",
+      "tips": "", "tags": ["bowls"]
+    },
+    {
+      "id": "r_vinagreta_mostaza", "category": "toppings", "name": "Vinagreta de mostaza",
+      "ingredients": ["1 cda de mostaza", "4 cdas de aceite de oliva (o 2 de aceite y 2 de agua)", "2 cdas de vinagre blanco", "Sal"],
+      "steps": "Mezcla en un bowl y remueve con cuchara hasta que espese.",
+      "tips": "", "tags": ["ensaladas"]
+    },
+    {
+      "id": "r_vinagreta_dulce", "category": "toppings", "name": "Vinagreta dulce express",
+      "ingredients": ["1 cda de zumo de limón", "2 cdas de vinagre de manzana", "Stevia líquida", "Canela en polvo", "Agua"],
+      "steps": "Revuelve muy bien.",
+      "tips": "", "tags": ["ensaladas", "sin azúcar"]
+    },
+    {
+      "id": "r_salsa_miso_mani", "category": "toppings", "name": "Salsa de miso y maní",
+      "ingredients": ["2 cdas de pasta miso blanca", "2 cdas de mantequilla de maní", "1 diente de ajo", "1/2 cdita de jengibre fresco", "1 cdita de vinagre de arroz o manzana", "2 cdas de miel o néctar de agave", "1/4 taza de agua", "1 cdita de semillas de sésamo"],
+      "steps": "Procesa todo en licuadora o procesador. Guarda en recipiente hermético en la nevera hasta 3 semanas.",
+      "tips": "Va con el wrap de col y salmón.", "tags": ["bowls"]
+    },
+    {
+      "id": "r_miel_mostaza", "category": "toppings", "name": "Miel mostaza cremosa",
+      "ingredients": ["3 cdas de mostaza Dijon", "1 cda de mostaza tradicional (que el ingrediente sea solo mostaza)", "1 cda de miel pura", "1 cdita de vinagre de sidra de manzana", "1/4 taza de yogurt griego", "1/4 cdita de sal rosada"],
+      "steps": "Mezcla todo en un tazón y guarda en recipiente hermético en la nevera hasta 3 semanas.",
+      "tips": "Para sándwich queda deli.", "tags": ["sándwich"]
+    },
+    {
+      "id": "r_pesto_kale", "category": "toppings", "name": "Pesto de kale",
+      "ingredients": ["2 tazas de col rizada (kale)", "2 tazas de albahaca fresca", "1 diente de ajo", "1/4 taza de piñones, almendras o nueces", "2 cdas de aceite de oliva extra virgen", "1/4 cdita de sal rosada"],
+      "steps": "Procesa todo y guarda en recipiente hermético en la nevera por unos días.",
+      "tips": "Para pastas o zucchini noodles queda delicioso.", "tags": ["pasta"]
+    },
+
+    {
+      "id": "r_patacones_airfryer", "category": "mealprep", "name": "Patacones “no fritos” en airfryer",
+      "ingredients": ["Plátano verde tajado", "Un poco de aceite (con servilleta)", "Pizca de sal"],
+      "steps": "Pon el plátano tajado con un poco de aceite y sal en el airfryer a 380 °F por 2 minutos; voltea y 2 minutos más.\nRetira y aplasta con la tostonera.\nVuelve al airfryer (con o sin aceite) y dora al gusto, volteando.",
+      "tips": "Haz el primer paso en tu meal prep y al desayuno solo el segundo.", "tags": ["colombiano"]
+    },
+    {
+      "id": "r_waffles_lowcarb", "category": "mealprep", "name": "Waffles low carb",
+      "ingredients": ["2 claras de huevo", "2 cdas de linaza molida", "Polvo para hornear", "Dulce: stevia y canela · Salado: orégano, sal y pimienta negra"],
+      "steps": "Mezcla todo y vierte en la wafflera engrasada y precalentada. Toppings al gusto.",
+      "tips": "", "tags": ["low carb"]
+    },
+    {
+      "id": "r_papas_fosforito", "category": "mealprep", "name": "Papas fosforito sin aceite",
+      "ingredients": ["1 papa pelada", "Sal", "Agua"],
+      "steps": "Ralla la papa y ponla en un colador. Pásala por agua 3 veces para quitar el exceso de almidón y agrega sal.\nPon papel aluminio en el fondo del airfryer y cocina por tandas a 400 °F hasta que doren.",
+      "tips": "El truco: la capa en el airfryer debe ser delgada para que todas se doren.", "tags": ["crujiente"]
+    },
+    {
+      "id": "r_quinoa", "category": "mealprep", "name": "Quinoa tradicional",
+      "ingredients": ["1 taza de quinoa seca", "2 tazas de agua o caldo", "Sal y pimienta"],
+      "steps": "Remoja la quinoa desde la noche anterior (o enjuágala muy bien antes de cocinar).\nCocina en agua o caldo, 1 taza de quinoa por 2 de líquido, hasta que se absorba. Sazona.",
+      "tips": "", "tags": ["carbohidrato complejo"]
+    },
+    {
+      "id": "r_arroz_integral", "category": "mealprep", "name": "Arroz integral (4 porciones)",
+      "ingredients": ["200 g de arroz integral o parboiled", "Agua abundante (6–7 veces el volumen del arroz)", "Sal", "Ghee, aceite de aguacate o de oliva (opcional)"],
+      "steps": "Remoja desde la noche anterior (o 1 hora antes). Enjuaga y escurre 3 veces.\nCalienta abundante agua tapada, como para pasta. Opcional: saltea el arroz crudo 1–2 minutos en un poco de aceite a fuego fuerte para potenciar el sabor.\nCuando hierva, agrega sal y el arroz poco a poco. Fuego bajo, ebullición constante, unos 20 minutos.\nDebe quedar tierno y ligeramente al dente. Si está duro, 2–5 minutos más. Escurre, vuelve a la olla caliente y seca, y reposa 5–10 minutos.",
+      "tips": "", "tags": ["carbohidrato complejo"]
+    },
+    {
+      "id": "r_pan_ajo_lowcarb", "category": "mealprep", "name": "Pan con ajo low carb sin gluten (15 minutos)",
+      "ingredients": ["Yogurt griego sin sabor", "Queso rallado de almendras (o de los recomendados)", "1 huevo o 2 claras", "5 cdas de puré de batata o ahuyama", "Sal, pimienta y perejil", "Aceite de oliva (poco), perejil y ajo para untar"],
+      "steps": "Mezcla todo y lleva 1 minuto al microondas.\nPasa a una bandeja de horno (mójate los dedos para que no se pegue), unta con un poco de aceite de oliva, perejil y ajo.\nHornea a 180 °C unos 12 minutos.",
+      "tips": "Esta opción la amo: es súper versátil. La hago 1 vez a la semana y la dejo en la nevera para desayunos, snacks o lo que sea.", "tags": ["low carb", "sin gluten"]
+    },
+    {
+      "id": "r_pan_atun", "category": "mealprep", "name": "Pan proteico de atún en minutos",
+      "ingredients": ["Atún bien escurrido (entre más seco mejor)", "3 claras, o 2 claras + 1 huevo", "Un tris de sal rosada o marina", "1/2 cdita de polvo para hornear", "Proteína en polvo natural o vainilla (opcional)"],
+      "steps": "Licúa todo muy bien.\nMicroondas hasta que coja consistencia y no queden partes líquidas (el tiempo depende de cada microondas).\nLuego lo tuesto en wafflera, sartén u horno.",
+      "tips": "Sabe deli, dale la oportunidad. Sirve para sándwiches, snacks o cortado en croutons para ensaladas.", "tags": ["proteína"]
+    },
+    {
+      "id": "r_pan_paleo_keto", "category": "mealprep", "name": "Pan paleo-keto de 2 ingredientes",
+      "ingredients": ["2 claras de huevo", "2 cdas (15 g) de harina de coco, o 1/4 taza de harina de almendras", "Especias: salado (ajo, sal marina, orégano) o dulce (canela, stevia, cacao)"],
+      "steps": "Mezcla hasta que no haya grumos, vierte en un molde cuadrado (puede ser un plato) y microondas 2–3 minutos.\nPara sándwich repite y tienes las 2 tapas: rellena con pollo desmechado o la proteína que prefieras.",
+      "tips": "Sin horno y sin lactosa.", "tags": ["keto", "sin gluten"]
+    },
+
+    {
+      "id": "r_pan_banano_5min", "category": "postres", "name": "Pan de banano en 5 minutos",
+      "ingredients": ["1/2 banano triturado", "1 huevo", "2 cdas de harina de almendras, avena o la que tengas", "1 cdita de polvo para hornear o bicarbonato", "1 o 2 cdas de crema de maní", "1 1/2 cda de leche vegetal (más si le falta)", "Toppings: nibs de cacao, banano, nueces, yogurt griego con cacao"],
+      "steps": "Bate el huevo con la crema de maní, incorpora el resto y mezcla.\nVierte en un molde engrasado. Sartén, horno a 180 °C por 25 minutos o microondas express (vigila que no quede seco).",
+      "tips": "", "tags": ["dulce"]
+    },
+    {
+      "id": "r_galletas_chocochips", "category": "postres", "name": "Galletas de chocolate con chips",
+      "ingredients": ["Secos: 3 cdas de harina (avena, almendras o coco), 1 1/2 cda de cacao en polvo, 1 cdita de polvo para hornear", "Húmedos: 1 cda de yogurt griego, 1 cda de crema de maní, 1 cda de leche vegetal", "Toppings: nibs de cacao o barra de cacao >70% en trozos"],
+      "steps": "Combina los secos, añade los húmedos y al final la leche vegetal revolviendo bien.\nForma la galleta, agrega el cacao y microondas 1–3 minutos.",
+      "tips": "Si quieres el chocolate más derretido usa la barra.", "tags": ["dulce", "cacao"]
+    },
+    {
+      "id": "r_mini_carrot_cake", "category": "postres", "name": "Mini carrot cake keto",
+      "ingredients": ["1/2 taza de harina de almendras", "Stevia", "1 cdita de polvo para hornear", "Canela y 1/2 cdita de nuez moscada", "1 huevo", "1 cda de ghee, aceite de aguacate o coco", "1/2 zanahoria rallada", "Frosting: 3 cdas de yogurt griego o ricotta, 1/2 cdita de vainilla y gotas de stevia", "Nuez pecana o nueces según tu porción"],
+      "steps": "Mezcla todo y vierte en un molde pequeño engrasado apto para microondas. Cocina 1:40 minutos en lapsos de 20 segundos. Enfría y desmolda.\nLicúa o mezcla el frosting y cubre. Termina con nueces.",
+      "tips": "", "tags": ["keto", "dulce"]
+    },
+    {
+      "id": "r_torta_proteica", "category": "postres", "name": "Torta proteica",
+      "ingredients": ["1/3 taza de harina de avena", "1/3 taza de harina de almendras", "35 g de proteína en polvo", "1/2 cdita de polvo para hornear", "1/2 banano triturado", "1 cda de aceite de coco", "2 claras a punto de nieve"],
+      "steps": "Precalienta el horno a 180 °C. Mezcla los secos en un bowl y los húmedos (sin las claras) en otro; júntalos.\nBate las claras muy, muy bien e incorpóralas de forma envolvente para que quede esponjosa.\nHornea 18–20 minutos. Cubre con una servilleta al salir, enfría y guarda en la nevera.",
+      "tips": "Disfruta con café o infusión.", "tags": ["proteína", "dulce"]
+    },
+    {
+      "id": "r_pastel_manzana", "category": "postres", "name": "Pastel de manzana (microondas)",
+      "ingredients": ["Manzana pelada en cubitos", "2 cdas de canela en polvo", "Stevia", "1 cda de zumo de limón", "1 huevo", "Ghee o aceite de aguacate", "200 ml de leche vegetal", "150 g de harina de avena o almendras", "1 cda de polvo para hornear o bicarbonato", "Sal y extracto de vainilla", "Coco rallado para servir"],
+      "steps": "Pon la manzana con canela, stevia, limón y especias en un recipiente apto para microondas, tapa y calienta 3 minutos. Enfría.\nAñade leche, huevo y aceite; bate con tenedor. Incorpora harina, bicarbonato y sal hasta que no queden grumos.\nTapa y microondas 7 minutos aprox. Desmolda, enfría y sirve con coco rallado.",
+      "tips": "", "tags": ["dulce"]
+    },
+    {
+      "id": "r_nutella_saludable", "category": "postres", "name": "Nutella express saludable",
+      "ingredients": ["1 aguacate mediano (o medio normal)", "Stevia líquida", "2 o 3 cdas de cacao en polvo"],
+      "steps": "Procesa hasta que quede cremoso. Refrigera y úsala en tus recetas.",
+      "tips": "", "tags": ["cacao", "sin azúcar"]
+    },
+
+    {
+      "id": "r_tilapia_moneditas", "category": "almuerzos", "name": "Tilapia con moneditas de plátano y vegetales salteados",
+      "ingredients": ["Tilapia", "Zumo de limón, jengibre rallado, ajo picado, sal y pimienta", "Brócoli (u otro vegetal)", "Pizca de ghee y sal marina", "1 plátano verde", "Aceite de oliva y sal"],
+      "steps": "Marina la tilapia con limón, jengibre, ajo, sal y pimienta por 2 horas (no es necesario, pero queda delicioso). Airfryer a 390 °F por 10 minutos.\nVegetales: brócoli 2 minutos en agua hirviendo y luego 3 minutos en sartén con ghee y sal. Cada vegetal tiene su tiempo.\nMoneditas: corta el plátano bien delgado, pizca de aceite y sal, airfryer 6 minutos a 390 °F, mueve y 3 minutos más.",
+      "tips": "Tiempo y temperatura dependen de cada airfryer.", "tags": ["pescado"]
+    },
+    {
+      "id": "r_pollo_bbq_miel", "category": "almuerzos", "name": "Pollo con BBQ y miel",
+      "ingredients": ["Trozos de pollo", "Sal, pimienta y ajo picado", "BBQ casera (en Toppings)", "Arroz integral o parboiled", "Ensalada fresca"],
+      "steps": "Adoba el pollo y saltéalo; cuando esté sellado por todos lados agrega una pizca de BBQ casera.\nAcompaña con arroz integral y ensalada.",
+      "tips": "", "tags": ["pollo"]
+    },
+    {
+      "id": "r_pechuga_dijon", "category": "almuerzos", "name": "Pechuga de pollo Dijon",
+      "ingredients": ["Pechuga cruda en tiras", "4 cdas de cebolla picada", "1/2 diente de ajo machacado", "4 cdas de caldo de pollo", "2 cdas de aceite de oliva o aguacate", "2 cdas de mostaza Dijon", "Sal y pimienta"],
+      "steps": "Aceite con servilleta o spray en un sartén caliente. Cebolla 5 minutos, ajo 1 minuto más.\nCondimenta el pollo y saltéalo con la cebolla 8–10 minutos.\nAgrega el caldo, reduce a la mitad y agrega la mostaza.",
+      "tips": "Almuerzo: con tu carbohidrato favorito, ensalada y grasa. Cena: ensalada y grasa.", "tags": ["pollo"]
+    },
+    {
+      "id": "r_salmon_miel_naranja", "category": "almuerzos", "name": "Salmón con miel y naranja, ahuyama y papa criolla",
+      "ingredients": ["2 filetes de salmón", "Zumo de 1 naranja, jengibre rallado, 1 cda de miel", "2 cdas de aminos o salsa soya baja en sodio (opcional)", "Sal y pimienta", "Ahuyama en cubos con miel, canela y aceite de oliva", "Papa criolla con aceite, sal y orégano", "Zanahoria, zucchini, pimentón y cebolla en tiras", "Guacamole de topping"],
+      "steps": "Marina el salmón 20 minutos con naranja, jengibre, miel, aminos, sal y pimienta; luego al sartén.\nAhuyama: 15 minutos a 390 °F en airfryer (hazla en meal prep: dura 3 días y va con todo).\nPapa criolla cruda al airfryer 15 minutos a 390 °F.\nVegetales salteados 6 minutos a fuego medio con pizca de sal, con o sin aceite; especias al gusto.",
+      "tips": "", "tags": ["pescado"]
+    },
+    {
+      "id": "r_arroz_camarones_frito", "category": "almuerzos", "name": "Arroz “frito” con camarones",
+      "ingredients": ["1 taza de arroz de coliflor", "1/2 taza de arroz", "1/2 taza de camarones", "1/8 de cebolla cabezona", "1/2 cdita de sriracha", "4 cdas de salsa soya baja en sodio o coco aminos", "1/4 cdita de jengibre en polvo", "Sal y pimienta"],
+      "steps": "Sofríe la cebolla en un sartén muy caliente hasta que esté transparente. Agrega la coliflor y deja cocinar.\nAgrega los camarones, 5 minutos. Luego el arroz, sriracha, soya, jengibre, sal y pimienta; mezcla bien.",
+      "tips": "Para cena: más coliflor en vez de arroz.", "tags": ["mariscos"]
+    },
+    {
+      "id": "r_espaguetis_lowcarb", "category": "almuerzos", "name": "Espaguetis saludables bajos en carbs",
+      "ingredients": ["Espaguetis de arroz o de almendras", "1/2 calabacín", "1 zanahoria", "1/2 cebolla morada", "Pimentón", "Sal marina o rosada", "Levadura nutricional (opcional)", "Pechuga desmenuzada"],
+      "steps": "Pica los vegetales en julianas. Engrasa un sartén, dora pimentón y cebolla, añade calabacín y zanahoria.\nHierve los espaguetis (solo 3–4 minutos desde que hierve). Escurre y mezcla en el sartén.\nAñade levadura nutricional y sal. Disfruta con la proteína que más te guste.",
+      "tips": "", "tags": ["pasta"]
+    },
+    {
+      "id": "r_arroz_arabe", "category": "almuerzos", "name": "Arroz árabe express",
+      "ingredients": ["1/2 cebolla blanca", "1 cdita de almendras fileteadas", "1/3 taza de arroz integral o parboiled (o arroz de coliflor)", "Pollo desmechado", "Ciruelas pasas (opcional)"],
+      "steps": "Sofríe la cebolla a fuego bajo hasta que esté transparente. Agrega las almendras para tostarlas un poco.\nPon el pollo y el arroz, revuelve bien. Por último las ciruelas. Cocina 5 minutos más.",
+      "tips": "", "tags": ["pollo"]
+    },
+    {
+      "id": "r_wrap_col_salmon", "category": "almuerzos", "name": "Wrap de col y salmón (2 porciones)",
+      "ingredients": ["Hojas de col verde", "1 taza de rúgula o berros", "1 taza de champiñones picados", "2 tallos de cebollín", "1/2 diente de ajo", "2 filetes de salmón (del tamaño de tu palma)", "1 cda de salsa miso y maní (en Toppings)", "1 taza de quinoa (en Meal prep)"],
+      "steps": "Rebaja el grosor del tallo de la col, hierve la hoja 3 minutos y pásala por agua fría. Seca.\nSazona el salmón con sal rosada, ajo, cebollín y un poco de miso; 5 minutos. Sella en sartén caliente con la piel hacia abajo 5 minutos y 2–3 más por el otro lado.\nChampiñones dorados en ghee con cebollín y sal.\nArma: hoja de col, salsa miso, verdes, quinoa, champiñones y salmón. Enrolla.",
+      "tips": "Las hojas se guardan días en la nevera separadas con papel toalla.", "tags": ["pescado"]
+    },
+    {
+      "id": "r_berenjenas_rellenas", "category": "almuerzos", "name": "Berenjenas rellenas low carb",
+      "ingredients": ["1 berenjena mediana", "1 cebolla pequeña", "1/3 pimentón rojo", "3 tomates", "Pollo o tofu", "40 g de queso de almendras o mozzarella", "Sal, pimienta, orégano y ajo en polvo"],
+      "steps": "Corta la berenjena a la mitad y cocínala en cacerola antiadherente tapada 10 minutos.\nSofríe cebolla y pimentón con poca agua; cuando estén transparentes agrega el tomate y condimenta. Agrega el pollo o tofu picado y cocina 8–10 minutos a fuego bajo.\nAhueca las berenjenas, rellena y gratina con queso 5–6 minutos en horno, airfryer o sartén.",
+      "tips": "", "tags": ["low carb"]
+    },
+    {
+      "id": "r_curry_vegano", "category": "almuerzos", "name": "Curry vegano low carb",
+      "ingredients": ["Tempeh o tofu", "Zucchini en noodles", "Repollo morado", "Tomate cherry", "Chiles secos o salsa picante (opcional)", "2 cdas de leche de coco", "1/2 cdita de curry en polvo", "Sal y pimienta"],
+      "steps": "Calienta 2 cm de agua en una olla; agrega los chiles al hervir, sal y pimienta, tapa 2 minutos.\nAgrega todo, mezcla, tapa y cocina 15 minutos revolviendo cada 5.",
+      "tips": "Sirve con champiñones, berenjena, brócoli o coliflor; o proteína animal. Almuerzo: 1 porción de carbohidrato complejo.", "tags": ["vegano", "low carb"]
+    },
+    {
+      "id": "r_tilapia_naranja", "category": "almuerzos", "name": "Tilapia a la naranja",
+      "ingredients": ["Tilapia", "2 naranjas", "1 limón", "1 ajo", "Cilantro, romero, sal y pimienta"],
+      "steps": "Machaca el ajo y pica el cilantro; sazona la tilapia con esto, sal y pimienta.\nEn un recipiente engrasado pon la tilapia, zumo de limón y de 1 naranja, un ajo partido y romero.\nHorno 20 minutos a 180 °C (o sartén).",
+      "tips": "", "tags": ["pescado"]
+    },
+    {
+      "id": "r_pollo_curry", "category": "almuerzos", "name": "Pollo al curry",
+      "ingredients": ["Pechuga en cubos", "1 cebolla morada en julianas", "3/4 taza de zanahoria, 3/4 de zucchini y 3/4 de champiñones", "1/2 taza de agua", "1 cdita de curry", "1/2 cdita de canela", "2 gotas de stevia", "1 taza de leche de coco", "1 cdita de almidón de yuca o tapioca (opcional)", "Sal marina y pimienta"],
+      "steps": "Dora la cebolla en un sartén engrasado, luego las verduras y el pollo. Agrega canela y revuelve.\nAgrega la leche de coco, stevia, sal y pimienta, y el almidón disuelto en agua. Revuelve bien.",
+      "tips": "", "tags": ["pollo"]
+    },
+    {
+      "id": "r_pasta_zucchini_atun", "category": "almuerzos", "name": "Pasta de zucchini con atún express",
+      "ingredients": ["Zucchini en noodles", "Pimienta negra, paprika, ajo y sazonador italiano", "Tomates", "Atún en agua (bien lavado)", "Queso ricotta o rallado de almendras (opcional)"],
+      "steps": "Condimenta los noodles y llévalos al sartén con muy poca agua (el zucchini suelta mucha).\nAgrega tomate y atún. Termina con ricotta o queso de almendras.",
+      "tips": "", "tags": ["low carb", "pescado"]
+    },
+    {
+      "id": "r_garbanzos_lentejas_curry", "category": "almuerzos", "name": "Garbanzos o lentejas al curry",
+      "ingredients": ["1 taza de lentejas cocidas", "200 ml de leche de coco", "1 cebolla tierna", "1 diente de ajo", "1 zanahoria", "1 cdita de pimentón", "1 cda de curry en polvo", "Pimienta, perejil y sal"],
+      "steps": "Pica cebolla, ajo y zanahoria; cocina en olla con poca agua y sal. Agrega las especias, 5 minutos más. Tritura hasta un puré suave.\nVuelve a la olla con la leche de coco, el perejil y las lentejas; espera el hervor removiendo y apaga.",
+      "tips": "Con arroz de coliflor, integral o solo, más tu proteína y vegetales.", "tags": ["legumbres"]
+    },
+    {
+      "id": "r_lentejas_leche_coco", "category": "almuerzos", "name": "Lentejas en leche de coco",
+      "ingredients": ["1 taza de lentejas (remojadas)", "2 tazas de agua", "1 cda de cúrcuma, 1 de jengibre en polvo, 1 de ajo en polvo, 1 de curry y 1 de canela", "1 taza de leche de coco", "1 cda de aceite de coco, ghee o aguacate", "Champiñones"],
+      "steps": "Cocina las lentejas con el agua a fuego bajo y tapadas. Al hervir agrega las especias y vuelve a tapar.\nA los 10 minutos agrega la leche de coco, el aceite y los champiñones. Revuelve constantemente hasta la textura que te guste.",
+      "tips": "", "tags": ["legumbres"]
+    },
+    {
+      "id": "r_frijoles_cuscus_coliflor", "category": "almuerzos", "name": "Frijoles rojos con “arroz” cuscús de coliflor",
+      "ingredients": ["1 taza de frijoles", "2 tazas de caldo de pollo o agua con sal y pimienta", "1 taza de agua", "1/2 tallo de apio o puerro", "1 cebolla roja y 1 cebolla blanca en daditos", "1 pimentón", "Laurel, tomillo, orégano, chile, ajo, sal y pimienta", "1 cdita pequeña de canela", "Cuscús: 1 coliflor desmenuzada, 1/2 cda de ghee, media cebolla roja, sal, ajo y pimienta"],
+      "steps": "Todo menos la coliflor en olla de cocción lenta: 4–6 horas a baja temperatura, o 1 hora si la subes.\nCuscús: procesa la coliflor. En un sartén con aceite, ajo y cebolla 2 minutos; añade la coliflor y cocina 5 minutos hasta que los bordes doren. Sazona.\nSirve los frijoles sobre el cuscús como alternativa al arroz blanco.",
+      "tips": "", "tags": ["legumbres", "colombiano"]
+    },
+
+    {
+      "id": "r_ensalada_espinaca", "category": "ensaladas", "name": "Ensalada de espinaca",
+      "ingredients": ["Espinaca en tiras", "Zanahoria rallada", "Aguacate", "Maíz dulce (no a diario)", "Tomate y cebolla roja", "Sal, pimienta, limón y pizca de aceite de oliva"],
+      "steps": "Revuelve todo. Como comida completa ponle pollo, atún o tilapia.",
+      "tips": "También sirve de topping para otras preparaciones.", "tags": ["ensalada"]
+    },
+    {
+      "id": "r_ensalada_rugula_fresas", "category": "ensaladas", "name": "Ensalada de rúgula baby, nueces y fresas",
+      "ingredients": ["Rúgula baby (o kale u otra hoja verde)", "Fresas fileteadas", "Nueces salteadas con pizca de miel y vainilla o stevia", "Queso de cabra o cottage", "Arándanos deshidratados o frescos", "Vinagreta de balsámico y miel (en Toppings)"],
+      "steps": "Mezcla todo y aliña con la vinagreta.",
+      "tips": "", "tags": ["ensalada"]
+    },
+    {
+      "id": "r_ensalada_camarones_mango", "category": "ensaladas", "name": "Ensalada de camarones con mango",
+      "ingredients": ["Camarones salteados en ghee o aceite de aguacate con miel, pizca de soya baja en sodio y sal", "Lechuga crespa o cogollo europeo", "Mango maduro en trocitos", "Cebolla roja", "Aguacate", "Tomate cherry", "Cilantro", "Limón y sal"],
+      "steps": "Revuelve todo y listo.",
+      "tips": "", "tags": ["ensalada", "mariscos"]
+    },
+    {
+      "id": "r_poke_trucha", "category": "ensaladas", "name": "Poke bowl de trucha y sriracha mayo",
+      "ingredients": ["2 tazas de arroz de sushi", "3 tazas de agua", "1/4 taza de vinagre de arroz o manzana + 1 cda de stevia líquida", "Trucha", "Sal, pimienta, perejil y orégano", "Aguacate y pepino en cubos", "Sriracha mayo (en Toppings)", "Ajonjolí"],
+      "steps": "Lava el arroz hasta que el agua salga limpia. Hierve con el agua, baja el fuego, tapa y cocina 20 minutos. Enfría en bandeja y rocía la mezcla de vinagre y stevia.\nTrucha: sartén caliente, piel hacia arriba 3–4 minutos, voltea 5–8 minutos más. Sal y pimienta.\nArma el bowl: arroz, trucha, aguacate, pepino, sriracha mayo y ajonjolí.",
+      "tips": "", "tags": ["bowl", "pescado"]
+    },
+    {
+      "id": "r_bowl_atun_marinado", "category": "ensaladas", "name": "Bowl de atún marinado",
+      "ingredients": ["Atún en trozos", "Zumo de naranja", "Soya baja en sodio o coco aminos", "Pizca de jengibre rallado y de miel", "Sal", "Aceite de ajonjolí o aguacate", "Ensalada: lechuga, tomate, pepino, cebolla, pimentón, cilantro", "Moneditas de plátano con guacamole"],
+      "steps": "Marina el atún 1 hora en la nevera: el jugo debe cubrir completamente los trozos. Se “cocina” solo.\nSirve con la ensalada fresca y moneditas de plátano con guacamole.",
+      "tips": "", "tags": ["bowl", "pescado"]
+    },
+    {
+      "id": "r_ensalada_peras", "category": "ensaladas", "name": "Ensalada con peras caramelizadas",
+      "ingredients": ["Col rizada masajeada con aceite de oliva, limón y sal", "Cebolla roja", "Nueces salteadas con pizca de miel y vainilla", "Peras salteadas en ghee", "Queso feta", "Arándanos deshidratados"],
+      "steps": "Revuelve todo y acompaña con tu proteína animal o vegetal favorita.",
+      "tips": "", "tags": ["ensalada"]
+    },
+    {
+      "id": "r_ensalada_kale_yogurt", "category": "ensaladas", "name": "Ensalada de col rizada y yogurt (2 porciones)",
+      "ingredients": ["6 tazas de kale", "1/4 taza de almendras enteras o laminadas", "1 taza de papaya o fresas en cubitos", "4 tiritas de tocineta healthy", "Aderezo: 1/2 taza de yogurt griego, zumo de 1 limón, 1–2 cdas de aceite extra virgen, 1 cdita de sal rosada"],
+      "steps": "Mezcla el aderezo. Quita el tallo de las hojas, agrégalas al tazón con el aderezo y masajea 3–5 minutos (relájate en el proceso, sirve).\nSirve con todo lo demás y tu proteína favorita.",
+      "tips": "Es deli.", "tags": ["ensalada"]
+    },
+
+    {
+      "id": "r_sopa_esparragos_garbanzos", "category": "sopas", "name": "Sopa de espárragos y garbanzos (4 porciones)",
+      "ingredients": ["1 puerro limpio y picado", "2 dientes de ajo", "1 taza de garbanzos cocidos", "1 taza del agua de los espárragos o caldo", "250 g de espárragos (20–25)", "1 cda de ghee"],
+      "steps": "Remoja los garbanzos desde la noche anterior (o 1 hora en agua caliente) y cocínalos cubiertos de agua.\nCocina las colas de espárrago 15 minutos en 4 tazas de agua. Saltea puerro y ajo en ghee 5 minutos, agrega los espárragos en trozos 3 minutos (sin pasarte).\nLicúa todo con los garbanzos y el caldo hasta que esté cremoso. Ajusta sal. Decora con garbanzos y cabezas de espárrago.",
+      "tips": "Es comida completa por la proteína de los garbanzos, o acompáñala con tu proteína y ensalada.", "tags": ["sopa", "legumbres"]
+    },
+    {
+      "id": "r_cazuela_mariscos", "category": "sopas", "name": "Cazuela de mariscos (5 porciones)",
+      "ingredients": ["50 g de pescado blanco", "1 paquete de palmitos de cangrejo en cubos", "500 g de camarones", "2 bolsas + 1/2 lata de leche de coco", "1 cebolla roja, 5 tomates maduros y 1 pimentón rojo en cuadritos", "Sal, pimienta y ajo"],
+      "steps": "Sofríe pimentón, tomate y cebolla con sal, ajo y pimienta hasta hacer una pasta tipo hogao, no muy seca. Licúa la mitad.\nAgrega el pescado a la olla, luego la leche de coco, lo licuado y los palmitos. Ajusta sal y deja a fuego medio bajo para concentrar sabores.",
+      "tips": "Me gusta con mucho limón, cilantro y patacones al airfryer.", "tags": ["sopa", "mariscos"]
+    },
+    {
+      "id": "r_crema_brocoli_zucchini", "category": "sopas", "name": "Crema de brócoli y zucchini express",
+      "ingredients": ["Zucchini y brócoli", "Un poco del agua de cocción", "Ajo, pimienta y sal rosada o marina", "Especias al gusto"],
+      "steps": "Vapor 5 minutos, licúa con un poco del agua de cocción y las especias. Listo.",
+      "tips": "Acompaña con tu proteína y carbohidrato complejo favorito.", "tags": ["sopa", "express"]
+    }
+  ],
+  "lessons": [
+    {
+      "id": "l_objetivo", "title": "El objetivo",
+      "body": "- Encontrar balance y equilibrio.\n- Aprender a tener una vida más saludable y disfrutar del proceso.\n- Amor y tolerancia conmigo y con los demás.\n\nRecuerda que toda la información está enfocada en el respeto y el autocuidado de ti misma y de tus seres queridos. Sin obsesionarnos, sin ser restrictivos ni demasiado flexibles."
+    },
+    {
+      "id": "l_cantidad_calidad", "title": "¿Importan más las calorías o la calidad?",
+      "body": "Nos han hecho creer que la clave está en contar calorías, cuando no es solo la cantidad sino la calidad. La gasolina de un carro no tiene calorías, ¿la consumirías? Eso pasa con muchos procesados: pueden ser 0 calorías y no ser aptos para el cuerpo. Generan inflamación crónica, dolor de articulaciones, cansancio, insomnio, irritación y problemas hormonales: síntomas “silenciosos”.\n\nLas calorías sí cuentan si queremos controlar el peso: si comemos más de lo que gastamos, subimos; si comemos menos, bajamos. Pero no es lo único. Importan los porcentajes de macronutrientes, el efecto de cada alimento en el organismo y las reacciones hormonales que desencadena.\n\n# En resumen\nLas calorías cuentan, por supuesto, pero no son lo único que hay que mirar al cuidar la alimentación. Por eso en la app registras lo que comes Y aprendes a elegir mejor."
+    },
+    {
+      "id": "l_tips_cuidar", "title": "3 tips para cuidar lo que comes",
+      "body": "# 1. Alimentos por encima de productos\nComprar alimentos frescos (frutas, verduras, carnes, pescados, legumbres) es el paso básico. Evita los productos con una lista interminable de ingredientes: con alimentos frescos preparas lo que quieras en casa y sabes lo que comes.\n\n# 2. Cocina en casa y elige cocciones sanas\nAl vapor, al horno, al wok, a la plancha, en papillote: no alteran la calidad ni los nutrientes y no suben las calorías en exceso.\n\n# 3. Aprende a leer las etiquetas\nNo te quedes en el claim publicitario. Un producto “bajo en grasas” puede esconder mucha azúcar. Leyendo la etiqueta eliges lo que de verdad se adapta a tus necesidades."
+    },
+    {
+      "id": "l_leer_tabla", "title": "Cómo leer una tabla nutricional",
+      "body": "- Fíjate en cuántas porciones trae el paquete. Muchas veces dice “50 kcal”, pero es por porción de 30 g y el paquete trae 15 porciones. ¿Cuánto daría?\n- Los ingredientes van de mayor a menor cantidad. Si el primero es azúcar o harina de trigo fortificada, es un alimento altamente procesado. Prefiere listas cortas y de ingredientes que puedas “entender”.\n- Los gramos de azúcar por porción deben tener 1 dígito. Más de 10 g: altamente procesado.\n- Sodio: más de 300 mg por porción ya es muy alto. Además de retención de líquidos, trae muchos problemas de salud.\n- Evita las grasas trans: aceite hidrogenado o parcialmente hidrogenado. Recomendable menos de 15 g de grasa por porción.\n\n# Actividad\nHaz el ejercicio con algo que tengas en la despensa. Lee sus ingredientes y su tabla. ¿Qué tanto de lo que está escrito sabes qué es? Entre menos ingredientes, siempre mejor."
+    },
+    {
+      "id": "l_nombres_azucar", "title": "El azúcar escondida y sus nombres",
+      "body": "La industria esconde el azúcar bajo decenas de nombres para hacerte creer que el producto es sano o trae poca. Si en la etiqueta no dice “azúcar” no significa que no tenga. Estos son los nombres que te vas a encontrar:\n\n- Néctar de agave · Cristales de caña · Jugo de caña o jugo de caña evaporado · Caña de azúcar\n- Glucosa · Dextrosa · Fructosa · Galactosa · Lactosa · Maltosa · Sacarosa · Sólidos de glucosa · Dextrano · Maltodextrina\n- Jarabe de maíz · Jarabe de maíz de alta fructosa · Jarabe de maíz refinado · Sólidos de jarabe de maíz · Maíz edulcorante\n- Jarabe de arroz · Jarabe de malta · Cebada de malta · Malta diastásica · Jarabe de sorgo · Jarabe o sirope de arce · Jarabe de oro · Sirope\n- Melaza · Treacle · Caramelo · Panela o panocha · Miel\n- Azúcar granulado · Azúcar de uva · Azúcar mascabado · Azúcar turbinado · Azúcar oro · Azúcar crudo · Azúcar amarillo · Azúcar invertido · Concentrado de jugo de frutas · Sorbitol"
+    },
+    {
+      "id": "l_azucar_cuerpo", "title": "Lo que el azúcar en exceso hace en tu cuerpo",
+      "body": "# Acelera el envejecimiento\nPor la glicación: el exceso de glucosa se une a proteínas como el colágeno, las fibras se tensan y la piel pierde elasticidad.\n\n# Afecta el ánimo\nEn pequeñas cantidades ayuda a liberar serotonina. En exceso, los cambios súbitos de azúcar en sangre provocan irritabilidad, cambios de humor y nerviosismo.\n\n# Altera la flora intestinal\nUna flora sana protege el aparato digestivo. El exceso de azúcar favorece hongos como la cándida y ocasiona flatulencia, estreñimiento o diarrea.\n\n# Genera dependencia\nEl cerebro reacciona al azúcar liberando dopamina, parecido a otras sustancias adictivas. Compruébalo: retira el azúcar 10 días. Si al segundo día tienes dolor de cabeza, irritabilidad y el cuerpo te pide dulce, es abstinencia.\n\n# Engorda y afecta el hígado\nSe absorbe rápido como glucosa; si no la usas en el momento, el cuerpo la guarda como grasa. El exceso de fructosa se acumula en el hígado y puede producir hígado graso y resistencia a la insulina.\n\n# Afecta la memoria\nNiveles altos de azúcar en sangre se han relacionado con un hipocampo más pequeño, la región clave de la memoria a largo plazo."
+    },
+    {
+      "id": "l_reemplazar", "title": "Aprendamos a reemplazar alimentos",
+      "body": "# Bajo en azúcar, bajo en sodio\nUn alimento sin azúcar añadida debe tener menos de 10 g de azúcar por porción, y bajo en sodio, menos de 140 mg.\n\n# Grasas buenas vs malas\nEvita las grasas trans y las saturadas; elige poliinsaturadas y monoinsaturadas: aceite de oliva, frutos secos, aguacate.\n\n# Alto en fibra\nSe considera alto en fibra si aporta al menos el 20% del valor diario, es decir, al menos 5 g por porción.\n\n# Snacks bajos en calorías\nEscoge snacks entre 150 y 200 calorías, altos en proteína y fibra, bajos en azúcar y sodio.\n\n# No te dejes engañar\nNo confíes en “bajo en sodio”, “light” o “sin azúcar” a ciegas: compara la tabla y elige el que realmente cumpla.\n\n# Porciones y calorías\nLas calorías son por porción, no por paquete. Come solo la cantidad indicada como porción y no te sobrepasarás."
+    },
+    {
+      "id": "l_preparaciones", "title": "Tips de preparación",
+      "body": "- Ahorra el exceso de calorías: no pongas el aceite directo al sartén. Ponlo primero en una servilleta y luego lo que queda en la servilleta al sartén.\n- Evita los jugos de fruta. Come la fruta entera: al licuarla le quitas la fibra y queda la fructosa, su azúcar. El exceso de fructosa te genera más hambre durante el día (quizás son tus ganas de picar en la tarde). Reemplázalos con las infusiones y aguas saborizadas del recetario.\n- Aprende a reemplazar alimentos: mira las opciones de meal prep, toppings y snacks."
+    },
+    {
+      "id": "l_desayunos", "title": "Bases de un buen desayuno",
+      "body": "- Ponle vegetales a tus desayunos: son altos en fibra y te dan saciedad durante el día, así evitas el picoteo.\n- Evita el alto consumo de lácteos; reemplázalos por leches y quesos vegetales. Si te da antojo (no para el día a día), los quesos con menos grasa y sodio son feta, parmesano, cottage, mozzarella y requesón. La porción varía según cada persona.\n- El yogurt griego sí ayuda: alto en proteína, sin azúcar añadida y con menos de 4 ingredientes. Si lo quieres dulce, stevia o fruta.\n- El chocolate se reemplaza por cacao: en polvo o sticks, con leche vegetal (almendras, coco, marañón o avena), stevia y canela. Queda delicioso.\n- Ya preparados para comer saludable: pan de avena, integral o de almendras; arepas integrales o de coliflor; yogurt griego alto en proteína; quesos de almendras; leches vegetales; granolas artesanales; avena sin gluten; cacao; obleas de amaranto; crispetas; stevia líquida; harinas de almendras, coco o avena; cremas de maní. Si estás fuera del país, tu coach te asesora qué comprar."
+    },
+    {
+      "id": "l_dormir", "title": "Nutrición para dormir mejor",
+      "body": "- En la cena incluye vegetales en cualquier presentación.\n- Evita carnes rojas, procesados, alimentos altos en azúcar, café o estimulantes en la noche.\n- Ojalá puedas cenar antes de las 7:30–8:00 PM.\n- La fruta y los carbohidratos en la noche no engordan, pero te dan energía y pueden afectar el sueño: mejor en desayuno, snack o almuerzo.\n- Comer grasas buenas en la noche ayuda a conciliar el sueño: un bowl de verduras, proteína y grasas buenas (mide la porción de grasas).\n\n# Infusiones para dormir\nManzanilla, valeriana, toronjil, cúrcuma, pasionaria, ashwagandha, o vinagre de sidra de manzana diluido."
+    },
+    {
+      "id": "l_felicidad", "title": "Alimentos que generan felicidad",
+      "body": "- Yogurt griego o vegetal (máximo 150 g al día).\n- Frutos secos (1 puñado).\n- Chocolate (1 pedazo, cacao alto).\n- Verduras verdes: grandes cantidades de ácido fólico y vitamina B9, que ayudan a reducir el riesgo de depresión y ansiedad.\n- Huevo: alto en triptófano, aminoácido excelente para generar bienestar.\n- Chile o picante.\n\n> “Que tu alimento sea tu medicina y tu medicina sea tu alimento.” — Hipócrates\n\nAprender a leer una tabla nutricional es clave para elegir alimentos óptimos para tu salud física y mental, porque ambas se conectan. Y para no dejarte engañar por la publicidad de lo “sano”."
+    }
+  ]
+}

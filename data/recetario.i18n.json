@@ -1,0 +1,2752 @@
+{
+ "categories": {
+  "bebidas": {
+   "en": {
+    "name": "Infusions and Drinks"
+   },
+   "pt": {
+    "name": "Infusões e bebidas"
+   }
+  },
+  "desayunos": {
+   "en": {
+    "name": "Breakfasts"
+   },
+   "pt": {
+    "name": "Cafés da manhã"
+   }
+  },
+  "snacks": {
+   "en": {
+    "name": "Snacks"
+   },
+   "pt": {
+    "name": "Lanches"
+   }
+  },
+  "smoothies": {
+   "en": {
+    "name": "Smoothies and Shakes"
+   },
+   "pt": {
+    "name": "Smoothies e vitaminas"
+   }
+  },
+  "toppings": {
+   "en": {
+    "name": "Toppings, Sauces, and Vinaigrettes"
+   },
+   "pt": {
+    "name": "Toppings, molhos e vinagretes"
+   }
+  },
+  "mealprep": {
+   "en": {
+    "name": "Meal Prep and Breads"
+   },
+   "pt": {
+    "name": "Meal prep e pães"
+   }
+  },
+  "postres": {
+   "en": {
+    "name": "Express Desserts"
+   },
+   "pt": {
+    "name": "Sobremesas express"
+   }
+  },
+  "almuerzos": {
+   "en": {
+    "name": "Lunches and Dinners"
+   },
+   "pt": {
+    "name": "Almoços e jantares"
+   }
+  },
+  "ensaladas": {
+   "en": {
+    "name": "Bowls and Salads"
+   },
+   "pt": {
+    "name": "Bowls e saladas"
+   }
+  },
+  "sopas": {
+   "en": {
+    "name": "Creams and Soups"
+   },
+   "pt": {
+    "name": "Cremes e sopas"
+   }
+  }
+ },
+ "recipes": {
+  "r_batido_cafe_chocolate": {
+   "en": {
+    "name": "Protein shake with coffee or chocolate",
+    "ingredients": [
+     "1 scoop of protein",
+     "1 or 2 shots of coffee (or instant coffee), or 1 tbsp of chocolate powder",
+     "Half a glass of plant-based milk",
+     "Stevia",
+     "1 tsp of peanut butter for more satiety"
+    ],
+    "steps": "Blend everything and enjoy.",
+    "tips": ""
+   },
+   "pt": {
+    "name": "Vitamina proteica com café ou chocolate",
+    "ingredients": [
+     "1 scoop de proteína",
+     "1 ou 2 shots de café (ou café solúvel), ou 1 colher de sopa de chocolate em pó",
+     "Meio copo de leite vegetal",
+     "Stevia",
+     "1 colher de chá de pasta de amendoim para mais saciedade"
+    ],
+    "steps": "Bata tudo no liquidificador e aproveite.",
+    "tips": ""
+   }
+  },
+  "r_batido_malteada_postre": {
+   "en": {
+    "name": "Dessert milkshake smoothie",
+    "ingredients": [
+     "1 scoop of protein",
+     "Half a frozen banana",
+     "1 tbsp of peanut butter",
+     "Ice",
+     "Cocoa powder if you want it sweeter"
+    ],
+    "steps": "Blend very well and enjoy.",
+    "tips": ""
+   },
+   "pt": {
+    "name": "Vitamina milk-shake sobremesa",
+    "ingredients": [
+     "1 scoop de proteína",
+     "Meia banana congelada",
+     "1 colher de sopa de pasta de amendoim",
+     "Gelo",
+     "Cacau em pó se quiser mais doce"
+    ],
+    "steps": "Bata bem no liquidificador e aproveite.",
+    "tips": ""
+   }
+  },
+  "r_malteada_frutos_rojos": {
+   "en": {
+    "name": "Berry smoothie",
+    "ingredients": [
+     "1 scoop of protein",
+     "Frozen mixed berries",
+     "A small handful of walnuts or 1 tsp of peanut butter",
+     "Half a cup of plant-based milk or yogurt",
+     "Spinach",
+     "Flaxseed (optional)",
+     "1/2 cup of water",
+     "Ice (optional)"
+    ],
+    "steps": "Blend very well and enjoy.",
+    "tips": ""
+   },
+   "pt": {
+    "name": "Vitamina de frutas vermelhas",
+    "ingredients": [
+     "1 scoop de proteína",
+     "Mix de frutas vermelhas congeladas",
+     "Um punhado pequeno de castanhas ou 1 colher de chá de pasta de amendoim",
+     "Meia xícara de leite vegetal ou iogurte",
+     "Espinafre",
+     "Linhaça (opcional)",
+     "1/2 xícara de água",
+     "Gelo (opcional)"
+    ],
+    "steps": "Bata bem no liquidificador e aproveite.",
+    "tips": ""
+   }
+  },
+  "r_vanilla_pumpkin_pie": {
+   "en": {
+    "name": "Vanilla pumpkin pie",
+    "ingredients": [
+     "1 scoop of protein",
+     "Half a cup of cooked ahuyama (squash/pumpkin)",
+     "A small handful of walnuts or peanut butter",
+     "Flaxseed (optional)",
+     "3 tbsp of rolled oats",
+     "Ground cinnamon",
+     "Vanilla extract (optional)",
+     "Half a cup of water, milk, or yogurt",
+     "Ice"
+    ],
+    "steps": "Blend everything until creamy.",
+    "tips": ""
+   },
+   "pt": {
+    "name": "Vanilla pumpkin pie (torta de abóbora com baunilha)",
+    "ingredients": [
+     "1 scoop de proteína",
+     "Meia xícara de abóbora cozida",
+     "Um punhado pequeno de castanhas ou pasta de amendoim",
+     "Linhaça (opcional)",
+     "3 colheres de sopa de aveia em flocos",
+     "Canela em pó",
+     "Extrato de baunilha (opcional)",
+     "Meia xícara de água, leite ou iogurte",
+     "Gelo"
+    ],
+    "steps": "Bata tudo até ficar cremoso.",
+    "tips": ""
+   }
+  },
+  "r_snickers_smoothie": {
+   "en": {
+    "name": "Snickers smoothie",
+    "ingredients": [
+     "1 frozen banana",
+     "1 mug of plant-based milk, or Greek yogurt with water",
+     "2 dates",
+     "1 tsp of cocoa powder",
+     "1 tsp of peanut butter"
+    ],
+    "steps": "Blend very well and enjoy.",
+    "tips": ""
+   },
+   "pt": {
+    "name": "Snickers smoothie",
+    "ingredients": [
+     "1 banana congelada",
+     "1 xícara de leite vegetal, ou iogurte grego com água",
+     "2 tâmaras",
+     "1 colher de chá de cacau em pó",
+     "1 colher de chá de pasta de amendoim"
+    ],
+    "steps": "Bata bem no liquidificador e aproveite.",
+    "tips": ""
+   }
+  },
+  "r_tocineta_healthy": {
+   "en": {
+    "name": "Express healthy bacon",
+    "ingredients": [
+     "Low-sodium turkey ham, cut into small pieces",
+     "Ghee or avocado oil",
+     "Cinnamon and stevia",
+     "A little honey"
+    ],
+    "steps": "In a pan, add the ghee or oil with cinnamon and stevia, add the turkey ham and stir well.\nAdd a little honey and stir until you get that sweet-savory flavor.",
+    "tips": "Have your toppings ready in the fridge: they last several days. The key is planning ahead."
+   },
+   "pt": {
+    "name": "Bacon fit expresso",
+    "ingredients": [
+     "Peito de peru com baixo sódio em pedacinhos",
+     "Ghee ou óleo de abacate",
+     "Canela e stevia",
+     "Um pouco de mel"
+    ],
+    "steps": "Numa frigideira, coloque o ghee ou óleo com canela e stevia, adicione o peito de peru e misture bem.\nAdicione um pouco de mel e mexa até alcançar o sabor doce-salgado.",
+    "tips": "Deixe os toppings prontos na geladeira: duram vários dias. A chave é se antecipar."
+   }
+  },
+  "r_mermelada_frutos_rojos": {
+   "en": {
+    "name": "Homemade berry jam",
+    "ingredients": [
+     "Strawberries, blueberries, and blackberries (or just one)",
+     "Water and lemon juice",
+     "Apple cider vinegar",
+     "Cinnamon and stevia",
+     "Chia seeds"
+    ],
+    "steps": "Cook the fruit in a small pot with water, lemon, vinegar, cinnamon, stevia, and chia for a few minutes.\nWhen it has a jam-like consistency, turn off the heat, let it cool, and store in a glass jar. It lasts for days in the fridge.",
+    "tips": "This works with other fruits too, so you'll have several options."
+   },
+   "pt": {
+    "name": "Geleia caseira de frutas vermelhas",
+    "ingredients": [
+     "Morangos, mirtilos e amoras (ou só uma delas)",
+     "Água e suco de limão",
+     "Vinagre de maçã",
+     "Canela e stevia",
+     "Sementes de chia"
+    ],
+    "steps": "Cozinhe a fruta numa panelinha com água, limão, vinagre, canela, stevia e chia por alguns minutos.\nQuando tiver consistência de geleia, apague o fogo, deixe esfriar e coloque em um vidro. Dura dias na geladeira.",
+    "tips": "Funciona com outras frutas: assim você tem várias opções."
+   }
+  },
+  "r_guacamole": {
+   "en": {
+    "name": "Guacamole",
+    "ingredients": [
+     "Avocado",
+     "A pinch of finely chopped garlic",
+     "Finely chopped red onion",
+     "Cilantro to taste",
+     "Lemon",
+     "Sea salt and black pepper"
+    ],
+    "steps": "Mash the avocado, add the rest, and taste to adjust salt and lemon.",
+    "tips": ""
+   },
+   "pt": {
+    "name": "Guacamole",
+    "ingredients": [
+     "Abacate",
+     "Uma pitada de alho bem picado",
+     "Cebola roxa bem picada",
+     "Coentro a gosto",
+     "Limão",
+     "Sal marinho e pimenta-do-reino"
+    ],
+    "steps": "Amasse o abacate, adicione o resto e prove para ajustar o sal e o limão.",
+    "tips": ""
+   }
+  },
+  "r_galletas_arroz": {
+   "en": {
+    "name": "Puffed Rice Cakes: Sweet and Savory",
+    "ingredients": [
+     "2 puffed rice cakes",
+     "Sweet: homemade sugar-free jam + 2 strawberries, or healthy Nutella + banana or strawberries",
+     "Savory: guacamole, cherry tomato, arugula, oregano and seeds",
+     "Your favorite drink"
+    ],
+    "steps": "Put together the sweet and savory versions, and pair them with your favorite drink.",
+    "tips": "The jam, guacamole, and healthy Nutella are in Toppings and Desserts."
+   },
+   "pt": {
+    "name": "Bolachas de arroz inflado: doce e salgada",
+    "ingredients": [
+     "2 bolachas de arroz inflado",
+     "Doce: geleia caseira sem açúcar + 2 morangos, ou Nutella saudável + banana ou morangos",
+     "Salgada: guacamole, tomate cereja, rúcula, orégano e sementes",
+     "Sua bebida favorita"
+    ],
+    "steps": "Monte a doce e a salgada, e acompanhe com sua bebida favorita.",
+    "tips": "A geleia, o guacamole e a Nutella saudável estão em Coberturas e Sobremesas."
+   }
+  },
+  "r_snack_citrico": {
+   "en": {
+    "name": "Citrus Snack",
+    "ingredients": [
+     "Apple or strawberries, sliced",
+     "Cucumber, sliced",
+     "Lemon",
+     "Low-sodium tajín (spicy optional) or apple cider vinegar with stevia and lemon",
+     "Nuts"
+    ],
+    "steps": "Toss the fruit and cucumber with lemon and tajín (or the vinegar, stevia, and lemon dressing). Serve with nuts on the side.",
+    "tips": ""
+   },
+   "pt": {
+    "name": "Snack cítrico",
+    "ingredients": [
+     "Maçã ou morangos em rodelas",
+     "Pepino em rodelas",
+     "Limão",
+     "Tajín com baixo teor de sódio (picante opcional) ou vinagre de maçã com stevia e limão",
+     "Castanhas"
+    ],
+    "steps": "Coloque a fruta e o pepino com limão e tajín (ou o tempero de vinagre, stevia e limão). Acompanhe com castanhas.",
+    "tips": ""
+   }
+  },
+  "r_yogurt_manzana_caramelizada": {
+   "en": {
+    "name": "Greek Yogurt with Caramelized Apple",
+    "ingredients": [
+     "1/2 peeled apple, diced",
+     "Water, stevia and lots of cinnamon",
+     "150 g Greek yogurt",
+     "Stevia, cinnamon and vanilla extract",
+     "Nuts (for more satiety)"
+    ],
+    "steps": "Put the apple in a pan almost covered with water, stevia, and cinnamon. Cook, stirring; if the water dries up add more, until it's soft.\nMix the yogurt with stevia, cinnamon, and vanilla.\nServe the apple over the yogurt and add more cinnamon.",
+    "tips": ""
+   },
+   "pt": {
+    "name": "Iogurte grego com maçã caramelizada",
+    "ingredients": [
+     "1/2 maçã descascada em cubinhos",
+     "Água, stevia e bastante canela",
+     "150 g de iogurte grego",
+     "Stevia, canela e essência de baunilha",
+     "Castanhas (para mais saciedade)"
+    ],
+    "steps": "Coloque a maçã em uma frigideira quase coberta com água, stevia e canela. Cozinhe mexendo; se a água secar, adicione mais, até que fique macia.\nMisture o iogurte com stevia, canela e baunilha.\nSirva a maçã sobre o iogurte e adicione mais canela.",
+    "tips": ""
+   }
+  },
+  "r_snacks_frutas": {
+   "en": {
+    "name": "Express Fruit Snacks (7 Ideas)",
+    "ingredients": [
+     "Banana split in half, spread with healthy Nutella, peanut butter, or sugar-free almond arequipe (caramel), topped with nuts or artisanal granola (or sliced into a mini sandwich)",
+     "Apple, thinly sliced and dipped in chocolate melted over a double boiler; let it set or refrigerate",
+     "1 kiwi + 1 handful of almonds + oil-free air-popped popcorn",
+     "1 cup strawberries mixed with healthy Nutella and yogurt",
+     "Parfait: layers of yogurt, a touch of sugar-free granola (or whole grain cereal or oats) and fruit (I love strawberries and blueberries)",
+     "Apple sandwich with peanut butter and granola",
+     "1 slice of whole grain toast with peanut butter and fruit"
+    ],
+    "steps": "Choose one based on your recommended portion.",
+    "tips": ""
+   },
+   "pt": {
+    "name": "Snacks rápidos com frutas (7 ideias)",
+    "ingredients": [
+     "Banana partida ao meio, coberta com Nutella saudável, pasta de amendoim ou doce de leite de amêndoas sem açúcar, com castanhas ou granola artesanal por cima (ou em rodelas tipo mini sanduíche)",
+     "Maçã em rodelas finas banhadas em chocolate derretido em banho-maria; deixe secar ou leve à geladeira",
+     "1 kiwi + 1 punhado de amêndoas + pipoca de ar sem óleo",
+     "1 xícara de morangos misturados com Nutella saudável e iogurte",
+     "Parfait: camadas de iogurte, um pouco de granola sem açúcar (ou cereal integral ou aveia) e fruta (eu amo morangos e mirtilos)",
+     "Sanduíche de maçã com pasta de amendoim e granola",
+     "1 torrada de pão integral com pasta de amendoim e fruta"
+    ],
+    "steps": "Escolha uma opção de acordo com sua porção recomendada.",
+    "tips": ""
+   }
+  },
+  "r_chips_papas_saladas": {
+   "en": {
+    "name": "Salty Potato Chips (Microwave)",
+    "ingredients": [
+     "2 potatoes",
+     "Salt and pepper",
+     "Water"
+    ],
+    "steps": "Peel and wash the potatoes and cut them very thin (a couple of millimeters) with a knife, mandoline, or peeler.\nSoak them for 15 minutes in water with salt and pepper.\nDrain and dry by pressing between two cloths, without stacking them.\nPlace them apart on a microwave-safe plate, 2 minutes at maximum power. Flip and repeat 4 or 5 times until golden.",
+    "tips": "Ultra-processed packaged snacks don't add any nutritional value; swapping them out is a delicious and nutritious option."
+   },
+   "pt": {
+    "name": "Chips de batata salgados (microondas)",
+    "ingredients": [
+     "2 batatas",
+     "Sal e pimenta",
+     "Água"
+    ],
+    "steps": "Descasque e lave as batatas e corte-as bem finas (poucos milímetros) com faca, mandolina ou descascador.\nDeixe de molho por 15 minutos em água com sal e pimenta.\nEscorra e seque pressionando entre dois panos, sem sobrepor.\nColoque-as separadas em um prato próprio para microondas, 2 minutos na potência máxima. Vire e repita 4 ou 5 vezes até dourarem.",
+    "tips": "Os pacotes ultraprocessados não trazem nenhum benefício; substituí-los é uma opção deliciosa e nutritiva."
+   }
+  },
+  "r_chips_papas_mostaza": {
+   "en": {
+    "name": "Mustard and Herb Potato Chips",
+    "ingredients": [
+     "2 potatoes",
+     "Salt, oregano, mustard, garlic powder, basil and paprika"
+    ],
+    "steps": "Same process as the salty chips: cut very thin, soak 15 minutes, dry well, and microwave in 2-minute intervals, flipping, until golden.\nSeason with the mustard and herbs before microwaving.",
+    "tips": ""
+   },
+   "pt": {
+    "name": "Chips de batata com mostarda e ervas",
+    "ingredients": [
+     "2 batatas",
+     "Sal, orégano, mostarda, alho em pó, manjericão e páprica"
+    ],
+    "steps": "Mesmo procedimento dos chips salgados: cortar bem fino, deixar de molho por 15 minutos, secar bem e levar ao microondas em intervalos de 2 minutos, virando, até dourar.\nTempere com a mostarda e as ervas antes de levar ao microondas.",
+    "tips": ""
+   }
+  },
+  "r_chips_vegetales": {
+   "en": {
+    "name": "Vegetable Chips (2 servings)",
+    "ingredients": [
+     "1 eggplant",
+     "1 zucchini",
+     "1 carrot",
+     "Olive or avocado oil",
+     "Salt, pepper and parsley",
+     "A splash of lemon"
+    ],
+    "steps": "Cut the vegetables into very thin slices (a mandoline if you have one): an even cut is the key to crispiness.\nPlace them on parchment paper with a little oil so they don't stick.\nOven preheated to 180°C (350°F) for 15–20 minutes, flipping halfway through.",
+    "tips": ""
+   },
+   "pt": {
+    "name": "Chips de vegetais (2 porções)",
+    "ingredients": [
+     "1 berinjela",
+     "1 abobrinha",
+     "1 cenoura",
+     "Azeite de oliva ou óleo de abacate",
+     "Sal, pimenta e salsa",
+     "1 fio de limão"
+    ],
+    "steps": "Corte os vegetais em rodelas bem finas (mandolina, se tiver): o corte uniforme é a chave para ficarem crocantes.\nColoque sobre papel manteiga com um pouco de azeite para não grudarem.\nForno pré-aquecido a 180 °C por 15–20 minutos, virando na metade do tempo.",
+    "tips": ""
+   }
+  },
+  "r_batido_proteico": {
+   "en": {
+    "name": "Protein Shake",
+    "ingredients": [
+     "1 scoop of protein",
+     "Half a glass of plant-based milk",
+     "Half a glass of water",
+     "Cinnamon and stevia to taste"
+    ],
+    "steps": "Blend everything together.",
+    "tips": "To make it milkshake-style: freeze zucchini and add it to the blender, or use plenty of ice, or Greek yogurt with unflavored gelatin."
+   },
+   "pt": {
+    "name": "Batida proteica",
+    "ingredients": [
+     "1 scoop de proteína",
+     "Meio copo de leite vegetal",
+     "Meio copo de água",
+     "Canela e stevia a gosto"
+    ],
+    "steps": "Bata tudo no liquidificador.",
+    "tips": "Para que fique tipo milkshake: congele abobrinha e coloque no liquidificador, ou use bastante gelo, ou iogurte grego com gelatina sem sabor."
+   }
+  },
+  "r_pancakes_avena": {
+   "en": {
+    "name": "Oatmeal Pancakes or Waffles",
+    "ingredients": [
+     "40 g of oat flour (about 4 tbsp)",
+     "1 egg",
+     "3 tbsp Greek yogurt",
+     "Liquid stevia",
+     "Cinnamon (or cocoa powder for the chocolate version)",
+     "Toppings: fruit and 100% pure honey or Greek yogurt"
+    ],
+    "steps": "Mix everything and pour into a pan over medium-low heat.\nWhen little bubbles appear, flip.\nWhat makes it a pancake or a waffle is whether you cook it in a pan or a waffle maker.",
+    "tips": "Chocolate version: use cocoa powder instead of cinnamon. It's delicious."
+   },
+   "pt": {
+    "name": "Pancakes ou waffles de aveia",
+    "ingredients": [
+     "40 g de farinha de aveia (aprox. 4 colheres de sopa)",
+     "1 ovo",
+     "3 colheres de sopa de iogurte grego",
+     "Stevia líquida",
+     "Canela (ou cacau em pó para a versão chocolate)",
+     "Coberturas: fruta e mel 100% puro ou iogurte grego"
+    ],
+    "steps": "Misture tudo e despeje em uma frigideira em fogo médio-baixo.\nQuando aparecerem bolhinhas, vire.\nO que muda entre pancake e waffle é se você faz na frigideira ou na máquina de waffle.",
+    "tips": "Versão chocolate: cacau em pó em vez de canela. Fica delicioso."
+   }
+  },
+  "r_pancakes_arandanos": {
+   "en": {
+    "name": "Blueberry Pancakes or Waffles",
+    "ingredients": [
+     "2 eggs",
+     "40 g rolled oats (about 1/3 cup)",
+     "1/2 cup blueberries",
+     "2 tsp chia seeds",
+     "1/4 tsp baking powder",
+     "Stevia to taste",
+     "Toppings: blueberries, peanut or cashew butter, pumpkin seeds"
+    ],
+    "steps": "Mix all the ingredients except the blueberries.\nIn a greased pan over medium heat, make the pancakes and place 5–6 blueberries on top of each one.\nWhen bubbles appear, flip.\nMake them small for a tower, or large if you want something more practical. Stack the tower and add the toppings.",
+    "tips": ""
+   },
+   "pt": {
+    "name": "Pancakes ou waffles com mirtilos",
+    "ingredients": [
+     "2 ovos",
+     "40 g de aveia em flocos (1/3 xícara aprox.)",
+     "1/2 xícara de mirtilos",
+     "2 colheres de chá de sementes de chia",
+     "1/4 colher de chá de fermento em pó",
+     "Stevia a gosto",
+     "Coberturas: mirtilos, pasta de amendoim ou castanha-de-caju, sementes de abóbora"
+    ],
+    "steps": "Misture todos os ingredientes menos os mirtilos.\nEm uma frigideira untada em fogo médio, faça os pancakes e coloque 5–6 mirtilos sobre cada um.\nQuando aparecerem bolhas, vire.\nFaça-os pequenos para montar uma torre ou grandes se quiser algo mais prático. Monte a torre e coloque as coberturas.",
+    "tips": ""
+   }
+  },
+  "r_porridge_clasico": {
+   "en": {
+    "name": "Classic Porridge",
+    "ingredients": [
+     "4 or 5 tbsp rolled oats",
+     "Half a glass of water",
+     "Half a glass of plant-based milk",
+     "Cinnamon and stevia to taste"
+    ],
+    "steps": "Boil the water or milk; once it starts boiling, add the oats and stir over low heat.\nRunny or thick, depending on your preference. Once it's how you like it, cover and let it sit.\nAdd any toppings you like.",
+    "tips": "To make it go further: cook it in water the night before, leave it in the fridge, and in the morning add water or almond milk and heat it for a few minutes in the microwave. It ends up with more volume."
+   },
+   "pt": {
+    "name": "Porridge clássico",
+    "ingredients": [
+     "4 ou 5 colheres de sopa de aveia em flocos",
+     "Meio copo de água",
+     "Meio copo de leite vegetal",
+     "Canela e stevia a gosto"
+    ],
+    "steps": "Ferva a água ou o leite; quando começar a ferver, adicione a aveia e mexa em fogo baixo.\nMais líquida ou mais grossa, de acordo com seu gosto. Quando estiver do jeito que você gosta, tampe e deixe descansar.\nAdicione as coberturas que quiser.",
+    "tips": "Para render mais: cozinhe na água na noite anterior, deixe na geladeira e, de manhã, acrescente água ou leite de amêndoas e aqueça alguns minutos no micro-ondas. Fica com mais volume."
+   }
+  },
+  "r_avena_proteica_express": {
+   "en": {
+    "name": "Express Protein Oats",
+    "ingredients": [
+     "4 tbsp oats",
+     "40 g mixed berries",
+     "4 banana slices",
+     "Cinnamon",
+     "1/2 cup water",
+     "1 scoop of protein",
+     "1/2 cup plant-based milk (coconut or oat)",
+     "Liquid stevia"
+    ],
+    "steps": "Put everything except the protein in a pot and bring to a boil, stirring constantly so it doesn't stick.\nSeparately, mix the protein scoop with the plant-based milk and stevia; stir very well and add it in.\nIf you like, top with nuts.",
+    "tips": ""
+   },
+   "pt": {
+    "name": "Aveia proteica express",
+    "ingredients": [
+     "4 colheres de sopa de aveia",
+     "40 g de frutas vermelhas",
+     "4 rodelas de banana",
+     "Canela",
+     "1/2 xícara de água",
+     "1 scoop de proteína",
+     "1/2 xícara de leite vegetal (coco ou aveia)",
+     "Stevia líquida"
+    ],
+    "steps": "Coloque tudo menos a proteína em uma panela e deixe ferver mexendo sempre para não grudar.\nÀ parte, misture o scoop de proteína com o leite vegetal e stevia; misture muito bem e adicione.\nSe quiser, oleaginosas por cima.",
+    "tips": ""
+   }
+  },
+  "r_avena_chocolate": {
+   "en": {
+    "name": "Chocolate Oats",
+    "ingredients": [
+     "4 tbsp or 1/2 cup oats",
+     "1/2 cup water",
+     "1/2 cup milk",
+     "1 tsp unsweetened cocoa powder",
+     "Cinnamon and stevia",
+     "Topping: 1 kiwi and shredded coconut"
+    ],
+    "steps": "Combine all the ingredients and microwave for about 2 minutes.\nServe with kiwi and shredded coconut: it's delicious.",
+    "tips": ""
+   },
+   "pt": {
+    "name": "Aveia de chocolate",
+    "ingredients": [
+     "4 colheres de sopa ou 1/2 xícara de aveia",
+     "1/2 xícara de água",
+     "1/2 xícara de leite",
+     "1 colher de chá de cacau em pó sem açúcar",
+     "Canela e stevia",
+     "Cobertura: 1 kiwi e coco ralado"
+    ],
+    "steps": "Junte todos os ingredientes e leve ao micro-ondas por uns 2 minutos.\nSirva com kiwi e coco ralado: fica delicioso.",
+    "tips": ""
+   }
+  },
+  "r_avena_cacao_cafe": {
+   "en": {
+    "name": "Cocoa, Coffee, and Peanut Butter Oats",
+    "ingredients": [
+     "4 or 5 tbsp oats, soaked overnight",
+     "1 cup of plant-based milk",
+     "1 cinnamon stick and ground cinnamon",
+     "Stevia",
+     "1/4 cup cocoa powder",
+     "2 tbsp peanut butter",
+     "Stevia or honey",
+     "1 shot of coffee"
+    ],
+    "steps": "Cook the oats with the milk and cinnamon over medium heat for 7 minutes.\nAdd the cocoa, peanut butter, and stevia or honey. Turn off the heat and let sit for 2 minutes.\nServe with a shot of coffee and stir.",
+    "tips": ""
+   },
+   "pt": {
+    "name": "Aveia de cacau, café e pasta de amendoim",
+    "ingredients": [
+     "4 ou 5 colheres de sopa de aveia deixada de molho na noite anterior",
+     "1 xícara de leite vegetal",
+     "1 pau de canela e canela em pó",
+     "Stevia",
+     "1/4 xícara de cacau em pó",
+     "2 colheres de sopa de pasta de amendoim",
+     "Stevia ou mel",
+     "1 shot de café"
+    ],
+    "steps": "Cozinhe a aveia com o leite e a canela em fogo médio por 7 minutos.\nAdicione o cacau, a pasta de amendoim e stevia ou mel. Desligue e deixe descansar 2 minutos.\nSirva com um shot de café e misture.",
+    "tips": ""
+   }
+  },
+  "r_bowl_proteico": {
+   "en": {
+    "name": "Protein Bowl",
+    "ingredients": [
+     "150 g Greek or coconut yogurt",
+     "Sugar-free artisanal granola, keto or oat-based",
+     "1 tsp chia seeds (optional)",
+     "Fruit, per your suggested portion",
+     "1 or half a scoop of protein (optional)",
+     "1 tsp peanut butter or nuts for extra satiety"
+    ],
+    "steps": "Serve the yogurt as the base, add granola, chia, and fruit.\nIf you want more protein, mix the scoop into the yogurt: it's delicious.",
+    "tips": ""
+   },
+   "pt": {
+    "name": "Bowl proteico",
+    "ingredients": [
+     "150 g de iogurte grego ou de coco",
+     "Granola artesanal sem açúcar, keto ou de aveia",
+     "1 colher de chá de sementes de chia (opcional)",
+     "Fruta de acordo com a sua porção sugerida",
+     "1 scoop ou meio de proteína (opcional)",
+     "1 colher de chá de pasta de amendoim ou oleaginosas para mais saciedade"
+    ],
+    "steps": "Sirva o iogurte como base, adicione a granola, a chia e a fruta.\nSe quiser mais proteína, misture o scoop no iogurte: fica delicioso.",
+    "tips": ""
+   }
+  },
+  "r_crumble_arandanos": {
+   "en": {
+    "name": "Healthy Blueberry Crumble",
+    "ingredients": [
+     "3 or 4 tbsp rolled oats",
+     "2 tbsp oat flour",
+     "2 tbsp honey or maple syrup",
+     "1 tsp ground cinnamon",
+     "1 cup fresh or frozen blueberries",
+     "Topping: 3 tbsp Greek yogurt with 1 tsp maple syrup or cinnamon"
+    ],
+    "steps": "Mix the oats, flour, honey, and cinnamon.\nPlace the blueberries in a baking dish and top with the oat mixture.\nBake at 180°C (350°F) for 20 minutes or until golden; in the airfryer, about 360°F for 15 minutes.\nPair with protein, like eggs, for example.",
+    "tips": ""
+   },
+   "pt": {
+    "name": "Crumble de mirtilos saudável",
+    "ingredients": [
+     "3 ou 4 colheres de sopa de aveia em flocos",
+     "2 colheres de sopa de farinha de aveia",
+     "2 colheres de sopa de mel de abelha ou maple",
+     "1 colher de chá de canela em pó",
+     "1 xícara de mirtilos frescos ou congelados",
+     "Cobertura: 3 colheres de sopa de iogurte grego com 1 colher de chá de maple ou canela"
+    ],
+    "steps": "Misture a aveia, a farinha, o mel e a canela.\nColoque os mirtilos em um refratário e por cima a mistura de aveia.\nForno a 180 °C por 20 minutos ou até dourar; na airfryer, 360 °F por aprox. 15 minutos.\nAcompanhe com proteína, por exemplo ovos.",
+    "tips": ""
+   }
+  },
+  "r_huevos_hogao": {
+   "en": {
+    "name": "Eggs with healthy hogao (typical Colombian dish)",
+    "ingredients": [
+     "2 tomatoes",
+     "1/2 medium eggplant",
+     "1 small onion, diced",
+     "1 egg + 2 egg whites",
+     "Recommended oil, salt and pepper"
+    ],
+    "steps": "Sauté the tomato, eggplant and onion over medium-low heat with salt and pepper until everything is soft, like a hogao (Colombian tomato-onion sauce).\nAdd the eggs and cook.\nEnjoy with a carb from the recommended list.",
+    "tips": "The hogao shouldn't be dry: if needed, add a splash of water. You can save hogao for another portion or another recipe."
+   },
+   "pt": {
+    "name": "Ovos com hogao saudável (prato típico colombiano)",
+    "ingredients": [
+     "2 tomates",
+     "1/2 berinjela média",
+     "1 cebola pequena em cubinhos",
+     "1 ovo + 2 claras",
+     "Óleo recomendado, sal e pimenta"
+    ],
+    "steps": "Refogue o tomate, a berinjela e a cebola em fogo médio-baixo com sal e pimenta até tudo ficar bem macio, como um hogao (molho colombiano de tomate e cebola).\nAdicione os ovos e cozinhe.\nAproveite com um carboidrato da lista recomendada.",
+    "tips": "O hogao não deve ficar seco: se precisar, coloque um pouquinho de água. Você pode guardar o hogao para outra porção ou outra preparação."
+   }
+  },
+  "r_huevos_espinaca_cremosa": {
+   "en": {
+    "name": "Eggs with creamy spinach",
+    "ingredients": [
+     "A bit of onion and 1/2 garlic clove",
+     "Ghee",
+     "2 handfuls of spinach",
+     "4 tbsp plain Greek yogurt",
+     "A splash of almond milk",
+     "Eggs",
+     "Nutritional yeast or parmesan cheese",
+     "Salt and pepper"
+    ],
+    "steps": "Sauté the onion with the garlic in ghee, add the spinach (it looks like a lot but shrinks down a ton), the yogurt and the almond milk. Stir and add another half tbsp of ghee.\nPut the eggs on top, along with the nutritional yeast or parmesan, salt and pepper.\nCover and let cook for 3 minutes over medium heat.\nEnjoy with a carb from the recommended list.",
+    "tips": ""
+   },
+   "pt": {
+    "name": "Ovos com espinafre cremoso",
+    "ingredients": [
+     "Um pouco de cebola e 1/2 dente de alho",
+     "Ghee",
+     "2 punhados de espinafre",
+     "4 colheres de sopa de iogurte grego sem sabor",
+     "Um fiozinho de leite de amêndoas",
+     "Ovos",
+     "Levedura nutricional ou queijo parmesão",
+     "Sal e pimenta"
+    ],
+    "steps": "Refogue a cebola com o alho no ghee, adicione o espinafre (parece muito, mas encolhe bastante), o iogurte e o leite de amêndoas. Misture e adicione mais meia colher de sopa de ghee.\nColoque os ovos por cima, a levedura nutricional ou o parmesão, sal e pimenta.\nTampe e deixe 3 minutos em fogo médio.\nAproveite com um carboidrato da lista recomendada.",
+    "tips": ""
+   }
+  },
+  "r_maduro_huevo": {
+   "en": {
+    "name": "Maduro (ripe plantain) with egg",
+    "ingredients": [
+     "1 medium ripe plantain (maduro)",
+     "Homemade guacamole (avocado, lime, apple cider vinegar, pepper, onion, tomato)",
+     "Scrambled eggs",
+     "Almond mozzarella-style cheese (optional)"
+    ],
+    "steps": "Cook the maduro with the peel on in the microwave for a few minutes.\nCut it in half, open it up and fill with guacamole and scrambled eggs. A touch of almond cheese is optional.",
+    "tips": "Recommended portion: 1 medium maduro."
+   },
+   "pt": {
+    "name": "Maduro (banana-da-terra madura) com ovo",
+    "ingredients": [
+     "1 banana-da-terra madura média",
+     "Guacamole caseiro (abacate, limão, vinagre de maçã, pimenta, cebola, tomate)",
+     "Ovos mexidos",
+     "Queijo tipo mozarela de amêndoas (opcional)"
+    ],
+    "steps": "Cozinhe a banana-da-terra madura com casca no micro-ondas por alguns minutos.\nCorte-a ao meio, abra e recheie com guacamole e ovos mexidos. Um toque de queijo de amêndoas é opcional.",
+    "tips": "Porção recomendada: 1 banana-da-terra madura média."
+   }
+  },
+  "r_huevos_zucchini_noodles": {
+   "en": {
+    "name": "Eggs with zucchini noodles (low carb)",
+    "ingredients": [
+     "1 zucchini, spiralized into noodles or julienned",
+     "Eggs",
+     "Almond cheese (optional)",
+     "Hot sauce or homemade tomato sauce (optional)"
+    ],
+    "steps": "Put the noodles in a pan, make a hole in the middle and add the eggs.\nCook covered, like a fried egg.\nIf you want a complex carb, pair it with half an arepa or 1 slice of whole wheat bread.",
+    "tips": "The little noodle maker is super affordable; if you don't have one, cut long julienne strips instead."
+   },
+   "pt": {
+    "name": "Ovos com noodles de abobrinha (low carb)",
+    "ingredients": [
+     "1 abobrinha em noodles ou julienne",
+     "Ovos",
+     "Queijo de amêndoas (opcional)",
+     "Molho picante ou molho de tomate caseiro (opcional)"
+    ],
+    "steps": "Coloque os noodles em uma frigideira, abra um buraco no meio e adicione os ovos.\nCozinhe tampado, como um ovo frito.\nSe quiser um carboidrato complexo, acompanhe com meia arepa (bolinho colombiano de milho) ou 1 fatia de pão integral.",
+    "tips": "O aparelhinho de fazer noodles é super econômico; se não tiver, corte julienne bem finas e compridas."
+   }
+  },
+  "r_arepa_choclo": {
+   "en": {
+    "name": "Corn arepa without corn",
+    "ingredients": [
+     "1 egg + 1 egg white",
+     "2 tbsp coconut flour",
+     "2 tbsp Greek yogurt",
+     "1 or 2 slices of almond cheese or low-fat mozzarella",
+     "Pinch of sea salt or pink salt",
+     "1/2 tsp baking powder",
+     "Liquid stevia (gives it the sweet flavor)",
+     "3 tbsp water"
+    ],
+    "steps": "Mix all the ingredients except the cheese. Taste the mixture before cooking it to adjust the sweetness.\nIn a greased pan, spread out half of the mixture evenly and cover for 1 minute.\nUncover, add the cheese and pour the other half over it, covering it well so it stays in the center.\nCover, let it cook a bit and flip to brown the other side.",
+    "tips": ""
+   },
+   "pt": {
+    "name": "Arepa de milho sem milho",
+    "ingredients": [
+     "1 ovo + 1 clara",
+     "2 colheres de sopa de farinha de coco",
+     "2 colheres de sopa de iogurte grego",
+     "1 ou 2 fatias de queijo de amêndoas ou mozarela light",
+     "Uma pitada de sal marinho ou rosa",
+     "1/2 colher de chá de fermento em pó",
+     "Stevia líquida (dá o toque doce)",
+     "3 colheres de sopa de água"
+    ],
+    "steps": "Misture todos os ingredientes menos o queijo. Prove a mistura antes de cozinhar para ajustar o doce.\nEm uma frigideira untada, coloque metade da mistura bem espalhada e tampe por 1 minuto.\nDestampe, coloque o queijo e despeje a outra metade cobrindo bem para que fique no centro.\nTampe, deixe cozinhar um pouco e vire para dourar do outro lado.",
+    "tips": ""
+   }
+  },
+  "r_desayuno_dulce_salado": {
+   "en": {
+    "name": "Sweet and savory breakfast",
+    "ingredients": [
+     "1 egg + 2 egg whites scrambled with ghee",
+     "Sprouts (on top of the eggs)",
+     "1 slice of 100% whole wheat or oat bread, toasted",
+     "1 tsp peanut butter",
+     "Fruit slices",
+     "Greek yogurt with fruit"
+    ],
+    "steps": "Scramble the eggs with ghee and top them with sprouts: it's delicious and packed with nutrients.\nOn the side, the toast with peanut butter and fruit.\nPair it with Greek yogurt mixed with fruit for more satiety and protein.",
+    "tips": ""
+   },
+   "pt": {
+    "name": "Café da manhã doce e salgado",
+    "ingredients": [
+     "1 ovo + 2 claras mexidos com ghee",
+     "Brotos (por cima dos ovos)",
+     "1 torrada 100% integral ou de aveia",
+     "1 colher de chá de pasta de amendoim",
+     "Fatias de fruta",
+     "Iogurte grego com fruta"
+    ],
+    "steps": "Mexa os ovos com ghee e coloque brotos por cima: fica gostoso e é rico em nutrientes.\nAo lado, a torrada com pasta de amendoim e fruta.\nAcompanhe com iogurte grego misturado com fruta para mais saciedade e proteína.",
+    "tips": ""
+   }
+  },
+  "r_tostadas_francesas": {
+   "en": {
+    "name": "French toast",
+    "ingredients": [
+     "Whole wheat, oat or almond bread",
+     "1 egg",
+     "1/3 cup plant-based milk",
+     "1 tsp stevia and vanilla extract",
+     "Toppings: fruit, homemade jam, Greek yogurt or peanut butter"
+    ],
+    "steps": "Mix the egg, milk, stevia and vanilla in a bowl.\nDip the bread slices in the liquid and place them in the pan; brown on both sides.\nServe with your favorite toppings.",
+    "tips": ""
+   },
+   "pt": {
+    "name": "Rabanadas",
+    "ingredients": [
+     "Pão integral, de aveia ou de amêndoas",
+     "1 ovo",
+     "1/3 xícara de leite vegetal",
+     "1 colher de chá de stevia e essência de baunilha",
+     "Coberturas: fruta, geleia caseira, iogurte grego ou pasta de amendoim"
+    ],
+    "steps": "Misture o ovo, o leite, a stevia e a baunilha em uma tigela.\nMolhe as fatias de pão no líquido e leve à frigideira; doure dos dois lados.\nSirva com as coberturas que mais gostar.",
+    "tips": ""
+   }
+  },
+  "r_waffles_tocineta_fit": {
+   "en": {
+    "name": "Waffles with fit bacon",
+    "ingredients": [
+     "1 scoop of waffle mix (@NatMatStore: banana, brownie or vanilla)",
+     "2 tbsp plant-based milk or Greek yogurt",
+     "Toppings: cuajada (fresh curd cheese) or cottage cheese, blueberries, bits of low-sodium turkey ham made into bacon, and honey"
+    ],
+    "steps": "Mix the powder with the milk or yogurt (no egg needed).\nCook in a pan over medium-low heat on each side.\nServe with the toppings.",
+    "tips": "The healthy bacon is in Toppings."
+   },
+   "pt": {
+    "name": "Waffles com bacon fit",
+    "ingredients": [
+     "1 scoop de mix de waffles (@NatMatStore: banana, brownie ou baunilha)",
+     "2 colheres de sopa de leite vegetal ou iogurte grego",
+     "Coberturas: queijo cuajada (queijo fresco colombiano) ou cottage, mirtilos, pedacinhos de peito de peru com baixo sódio em formato de bacon, e mel"
+    ],
+    "steps": "Misture o mix com o leite ou iogurte (não precisa de ovo).\nCozinhe na frigideira em fogo médio-baixo dos dois lados.\nSirva com as coberturas.",
+    "tips": "O bacon saudável está em Coberturas."
+   }
+  },
+  "r_aguas_saborizadas": {
+   "en": {
+    "name": "Flavored waters and infusions (replace juices)",
+    "ingredients": [
+     "Water, lemon juice, stevia, mint or basil (or both). I promise it tastes delicious!",
+     "Water and hibiscus flower",
+     "Water, lemon and ginger",
+     "Water, lemon, mint, and orange slices or cherries at the bottom",
+     "Water, watermelon slices at the bottom, mint and cucumber",
+     "Water, strawberries at the bottom, mint and lemon",
+     "Water, watermelon, mint and basil or rosemary",
+     "Water, orange slices at the bottom, ginger and basil"
+    ],
+    "steps": "Since this is an infusion and not a smoothie, the amount of fruit should be small.\nPut the fruit or vegetable in a container and mash it with a wooden spoon if you want more flavor; if you want less flavor, just cut slices and leave them at the bottom of the pitcher. Remove peel and seeds if needed.\nAdd a little of the herb or spice you chose. If it's aromatic, it's better fresh: press it a bit to release aroma and juice.\nAdd water and, if you want it colder, ice right when you drink it (that way the pitcher doesn't get watered down in the fridge). In a glass pitcher it keeps its flavor and properties for up to 1 week.",
+    "tips": "If you like it sweet, add liquid stevia (that's how I drink them). Benefits: no added sugar, they help with fluid retention, boost your defenses and hydrate you; skin, hair and nails look better. Customize with: fruits (citrus, berries, mango, kiwi, papaya, melon, watermelon, pear, apple, peach), vegetables (cucumber, carrot, celery), herbs (mint, sage, basil, rosemary, lavender, thyme, dandelion, hibiscus flower, green, black or red tea, moringa) and spices (cinnamon, ginger, black pepper)."
+   },
+   "pt": {
+    "name": "Águas saborizadas e infusões (substituem os sucos)",
+    "ingredients": [
+     "Água, suco de limão, stevia, hortelã ou manjericão (ou ambos). Prometo que fica delicioso!",
+     "Água e flor de hibisco (jamaica)",
+     "Água, limão e gengibre",
+     "Água, limão, hortelã e, no fundo, algumas rodelas de laranja ou cerejas",
+     "Água, melancia em rodelas no fundo, hortelã e pepino",
+     "Água, morangos no fundo, hortelã e limão",
+     "Água, melancia, hortelã e manjericão ou alecrim",
+     "Água, rodelas de laranja no fundo, gengibre e manjericão"
+    ],
+    "steps": "Por ser uma infusão e não um suco batido, as quantidades de fruta devem ser pequenas.\nColoque a fruta ou o vegetal em um recipiente e amasse com uma colher de pau se quiser mais sabor; se quiser menos sabor, apenas corte rodelas e deixe-as no fundo da jarra. Retire casca e sementes se necessário.\nAdicione um pouco da erva ou especiaria escolhida. Se for aromática, melhor a folha ao natural: aperte-a um pouco para que solte aroma e suco.\nAdicione água e, se quiser mais gelada, gelo só na hora de tomar (assim a jarra não fica aguada na geladeira). Em jarra de vidro dura até 1 semana com sabor e propriedades.",
+    "tips": "Se você gosta doce, adicione stevia líquida (eu as tomo assim). Benefícios: sem açúcar adicionado, ajudam com a retenção de líquidos, aumentam as defesas e te hidratam; pele, cabelo e unhas ficam melhores. Personalize com: frutas (cítricos, frutas vermelhas, manga, kiwi, mamão, melão, melancia, pera, maçã, pêssego), vegetais (pepino, cenoura, aipo), ervas (hortelã, sálvia, manjericão, alecrim, lavanda, tomilho, dente-de-leão, flor de hibisco, chá verde, preto ou vermelho, moringa) e especiarias (canela, gengibre, pimenta-do-reino)."
+   }
+  },
+  "r_infusiones_dormir": {
+   "en": {
+    "name": "Infusions for better sleep",
+    "ingredients": [
+     "Chamomile",
+     "Valerian",
+     "Lemon balm",
+     "Turmeric",
+     "Passionflower",
+     "Ashwagandha tea",
+     "BedTime Tea (@NatMatStore)",
+     "Apple cider vinegar (diluted in water)"
+    ],
+    "steps": "Choose one and prepare it hot at night.\nInclude vegetables in any form at dinner.\nAvoid red meats, processed foods, high-sugar foods, coffee or stimulants at night.\nTry to have dinner before 7:30–8:00 PM.\nFruit and carbs at night don't make you gain weight, but they give you energy and can affect your sleep: better to have them at breakfast, snack or lunch.\nEating healthy fats at night helps you fall asleep: a bowl of vegetables, protein and healthy fats is a good option (measure your fat portion).",
+    "tips": ""
+   },
+   "pt": {
+    "name": "Infusões para dormir melhor",
+    "ingredients": [
+     "Camomila",
+     "Valeriana",
+     "Erva-cidreira (toronjil)",
+     "Cúrcuma",
+     "Passiflora (maracujá)",
+     "Chá de ashwagandha",
+     "Chá BedTime (@NatMatStore)",
+     "Vinagre de maçã (diluído em água)"
+    ],
+    "steps": "Escolha uma e prepare-a quente à noite.\nNo jantar inclua vegetais em qualquer preparação.\nEvite carnes vermelhas, processados, alimentos ricos em açúcar, café ou estimulantes à noite.\nSe possível, jante antes das 19h30–20h.\nA fruta e os carboidratos à noite não engordam, mas dão energia e podem afetar o sono: melhor no café da manhã, lanche ou almoço.\nComer gorduras boas à noite ajuda a conciliar o sono: um bowl de vegetais, proteína e gorduras boas é uma boa opção (meça a porção de gorduras).",
+    "tips": ""
+   }
+  },
+  "r_jugos_verdes": {
+   "en": {
+    "name": "Green juices (bonus)",
+    "ingredients": [
+     "Celery extract alone (in a juicer, or in a blender with a little water and lemon juice)",
+     "Half an apple, half a cucumber, 4 spinach leaves, aloe vera, 1 tsp chia seeds and half a large glass of water",
+     "Half a pineapple slice, spinach or chard, aloe vera and half a cucumber",
+     "Lemon juice, spinach or chard, half a cucumber and 1 tsp flaxseed"
+    ],
+    "steps": "Ideal before breakfast. Combine however you like, but only ONE fruit with 3 or 4 vegetables. Blend and enjoy.",
+    "tips": "They're packed with fiber: they lower cholesterol and glucose, keep you full and support your body's natural cleansing. You might not love it the first day; but you'll end up loving it. It's not mandatory every day: it's a way to treat yourself and start the day well."
+   },
+   "pt": {
+    "name": "Sucos verdes (bônus)",
+    "ingredients": [
+     "Extrato de aipo puro (na centrífuga, ou no liquidificador com um pouco de água e suco de limão)",
+     "Meia maçã, meio pepino, 4 folhas de espinafre, babosa, 1 colher de chá de sementes de chia e meio copo grande de água",
+     "Meia rodela de abacaxi, espinafre ou acelga, babosa e meio pepino",
+     "Suco de limão, espinafre ou acelga, meio pepino e 1 colher de chá de linhaça"
+    ],
+    "steps": "Ideal antes do café da manhã. Combine como quiser, mas apenas UMA fruta com 3 ou 4 vegetais. Bata no liquidificador e aproveite.",
+    "tips": "Estão cheios de fibra: baixam colesterol e glicose, dão saciedade e regulam a limpeza do corpo. No primeiro dia talvez você não goste tanto; depois vai amar. Não é obrigatório todos os dias: é uma forma de se cuidar e começar bem o dia."
+   }
+  },
+  "r_desayuno_tradicional": {
+   "en": {
+    "name": "Traditional breakfast",
+    "ingredients": [
+     "2 egg whites + 1 whole egg",
+     "Vegetables: mushrooms, spinach, zucchini, eggplant, tomato, onion, bell pepper or arugula",
+     "Avocado oil, ghee or coconut oil",
+     "Sea salt or pink salt and black pepper",
+     "1 arepa (cornmeal patty) made with yuca, brown rice or 100% artisanal corn"
+    ],
+    "steps": "Scramble the eggs with the vegetables in a little avocado, ghee or coconut oil.\nServe with an artisanal arepa (always check its nutrition facts and ingredients).",
+    "tips": "At @NatMatStore there's a wide variety of artisanal arepas; supermarkets also carry them, but read the label."
+   },
+   "pt": {
+    "name": "Café da manhã tradicional",
+    "ingredients": [
+     "2 claras + 1 ovo inteiro",
+     "Vegetais: cogumelos, espinafre, abobrinha, berinjela, tomate, cebola, pimentão ou rúcula",
+     "Óleo de abacate, ghee ou óleo de coco",
+     "Sal marinho ou rosa e pimenta-do-reino",
+     "1 arepa de mandioca, arroz integral ou milho 100% artesanal"
+    ],
+    "steps": "Mexa os ovos com os vegetais em um pouco de óleo de abacate, ghee ou coco.\nAcompanhe com uma arepa artesanal (sempre confira a tabela nutricional e os ingredientes).",
+    "tips": "Na @NatMatStore há grande variedade de arepas artesanais; em supermercados também, mas leia o rótulo."
+   }
+  },
+  "r_avotoast": {
+   "en": {
+    "name": "Avotoast",
+    "ingredients": [
+     "2 egg whites + 1 egg",
+     "1 slice of oat bread or 100% whole wheat bread",
+     "Avocado slices",
+     "Lemon, black pepper, red onion",
+     "Apple cider vinegar (optional)"
+    ],
+    "steps": "Scramble the eggs with any vegetables you like, or plain.\nOn the toast, add the avocado with lemon, apple cider vinegar, black pepper and red onion.",
+    "tips": ""
+   },
+   "pt": {
+    "name": "Avotoast",
+    "ingredients": [
+     "2 claras + 1 ovo",
+     "1 fatia de pão de aveia ou 100% integral",
+     "Fatias de abacate",
+     "Limão, pimenta-do-reino, cebola roxa",
+     "Vinagre de maçã (opcional)"
+    ],
+    "steps": "Mexa os ovos com os vegetais que quiser ou sozinhos.\nSobre a torrada coloque o abacate com limão, vinagre de maçã, pimenta-do-reino e cebola roxa.",
+    "tips": ""
+   }
+  },
+  "r_patacones_desayuno": {
+   "en": {
+    "name": "Patacones (crispy green plantain) for breakfast",
+    "ingredients": [
+     "1 whole egg + 2 egg whites",
+     "Tomato and onion",
+     "Sliced green plantain",
+     "A little oil (with a paper towel) and a pinch of salt",
+     "Almond cheese or feta (optional)"
+    ],
+    "steps": "Scramble the eggs with tomato and onion.\nNot-fried patacones: put the sliced plantain with a little oil and salt in the airfryer at 380 °F for 2 minutes, flip, and 2 more minutes. Flatten with a tostonera (plantain press), return to the airfryer and brown to taste.\nServe the eggs over the patacones with a bit of almond cheese or feta.",
+    "tips": "Do the first step of the patacones during your meal prep and just brown them at breakfast."
+   },
+   "pt": {
+    "name": "Patacones (banana-da-terra verde frita e amassada) no café da manhã",
+    "ingredients": [
+     "1 ovo inteiro + 2 claras",
+     "Tomate e cebola",
+     "Banana-da-terra verde fatiada",
+     "Um pouco de óleo (com guardanapo) e uma pitada de sal",
+     "Queijo de amêndoas ou feta (opcional)"
+    ],
+    "steps": "Mexa os ovos com tomate e cebola.\nPatacones não fritos: coloque a banana fatiada com um pouco de óleo e sal na airfryer a 380 °F por 2 minutos, vire e mais 2 minutos. Amasse com o tostonera (utensílio para amassar patacones), volte à airfryer e doure a gosto.\nSirva os ovos sobre os patacones com um pouco de queijo de amêndoas ou feta.",
+    "tips": "Faça o primeiro passo dos patacones no seu meal prep e no café da manhã só doure."
+   }
+  },
+  "r_keto_cheese_waffles": {
+   "en": {
+    "name": "Keto cheese waffles",
+    "ingredients": [
+     "2/3 cup almond flour",
+     "2 slices almond cheese, chopped",
+     "1 egg",
+     "1/3 cup coconut milk",
+     "1/2 tbsp melted ghee",
+     "1/4 tsp salt",
+     "To serve: 1 egg fried in ghee, tomato, arugula and avocado (optional)"
+    ],
+    "steps": "Heat the waffle iron or pan to maximum temperature.\nMix all the ingredients in a bowl.\nGrease the waffle iron very well, pour in the mixture and cook for 8 minutes.\nAdd any healthy toppings you like.",
+    "tips": "Low in carbs, rich in protein and healthy fats."
+   },
+   "pt": {
+    "name": "Keto cheese waffles",
+    "ingredients": [
+     "2/3 xícara de farinha de amêndoas",
+     "2 fatias de queijo de amêndoas em pedaços",
+     "1 ovo",
+     "1/3 xícara de leite de coco",
+     "1/2 colher de sopa de ghee derretido",
+     "1/4 colher de chá de sal",
+     "Para acompanhar: 1 ovo frito em ghee, tomate, rúcula e abacate (opcional)"
+    ],
+    "steps": "Aqueça a máquina de waffles ou a frigideira na temperatura máxima.\nMisture todos os ingredientes em uma tigela.\nUnte bem a máquina de waffles, despeje a mistura e cozinhe por 8 minutos.\nAdicione os toppings saudáveis que quiser.",
+    "tips": "Baixo em carboidrato, rico em proteína e gorduras boas."
+   }
+  },
+  "r_huevos_pomodoro": {
+   "en": {
+    "name": "Pomodoro eggs in a skillet",
+    "ingredients": [
+     "1 egg + 2 egg whites",
+     "Tomato and garlic",
+     "Dried herbs: bay leaf, oregano, thyme",
+     "1 tbsp chopped basil (at the end)",
+     "Almond cheese or buffalo mozzarella",
+     "Olive, coconut or avocado oil",
+     "Salt"
+    ],
+    "steps": "Make the sauce: chop the tomato and garlic, sauté in a little oil until the tomato is soft, add the dried herbs and mash until you have a paste.\nSpread the sauce around the edges of a pan, like a nest, and add the eggs in the center.\nCook over very low heat, covering and uncovering so they cook evenly without drying out. Add salt only on top of the egg.\nBefore removing from heat, add a bit of cheese; when serving, add the chopped basil (if you add it earlier it turns black).\nEnjoy with a carb from the recommended list.",
+    "tips": ""
+   },
+   "pt": {
+    "name": "Ovinhos pomodoro na panela",
+    "ingredients": [
+     "1 ovo + 2 claras",
+     "Tomate e alho",
+     "Ervas secas: louro, orégano, tomilho",
+     "1 colher de sopa de manjericão picado (no final)",
+     "Queijo de amêndoas ou mussarela de búfala",
+     "Azeite de oliva, óleo de coco ou de abacate",
+     "Sal"
+    ],
+    "steps": "Faça o molho: pique o tomate e o alho, refogue em um pouco de óleo até o tomate ficar macio, adicione as ervas secas e amasse até obter uma pasta.\nLeve o molho a uma frigideira deixando-o nas bordas, como um ninho, e coloque os ovos no centro.\nCozinhe em fogo bem baixo, tampando e destampando para que cozinhem por igual sem secar. O sal vai só por cima do ovo.\nAntes de retirar adicione um pouco de queijo; na hora de servir, o manjericão picado (se colocar antes, ele escurece).\nAproveite com um carboidrato da lista recomendada.",
+    "tips": ""
+   }
+  },
+  "r_vinagreta_dulce": {
+   "en": {
+    "name": "Express sweet vinaigrette",
+    "ingredients": [
+     "1 tbsp lemon juice",
+     "2 tbsp apple cider vinegar",
+     "Liquid stevia",
+     "Ground cinnamon",
+     "Water"
+    ],
+    "steps": "Mix very well.",
+    "tips": ""
+   },
+   "pt": {
+    "name": "Vinagrete doce express",
+    "ingredients": [
+     "1 colher de sopa de suco de limão",
+     "2 colheres de sopa de vinagre de maçã",
+     "Stevia líquida",
+     "Canela em pó",
+     "Água"
+    ],
+    "steps": "Misture muito bem.",
+    "tips": ""
+   }
+  },
+  "r_salsa_miso_mani": {
+   "en": {
+    "name": "Miso and peanut sauce",
+    "ingredients": [
+     "2 tbsp white miso paste",
+     "2 tbsp peanut butter",
+     "1 garlic clove",
+     "1/2 tsp fresh ginger",
+     "1 tsp rice vinegar or apple cider vinegar",
+     "2 tbsp honey or agave nectar",
+     "1/4 cup water",
+     "1 tsp sesame seeds"
+    ],
+    "steps": "Blend everything in a blender or food processor. Store in an airtight container in the fridge for up to 3 weeks.",
+    "tips": "Goes great with the cabbage and salmon wrap."
+   },
+   "pt": {
+    "name": "Molho de miso e amendoim",
+    "ingredients": [
+     "2 colheres de sopa de pasta de miso branco",
+     "2 colheres de sopa de pasta de amendoim",
+     "1 dente de alho",
+     "1/2 colher de chá de gengibre fresco",
+     "1 colher de chá de vinagre de arroz ou de maçã",
+     "2 colheres de sopa de mel ou néctar de agave",
+     "1/4 xícara de água",
+     "1 colher de chá de sementes de gergelim"
+    ],
+    "steps": "Bata tudo no liquidificador ou processador. Guarde em recipiente hermético na geladeira por até 3 semanas.",
+    "tips": "Combina com o wrap de repolho e salmão."
+   }
+  },
+  "r_miel_mostaza": {
+   "en": {
+    "name": "Creamy honey mustard",
+    "ingredients": [
+     "3 tbsp Dijon mustard",
+     "1 tbsp traditional mustard (check that the only ingredient is mustard)",
+     "1 tbsp pure honey",
+     "1 tsp apple cider vinegar",
+     "1/4 cup Greek yogurt",
+     "1/4 tsp pink salt"
+    ],
+    "steps": "Mix everything in a bowl and store in an airtight container in the fridge for up to 3 weeks.",
+    "tips": "So good on a sandwich."
+   },
+   "pt": {
+    "name": "Mel e mostarda cremoso",
+    "ingredients": [
+     "3 colheres de sopa de mostarda Dijon",
+     "1 colher de sopa de mostarda tradicional (que o ingrediente seja só mostarda)",
+     "1 colher de sopa de mel puro",
+     "1 colher de chá de vinagre de maçã",
+     "1/4 xícara de iogurte grego",
+     "1/4 colher de chá de sal rosa"
+    ],
+    "steps": "Misture tudo em uma tigela e guarde em recipiente hermético na geladeira por até 3 semanas.",
+    "tips": "Fica ótimo no sanduíche."
+   }
+  },
+  "r_pesto_kale": {
+   "en": {
+    "name": "Kale pesto",
+    "ingredients": [
+     "2 cups kale",
+     "2 cups fresh basil",
+     "1 garlic clove",
+     "1/4 cup pine nuts, almonds, or walnuts",
+     "2 tbsp extra virgin olive oil",
+     "1/4 tsp pink salt"
+    ],
+    "steps": "Blend everything and store in an airtight container in the fridge for a few days.",
+    "tips": "Delicious on pasta or zucchini noodles."
+   },
+   "pt": {
+    "name": "Pesto de couve (kale)",
+    "ingredients": [
+     "2 xícaras de couve (kale)",
+     "2 xícaras de manjericão fresco",
+     "1 dente de alho",
+     "1/4 xícara de pinoli, amêndoas ou nozes",
+     "2 colheres de sopa de azeite de oliva extra virgem",
+     "1/4 colher de chá de sal rosa"
+    ],
+    "steps": "Bata tudo e guarde em recipiente hermético na geladeira por alguns dias.",
+    "tips": "Fica delicioso em massas ou em macarrão de abobrinha (zucchini noodles)."
+   }
+  },
+  "r_patacones_airfryer": {
+   "en": {
+    "name": "“Not-fried” patacones (crispy green plantain) in the airfryer",
+    "ingredients": [
+     "Sliced green plantain",
+     "A little oil (blotted with a napkin)",
+     "Pinch of salt"
+    ],
+    "steps": "Place the sliced plantain with a little oil and salt in the airfryer at 380 °F for 2 minutes; flip and cook 2 more minutes.\nRemove and smash with a tostonera (plantain smasher).\nReturn to the airfryer (with or without oil) and brown to your liking, flipping as needed.",
+    "tips": "Do the first step during your meal prep and just the second step at breakfast."
+   },
+   "pt": {
+    "name": "Patacones (banana-da-terra verde crocante) “não fritos” na airfryer",
+    "ingredients": [
+     "Banana-da-terra verde fatiada",
+     "Um pouco de óleo (com guardanapo)",
+     "Uma pitada de sal"
+    ],
+    "steps": "Coloque a banana-da-terra fatiada com um pouco de óleo e sal na airfryer a 380 °F por 2 minutos; vire e mais 2 minutos.\nRetire e amasse com o amassador de patacones.\nVolte à airfryer (com ou sem óleo) e doure a gosto, virando.",
+    "tips": "Faça o primeiro passo no seu meal prep e, no café da manhã, só o segundo."
+   }
+  },
+  "r_waffles_lowcarb": {
+   "en": {
+    "name": "Low carb waffles",
+    "ingredients": [
+     "2 egg whites",
+     "2 tbsp ground flaxseed",
+     "Baking powder",
+     "Sweet: stevia and cinnamon · Savory: oregano, salt, and black pepper"
+    ],
+    "steps": "Mix everything and pour into a greased, preheated waffle iron. Add toppings to taste.",
+    "tips": ""
+   },
+   "pt": {
+    "name": "Waffles low carb",
+    "ingredients": [
+     "2 claras de ovo",
+     "2 colheres de sopa de linhaça moída",
+     "Fermento em pó",
+     "Doce: stevia e canela · Salgado: orégano, sal e pimenta-do-reino"
+    ],
+    "steps": "Misture tudo e despeje na máquina de waffles untada e pré-aquecida. Toppings a gosto.",
+    "tips": ""
+   }
+  },
+  "r_papas_fosforito": {
+   "en": {
+    "name": "Oil-free fosforito potatoes",
+    "ingredients": [
+     "1 peeled potato",
+     "Salt",
+     "Water"
+    ],
+    "steps": "Grate the potato and place it in a colander. Rinse it under water 3 times to remove excess starch, then add salt.\nLine the bottom of the airfryer with foil and cook in batches at 400 °F until golden.",
+    "tips": "The trick: the layer in the airfryer should be thin so they all brown evenly."
+   },
+   "pt": {
+    "name": "Batata fósforo sem óleo",
+    "ingredients": [
+     "1 batata descascada",
+     "Sal",
+     "Água"
+    ],
+    "steps": "Ralle a batata e coloque em uma peneira. Passe por água 3 vezes para tirar o excesso de amido e adicione sal.\nColoque papel-alumínio no fundo da airfryer e cozinhe em levas a 400 °F até dourar.",
+    "tips": "O truque: a camada na airfryer deve ser fina para que todas dourem."
+   }
+  },
+  "r_quinoa": {
+   "en": {
+    "name": "Traditional quinoa",
+    "ingredients": [
+     "1 cup dry quinoa",
+     "2 cups water or broth",
+     "Salt and pepper"
+    ],
+    "steps": "Soak the quinoa the night before (or rinse it very well before cooking).\nCook in water or broth, 1 cup quinoa to 2 cups liquid, until absorbed. Season to taste.",
+    "tips": ""
+   },
+   "pt": {
+    "name": "Quinoa tradicional",
+    "ingredients": [
+     "1 xícara de quinoa seca",
+     "2 xícaras de água ou caldo",
+     "Sal e pimenta"
+    ],
+    "steps": "Deixe a quinoa de molho desde a noite anterior (ou enxágue muito bem antes de cozinhar).\nCozinhe em água ou caldo, 1 xícara de quinoa para 2 de líquido, até absorver. Tempere.",
+    "tips": ""
+   }
+  },
+  "r_pure_coliflor": {
+   "en": {
+    "name": "Cauliflower Puree",
+    "ingredients": [
+     "3 cups steamed or boiled cauliflower",
+     "2 leek stalks, sliced into rings",
+     "1/4 cup vegetable broth or water with salt and pepper",
+     "Pink or sea salt and pepper",
+     "A little oil"
+    ],
+    "steps": "Preheat the oven to 375 °F or the airfryer. Spray a pan with oil and blanch the leek.\nBlend the leek with the cauliflower, broth, salt, and pepper. If you want it thicker, use less liquid.\nPour into a baking dish and bake until golden.",
+    "tips": "For lunches and dinners."
+   },
+   "pt": {
+    "name": "Purê de couve-flor",
+    "ingredients": [
+     "3 xícaras de couve-flor no vapor ou cozida",
+     "2 talos de alho-poró em rodelas",
+     "1/4 xícara de caldo de vegetais ou água com sal e pimenta",
+     "Sal rosa ou marinho e pimenta",
+     "Um pouco de azeite"
+    ],
+    "steps": "Preaqueça o forno a 375 °F ou a airfryer. Untei uma frigideira com azeite e branqueei o alho-poró.\nBata no liquidificador o alho-poró com a couve-flor, o caldo, sal e pimenta. Se quiser mais espesso, use menos líquido.\nColoque em um refratário e leve ao forno até dourar.",
+    "tips": "Para almoços e jantares."
+   }
+  },
+  "r_batatas_horneadas": {
+   "en": {
+    "name": "Baked \"Fried\" Sweet Potatoes or Potatoes",
+    "ingredients": [
+     "4 medium sweet potatoes with skin, well washed",
+     "1 tsp sea salt or pink salt",
+     "1 tsp chili powder",
+     "Ground pepper",
+     "Oil spray or applied with a napkin"
+    ],
+    "steps": "Preheat the oven to 350 °F or the airfryer.\nCut the sweet potatoes with skin on into 1 cm sticks.\nPut them in a bag with salt, pepper, and chili; close and shake.\nSpray a baking sheet, spread them out, and bake for 30 minutes.",
+    "tips": "Lower in carbs: use ahuyama (squash/pumpkin) instead of sweet potato or potato."
+   },
+   "pt": {
+    "name": "Batata-doce ou batata “fritas” assadas",
+    "ingredients": [
+     "4 batatas-doces médias com casca, bem lavadas",
+     "1 colher de chá de sal marinho ou rosa",
+     "1 colher de chá de pó de pimenta (chili)",
+     "Pimenta moída",
+     "Azeite em spray ou aplicado com guardanapo"
+    ],
+    "steps": "Preaqueça o forno a 350 °F ou a airfryer.\nCorte as batatas-doces com casca em palitos de 1 cm.\nColoque-as em um saco com sal, pimenta e pó de pimenta; feche e sacuda.\nUnte uma assadeira com spray, distribua e asse por 30 minutos.",
+    "tips": "Mais baixo em carboidrato: use abóbora em vez de batata-doce ou batata."
+   }
+  },
+  "r_pure_papas_rostizadas": {
+   "en": {
+    "name": "Roasted Potato Puree (2–3 servings)",
+    "ingredients": [
+     "4 potatoes",
+     "3 whole garlic cloves",
+     "2 tbsp chives",
+     "A drizzle of olive oil",
+     "6 tbsp vegetable broth or water with salt and pepper"
+    ],
+    "steps": "Bake the whole potatoes for 35–45 minutes at 375 °F or in the airfryer; peel them afterward.\nBake the garlic and chives with the oil for 20 minutes until golden and soft.\nBoil the broth. Mash the potatoes, add the garlic and chives, and gradually add broth until you reach a puree consistency. Add salt and pepper.\nTransfer to a baking dish and bake until golden on top.",
+    "tips": ""
+   },
+   "pt": {
+    "name": "Purê de batatas assadas (2–3 porções)",
+    "ingredients": [
+     "4 batatas",
+     "3 dentes de alho inteiros",
+     "2 colheres de sopa de cebolinha",
+     "Um fio de azeite de oliva",
+     "6 colheres de sopa de caldo de vegetais ou água com sal e pimenta"
+    ],
+    "steps": "Asse as batatas inteiras por 35–45 minutos a 375 °F ou na airfryer; descasque-as depois.\nAsse o alho e a cebolinha com o azeite por 20 minutos até ficarem dourados e macios.\nFerva o caldo. Amasse as batatas, adicione o alho e a cebolinha, e vá acrescentando o caldo até a consistência de purê. Sal e pimenta.\nPasse para um refratário e leve ao forno até dourar por cima.",
+    "tips": ""
+   }
+  },
+  "r_salsa_tomate": {
+   "en": {
+    "name": "Homemade Tomato Sauce",
+    "ingredients": [
+     "2 medium tomatoes (about 350 g)",
+     "1 medium onion (about 160 g)",
+     "1 piece of red bell pepper",
+     "3 sprigs of fresh parsley or cilantro",
+     "1/2 tsp dried oregano and 1/2 tsp dried basil",
+     "1 tsp olive or avocado oil",
+     "Ground black pepper and salt"
+    ],
+    "steps": "Cut the tomato, peeled onion, and bell pepper into 1–2 cm pieces.\nIn a pan over medium heat with the oil, sauté the vegetables with salt and pepper for 10–15 minutes until they take on color and the tomato is soft.\nBlend with parsley or cilantro, oregano, and basil. Adjust the salt. Let cool and store in the fridge.",
+    "tips": ""
+   },
+   "pt": {
+    "name": "Molho de tomate caseiro",
+    "ingredients": [
+     "2 tomates médios (350 g aprox.)",
+     "1 cebola média (160 g aprox.)",
+     "1 pedaço de pimentão vermelho",
+     "3 ramos de salsinha ou coentro fresco",
+     "1/2 colher de chá de orégano seco e 1/2 colher de chá de manjericão seco",
+     "1 colher de chá de azeite de oliva ou óleo de abacate",
+     "Pimenta preta moída e sal"
+    ],
+    "steps": "Corte o tomate, a cebola descascada e o pimentão em pedaços de 1–2 cm.\nEm uma frigideira em fogo médio com o azeite, refogue os vegetais com sal e pimenta por 10–15 minutos até dourarem e o tomate ficar macio.\nBata no liquidificador com a salsinha ou coentro, orégano e manjericão. Ajuste o sal. Deixe esfriar e guarde na geladeira.",
+    "tips": ""
+   }
+  },
+  "r_salsa_bbq": {
+   "en": {
+    "name": "Homemade BBQ Sauce",
+    "ingredients": [
+     "Homemade tomato sauce",
+     "1/4 cup chopped onion",
+     "1/2 cup water",
+     "1/4 cup lemon juice",
+     "2 tbsp apple cider vinegar",
+     "2 tbsp sugar-free mustard",
+     "1 tbsp stevia",
+     "1/2 tsp sea salt",
+     "1/4 tsp cayenne or black pepper"
+    ],
+    "steps": "Mix everything in a small pot and heat for 10–15 minutes. Let cool and store: it lasts several days in the fridge.",
+    "tips": ""
+   },
+   "pt": {
+    "name": "Molho BBQ caseiro",
+    "ingredients": [
+     "Molho de tomate caseiro",
+     "1/4 xícara de cebola picada",
+     "1/2 xícara de água",
+     "1/4 xícara de suco de limão",
+     "2 colheres de sopa de vinagre de maçã",
+     "2 colheres de sopa de mostarda sem açúcar",
+     "1 colher de sopa de stevia",
+     "1/2 colher de chá de sal marinho",
+     "1/4 colher de chá de pimenta caiena ou preta"
+    ],
+    "steps": "Misture tudo em uma panela pequena e aqueça por 10–15 minutos. Deixe esfriar e guarde: dura vários dias na geladeira.",
+    "tips": ""
+   }
+  },
+  "r_vinagreta_balsamico_miel": {
+   "en": {
+    "name": "Balsamic and Honey Vinaigrette",
+    "ingredients": [
+     "1 tsp Dijon mustard",
+     "2 tbsp honey",
+     "1/3 cup balsamic vinegar",
+     "1/3 cup olive oil",
+     "Pinch of salt and pepper"
+    ],
+    "steps": "Stir everything together and it's ready. This makes a good amount: it lasts up to a month in the fridge.",
+    "tips": ""
+   },
+   "pt": {
+    "name": "Vinagrete de balsâmico e mel",
+    "ingredients": [
+     "1 colher de chá de mostarda Dijon",
+     "2 colheres de sopa de mel",
+     "1/3 xícara de vinagre balsâmico",
+     "1/3 xícara de azeite de oliva",
+     "Pitada de sal e pimenta"
+    ],
+    "steps": "Misture tudo e está pronto. Rende boa quantidade: dura até um mês na geladeira.",
+    "tips": ""
+   }
+  },
+  "r_sriracha_mayo": {
+   "en": {
+    "name": "Sriracha Mayo",
+    "ingredients": [
+     "2 tbsp Greek yogurt",
+     "1 tsp sriracha",
+     "2 drops of pure liquid stevia"
+    ],
+    "steps": "Mix and it's ready.",
+    "tips": ""
+   },
+   "pt": {
+    "name": "Sriracha mayo",
+    "ingredients": [
+     "2 colheres de sopa de iogurte grego",
+     "1 colher de chá de sriracha",
+     "2 gotinhas de stevia líquida pura"
+    ],
+    "steps": "Misture e está pronto.",
+    "tips": ""
+   }
+  },
+  "r_vinagreta_mostaza": {
+   "en": {
+    "name": "Mustard Vinaigrette",
+    "ingredients": [
+     "1 tbsp mustard",
+     "4 tbsp olive oil (or 2 tbsp oil and 2 tbsp water)",
+     "2 tbsp white vinegar",
+     "Salt"
+    ],
+    "steps": "Mix in a bowl and stir with a spoon until it thickens.",
+    "tips": ""
+   },
+   "pt": {
+    "name": "Vinagrete de mostarda",
+    "ingredients": [
+     "1 colher de sopa de mostarda",
+     "4 colheres de sopa de azeite de oliva (ou 2 de azeite e 2 de água)",
+     "2 colheres de sopa de vinagre branco",
+     "Sal"
+    ],
+    "steps": "Misture em uma tigela e mexa com uma colher até engrossar.",
+    "tips": ""
+   }
+  },
+  "r_pastel_manzana": {
+   "en": {
+    "name": "Apple pie (microwave)",
+    "ingredients": [
+     "Peeled apple, cubed",
+     "2 tbsp ground cinnamon",
+     "Stevia",
+     "1 tbsp lemon juice",
+     "1 egg",
+     "Ghee or avocado oil",
+     "200 ml plant-based milk",
+     "150 g oat or almond flour",
+     "1 tbsp baking powder or baking soda",
+     "Salt and vanilla extract",
+     "Shredded coconut to serve"
+    ],
+    "steps": "Put the apple with cinnamon, stevia, lemon and spices in a microwave-safe dish, cover and heat for 3 minutes. Let it cool.\nAdd milk, egg and oil; whisk with a fork. Fold in the flour, baking soda and salt until there are no lumps.\nCover and microwave for about 7 minutes. Unmold, let cool and serve with shredded coconut.",
+    "tips": ""
+   },
+   "pt": {
+    "name": "Torta de maçã (micro-ondas)",
+    "ingredients": [
+     "Maçã descascada em cubinhos",
+     "2 colheres de sopa de canela em pó",
+     "Stevia",
+     "1 colher de sopa de suco de limão",
+     "1 ovo",
+     "Ghee ou óleo de abacate",
+     "200 ml de leite vegetal",
+     "150 g de farinha de aveia ou amêndoas",
+     "1 colher de sopa de fermento em pó ou bicarbonato",
+     "Sal e extrato de baunilha",
+     "Coco ralado para servir"
+    ],
+    "steps": "Coloque a maçã com canela, stevia, limão e especiarias em um recipiente próprio para micro-ondas, tampe e aqueça por 3 minutos. Deixe esfriar.\nAdicione o leite, o ovo e o óleo; bata com um garfo. Incorpore a farinha, o bicarbonato e o sal até não restarem grumos.\nTampe e leve ao micro-ondas por aproximadamente 7 minutos. Desenforme, deixe esfriar e sirva com coco ralado.",
+    "tips": ""
+   }
+  },
+  "r_nutella_saludable": {
+   "en": {
+    "name": "Quick healthy Nutella",
+    "ingredients": [
+     "1 medium avocado (or half of a regular one)",
+     "Liquid stevia",
+     "2 or 3 tbsp cocoa powder"
+    ],
+    "steps": "Process until creamy. Refrigerate and use it in your recipes.",
+    "tips": ""
+   },
+   "pt": {
+    "name": "Nutella saudável expressa",
+    "ingredients": [
+     "1 abacate médio (ou meio abacate normal)",
+     "Stevia líquida",
+     "2 ou 3 colheres de sopa de cacau em pó"
+    ],
+    "steps": "Processe até ficar cremoso. Refrigere e use nas suas receitas.",
+    "tips": ""
+   }
+  },
+  "r_tilapia_moneditas": {
+   "en": {
+    "name": "Tilapia with plantain coins and sautéed vegetables",
+    "ingredients": [
+     "Tilapia",
+     "Lemon juice, grated ginger, minced garlic, salt and pepper",
+     "Broccoli (or another vegetable)",
+     "A pinch of ghee and sea salt",
+     "1 green plantain",
+     "Olive oil and salt"
+    ],
+    "steps": "Marinate the tilapia with lemon, ginger, garlic, salt and pepper for 2 hours (not necessary, but it turns out delicious). Airfryer at 390 °F for 10 minutes.\nVegetables: broccoli for 2 minutes in boiling water, then 3 minutes in a pan with ghee and salt. Each vegetable has its own time.\nCoins: slice the plantain very thin, a pinch of oil and salt, airfryer for 6 minutes at 390 °F, toss and 3 more minutes.",
+    "tips": "Time and temperature depend on each airfryer."
+   },
+   "pt": {
+    "name": "Tilápia com moedinhas de banana-da-terra e vegetais salteados",
+    "ingredients": [
+     "Tilápia",
+     "Suco de limão, gengibre ralado, alho picado, sal e pimenta",
+     "Brócolis (ou outro vegetal)",
+     "Uma pitada de ghee e sal marinha",
+     "1 banana-da-terra verde",
+     "Azeite de oliva e sal"
+    ],
+    "steps": "Marine a tilápia com limão, gengibre, alho, sal e pimenta por 2 horas (não é necessário, mas fica delicioso). Airfryer a 390 °F por 10 minutos.\nVegetais: brócolis 2 minutos em água fervente e depois 3 minutos na frigideira com ghee e sal. Cada vegetal tem seu tempo.\nMoedinhas: corte a banana-da-terra bem fininha, uma pitada de óleo e sal, airfryer 6 minutos a 390 °F, mexa e mais 3 minutos.",
+    "tips": "O tempo e a temperatura dependem de cada airfryer."
+   }
+  },
+  "r_pollo_bbq_miel": {
+   "en": {
+    "name": "Chicken with BBQ and honey",
+    "ingredients": [
+     "Chicken pieces",
+     "Salt, pepper and minced garlic",
+     "Homemade BBQ sauce (in Toppings)",
+     "Brown or parboiled rice",
+     "Fresh salad"
+    ],
+    "steps": "Season the chicken and sauté it; once it's seared on all sides, add a bit of homemade BBQ sauce.\nServe with brown rice and salad.",
+    "tips": ""
+   },
+   "pt": {
+    "name": "Frango com BBQ e mel",
+    "ingredients": [
+     "Pedaços de frango",
+     "Sal, pimenta e alho picado",
+     "BBQ caseiro (em Toppings)",
+     "Arroz integral ou parboilizado",
+     "Salada fresca"
+    ],
+    "steps": "Tempere o frango e refogue; quando estiver selado de todos os lados, adicione uma pitada de BBQ caseiro.\nAcompanhe com arroz integral e salada.",
+    "tips": ""
+   }
+  },
+  "r_pechuga_dijon": {
+   "en": {
+    "name": "Dijon chicken breast",
+    "ingredients": [
+     "Raw chicken breast, sliced into strips",
+     "4 tbsp chopped onion",
+     "1/2 garlic clove, crushed",
+     "4 tbsp chicken broth",
+     "2 tbsp olive or avocado oil",
+     "2 tbsp Dijon mustard",
+     "Salt and pepper"
+    ],
+    "steps": "Oil a hot pan with a napkin or spray. Cook the onion for 5 minutes, then garlic for 1 more minute.\nSeason the chicken and sauté it with the onion for 8–10 minutes.\nAdd the broth, reduce by half and stir in the mustard.",
+    "tips": "Lunch: with your favorite carb, salad and fat. Dinner: salad and fat."
+   },
+   "pt": {
+    "name": "Peito de frango Dijon",
+    "ingredients": [
+     "Peito de frango cru em tiras",
+     "4 colheres de sopa de cebola picada",
+     "1/2 dente de alho amassado",
+     "4 colheres de sopa de caldo de frango",
+     "2 colheres de sopa de azeite de oliva ou óleo de abacate",
+     "2 colheres de sopa de mostarda Dijon",
+     "Sal e pimenta"
+    ],
+    "steps": "Unte a frigideira quente com óleo usando um guardanapo ou spray. Cebola por 5 minutos, alho mais 1 minuto.\nTempere o frango e refogue com a cebola por 8–10 minutos.\nAdicione o caldo, reduza pela metade e acrescente a mostarda.",
+    "tips": "Almoço: com seu carboidrato favorito, salada e gordura. Jantar: salada e gordura."
+   }
+  },
+  "r_salmon_miel_naranja": {
+   "en": {
+    "name": "Honey-orange salmon with ahuyama (squash/pumpkin) and papa criolla (Colombian yellow potato)",
+    "ingredients": [
+     "2 salmon fillets",
+     "Juice of 1 orange, grated ginger, 1 tbsp honey",
+     "2 tbsp aminos or low-sodium soy sauce (optional)",
+     "Salt and pepper",
+     "Cubed ahuyama with honey, cinnamon and olive oil",
+     "Papa criolla with oil, salt and oregano",
+     "Carrot, zucchini, bell pepper and onion, cut into strips",
+     "Guacamole as a topping"
+    ],
+    "steps": "Marinate the salmon for 20 minutes with orange, ginger, honey, aminos, salt and pepper; then cook in a pan.\nAhuyama: 15 minutes at 390 °F in the airfryer (make it as meal prep: it lasts 3 days and goes with everything).\nRaw papa criolla in the airfryer for 15 minutes at 390 °F.\nSautéed vegetables for 6 minutes over medium heat with a pinch of salt, with or without oil; season to taste.",
+    "tips": ""
+   },
+   "pt": {
+    "name": "Salmão com mel e laranja, abóbora e batata criolla",
+    "ingredients": [
+     "2 filés de salmão",
+     "Suco de 1 laranja, gengibre ralado, 1 colher de sopa de mel",
+     "2 colheres de sopa de aminos de coco ou molho de soja com baixo teor de sódio (opcional)",
+     "Sal e pimenta",
+     "Abóbora em cubos com mel, canela e azeite de oliva",
+     "Batata criolla (batatinha amarela colombiana) com óleo, sal e orégano",
+     "Cenoura, abobrinha, pimentão e cebola em tiras",
+     "Guacamole como topping"
+    ],
+    "steps": "Marine o salmão por 20 minutos com laranja, gengibre, mel, aminos, sal e pimenta; depois leve à frigideira.\nAbóbora: 15 minutos a 390 °F no airfryer (faça em meal prep: dura 3 dias e combina com tudo).\nBatata criolla crua no airfryer por 15 minutos a 390 °F.\nVegetais salteados por 6 minutos em fogo médio com uma pitada de sal, com ou sem óleo; especiarias a gosto.",
+    "tips": ""
+   }
+  },
+  "r_arroz_camarones_frito": {
+   "en": {
+    "name": "\"Fried\" rice with shrimp",
+    "ingredients": [
+     "1 cup cauliflower rice",
+     "1/2 cup rice",
+     "1/2 cup shrimp",
+     "1/8 yellow onion",
+     "1/2 tsp sriracha",
+     "4 tbsp low-sodium soy sauce or coconut aminos",
+     "1/4 tsp ground ginger",
+     "Salt and pepper"
+    ],
+    "steps": "Sauté the onion in a very hot pan until translucent. Add the cauliflower and let it cook.\nAdd the shrimp, 5 minutes. Then the rice, sriracha, soy sauce, ginger, salt and pepper; mix well.",
+    "tips": "For dinner: more cauliflower instead of rice."
+   },
+   "pt": {
+    "name": "Arroz \"frito\" com camarão",
+    "ingredients": [
+     "1 xícara de arroz de couve-flor",
+     "1/2 xícara de arroz",
+     "1/2 xícara de camarão",
+     "1/8 de cebola branca",
+     "1/2 colher de chá de sriracha",
+     "4 colheres de sopa de molho de soja com baixo teor de sódio ou aminos de coco",
+     "1/4 de colher de chá de gengibre em pó",
+     "Sal e pimenta"
+    ],
+    "steps": "Refogue a cebola em uma frigideira bem quente até ficar transparente. Adicione a couve-flor e deixe cozinhar.\nAdicione os camarões, 5 minutos. Depois o arroz, o sriracha, o molho de soja, o gengibre, sal e pimenta; misture bem.",
+    "tips": "Para o jantar: mais couve-flor no lugar do arroz."
+   }
+  },
+  "r_espaguetis_lowcarb": {
+   "en": {
+    "name": "Healthy low-carb spaghetti",
+    "ingredients": [
+     "Rice or almond spaghetti",
+     "1/2 zucchini",
+     "1 carrot",
+     "1/2 red onion",
+     "Bell pepper",
+     "Sea salt or pink salt",
+     "Nutritional yeast (optional)",
+     "Shredded chicken breast"
+    ],
+    "steps": "Cut the vegetables into julienne strips. Grease a pan, brown the bell pepper and onion, then add the zucchini and carrot.\nBoil the spaghetti (just 3–4 minutes from when it starts boiling). Drain and mix it into the pan.\nAdd nutritional yeast and salt. Enjoy with the protein you like best.",
+    "tips": ""
+   },
+   "pt": {
+    "name": "Espaguete saudável com baixo carboidrato",
+    "ingredients": [
+     "Espaguete de arroz ou de amêndoas",
+     "1/2 abobrinha",
+     "1 cenoura",
+     "1/2 cebola roxa",
+     "Pimentão",
+     "Sal marinho ou rosa",
+     "Levedura nutricional (opcional)",
+     "Peito de frango desfiado"
+    ],
+    "steps": "Corte os vegetais em julienne. Unte uma frigideira, doure o pimentão e a cebola, adicione a abobrinha e a cenoura.\nCozinhe o espaguete (apenas 3–4 minutos depois de levantar fervura). Escorra e misture na frigideira.\nAdicione a levedura nutricional e o sal. Aproveite com a proteína que você mais gostar.",
+    "tips": ""
+   }
+  },
+  "r_arroz_integral": {
+   "en": {
+    "name": "Brown Rice (4 servings)",
+    "ingredients": [
+     "200 g of brown or parboiled rice",
+     "Plenty of water (6–7 times the volume of the rice)",
+     "Salt",
+     "Ghee, avocado oil, or olive oil (optional)"
+    ],
+    "steps": "Soak the night before (or 1 hour ahead). Rinse and drain 3 times.\nHeat plenty of water, covered, as you would for pasta. Optional: sauté the raw rice for 1–2 minutes in a bit of oil over high heat to boost the flavor.\nWhen it boils, add salt and the rice little by little. Low heat, steady simmer, about 20 minutes.\nIt should be tender and slightly al dente. If it's still firm, cook 2–5 minutes more. Drain, return to the hot, dry pot, and let rest for 5–10 minutes.",
+    "tips": ""
+   },
+   "pt": {
+    "name": "Arroz integral (4 porções)",
+    "ingredients": [
+     "200 g de arroz integral ou parboiled",
+     "Água abundante (6–7 vezes o volume do arroz)",
+     "Sal",
+     "Ghee, óleo de abacate ou de oliva (opcional)"
+    ],
+    "steps": "Deixe de molho desde a noite anterior (ou 1 hora antes). Enxágue e escorra 3 vezes.\nAqueça bastante água tampada, como para massa. Opcional: refogue o arroz cru por 1–2 minutos em um pouco de óleo em fogo forte para potencializar o sabor.\nQuando ferver, adicione sal e o arroz aos poucos. Fogo baixo, fervura constante, por cerca de 20 minutos.\nDeve ficar macio e levemente al dente. Se estiver duro, mais 2–5 minutos. Escorra, volte à panela quente e seca, e deixe descansar 5–10 minutos.",
+    "tips": ""
+   }
+  },
+  "r_pan_ajo_lowcarb": {
+   "en": {
+    "name": "Low-Carb Gluten-Free Garlic Bread (15 minutes)",
+    "ingredients": [
+     "Plain Greek yogurt",
+     "Shredded almond cheese (or one of the recommended kinds)",
+     "1 egg or 2 egg whites",
+     "5 tbsp of sweet potato or ahuyama (squash/pumpkin) purée",
+     "Salt, pepper, and parsley",
+     "Olive oil (a little), parsley, and garlic for brushing on top"
+    ],
+    "steps": "Mix everything together and microwave for 1 minute.\nTransfer to a baking sheet (wet your fingers so it doesn't stick), brush with a bit of olive oil, parsley, and garlic.\nBake at 180 °C for about 12 minutes.",
+    "tips": "I love this option — it's super versatile. I make it once a week and keep it in the fridge for breakfasts, snacks, or whatever you need."
+   },
+   "pt": {
+    "name": "Pão com alho low carb sem glúten (15 minutos)",
+    "ingredients": [
+     "Iogurte grego sem sabor",
+     "Queijo ralado de amêndoas (ou dos recomendados)",
+     "1 ovo ou 2 claras",
+     "5 colheres de sopa de purê de batata-doce ou abóbora",
+     "Sal, pimenta e salsinha",
+     "Azeite de oliva (pouco), salsinha e alho para passar"
+    ],
+    "steps": "Misture tudo e leve ao micro-ondas por 1 minuto.\nPasse para uma assadeira (molhe os dedos para não grudar), unte com um pouco de azeite de oliva, salsinha e alho.\nAsse a 180 °C por cerca de 12 minutos.",
+    "tips": "Eu amo essa opção: é super versátil. Eu faço 1 vez por semana e deixo na geladeira para cafés da manhã, lanches ou o que for."
+   }
+  },
+  "r_pan_atun": {
+   "en": {
+    "name": "Protein Tuna Bread in Minutes",
+    "ingredients": [
+     "Well-drained tuna (the drier the better)",
+     "3 egg whites, or 2 egg whites + 1 egg",
+     "A pinch of pink or sea salt",
+     "1/2 tsp of baking powder",
+     "Natural or vanilla protein powder (optional)"
+    ],
+    "steps": "Blend everything very well.\nMicrowave until it firms up and there are no liquid parts left (the time depends on each microwave).\nThen I toast it in a waffle iron, pan, or oven.",
+    "tips": "It tastes great, give it a chance. Good for sandwiches, snacks, or cut into croutons for salads."
+   },
+   "pt": {
+    "name": "Pão proteico de atum em minutos",
+    "ingredients": [
+     "Atum bem escorrido (quanto mais seco, melhor)",
+     "3 claras, ou 2 claras + 1 ovo",
+     "Uma pitada de sal rosa ou marinho",
+     "1/2 colher de chá de fermento em pó",
+     "Proteína em pó natural ou baunilha (opcional)"
+    ],
+    "steps": "Bata tudo muito bem no liquidificador.\nLeve ao micro-ondas até que fique consistente e não haja partes líquidas (o tempo depende de cada micro-ondas).\nDepois eu doure na sanduicheira, frigideira ou forno.",
+    "tips": "Fica delícia, dê uma chance. Serve para sanduíches, lanches ou cortado em croutons para saladas."
+   }
+  },
+  "r_pan_paleo_keto": {
+   "en": {
+    "name": "2-Ingredient Paleo-Keto Bread",
+    "ingredients": [
+     "2 egg whites",
+     "2 tbsp (15 g) of coconut flour, or 1/4 cup of almond flour",
+     "Spices: savory (garlic, sea salt, oregano) or sweet (cinnamon, stevia, cacao)"
+    ],
+    "steps": "Mix until there are no lumps, pour into a square mold (a plate works too), and microwave for 2–3 minutes.\nFor a sandwich, repeat to get both slices: fill with shredded chicken or the protein of your choice.",
+    "tips": "No oven and no lactose."
+   },
+   "pt": {
+    "name": "Pão paleo-keto de 2 ingredientes",
+    "ingredients": [
+     "2 claras de ovo",
+     "2 colheres de sopa (15 g) de farinha de coco, ou 1/4 xícara de farinha de amêndoas",
+     "Especiarias: salgado (alho, sal marinho, orégano) ou doce (canela, stevia, cacau)"
+    ],
+    "steps": "Misture até não haver grumos, despeje em uma forma quadrada (pode ser um prato) e leve ao micro-ondas por 2–3 minutos.\nPara sanduíche, repita e você terá as 2 fatias: recheie com frango desfiado ou a proteína que preferir.",
+    "tips": "Sem forno e sem lactose."
+   }
+  },
+  "r_pan_banano_5min": {
+   "en": {
+    "name": "5-Minute Banana Bread",
+    "ingredients": [
+     "1/2 mashed banana",
+     "1 egg",
+     "2 tbsp of almond flour, oats, or whatever you have",
+     "1 tsp of baking powder or baking soda",
+     "1 or 2 tbsp of peanut butter",
+     "1 1/2 tbsp of plant-based milk (more if it needs it)",
+     "Toppings: cacao nibs, banana, nuts, Greek yogurt with cacao"
+    ],
+    "steps": "Beat the egg with the peanut butter, add the rest, and mix.\nPour into a greased mold. Pan, oven at 180 °C for 25 minutes, or a quick microwave (watch so it doesn't dry out).",
+    "tips": ""
+   },
+   "pt": {
+    "name": "Pão de banana em 5 minutos",
+    "ingredients": [
+     "1/2 banana amassada",
+     "1 ovo",
+     "2 colheres de sopa de farinha de amêndoas, aveia ou a que você tiver",
+     "1 colher de chá de fermento em pó ou bicarbonato",
+     "1 ou 2 colheres de sopa de pasta de amendoim",
+     "1 1/2 colher de sopa de leite vegetal (mais se precisar)",
+     "Coberturas: nibs de cacau, banana, castanhas, iogurte grego com cacau"
+    ],
+    "steps": "Bata o ovo com a pasta de amendoim, incorpore o restante e misture.\nDespeje em uma forma untada. Frigideira, forno a 180 °C por 25 minutos ou micro-ondas rápido (fique de olho para não ressecar).",
+    "tips": ""
+   }
+  },
+  "r_galletas_chocochips": {
+   "en": {
+    "name": "Chocolate Chip Cookies",
+    "ingredients": [
+     "Dry: 3 tbsp of flour (oat, almond, or coconut), 1 1/2 tbsp of cocoa powder, 1 tsp of baking powder",
+     "Wet: 1 tbsp of Greek yogurt, 1 tbsp of peanut butter, 1 tbsp of plant-based milk",
+     "Toppings: cacao nibs or chopped >70% cacao bar"
+    ],
+    "steps": "Combine the dry ingredients, add the wet ones, and finally the plant-based milk, stirring well.\nShape the cookie, add the cacao, and microwave for 1–3 minutes.",
+    "tips": "If you want the chocolate more melted, use the cacao bar."
+   },
+   "pt": {
+    "name": "Biscoitos de chocolate com gotas",
+    "ingredients": [
+     "Secos: 3 colheres de sopa de farinha (aveia, amêndoas ou coco), 1 1/2 colher de sopa de cacau em pó, 1 colher de chá de fermento em pó",
+     "Úmidos: 1 colher de sopa de iogurte grego, 1 colher de sopa de pasta de amendoim, 1 colher de sopa de leite vegetal",
+     "Coberturas: nibs de cacau ou barra de cacau >70% em pedaços"
+    ],
+    "steps": "Combine os secos, adicione os úmidos e por último o leite vegetal, misturando bem.\nModele o biscoito, adicione o cacau e leve ao micro-ondas por 1–3 minutos.",
+    "tips": "Se quiser o chocolate mais derretido, use a barra."
+   }
+  },
+  "r_mini_carrot_cake": {
+   "en": {
+    "name": "Mini Keto Carrot Cake",
+    "ingredients": [
+     "1/2 cup of almond flour",
+     "Stevia",
+     "1 tsp of baking powder",
+     "Cinnamon and 1/2 tsp of nutmeg",
+     "1 egg",
+     "1 tbsp of ghee, avocado oil, or coconut oil",
+     "1/2 grated carrot",
+     "Frosting: 3 tbsp of Greek yogurt or ricotta, 1/2 tsp of vanilla, and a few drops of stevia",
+     "Pecans or walnuts to your liking"
+    ],
+    "steps": "Mix everything together and pour into a small greased microwave-safe mold. Cook for 1:40 minutes in 20-second intervals. Let cool and remove from the mold.\nBlend or mix the frosting and cover the cake. Finish with nuts.",
+    "tips": ""
+   },
+   "pt": {
+    "name": "Mini carrot cake keto",
+    "ingredients": [
+     "1/2 xícara de farinha de amêndoas",
+     "Stevia",
+     "1 colher de chá de fermento em pó",
+     "Canela e 1/2 colher de chá de noz-moscada",
+     "1 ovo",
+     "1 colher de sopa de ghee, óleo de abacate ou coco",
+     "1/2 cenoura ralada",
+     "Frosting: 3 colheres de sopa de iogurte grego ou ricota, 1/2 colher de chá de baunilha e gotas de stevia",
+     "Noz-pecã ou castanhas conforme sua porção"
+    ],
+    "steps": "Misture tudo e despeje em uma forma pequena untada, própria para micro-ondas. Cozinhe por 1:40 minutos em intervalos de 20 segundos. Deixe esfriar e desenforme.\nBata ou misture o frosting e cubra. Finalize com castanhas.",
+    "tips": ""
+   }
+  },
+  "r_torta_proteica": {
+   "en": {
+    "name": "Protein Cake",
+    "ingredients": [
+     "1/3 cup of oat flour",
+     "1/3 cup of almond flour",
+     "35 g of protein powder",
+     "1/2 tsp of baking powder",
+     "1/2 mashed banana",
+     "1 tbsp of coconut oil",
+     "2 egg whites, whipped to stiff peaks"
+    ],
+    "steps": "Preheat the oven to 180 °C. Mix the dry ingredients in one bowl and the wet ones (without the egg whites) in another; combine them.\nBeat the egg whites very, very well and fold them in gently so the cake stays fluffy.\nBake for 18–20 minutes. Cover with a napkin as it comes out, let cool, and store in the fridge.",
+    "tips": "Enjoy with coffee or herbal tea."
+   },
+   "pt": {
+    "name": "Bolo proteico",
+    "ingredients": [
+     "1/3 xícara de farinha de aveia",
+     "1/3 xícara de farinha de amêndoas",
+     "35 g de proteína em pó",
+     "1/2 colher de chá de fermento em pó",
+     "1/2 banana amassada",
+     "1 colher de sopa de óleo de coco",
+     "2 claras em ponto de neve"
+    ],
+    "steps": "Pré-aqueça o forno a 180 °C. Misture os secos em uma tigela e os úmidos (sem as claras) em outra; junte-os.\nBata as claras muito, muito bem e incorpore delicadamente para que fique fofinho.\nAsse por 18–20 minutos. Cubra com um guardanapo ao sair do forno, deixe esfriar e guarde na geladeira.",
+    "tips": "Aproveite com café ou chá."
+   }
+  },
+  "r_ensalada_kale_yogurt": {
+   "en": {
+    "name": "Kale and Yogurt Salad (2 servings)",
+    "ingredients": [
+     "6 cups of kale",
+     "1/4 cup whole or sliced almonds",
+     "1 cup papaya or strawberries, diced",
+     "4 strips of healthy bacon",
+     "Dressing: 1/2 cup Greek yogurt, juice of 1 lemon, 1–2 tbsp extra virgin olive oil, 1 tsp pink salt"
+    ],
+    "steps": "Mix the dressing. Remove the stems from the leaves, add them to the bowl with the dressing, and massage for 3–5 minutes (relax during the process, it helps).\nServe with everything else and your favorite protein.",
+    "tips": "It's delish."
+   },
+   "pt": {
+    "name": "Salada de kale com iogurte (2 porções)",
+    "ingredients": [
+     "6 xícaras de kale",
+     "1/4 xícara de amêndoas inteiras ou laminadas",
+     "1 xícara de mamão ou morangos em cubinhos",
+     "4 tirinhas de bacon fit",
+     "Molho: 1/2 xícara de iogurte grego, suco de 1 limão, 1–2 colheres de sopa de azeite extra virgem, 1 colher de chá de sal rosa"
+    ],
+    "steps": "Misture o molho. Retire o talo das folhas, adicione-as à tigela com o molho e massageie por 3–5 minutos (relaxe durante o processo, funciona).\nSirva com o restante dos ingredientes e sua proteína favorita.",
+    "tips": "É uma delícia."
+   }
+  },
+  "r_sopa_esparragos_garbanzos": {
+   "en": {
+    "name": "Asparagus and Chickpea Soup (4 servings)",
+    "ingredients": [
+     "1 leek, cleaned and chopped",
+     "2 cloves of garlic",
+     "1 cup cooked chickpeas",
+     "1 cup asparagus water or broth",
+     "250 g asparagus (20–25 spears)",
+     "1 tbsp ghee"
+    ],
+    "steps": "Soak the chickpeas the night before (or 1 hour in hot water) and cook them covered in water.\nCook the asparagus stalks for 15 minutes in 4 cups of water. Sauté the leek and garlic in ghee for 5 minutes, add the chopped asparagus for 3 minutes (don't overcook).\nBlend everything with the chickpeas and broth until creamy. Adjust salt. Garnish with chickpeas and asparagus tips.",
+    "tips": "It's a complete meal thanks to the protein from the chickpeas, or pair it with your protein and salad."
+   },
+   "pt": {
+    "name": "Sopa de aspargos e grão-de-bico (4 porções)",
+    "ingredients": [
+     "1 alho-poró limpo e picado",
+     "2 dentes de alho",
+     "1 xícara de grão-de-bico cozido",
+     "1 xícara da água dos aspargos ou caldo",
+     "250 g de aspargos (20–25)",
+     "1 colher de sopa de ghee"
+    ],
+    "steps": "Deixe o grão-de-bico de molho desde a noite anterior (ou 1 hora em água quente) e cozinhe-o coberto com água.\nCozinhe os talos dos aspargos por 15 minutos em 4 xícaras de água. Refogue o alho-poró e o alho no ghee por 5 minutos, adicione os aspargos em pedaços por 3 minutos (sem passar do ponto).\nBata tudo no liquidificador com o grão-de-bico e o caldo até ficar cremoso. Ajuste o sal. Decore com grão-de-bico e pontas de aspargo.",
+    "tips": "É uma refeição completa pela proteína do grão-de-bico, ou acompanhe com sua proteína e salada."
+   }
+  },
+  "r_cazuela_mariscos": {
+   "en": {
+    "name": "Seafood Casserole (5 servings)",
+    "ingredients": [
+     "50 g white fish",
+     "1 package of crab palmitos (heart of palm), cubed",
+     "500 g shrimp",
+     "2 bags + 1/2 can of coconut milk",
+     "1 red onion, 5 ripe tomatoes, and 1 red bell pepper, diced",
+     "Salt, pepper, and garlic"
+    ],
+    "steps": "Sauté the bell pepper, tomato, and onion with salt, garlic, and pepper until you get a hogao-like paste (Colombian tomato-onion sauce), not too dry. Blend half of it.\nAdd the fish to the pot, then the coconut milk, the blended mixture, and the palmitos. Adjust salt and let it simmer on medium-low heat to concentrate the flavors.",
+    "tips": "I like it with lots of lime, cilantro, and airfryer patacones (crispy green plantain)."
+   },
+   "pt": {
+    "name": "Caçarola de frutos do mar (5 porções)",
+    "ingredients": [
+     "50 g de peixe branco",
+     "1 pacote de palmito de caranguejo em cubos",
+     "500 g de camarões",
+     "2 pacotes + 1/2 lata de leite de coco",
+     "1 cebola roxa, 5 tomates maduros e 1 pimentão vermelho em cubinhos",
+     "Sal, pimenta e alho"
+    ],
+    "steps": "Refogue o pimentão, o tomate e a cebola com sal, alho e pimenta até formar uma pasta tipo hogao (molho colombiano de tomate e cebola), não muito seca. Bata metade no liquidificador.\nAdicione o peixe à panela, depois o leite de coco, a mistura batida e o palmito. Ajuste o sal e deixe em fogo médio-baixo para concentrar os sabores.",
+    "tips": "Gosto com bastante limão, coentro e patacones (banana-da-terra verde crocante) na airfryer."
+   }
+  },
+  "r_crema_brocoli_zucchini": {
+   "en": {
+    "name": "Express Broccoli and Zucchini Cream Soup",
+    "ingredients": [
+     "Zucchini and broccoli",
+     "A bit of the cooking water",
+     "Garlic, pepper, and pink or sea salt",
+     "Spices to taste"
+    ],
+    "steps": "Steam for 5 minutes, blend with a bit of the cooking water and the spices. Done.",
+    "tips": "Serve with your favorite protein and complex carb."
+   },
+   "pt": {
+    "name": "Creme de brócolis e abobrinha expresso",
+    "ingredients": [
+     "Abobrinha e brócolis",
+     "Um pouco da água do cozimento",
+     "Alho, pimenta e sal rosa ou marinho",
+     "Especiarias a gosto"
+    ],
+    "steps": "Cozinhe no vapor por 5 minutos, bata no liquidificador com um pouco da água do cozimento e as especiarias. Pronto.",
+    "tips": "Acompanhe com sua proteína e carboidrato complexo favorito."
+   }
+  },
+  "r_arroz_arabe": {
+   "en": {
+    "name": "Express Arab-style rice",
+    "ingredients": [
+     "1/2 white onion",
+     "1 tsp sliced almonds",
+     "1/3 cup brown or parboiled rice (or cauliflower rice)",
+     "Shredded chicken",
+     "Prunes (optional)"
+    ],
+    "steps": "Sauté the onion over low heat until translucent. Add the almonds to toast them a bit.\nAdd the chicken and rice, stir well. Finally add the prunes. Cook 5 more minutes.",
+    "tips": ""
+   },
+   "pt": {
+    "name": "Arroz árabe express",
+    "ingredients": [
+     "1/2 cebola branca",
+     "1 colher de chá de amêndoas fatiadas",
+     "1/3 xícara de arroz integral ou parboilizado (ou arroz de couve-flor)",
+     "Frango desfiado",
+     "Ameixas secas (opcional)"
+    ],
+    "steps": "Refogue a cebola em fogo baixo até ficar transparente. Adicione as amêndoas para tostar um pouco.\nColoque o frango e o arroz, misture bem. Por último as ameixas. Cozinhe mais 5 minutos.",
+    "tips": ""
+   }
+  },
+  "r_wrap_col_salmon": {
+   "en": {
+    "name": "Cabbage and salmon wrap (2 servings)",
+    "ingredients": [
+     "Green cabbage leaves",
+     "1 cup arugula or watercress",
+     "1 cup chopped mushrooms",
+     "2 scallion stalks",
+     "1/2 garlic clove",
+     "2 salmon fillets (about the size of your palm)",
+     "1 tbsp miso-peanut sauce (in Toppings)",
+     "1 cup quinoa (in Meal prep)"
+    ],
+    "steps": "Thin out the cabbage stem, boil the leaf for 3 minutes, then run it under cold water. Pat dry.\nSeason the salmon with pink salt, garlic, scallion, and a bit of miso; let sit 5 minutes. Sear skin-side down in a hot pan for 5 minutes and 2–3 more on the other side.\nMushrooms browned in ghee with scallion and salt.\nAssemble: cabbage leaf, miso sauce, greens, quinoa, mushrooms, and salmon. Roll up.",
+    "tips": "The leaves keep for days in the fridge, separated with paper towel."
+   },
+   "pt": {
+    "name": "Wrap de couve e salmão (2 porções)",
+    "ingredients": [
+     "Folhas de couve verde",
+     "1 xícara de rúcula ou agrião",
+     "1 xícara de champignon picado",
+     "2 talos de cebolinha",
+     "1/2 dente de alho",
+     "2 filés de salmão (do tamanho da sua palma)",
+     "1 colher de sopa de molho miso e amendoim (em Toppings)",
+     "1 xícara de quinoa (em Meal prep)"
+    ],
+    "steps": "Fine a espessura do talo da couve, ferva a folha por 3 minutos e passe por água fria. Seque.\nTempere o salmão com sal rosa, alho, cebolinha e um pouco de miso; 5 minutos. Sele numa frigideira quente com a pele para baixo por 5 minutos e mais 2–3 do outro lado.\nChampignons dourados no ghee com cebolinha e sal.\nMonte: folha de couve, molho miso, folhas verdes, quinoa, champignon e salmão. Enrole.",
+    "tips": "As folhas se conservam por dias na geladeira, separadas com papel-toalha."
+   }
+  },
+  "r_berenjenas_rellenas": {
+   "en": {
+    "name": "Low-carb stuffed eggplant",
+    "ingredients": [
+     "1 medium eggplant",
+     "1 small onion",
+     "1/3 red bell pepper",
+     "3 tomatoes",
+     "Chicken or tofu",
+     "40 g almond cheese or mozzarella",
+     "Salt, pepper, oregano, and garlic powder"
+    ],
+    "steps": "Cut the eggplant in half and cook it covered in a nonstick pan for 10 minutes.\nSauté onion and bell pepper with a little water; once translucent, add the tomato and season. Add the chopped chicken or tofu and cook 8–10 minutes over low heat.\nHollow out the eggplant halves, fill them, and broil with cheese for 5–6 minutes in the oven, airfryer, or pan.",
+    "tips": ""
+   },
+   "pt": {
+    "name": "Berinjelas recheadas low carb",
+    "ingredients": [
+     "1 berinjela média",
+     "1 cebola pequena",
+     "1/3 de pimentão vermelho",
+     "3 tomates",
+     "Frango ou tofu",
+     "40 g de queijo de amêndoas ou mussarela",
+     "Sal, pimenta, orégano e alho em pó"
+    ],
+    "steps": "Corte a berinjela ao meio e cozinhe numa panela antiaderente tampada por 10 minutos.\nRefogue a cebola e o pimentão com pouca água; quando estiverem transparentes, adicione o tomate e tempere. Adicione o frango ou tofu picado e cozinhe por 8–10 minutos em fogo baixo.\nEsvazie as berinjelas, recheie e gratine com queijo por 5–6 minutos no forno, airfryer ou frigideira.",
+    "tips": ""
+   }
+  },
+  "r_curry_vegano": {
+   "en": {
+    "name": "Low-carb vegan curry",
+    "ingredients": [
+     "Tempeh or tofu",
+     "Zucchini noodles",
+     "Purple cabbage",
+     "Cherry tomato",
+     "Dried chiles or hot sauce (optional)",
+     "2 tbsp coconut milk",
+     "1/2 tsp curry powder",
+     "Salt and pepper"
+    ],
+    "steps": "Heat about 2 cm of water in a pot; once boiling add the chiles, salt, and pepper, cover for 2 minutes.\nAdd everything else, mix, cover, and cook 15 minutes, stirring every 5.",
+    "tips": "Serve with mushrooms, eggplant, broccoli, or cauliflower; or animal protein. For lunch: 1 serving of complex carbs."
+   },
+   "pt": {
+    "name": "Curry vegano low carb",
+    "ingredients": [
+     "Tempeh ou tofu",
+     "Abobrinha em noodles",
+     "Repolho roxo",
+     "Tomate cereja",
+     "Pimentas secas ou molho picante (opcional)",
+     "2 colheres de sopa de leite de coco",
+     "1/2 colher de chá de curry em pó",
+     "Sal e pimenta"
+    ],
+    "steps": "Aqueça 2 cm de água numa panela; adicione as pimentas ao ferver, sal e pimenta, tampe por 2 minutos.\nAdicione tudo, misture, tampe e cozinhe por 15 minutos mexendo a cada 5.",
+    "tips": "Sirva com champignon, berinjela, brócolis ou couve-flor; ou proteína animal. Almoço: 1 porção de carboidrato complexo."
+   }
+  },
+  "r_tilapia_naranja": {
+   "en": {
+    "name": "Orange tilapia",
+    "ingredients": [
+     "Tilapia",
+     "2 oranges",
+     "1 lime",
+     "1 garlic clove",
+     "Cilantro, rosemary, salt, and pepper"
+    ],
+    "steps": "Crush the garlic and chop the cilantro; season the tilapia with this, salt, and pepper.\nIn a greased dish, place the tilapia, the juice of the lime and 1 orange, a split garlic clove, and rosemary.\nBake 20 minutes at 180°C/350°F (or cook in a pan).",
+    "tips": ""
+   },
+   "pt": {
+    "name": "Tilápia à laranja",
+    "ingredients": [
+     "Tilápia",
+     "2 laranjas",
+     "1 limão",
+     "1 alho",
+     "Coentro, alecrim, sal e pimenta"
+    ],
+    "steps": "Amasse o alho e pique o coentro; tempere a tilápia com isso, sal e pimenta.\nEm um recipiente untado, coloque a tilápia, o suco de limão e de 1 laranja, um dente de alho partido e alecrim.\nForno por 20 minutos a 180 °C (ou frigideira).",
+    "tips": ""
+   }
+  },
+  "r_pollo_curry": {
+   "en": {
+    "name": "Chicken curry",
+    "ingredients": [
+     "Chicken breast, cubed",
+     "1 red onion, sliced into julienne strips",
+     "3/4 cup carrot, 3/4 cup zucchini, and 3/4 cup mushrooms",
+     "1/2 cup water",
+     "1 tsp curry powder",
+     "1/2 tsp cinnamon",
+     "2 drops stevia",
+     "1 cup coconut milk",
+     "1 tsp cassava or tapioca starch (optional)",
+     "Sea salt and pepper"
+    ],
+    "steps": "Brown the onion in a greased pan, then the vegetables and chicken. Add the cinnamon and stir.\nAdd the coconut milk, stevia, salt, and pepper, and the starch dissolved in water. Stir well.",
+    "tips": ""
+   },
+   "pt": {
+    "name": "Frango ao curry",
+    "ingredients": [
+     "Peito em cubos",
+     "1 cebola roxa em julienne",
+     "3/4 de xícara de cenoura, 3/4 de abobrinha e 3/4 de champignon",
+     "1/2 xícara de água",
+     "1 colher de chá de curry",
+     "1/2 colher de chá de canela",
+     "2 gotas de stevia",
+     "1 xícara de leite de coco",
+     "1 colher de chá de polvilho de mandioca ou tapioca (opcional)",
+     "Sal marinho e pimenta"
+    ],
+    "steps": "Doure a cebola numa frigideira untada, depois os legumes e o frango. Adicione a canela e misture.\nAdicione o leite de coco, a stevia, sal e pimenta, e o polvilho dissolvido em água. Misture bem.",
+    "tips": ""
+   }
+  },
+  "r_pasta_zucchini_atun": {
+   "en": {
+    "name": "Express zucchini pasta with tuna",
+    "ingredients": [
+     "Zucchini noodles",
+     "Black pepper, paprika, garlic, and Italian seasoning",
+     "Tomatoes",
+     "Canned tuna in water (well rinsed)",
+     "Ricotta cheese or grated almond cheese (optional)"
+    ],
+    "steps": "Season the noodles and cook them in a pan with very little water (zucchini releases a lot).\nAdd tomato and tuna. Finish with ricotta or almond cheese.",
+    "tips": ""
+   },
+   "pt": {
+    "name": "Macarrão de abobrinha com atum express",
+    "ingredients": [
+     "Abobrinha em noodles",
+     "Pimenta-do-reino, páprica, alho e tempero italiano",
+     "Tomates",
+     "Atum em água (bem lavado)",
+     "Queijo ricota ou ralado de amêndoas (opcional)"
+    ],
+    "steps": "Tempere os noodles e leve à frigideira com bem pouca água (a abobrinha solta bastante).\nAdicione tomate e atum. Finalize com ricota ou queijo de amêndoas.",
+    "tips": ""
+   }
+  },
+  "r_garbanzos_lentejas_curry": {
+   "en": {
+    "name": "Curried chickpeas or lentils",
+    "ingredients": [
+     "1 cup cooked lentils",
+     "200 ml coconut milk",
+     "1 spring onion",
+     "1 garlic clove",
+     "1 carrot",
+     "1 tsp paprika",
+     "1 tbsp curry powder",
+     "Pepper, parsley, and salt"
+    ],
+    "steps": "Chop the onion, garlic, and carrot; cook in a pot with a little water and salt. Add the spices and cook 5 more minutes. Blend until smooth.\nReturn to the pot with the coconut milk, parsley, and lentils; wait for it to come to a boil, stirring, then turn off the heat.",
+    "tips": "Serve with cauliflower rice, brown rice, or on its own, plus your protein and vegetables."
+   },
+   "pt": {
+    "name": "Grão-de-bico ou lentilhas ao curry",
+    "ingredients": [
+     "1 xícara de lentilhas cozidas",
+     "200 ml de leite de coco",
+     "1 cebolinha",
+     "1 dente de alho",
+     "1 cenoura",
+     "1 colher de chá de páprica",
+     "1 colher de sopa de curry em pó",
+     "Pimenta, salsinha e sal"
+    ],
+    "steps": "Pique a cebolinha, o alho e a cenoura; cozinhe numa panela com pouca água e sal. Adicione os temperos, mais 5 minutos. Bata até obter um purê suave.\nVolte à panela com o leite de coco, a salsinha e as lentilhas; espere ferver mexendo e apague o fogo.",
+    "tips": "Com arroz de couve-flor, integral ou puro, mais sua proteína e vegetais."
+   }
+  },
+  "r_lentejas_leche_coco": {
+   "en": {
+    "name": "Lentils in Coconut Milk",
+    "ingredients": [
+     "1 cup lentils (soaked)",
+     "2 cups water",
+     "1 tbsp turmeric, 1 tbsp ground ginger, 1 tbsp garlic powder, 1 tbsp curry powder, and 1 tbsp cinnamon",
+     "1 cup coconut milk",
+     "1 tbsp coconut oil, ghee, or avocado oil",
+     "Mushrooms"
+    ],
+    "steps": "Cook the lentils with the water over low heat, covered. Once boiling, add the spices and cover again.\nAfter 10 minutes, add the coconut milk, oil, and mushrooms. Stir constantly until you reach the texture you like.",
+    "tips": ""
+   },
+   "pt": {
+    "name": "Lentilhas no leite de coco",
+    "ingredients": [
+     "1 xícara de lentilhas (de molho)",
+     "2 xícaras de água",
+     "1 colher de sopa de cúrcuma, 1 de gengibre em pó, 1 de alho em pó, 1 de curry e 1 de canela",
+     "1 xícara de leite de coco",
+     "1 colher de sopa de óleo de coco, ghee ou óleo de abacate",
+     "Champignons"
+    ],
+    "steps": "Cozinhe as lentilhas com a água em fogo baixo e com a panela tampada. Ao ferver, adicione as especiarias e tampe novamente.\nAos 10 minutos, adicione o leite de coco, o óleo e os champignons. Mexa constantemente até chegar na textura que você preferir.",
+    "tips": ""
+   }
+  },
+  "r_frijoles_cuscus_coliflor": {
+   "en": {
+    "name": "Red Beans with Cauliflower “Rice” Couscous",
+    "ingredients": [
+     "1 cup beans",
+     "2 cups chicken broth or water with salt and pepper",
+     "1 cup water",
+     "1/2 stalk celery or leek",
+     "1 red onion and 1 white onion, diced",
+     "1 bell pepper",
+     "Bay leaf, thyme, oregano, chili, garlic, salt and pepper",
+     "1 small tsp cinnamon",
+     "Couscous: 1 shredded cauliflower, 1/2 tbsp ghee, half a red onion, salt, garlic and pepper"
+    ],
+    "steps": "Add everything except the cauliflower to a slow cooker: 4–6 hours on low, or 1 hour if you turn it up.\nCouscous: process the cauliflower. In a pan with oil, garlic, and onion, cook 2 minutes; add the cauliflower and cook 5 minutes until the edges brown. Season.\nServe the beans over the couscous as an alternative to white rice.",
+    "tips": ""
+   },
+   "pt": {
+    "name": "Feijão vermelho com “arroz” de couve-flor (cuscuz)",
+    "ingredients": [
+     "1 xícara de feijão",
+     "2 xícaras de caldo de frango ou água com sal e pimenta",
+     "1 xícara de água",
+     "1/2 talo de aipo ou alho-poró",
+     "1 cebola roxa e 1 cebola branca em cubinhos",
+     "1 pimentão",
+     "Louro, tomilho, orégano, pimenta chili, alho, sal e pimenta",
+     "1 colher de chá pequena de canela",
+     "Cuscuz: 1 couve-flor desmanchada, 1/2 colher de sopa de ghee, meia cebola roxa, sal, alho e pimenta"
+    ],
+    "steps": "Tudo menos a couve-flor na panela de cozimento lento: 4–6 horas em temperatura baixa, ou 1 hora se aumentar a temperatura.\nCuscuz: processe a couve-flor. Numa frigideira com óleo, alho e cebola por 2 minutos; adicione a couve-flor e cozinhe 5 minutos até as bordas dourarem. Tempere.\nSirva o feijão sobre o cuscuz como alternativa ao arroz branco.",
+    "tips": ""
+   }
+  },
+  "r_ensalada_espinaca": {
+   "en": {
+    "name": "Spinach Salad",
+    "ingredients": [
+     "Spinach, sliced into strips",
+     "Grated carrot",
+     "Avocado",
+     "Sweet corn (not daily)",
+     "Tomato and red onion",
+     "Salt, pepper, lemon and a splash of olive oil"
+    ],
+    "steps": "Toss everything together. As a full meal, add chicken, tuna, or tilapia.",
+    "tips": "It also works as a topping for other dishes."
+   },
+   "pt": {
+    "name": "Salada de espinafre",
+    "ingredients": [
+     "Espinafre em tiras",
+     "Cenoura ralada",
+     "Abacate",
+     "Milho doce (não diariamente)",
+     "Tomate e cebola roxa",
+     "Sal, pimenta, limão e um fio de azeite de oliva"
+    ],
+    "steps": "Misture tudo. Como refeição completa, adicione frango, atum ou tilápia.",
+    "tips": "Também serve como topping para outras preparações."
+   }
+  },
+  "r_ensalada_rugula_fresas": {
+   "en": {
+    "name": "Baby Arugula Salad with Walnuts and Strawberries",
+    "ingredients": [
+     "Baby arugula (or kale or another leafy green)",
+     "Sliced strawberries",
+     "Walnuts sautéed with a touch of honey and vanilla or stevia",
+     "Goat cheese or cottage cheese",
+     "Dried or fresh blueberries",
+     "Balsamic honey vinaigrette (see Toppings)"
+    ],
+    "steps": "Mix everything together and dress with the vinaigrette.",
+    "tips": ""
+   },
+   "pt": {
+    "name": "Salada de rúcula baby, nozes e morangos",
+    "ingredients": [
+     "Rúcula baby (ou kale ou outra folha verde)",
+     "Morangos fatiados",
+     "Nozes salteadas com um toque de mel e baunilha ou stevia",
+     "Queijo de cabra ou cottage",
+     "Mirtilos desidratados ou frescos",
+     "Vinagrete de balsâmico e mel (em Toppings)"
+    ],
+    "steps": "Misture tudo e tempere com o vinagrete.",
+    "tips": ""
+   }
+  },
+  "r_ensalada_camarones_mango": {
+   "en": {
+    "name": "Shrimp and Mango Salad",
+    "ingredients": [
+     "Shrimp sautéed in ghee or avocado oil with honey, a splash of low-sodium soy sauce, and salt",
+     "Curly lettuce or Bibb lettuce",
+     "Ripe mango, diced",
+     "Red onion",
+     "Avocado",
+     "Cherry tomato",
+     "Cilantro",
+     "Lemon and salt"
+    ],
+    "steps": "Toss everything together and you're done.",
+    "tips": ""
+   },
+   "pt": {
+    "name": "Salada de camarão com manga",
+    "ingredients": [
+     "Camarões salteados em ghee ou óleo de abacate com mel, um toque de molho de soja com baixo teor de sódio e sal",
+     "Alface crespa ou alface americana",
+     "Manga madura em pedacinhos",
+     "Cebola roxa",
+     "Abacate",
+     "Tomate cereja",
+     "Coentro",
+     "Limão e sal"
+    ],
+    "steps": "Misture tudo e pronto.",
+    "tips": ""
+   }
+  },
+  "r_poke_trucha": {
+   "en": {
+    "name": "Trout Poke Bowl with Sriracha Mayo",
+    "ingredients": [
+     "2 cups sushi rice",
+     "3 cups water",
+     "1/4 cup rice or apple cider vinegar + 1 tbsp liquid stevia",
+     "Trout",
+     "Salt, pepper, parsley and oregano",
+     "Avocado and cucumber, cubed",
+     "Sriracha mayo (see Toppings)",
+     "Sesame seeds"
+    ],
+    "steps": "Rinse the rice until the water runs clear. Bring to a boil with the water, lower the heat, cover, and cook for 20 minutes. Cool on a tray and drizzle with the vinegar and stevia mixture.\nTrout: heat a pan, skin side up for 3–4 minutes, flip and cook 5–8 minutes more. Salt and pepper.\nBuild the bowl: rice, trout, avocado, cucumber, sriracha mayo, and sesame seeds.",
+    "tips": ""
+   },
+   "pt": {
+    "name": "Poke bowl de truta e sriracha mayo",
+    "ingredients": [
+     "2 xícaras de arroz de sushi",
+     "3 xícaras de água",
+     "1/4 xícara de vinagre de arroz ou de maçã + 1 colher de sopa de stevia líquida",
+     "Truta",
+     "Sal, pimenta, salsinha e orégano",
+     "Abacate e pepino em cubos",
+     "Sriracha mayo (em Toppings)",
+     "Gergelim"
+    ],
+    "steps": "Lave o arroz até a água sair limpa. Ferva com a água, abaixe o fogo, tampe e cozinhe por 20 minutos. Deixe esfriar numa bandeja e regue com a mistura de vinagre e stevia.\nTruta: frigideira quente, pele para cima por 3–4 minutos, vire e cozinhe mais 5–8 minutos. Sal e pimenta.\nMonte o bowl: arroz, truta, abacate, pepino, sriracha mayo e gergelim.",
+    "tips": ""
+   }
+  },
+  "r_bowl_atun_marinado": {
+   "en": {
+    "name": "Marinated Tuna Bowl",
+    "ingredients": [
+     "Tuna, cubed",
+     "Orange juice",
+     "Low-sodium soy sauce or coconut aminos",
+     "A touch of grated ginger and honey",
+     "Salt",
+     "Sesame or avocado oil",
+     "Salad: lettuce, tomato, cucumber, onion, bell pepper, cilantro",
+     "Plantain coins with guacamole"
+    ],
+    "steps": "Marinate the tuna for 1 hour in the fridge: the juice should fully cover the pieces. It “cooks” on its own.\nServe with the fresh salad and plantain coins with guacamole.",
+    "tips": ""
+   },
+   "pt": {
+    "name": "Bowl de atum marinado",
+    "ingredients": [
+     "Atum em pedaços",
+     "Suco de laranja",
+     "Molho de soja com baixo teor de sódio ou coco aminos",
+     "Um toque de gengibre ralado e de mel",
+     "Sal",
+     "Óleo de gergelim ou de abacate",
+     "Salada: alface, tomate, pepino, cebola, pimentão, coentro",
+     "Rodelinhas de banana-da-terra com guacamole"
+    ],
+    "steps": "Marine o atum por 1 hora na geladeira: o suco deve cobrir completamente os pedaços. Ele vai “cozinhar” sozinho.\nSirva com a salada fresca e as rodelinhas de banana-da-terra com guacamole.",
+    "tips": ""
+   }
+  },
+  "r_ensalada_peras": {
+   "en": {
+    "name": "Salad with Caramelized Pears",
+    "ingredients": [
+     "Kale, massaged with olive oil, lemon and salt",
+     "Red onion",
+     "Walnuts sautéed with a touch of honey and vanilla",
+     "Pears sautéed in ghee",
+     "Feta cheese",
+     "Dried blueberries"
+    ],
+    "steps": "Toss everything together and pair it with your favorite animal or plant-based protein.",
+    "tips": ""
+   },
+   "pt": {
+    "name": "Salada com peras caramelizadas",
+    "ingredients": [
+     "Couve massageada com azeite de oliva, limão e sal",
+     "Cebola roxa",
+     "Nozes salteadas com um toque de mel e baunilha",
+     "Peras salteadas em ghee",
+     "Queijo feta",
+     "Mirtilos desidratados"
+    ],
+    "steps": "Misture tudo e acompanhe com sua proteína animal ou vegetal favorita.",
+    "tips": ""
+   }
+  }
+ },
+ "lessons": {
+  "l_objetivo": {
+   "en": {
+    "title": "The goal",
+    "body": "- Find balance and equilibrium.\n- Learn to live a healthier life and enjoy the process.\n- Love and tolerance with myself and with others.\n\nRemember that all this information is focused on respect and self-care for yourself and your loved ones. Without obsessing, without being restrictive or too flexible."
+   },
+   "pt": {
+    "title": "O objetivo",
+    "body": "- Encontrar equilíbrio e balanço.\n- Aprender a ter uma vida mais saudável e aproveitar o processo.\n- Amor e tolerância comigo mesma e com os outros.\n\nLembre-se de que toda a informação está focada no respeito e no autocuidado com você mesma e com quem você ama. Sem obsessão, sem ser restritiva nem excessivamente flexível."
+   }
+  },
+  "l_cantidad_calidad": {
+   "en": {
+    "title": "Do calories or quality matter more?",
+    "body": "We've been led to believe that the key is counting calories, when it's not just about quantity but quality. A car's gasoline has no calories—would you drink it? The same happens with many processed foods: they can be 0 calories and still not be fit for the body. They cause chronic inflammation, joint pain, fatigue, insomnia, irritability, and hormonal issues: \"silent\" symptoms.\n\nCalories do count if we want to manage our weight: if we eat more than we burn, we gain weight; if we eat less, we lose it. But that's not the only thing. What also matters are the percentages of macronutrients, the effect each food has on the body, and the hormonal reactions it triggers.\n\n# In summary\nCalories count, of course, but they're not the only thing to look at when taking care of your diet. That's why in the app you log what you eat AND learn to choose better."
+   },
+   "pt": {
+    "title": "O que importa mais: as calorias ou a qualidade?",
+    "body": "Nos fizeram acreditar que a chave está em contar calorias, quando não é só a quantidade, mas sim a qualidade. A gasolina de um carro não tem calorias, você a consumiria? É isso que acontece com muitos processados: podem ter 0 calorias e não serem adequados para o corpo. Eles geram inflamação crônica, dor nas articulações, cansaço, insônia, irritação e problemas hormonais: sintomas “silenciosos”.\n\nAs calorias sim contam se queremos controlar o peso: se comemos mais do que gastamos, ganhamos peso; se comemos menos, perdemos. Mas não é a única coisa. Importam as porcentagens de macronutrientes, o efeito de cada alimento no organismo e as reações hormonais que ele desencadeia.\n\n# Resumindo\nAs calorias contam, claro, mas não são a única coisa que precisamos observar ao cuidar da alimentação. Por isso, no app você registra o que come E aprende a escolher melhor."
+   }
+  },
+  "l_tips_cuidar": {
+   "en": {
+    "title": "3 tips for taking care of what you eat",
+    "body": "# 1. Foods over products\nBuying fresh foods (fruits, vegetables, meats, fish, legumes) is the basic step. Avoid products with an endless list of ingredients: with fresh food you can prepare whatever you want at home and know exactly what you're eating.\n\n# 2. Cook at home and choose healthy cooking methods\nSteamed, baked, wok-cooked, grilled, in papillote: these don't alter the quality or nutrients and don't add excess calories.\n\n# 3. Learn to read labels\nDon't stop at the marketing claim. A \"low-fat\" product can hide a lot of sugar. Reading the label lets you choose what truly fits your needs."
+   },
+   "pt": {
+    "title": "3 dicas para cuidar do que você come",
+    "body": "# 1. Alimentos acima de produtos\nComprar alimentos frescos (frutas, verduras, carnes, peixes, leguminosas) é o passo básico. Evite produtos com uma lista interminável de ingredientes: com alimentos frescos você prepara o que quiser em casa e sabe o que está comendo.\n\n# 2. Cozinhe em casa e escolha cocções saudáveis\nNo vapor, no forno, no wok, na chapa, em papillote: elas não alteram a qualidade nem os nutrientes e não aumentam as calorias em excesso.\n\n# 3. Aprenda a ler os rótulos\nNão fique apenas no claim publicitário. Um produto “low fat” pode esconder muito açúcar. Lendo o rótulo, você escolhe o que realmente se adapta às suas necessidades."
+   }
+  },
+  "l_leer_tabla": {
+   "en": {
+    "title": "How to read a nutrition label",
+    "body": "- Check how many servings are in the package. It often says \"50 kcal,\" but that's per 30 g serving and the package has 15 servings. How much would that add up to?\n- Ingredients are listed from highest to lowest amount. If the first one is sugar or fortified wheat flour, it's a highly processed food. Prefer short lists with ingredients you can actually \"understand.\"\n- Grams of sugar per serving should be a 1-digit number. More than 10 g: highly processed.\n- Sodium: more than 300 mg per serving is already very high. Besides fluid retention, it brings many health problems.\n- Avoid trans fats: hydrogenated or partially hydrogenated oil. Recommended: less than 15 g of fat per serving.\n\n# Activity\nDo this exercise with something you have in your pantry. Read its ingredients and its label. How much of what's written do you actually know what it is? The fewer ingredients, the better, always."
+   },
+   "pt": {
+    "title": "Como ler uma tabela nutricional",
+    "body": "- Preste atenção em quantas porções o pacote traz. Muitas vezes diz “50 kcal”, mas é por porção de 30 g e o pacote tem 15 porções. Quanto isso daria no total?\n- Os ingredientes vêm em ordem de maior para menor quantidade. Se o primeiro é açúcar ou farinha de trigo fortificada, é um alimento altamente processado. Prefira listas curtas e ingredientes que você consiga “entender”.\n- Os gramas de açúcar por porção devem ter 1 dígito. Mais de 10 g: altamente processado.\n- Sódio: mais de 300 mg por porção já é muito alto. Além de retenção de líquidos, traz muitos problemas de saúde.\n- Evite as gorduras trans: óleo hidrogenado ou parcialmente hidrogenado. Recomendável menos de 15 g de gordura por porção.\n\n# Atividade\nFaça o exercício com algo que você tenha na despensa. Leia os ingredientes e a tabela. O quanto do que está escrito você realmente sabe o que é? Quanto menos ingredientes, sempre melhor."
+   }
+  },
+  "l_desayunos": {
+   "en": {
+    "title": "Building Blocks of a Good Breakfast",
+    "body": "- Add vegetables to your breakfasts: they're high in fiber and keep you full throughout the day, helping you avoid snacking.\n- Avoid high dairy intake; replace it with plant-based milks and cheeses. If you get a craving (not for every day), the lower-fat, lower-sodium cheeses are feta, parmesan, cottage, mozzarella, and ricotta. Portion size varies by person.\n- Greek yogurt does help: high in protein, no added sugar, and fewer than 4 ingredients. If you want it sweet, use stevia or fruit.\n- Swap chocolate for cacao: powder or sticks, with plant-based milk (almond, coconut, cashew, or oat), stevia, and cinnamon. It's delicious.\n- Ready-to-eat healthy options: oat, whole-grain, or almond bread; whole-grain or cauliflower arepas; high-protein Greek yogurt; almond cheeses; plant-based milks; artisanal granolas; gluten-free oats; cacao; amaranth wafers; puffed corn snacks; liquid stevia; almond, coconut, or oat flours; nut butters. If you're outside the country, your coach can advise you on what to buy."
+   },
+   "pt": {
+    "title": "Bases de um bom café da manhã",
+    "body": "- Coloque vegetais no seu café da manhã: são ricos em fibra e dão saciedade durante o dia, assim você evita ficar beliscando.\n- Evite o alto consumo de lácteos; substitua por leites e queijos vegetais. Se der vontade (não para o dia a dia), os queijos com menos gordura e sódio são feta, parmesão, cottage, mozzarella e ricota. A porção varia de pessoa para pessoa.\n- O iogurte grego sim ajuda: alto em proteína, sem açúcar adicionado e com menos de 4 ingredientes. Se quiser adoçado, use stevia ou fruta.\n- O chocolate pode ser substituído por cacau: em pó ou sticks, com leite vegetal (amêndoas, coco, castanha de caju ou aveia), stevia e canela. Fica delicioso.\n- Já preparados para comer de forma saudável: pão de aveia, integral ou de amêndoas; arepas integrais ou de couve-flor; iogurte grego alto em proteína; queijos de amêndoas; leites vegetais; granolas artesanais; aveia sem glúten; cacau; obreias de amaranto; pipoca; stevia líquida; farinhas de amêndoas, coco ou aveia; pastas de amendoim. Se você estiver fora do país, sua coach te orienta sobre o que comprar."
+   }
+  },
+  "l_dormir": {
+   "en": {
+    "title": "Nutrition for Better Sleep",
+    "body": "- Include vegetables in dinner, in any form.\n- Avoid red meat, processed foods, high-sugar foods, coffee, or stimulants at night.\n- Try to have dinner before 7:30–8:00 PM.\n- Fruit and carbs at night won't make you gain weight, but they give you energy and can affect your sleep: better to have them at breakfast, snack, or lunch.\n- Eating healthy fats at night helps you fall asleep: a bowl of vegetables, protein, and healthy fats (measure your fat portion).\n\n# Sleep-Inducing Teas\nChamomile, valerian root, lemon balm, turmeric, passionflower, ashwagandha, or diluted apple cider vinegar."
+   },
+   "pt": {
+    "title": "Nutrição para dormir melhor",
+    "body": "- No jantar, inclua vegetais em qualquer apresentação.\n- Evite carnes vermelhas, processados, alimentos ricos em açúcar, café ou estimulantes à noite.\n- Se possível, jante antes das 19h30–20h.\n- A fruta e os carboidratos à noite não engordam, mas dão energia e podem afetar o sono: melhor no café da manhã, no snack ou no almoço.\n- Comer boas gorduras à noite ajuda a conciliar o sono: um bowl de verduras, proteína e boas gorduras (meça a porção de gorduras).\n\n# Chás para dormir\nCamomila, valeriana, erva-cidreira, cúrcuma, maracujá (passiflora), ashwagandha, ou vinagre de maçã diluído."
+   }
+  },
+  "l_felicidad": {
+   "en": {
+    "title": "Foods That Boost Happiness",
+    "body": "- Greek or plant-based yogurt (150 g max per day).\n- Nuts (1 handful).\n- Chocolate (1 piece, high-cacao).\n- Leafy greens: large amounts of folic acid and vitamin B9, which help reduce the risk of depression and anxiety.\n- Eggs: high in tryptophan, an amino acid excellent for generating well-being.\n- Chili or spicy food.\n\n> \"Let food be thy medicine and medicine be thy food.\" — Hippocrates\n\nLearning to read a nutrition label is key to choosing foods that are best for your physical and mental health, because the two are connected. And so you don't get fooled by \"healthy\" marketing."
+   },
+   "pt": {
+    "title": "Alimentos que geram felicidade",
+    "body": "- Iogurte grego ou vegetal (máximo 150 g por dia).\n- Castanhas (1 punhado).\n- Chocolate (1 pedaço, cacau alto).\n- Vegetais verdes: grandes quantidades de ácido fólico e vitamina B9, que ajudam a reduzir o risco de depressão e ansiedade.\n- Ovo: alto em triptofano, aminoácido excelente para gerar bem-estar.\n- Pimenta ou picante.\n\n> “Que seu alimento seja seu remédio e seu remédio seja seu alimento.” — Hipócrates\n\nAprender a ler uma tabela nutricional é essencial para escolher alimentos ideais para sua saúde física e mental, porque as duas estão conectadas. E para você não se deixar enganar pela publicidade do que é “saudável”."
+   }
+  },
+  "l_nombres_azucar": {
+   "en": {
+    "title": "Hidden sugar and its many names",
+    "body": "The industry hides sugar under dozens of names to make you believe the product is healthy or has little sugar. If the label doesn't say “sugar,” it doesn't mean it has none. These are the names you'll come across:\n\n- Agave nectar · Cane crystals · Cane juice or evaporated cane juice · Sugar cane\n- Glucose · Dextrose · Fructose · Galactose · Lactose · Maltose · Sucrose · Glucose solids · Dextran · Maltodextrin\n- Corn syrup · High-fructose corn syrup · Refined corn syrup · Corn syrup solids · Corn sweetener\n- Rice syrup · Malt syrup · Malt barley · Diastatic malt · Sorghum syrup · Maple syrup · Golden syrup · Syrup\n- Molasses · Treacle · Caramel · Panela or panocha (unrefined cane sugar) · Honey\n- Granulated sugar · Grape sugar · Muscovado sugar · Turbinado sugar · Golden sugar · Raw sugar · Yellow sugar · Invert sugar · Fruit juice concentrate · Sorbitol"
+   },
+   "pt": {
+    "title": "O açúcar escondido e seus nomes",
+    "body": "A indústria esconde o açúcar sob dezenas de nomes para te fazer acreditar que o produto é saudável ou traz pouca quantidade. Se no rótulo não diz “açúcar” não significa que não tenha. Estes são os nomes que você vai encontrar:\n\n- Néctar de agave · Cristais de cana · Suco de cana ou suco de cana evaporado · Cana-de-açúcar\n- Glicose · Dextrose · Frutose · Galactose · Lactose · Maltose · Sacarose · Sólidos de glicose · Dextrana · Maltodextrina\n- Xarope de milho · Xarope de milho de alta frutose · Xarope de milho refinado · Sólidos de xarope de milho · Milho adoçante\n- Xarope de arroz · Xarope de malte · Cevada maltada · Malte diastático · Xarope de sorgo · Xarope de bordo (maple) · Xarope dourado · Sirope\n- Melaço · Treacle · Caramelo · Panela ou rapadura · Mel\n- Açúcar granulado · Açúcar de uva · Açúcar mascavo · Açúcar turbinado · Açúcar dourado · Açúcar cru · Açúcar amarelo · Açúcar invertido · Concentrado de suco de frutas · Sorbitol"
+   }
+  },
+  "l_azucar_cuerpo": {
+   "en": {
+    "title": "What excess sugar does to your body",
+    "body": "# It speeds up aging\nBecause of glycation: excess glucose binds to proteins like collagen, the fibers stiffen, and skin loses elasticity.\n\n# It affects your mood\nIn small amounts it helps release serotonin. In excess, sudden swings in blood sugar cause irritability, mood swings, and nervousness.\n\n# It alters your gut flora\nHealthy flora protects your digestive system. Excess sugar favors fungi like candida and causes bloating, constipation, or diarrhea.\n\n# It creates dependence\nThe brain reacts to sugar by releasing dopamine, similar to other addictive substances. Try it: cut out sugar for 10 days. If by day two you have headaches, irritability, and your body craves sweets, that's withdrawal.\n\n# It makes you gain weight and affects your liver\nIt's absorbed quickly as glucose; if you don't use it right away, your body stores it as fat. Excess fructose builds up in the liver and can lead to fatty liver and insulin resistance.\n\n# It affects memory\nHigh blood sugar levels have been linked to a smaller hippocampus, the key region for long-term memory."
+   },
+   "pt": {
+    "title": "O que o excesso de açúcar faz no seu corpo",
+    "body": "# Acelera o envelhecimento\nPela glicação: o excesso de glicose se liga a proteínas como o colágeno, as fibras se tensionam e a pele perde elasticidade.\n\n# Afeta o humor\nEm pequenas quantidades ajuda a liberar serotonina. Em excesso, as mudanças bruscas de açúcar no sangue provocam irritabilidade, alterações de humor e nervosismo.\n\n# Altera a flora intestinal\nUma flora saudável protege o aparelho digestivo. O excesso de açúcar favorece fungos como a cândida e causa flatulência, prisão de ventre ou diarreia.\n\n# Gera dependência\nO cérebro reage ao açúcar liberando dopamina, parecido com outras substâncias viciantes. Comprove você mesma: retire o açúcar por 10 dias. Se no segundo dia você tiver dor de cabeça, irritabilidade e o corpo pedir doce, é abstinência.\n\n# Engorda e afeta o fígado\nÉ absorvido rapidamente como glicose; se você não a usa no momento, o corpo a guarda como gordura. O excesso de frutose se acumula no fígado e pode causar esteatose hepática (fígado gorduroso) e resistência à insulina.\n\n# Afeta a memória\nNíveis altos de açúcar no sangue têm sido relacionados a um hipocampo menor, a região-chave da memória de longo prazo."
+   }
+  },
+  "l_reemplazar": {
+   "en": {
+    "title": "Let's learn to swap foods",
+    "body": "# Low in sugar, low in sodium\nA food with no added sugar should have less than 10 g of sugar per serving, and low sodium means less than 140 mg.\n\n# Good fats vs. bad fats\nAvoid trans fats and saturated fats; choose polyunsaturated and monounsaturated fats: olive oil, nuts, avocado.\n\n# High in fiber\nSomething is considered high in fiber if it provides at least 20% of the daily value, meaning at least 5 g per serving.\n\n# Low-calorie snacks\nChoose snacks between 150 and 200 calories, high in protein and fiber, low in sugar and sodium.\n\n# Don't be fooled\nDon't blindly trust “low sodium,” “light,” or “sugar-free”: compare the nutrition label and pick the one that actually delivers.\n\n# Servings and calories\nCalories are listed per serving, not per package. Eat only the amount listed as a serving and you won't overdo it."
+   },
+   "pt": {
+    "title": "Vamos aprender a substituir alimentos",
+    "body": "# Baixo em açúcar, baixo em sódio\nUm alimento sem açúcar adicionado deve ter menos de 10 g de açúcar por porção, e baixo em sódio, menos de 140 mg.\n\n# Gorduras boas vs ruins\nEvite as gorduras trans e as saturadas; escolha as poli-insaturadas e monoinsaturadas: azeite de oliva, oleaginosas, abacate.\n\n# Alto em fibra\nConsidera-se alto em fibra se fornece pelo menos 20% do valor diário, ou seja, pelo menos 5 g por porção.\n\n# Snacks baixos em calorias\nEscolha snacks entre 150 e 200 calorias, altos em proteína e fibra, baixos em açúcar e sódio.\n\n# Não se deixe enganar\nNão confie cegamente em “baixo em sódio”, “light” ou “sem açúcar”: compare a tabela nutricional e escolha o que realmente cumpre.\n\n# Porções e calorias\nAs calorias são por porção, não por embalagem. Coma apenas a quantidade indicada como porção e você não vai exagerar."
+   }
+  },
+  "l_preparaciones": {
+   "en": {
+    "title": "Prep tips",
+    "body": "- Save on excess calories: don't pour oil straight into the pan. Pour it onto a napkin first, then add what's left on the napkin to the pan.\n- Avoid fruit juices. Eat the whole fruit instead: blending it removes the fiber and leaves the fructose, its sugar. Excess fructose makes you hungrier throughout the day (maybe that's behind your afternoon cravings). Replace juices with the infusions and flavored waters from the recipe book.\n- Learn to swap foods: check out the meal prep, topping, and snack options."
+   },
+   "pt": {
+    "title": "Dicas de preparo",
+    "body": "- Economize o excesso de calorias: não coloque o óleo direto na frigideira. Coloque primeiro em um guardanapo e depois passe para a frigideira apenas o que ficou no guardanapo.\n- Evite os sucos de fruta. Coma a fruta inteira: ao bater no liquidificador você retira a fibra e sobra a frutose, seu açúcar. O excesso de frutose gera mais fome ao longo do dia (talvez sejam aquelas vontades de beliscar à tarde). Substitua por infusões e águas saborizadas do receituário.\n- Aprenda a substituir alimentos: veja as opções de meal prep, toppings e snacks."
+   }
+  }
+ }
+}

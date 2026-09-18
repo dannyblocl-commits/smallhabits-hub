@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { AppShell, Badge, Locked } from "@/components/AppShell";
 import { VideoCard } from "@/components/VideoCard";
 import { requireUser } from "@/lib/auth";
@@ -21,6 +22,10 @@ export default async function Nutrition({ searchParams }: { searchParams: Promis
           {recs.map((x) => <p key={x.id} className="text-sm mb-1"><span className="faint text-xs">{x.coach_name} · </span>{x.body}</p>)}
         </div>
       )}
+      <div className="grid sm:grid-cols-2 gap-3 mb-5">
+        <Link href="/dashboard/recipes" className="card lift-sage p-4 block"><div className="eyebrow" style={{ color: "var(--sage)" }}>{L.recipes.title}</div><div className="display text-lg mt-1">{L.recipes.kicker.replace(" · {n}", "").replace("{n}", "")}</div><div className="faint text-xs mt-1">{L.common.gratis} ✓</div></Link>
+        <Link href="/dashboard/learn" className="card lift-sage p-4 block"><div className="eyebrow" style={{ color: "var(--sage)" }}>{L.learn.title}</div><div className="display text-lg mt-1">{L.learn.kicker}</div></Link>
+      </div>
       <div className="grid lg:grid-cols-[300px_1fr] gap-5">
         <aside className="space-y-2">
           {menus.map((x) => (

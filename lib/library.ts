@@ -73,3 +73,66 @@ export async function listRecommendations(userId: string, category?: string, lim
     category ? [userId, limit, category] : [userId, limit]);
   return r.rows.map((x) => ({ ...x, at: new Date(x.at).toISOString() }));
 }
+
+// ---------- Recetario y hacks nutricionales de Maleja (contenido real de sus PDFs, editable por la coach) ----------
+import recetario from "@/data/recetario.json";
+import recetarioI18n from "@/data/recetario.i18n.json";
+import type { Lang } from "@/lib/i18n";
+
+export type RecipeText = { name: string; ingredients: string[]; steps: string; tips: string };
+export type RecipeRow = RecipeText & { id: string; category: string; tags: string[]; i18n: Partial<Record<Lang, RecipeText>>; free: boolean; sort: number; updated_at: string };
+export type LessonText = { title: string; body: string };
+export type LessonRow = LessonText & { id: string; i18n: Partial<Record<Lang, LessonText>>; free: boolean; sort: number; updated_at: string };
+export type RecipeCategory = { id: string; name: string; free: boolean };
+
+type I18nFile = { categories: Record<string, Partial<Record<Lang, { name: string }>>>; recipes: Record<string, Partial<Record<Lang, RecipeText>>>; lessons: Record<string, Partial<Record<Lang, LessonText>>> };
+const RI = recetarioI18n as I18nFile;
+export const RECIPE_CATEGORIES: RecipeCategory[] = recetario.categories;
+export const categoryName = (id: string, lang: Lang) => RI.categories?.[id]?.[lang]?.name ?? RECIPE_CATEGORIES.find((c) => c.id === id)?.name ?? id;
+export const localizeRecipe = (r: RecipeRow, lang: Lang): RecipeText => (lang !== "es" && r.i18n?.[lang]) || { name: r.name, ingredients: r.ingredients, steps: r.steps, tips: r.tips };
+export const localizeLesson = (l: LessonRow, lang: Lang): LessonText => (lang !== "es" && l.i18n?.[lang]) || { title: l.title, body: l.body };
+
+let seededRecetario: Promise<void> | null = null;
+export function seedRecetario() {
+  if (!seededRecetario) seededRecetario = (async () => {
+    await ensureSchema();
+    const r = await db().query("select count(*)::int as n from recipes");
+    if (r.rows[0].n === 0) {
+      const catFree = Object.fromEntries(RECIPE_CATEGORIES.map((c) => [c.id, c.free]));
+      for (const [i, x] of recetario.recipes.entries()) {
+        await db().query("insert into recipes (id, category, name, ingredients, steps, tips, tags, i18n, free, sort) values ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10) on conflict (id) do nothing",
+          [x.id, x.category, x.name, JSON.stringify(x.ingredients), x.steps, x.tips ?? "", JSON.stringify(x.tags ?? []), JSON.stringify(RI.recipes?.[x.id] ?? {}), catFree[x.category] ?? false, i + 1]);
+      }
+    }
+    const l = await db().query("select count(*)::int as n from lessons");
+    if (l.rows[0].n === 0) {
+      for (const [i, x] of recetario.lessons.entries()) {
+        await db().query("insert into lessons (id, title, body, i18n, free, sort) values ($1,$2,$3,$4,true,$5) on conflict (id) do nothing", [x.id, x.title, x.body, JSON.stringify(RI.lessons?.[x.id] ?? {}), i + 1]);
+      }
+    }
+  })();
+  return seededRecetario;
+}
+
+const rowR = (x: Record<string, unknown>): RecipeRow => ({ ...(x as RecipeRow), updated_at: new Date(x.updated_at as string).toISOString() });
+const rowL = (x: Record<string, unknown>): LessonRow => ({ ...(x as LessonRow), updated_at: new Date(x.updated_at as string).toISOString() });
+export async function listRecipes(category?: string): Promise<RecipeRow[]> {
+  await seedRecetario();
+  const r = category ? await db().query("select * from recipes where category=$1 order by sort, updated_at", [category]) : await db().query("select * from recipes order by sort, updated_at");
+  return r.rows.map(rowR);
+}
+export async function getRecipe(id: string): Promise<RecipeRow | null> {
+  await seedRecetario();
+  const r = await db().query("select * from recipes where id=$1", [id]);
+  return r.rows[0] ? rowR(r.rows[0]) : null;
+}
+export async function listLessons(): Promise<LessonRow[]> {
+  await seedRecetario();
+  const r = await db().query("select * from lessons order by sort, updated_at");
+  return r.rows.map(rowL);
+}
+export async function getLesson(id: string): Promise<LessonRow | null> {
+  await seedRecetario();
+  const r = await db().query("select * from lessons where id=$1", [id]);
+  return r.rows[0] ? rowL(r.rows[0]) : null;
+}
