@@ -53,6 +53,71 @@ export function ensureSchema() {
         at timestamptz default now()
       );
       create index if not exists photos_user_at on photos(user_id, at desc);
+      create table if not exists routines (
+        id text primary key,
+        type text not null default 'funcional',
+        difficulty text not null default 'beginner',
+        duration_minutes int not null default 20,
+        free boolean not null default false,
+        published boolean not null default true,
+        i18n jsonb not null default '{}',
+        exercises jsonb not null default '[]',
+        sort int not null default 100,
+        updated_by uuid references users(id), updated_at timestamptz default now()
+      );
+      create table if not exists menus (
+        id text primary key,
+        goal text not null default 'Salud integral',
+        kcal int not null default 1800,
+        macros text,
+        free boolean not null default false,
+        published boolean not null default true,
+        i18n jsonb not null default '{}',
+        meals jsonb not null default '[]',
+        recipes jsonb not null default '[]',
+        brands text,
+        sort int not null default 100,
+        updated_by uuid references users(id), updated_at timestamptz default now()
+      );
+      create table if not exists member_notes (
+        id uuid primary key default gen_random_uuid(),
+        user_id uuid references users(id) on delete cascade,
+        coach_id uuid references users(id),
+        scope text not null,
+        body text not null,
+        at timestamptz default now()
+      );
+      create index if not exists member_notes_user on member_notes(user_id, at desc);
+      create table if not exists member_overrides (
+        user_id uuid references users(id) on delete cascade,
+        scope text not null,
+        data jsonb not null default '{}',
+        coach_id uuid references users(id), at timestamptz default now(),
+        primary key (user_id, scope)
+      );
+      create table if not exists routines (
+        id text primary key default gen_random_uuid()::text,
+        name text not null, description text default '', type text not null default 'funcional',
+        duration_minutes int not null default 20, difficulty text not null default 'beginner',
+        exercises jsonb not null default '[]', free boolean not null default false, sort int not null default 100,
+        updated_by uuid references users(id), updated_at timestamptz default now()
+      );
+      create table if not exists menus (
+        id text primary key default gen_random_uuid()::text,
+        name text not null, kcal int not null default 1800, macros text default '', goal text default 'Salud integral',
+        meals jsonb not null default '[]', recipes jsonb not null default '[]', brands text default '',
+        free boolean not null default false, sort int not null default 100,
+        updated_by uuid references users(id), updated_at timestamptz default now()
+      );
+      create table if not exists recommendations (
+        id uuid primary key default gen_random_uuid(),
+        user_id uuid references users(id) on delete cascade,
+        coach_id uuid references users(id) on delete set null,
+        category text not null default 'general',
+        body text not null,
+        at timestamptz default now()
+      );
+      create index if not exists recs_user_at on recommendations(user_id, at desc);
       create table if not exists content_media (
         key text primary key,
         pathname text not null, content_type text not null, size int,

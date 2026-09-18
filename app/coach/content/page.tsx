@@ -2,9 +2,7 @@ import Link from "next/link";
 import { requireCoach } from "@/lib/auth";
 import { listContent, uploadContent, removeContent } from "@/app/actions/content";
 import { Logo } from "@/components/Leaves";
-import { demoRoutines } from "@/data/routines";
-
-const menus = [["menu_1", "Tonificación"], ["menu_2", "Pérdida de grasa"], ["menu_3", "Ganancia muscular"], ["menu_4", "Vegetariano balance"]];
+import { listRoutines, listMenus } from "@/lib/library";
 const sessions = [["m_1", "Reflexión: pequeños hábitos"], ["m_2", "Worship: gratitud y propósito"], ["m_3", "Meditación: antes de entrenar"], ["m_4", "Meditación: recuperación"], ["m_5", "Journal de la noche"], ["m_6", "Worship: paz en el presente"]];
 const langs = [["es", "ES"], ["en", "EN"], ["pt", "PT"]];
 const fmt = (iso: string) => new Date(iso).toLocaleString("es", { day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" });
@@ -12,7 +10,7 @@ const mb = (n: number | null) => (n ? `${(n / 1_000_000).toFixed(1)} MB` : "");
 
 export default async function CoachContent({ searchParams }: { searchParams: Promise<{ ok?: string }> }) {
   await requireCoach();
-  const [rows, sp] = await Promise.all([listContent(), searchParams]);
+  const [rows, sp, demoRoutines, menus] = await Promise.all([listContent(), searchParams, listRoutines(), listMenus().then((ms) => ms.map((m) => [m.id, m.name] as [string, string]))]);
   const have = new Map(rows.map((r) => [r.key, r]));
 
   function Row({ k, label, accept, kind }: { k: string; label: string; accept: string; kind: "video" | "audio" }) {

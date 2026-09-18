@@ -12,9 +12,13 @@ const LANGS = ["es", "en", "pt"];
 
 export type ContentRow = { key: string; content_type: string; size: number | null; at: string };
 
-function isValidKey(key: string) {
+async function isValidKey(key: string) {
   const [kind, rest] = key.split(":");
-  if (kind === "video") return VIDEO_IDS.includes(rest);
+  if (kind === "video") {
+    if (VIDEO_IDS.includes(rest)) return true;
+    const r = await db().query("select 1 from routines where id=$1 union all select 1 from menus where id=$1", [rest]);
+    return (r.rowCount ?? 0) > 0;
+  }
   if (kind === "audio") { const [id, lang] = rest.split("."); return AUDIO_IDS.includes(id) && LANGS.includes(lang); }
   return false;
 }
@@ -29,7 +33,7 @@ export async function uploadContent(form: FormData) {
   const coach = await requireCoach();
   const key = String(form.get("key") || "");
   const file = form.get("file");
-  if (!isValidKey(key) || !(file instanceof File) || file.size === 0) return;
+  if (!(await isValidKey(key)) || !(file instanceof File) || file.size === 0) return;
   const isVideo = key.startsWith("video:");
   if (isVideo && !file.type.startsWith("video/")) return;
   if (!isVideo && !file.type.startsWith("audio/")) return;

@@ -62,6 +62,8 @@ export default async function CoachPanel() {
         <aside className="space-y-4">
           <div className="hidden lg:block text-sm space-y-1">
             <div className="px-3 py-2 rounded-[12px] row" style={{ color: "var(--sage)" }}>Miembros</div>
+            <Link href="/coach/routines" className="block px-3 py-2 rounded-[12px] muted hover:text-[var(--text)]">Rutinas</Link>
+            <Link href="/coach/menus" className="block px-3 py-2 rounded-[12px] muted hover:text-[var(--text)]">Planes de alimentación</Link>
             <Link href="/coach/content" className="block px-3 py-2 rounded-[12px] muted hover:text-[var(--text)]">Videos y audios</Link>
             {["Sesiones 1:1", "Ingresos"].map((l) => <div key={l} className="px-3 py-2 rounded-[12px] faint">{l}</div>)}
           </div>

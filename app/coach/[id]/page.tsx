@@ -5,17 +5,16 @@ import { getMember, getAssignment, assign } from "@/app/actions/assign";
 import { listThread } from "@/app/actions/chat";
 import { listPhotos } from "@/app/actions/photos";
 import { listMyMenus } from "@/app/actions/menus";
+import { listRoutines, listMenus, listRecommendations } from "@/lib/library";
+import { addRecommendation, deleteRecommendation } from "@/app/actions/library";
 import { ChatThread } from "@/components/ChatThread";
 import { Logo } from "@/components/Leaves";
-import { demoRoutines } from "@/data/routines";
-
-const menus = [["menu_1", "Tonificación · 1.800 kcal"], ["menu_2", "Pérdida de grasa · 1.500 kcal"], ["menu_3", "Ganancia muscular · 2.600 kcal"], ["menu_4", "Vegetariano balance · 1.900 kcal"]];
 const fmt = (iso: string) => new Date(iso).toLocaleDateString("es", { day: "numeric", month: "short" });
 
 export default async function MemberDetail({ params }: { params: Promise<{ id: string }> }) {
   await requireCoach();
   const { id } = await params;
-  const [m, a, thread, photos, userMenus] = await Promise.all([getMember(id), getAssignment(id), listThread(id), listPhotos(id), listMyMenus(id)]);
+  const [m, a, thread, photos, userMenus, routines, libMenus, recs] = await Promise.all([getMember(id), getAssignment(id), listThread(id), listPhotos(id), listMyMenus(id), listRoutines(), listMenus(), listRecommendations(id, undefined, 20)]);
   if (!m) notFound();
   const firstPhoto = photos[0], lastPhoto = photos.length > 1 ? photos[photos.length - 1] : null;
 
@@ -46,9 +45,9 @@ export default async function MemberDetail({ params }: { params: Promise<{ id: s
               <div className="eyebrow" style={{ color: "var(--sage)" }}>Asignar plan de la semana</div>
               {a && <p className="faint text-xs">Última asignación: {fmt(a.at)} por {a.coach_name}</p>}
               <div><label className="eyebrow block mb-1" htmlFor="routine_id">Rutina</label>
-                <select id="routine_id" name="routine_id" defaultValue={a?.routine_id ?? ""} className="input input-s"><option value="">— sin asignar —</option>{demoRoutines.map((r) => <option key={r.id} value={r.id}>{r.name} · {r.duration_minutes} min</option>)}</select></div>
-              <div><label className="eyebrow block mb-1" htmlFor="menu_id">Menú</label>
-                <select id="menu_id" name="menu_id" defaultValue={a?.menu_id ?? ""} className="input input-s"><option value="">— sin asignar —</option>{menus.map(([v, l]) => <option key={v} value={v}>{l}</option>)}</select></div>
+                <select id="routine_id" name="routine_id" defaultValue={a?.routine_id ?? ""} className="input input-s"><option value="">— sin asignar —</option>{routines.map((r) => <option key={r.id} value={r.id}>{r.name} · {r.duration_minutes} min</option>)}</select></div>
+              <div><label className="eyebrow block mb-1" htmlFor="menu_id">Plan de alimentación</label>
+                <select id="menu_id" name="menu_id" defaultValue={a?.menu_id ?? ""} className="input input-s"><option value="">— sin asignar —</option>{libMenus.map((x) => <option key={x.id} value={x.id}>{x.name} · {x.kcal} kcal</option>)}</select></div>
               <div><label className="eyebrow block mb-1" htmlFor="note">Nota para el miembro</label>
                 <textarea id="note" name="note" rows={3} defaultValue={a?.note ?? ""} placeholder="Ej: esta semana prioriza técnica, no velocidad." className="input input-s" /></div>
               <button className="btn btn-balance w-full">Guardar asignación</button>
@@ -58,6 +57,26 @@ export default async function MemberDetail({ params }: { params: Promise<{ id: s
               <div className="eyebrow mb-2">Últimas comidas</div>
               {m.foods.length === 0 && <p className="muted text-sm">Sin registros todavía.</p>}
               {m.foods.map((f: { name: string; kcal: number; at: string }, i: number) => (<div key={i} className="flex justify-between text-sm py-1.5" style={{ borderTop: i ? "1px solid var(--line)" : undefined }}><span className="muted">{fmt(f.at)} · {f.name}</span><span className="num">{f.kcal}</span></div>))}
+            </div>
+
+            <div className="card lift p-5">
+              <div className="eyebrow mb-2" style={{ color: "var(--fucsia)" }}>Recomendaciones personalizadas</div>
+              <p className="faint text-xs mb-3">La miembro las ve en su inicio y en la sección correspondiente (entreno, nutrición o mente).</p>
+              <form action={addRecommendation} className="space-y-2">
+                <input type="hidden" name="user_id" value={m.id} />
+                <select name="category" className="input input-s"><option value="general">General</option><option value="entreno">Entreno</option><option value="nutricion">Nutrición</option><option value="mente">Mente</option></select>
+                <textarea name="body" rows={3} required placeholder="Ej: esta semana sube a 12 reps en sentadilla; en la cena cambia el arroz por camote." className="input input-s" />
+                <button className="btn btn-go btn-sm w-full">Enviar recomendación</button>
+              </form>
+              <div className="mt-4 space-y-2">
+                {recs.length === 0 && <p className="muted text-sm">Sin recomendaciones todavía.</p>}
+                {recs.map((r) => (
+                  <div key={r.id} className="row p-3 text-sm">
+                    <div className="flex justify-between items-start gap-2"><span className="pill">{r.category}</span><form action={deleteRecommendation}><input type="hidden" name="id" value={r.id} /><input type="hidden" name="user_id" value={m.id} /><button className="faint text-xs">✕</button></form></div>
+                    <p className="mt-2">{r.body}</p><p className="faint text-[.65rem] mt-1">{fmt(r.at)}</p>
+                  </div>
+                ))}
+              </div>
             </div>
 
             <div className="card p-5">

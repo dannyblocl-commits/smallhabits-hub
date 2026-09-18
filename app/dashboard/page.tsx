@@ -9,16 +9,16 @@ import { getAssignment } from "@/app/actions/assign";
 import { unreadCount } from "@/app/actions/chat";
 import { myCoach } from "@/app/actions/coaches";
 import { wearableStatus } from "@/app/actions/wearables";
-import { demoRoutines } from "@/data/routines";
+import { listRoutines, listRecommendations } from "@/lib/library";
 
 const goalKcal: Record<string, number> = { "Perder peso": 1500, Tonificar: 1800, "Ganar fuerza": 2600, Resistencia: 2200, Flexibilidad: 1900, "Salud integral": 1900 };
 
 export default async function Dashboard() {
   const [user, { lang, L }] = await Promise.all([requireUser(), tr()]);
-  const [s, a, unread, coach, w] = await Promise.all([stats(), getAssignment(), unreadCount(), myCoach(), wearableStatus()]);
+  const [s, a, unread, coach, w, routines, recs] = await Promise.all([stats(), getAssignment(), unreadCount(), myCoach(), wearableStatus(), listRoutines(), listRecommendations(user.id, undefined, 3)]);
   const steps = w.today?.steps ?? null;
-  const assigned = a?.routine_id ? demoRoutines.find((r) => r.id === a.routine_id) : undefined;
-  const todayRoutine = assigned ?? (s.workoutsWeek === 0 ? demoRoutines[0] : demoRoutines[1]);
+  const assigned = a?.routine_id ? routines.find((r) => r.id === a.routine_id) : undefined;
+  const todayRoutine = assigned ?? (routines.find((r) => r.free) ?? routines[0]) ?? { id: "routine_1", name: "Calistenia", duration_minutes: 30, exercises: [], type: "calistenia" };
   const rt = L.content.routines[todayRoutine.id as keyof typeof L.content.routines];
   const goal = goalKcal[user.goal] ?? 1800;
   const pct = Math.min(100, Math.round((s.kcalToday / goal) * 100));
@@ -71,6 +71,12 @@ export default async function Dashboard() {
         </div>
       </div>
 
+      {recs.length > 0 && (
+        <div className="card lift p-5 mb-5">
+          <div className="eyebrow mb-2" style={{ color: "var(--fucsia)" }}>{L.recs.title}</div>
+          {recs.map((x) => <p key={x.id} className="text-sm mb-2"><span className="pill mr-2">{L.recs.cat[x.category as keyof typeof L.recs.cat] ?? x.category}</span>{x.body}</p>)}
+        </div>
+      )}
       <Link href="/dashboard/chat" className="card p-5 flex items-center gap-4 hover:border-[var(--line-strong)] transition">
         <div className="relative w-14 h-14 rounded-full overflow-hidden ring-2 ring-[var(--fucsia)] shrink-0"><Image src="/img/miphoto.jpg" alt="Coach" fill className="object-cover object-top" sizes="56px" /></div>
         <div className="flex-1"><div className="display">{coach?.name ?? a?.coach_name ?? L.dash.eligeCoach}</div><div className="muted text-sm">{unread > 0 ? fill(L.dash.unread, unread) : fill(L.dash.welcome, first)}</div></div>
