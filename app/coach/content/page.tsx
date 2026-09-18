@@ -18,7 +18,7 @@ export default async function CoachContent({ searchParams }: { searchParams: Pro
     const src = `/api/content/${k.replace(":", "/")}`;
     return (
       <div className="row p-4 flex flex-col md:flex-row md:items-center gap-3">
-        <div className="md:w-64"><div className="display text-sm">{label}</div><div className="faint text-xs">{r ? `Subido ${fmt(r.at)} · ${mb(r.size)}` : "Usando el video/audio por defecto"}</div></div>
+        <div className="md:w-64"><div className="display text-sm">{label}</div><div className="faint text-xs">{r ? `Subido ${fmt(r.at)} · ${mb(r.size)}` : "Sin video propio: se muestra el clip de IA de ambiente (o el audio por defecto)"}</div></div>
         <div className="flex-1">{kind === "video" ? <video src={src} controls preload="metadata" className="h-28 rounded-[8px] bg-black" /> : <audio src={src} controls preload="metadata" className="w-full max-w-sm" />}</div>
         <form action={uploadContent} className="flex items-center gap-2">
           <input type="hidden" name="key" value={k} />

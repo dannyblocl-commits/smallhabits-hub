@@ -2,10 +2,12 @@ import { db, ensureSchema } from "@/lib/db";
 import { demoRoutines } from "@/data/routines";
 
 export type Exercise = { name: string; description: string; sets: number; reps: string; rest_seconds: number; muscle_groups: string[] };
-export type Routine = { id: string; name: string; description: string; type: string; duration_minutes: number; difficulty: string; exercises: Exercise[]; free: boolean; sort: number; updated_at: string };
+export type RoutineText = { name: string; description: string; exercises: { name: string; description: string; muscle_groups: string[] }[] };
+export type Routine = { id: string; name: string; description: string; type: string; duration_minutes: number; difficulty: string; exercises: Exercise[]; i18n: Partial<Record<"en" | "pt", RoutineText>>; free: boolean; sort: number; updated_at: string };
 export type Meal = { time: string; name: string; description: string; kcal: number };
 export type Recipe = { name: string; steps: string; kcal: number };
-export type Menu = { id: string; name: string; kcal: number; macros: string; goal: string; meals: Meal[]; recipes: Recipe[]; brands: string; free: boolean; sort: number; updated_at: string };
+export type MenuText = { name: string; meals: { name: string; description: string }[]; recipes: { name: string; steps: string }[]; brands: string };
+export type Menu = { id: string; name: string; kcal: number; macros: string; goal: string; meals: Meal[]; recipes: Recipe[]; brands: string; i18n: Partial<Record<"en" | "pt", MenuText>>; free: boolean; sort: number; updated_at: string };
 export type Recommendation = { id: string; category: string; body: string; at: string; coach_name: string | null };
 
 const seedMenus = [
@@ -135,4 +137,16 @@ export async function getLesson(id: string): Promise<LessonRow | null> {
   await seedRecetario();
   const r = await db().query("select * from lessons where id=$1", [id]);
   return r.rows[0] ? rowL(r.rows[0]) : null;
+}
+
+// Rutinas y menús en el idioma del miembro: i18n de la DB (traducción automática al guardar) → diccionario fijo (ids demo) → español.
+export function localizeRoutine(r: Routine, lang: Lang, dict?: [string, string]): { name: string; description: string; exercises: Exercise[] } {
+  const t = lang !== "es" ? r.i18n?.[lang] : undefined;
+  if (t && t.exercises?.length === r.exercises.length) return { name: t.name, description: t.description, exercises: r.exercises.map((e, i) => ({ ...e, name: t.exercises[i].name || e.name, description: t.exercises[i].description ?? e.description, muscle_groups: t.exercises[i].muscle_groups?.length ? t.exercises[i].muscle_groups : e.muscle_groups })) };
+  return { name: dict?.[0] ?? r.name, description: dict?.[1] ?? r.description, exercises: r.exercises };
+}
+export function localizeMenu(m: Menu, lang: Lang, dictName?: string): { name: string; meals: Meal[]; recipes: Recipe[]; brands: string } {
+  const t = lang !== "es" ? m.i18n?.[lang] : undefined;
+  if (t && t.meals?.length === m.meals.length && t.recipes?.length === m.recipes.length) return { name: t.name, meals: m.meals.map((x, i) => ({ ...x, name: t.meals[i].name || x.name, description: t.meals[i].description ?? x.description })), recipes: m.recipes.map((x, i) => ({ ...x, name: t.recipes[i].name || x.name, steps: t.recipes[i].steps ?? x.steps })), brands: t.brands ?? m.brands };
+  return { name: dictName ?? m.name, meals: m.meals, recipes: m.recipes, brands: m.brands };
 }

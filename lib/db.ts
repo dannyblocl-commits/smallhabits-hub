@@ -128,6 +128,8 @@ export function ensureSchema() {
       alter table menus add column if not exists free boolean not null default false;
       alter table menus add column if not exists sort int not null default 100;
       alter table menus add column if not exists updated_at timestamptz default now();
+      alter table routines add column if not exists i18n jsonb not null default '{}';
+      alter table menus add column if not exists i18n jsonb not null default '{}';
       create table if not exists recommendations (
         id uuid primary key default gen_random_uuid(),
         user_id uuid references users(id) on delete cascade,

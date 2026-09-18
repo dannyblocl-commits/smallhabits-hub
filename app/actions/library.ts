@@ -21,10 +21,14 @@ export async function saveRoutine(form: FormData) {
     rest_seconds: int(form.getAll("ex_rest")[i] ?? "", 45, 0, 600),
     muscle_groups: clean(form.getAll("ex_muscles")[i] ?? "", 120).split(",").map((s) => s.trim()).filter(Boolean),
   })).filter((e) => e.name);
-  const vals = [name, clean(form.get("description"), 300), clean(form.get("type"), 30) || "funcional", int(form.get("duration_minutes"), 20, 1, 240), clean(form.get("difficulty"), 20) || "beginner", JSON.stringify(exercises), form.get("free") === "on", int(form.get("sort"), 100, 0, 999), coach.id];
-  if (id) await db().query("update routines set name=$1, description=$2, type=$3, duration_minutes=$4, difficulty=$5, exercises=$6, free=$7, sort=$8, updated_by=$9, updated_at=now() where id=$10", [...vals, id]);
-  else await db().query("insert into routines (name, description, type, duration_minutes, difficulty, exercises, free, sort, updated_by) values ($1,$2,$3,$4,$5,$6,$7,$8,$9)", vals);
-  redirect("/coach/routines?ok=1");
+  const description = clean(form.get("description"), 300);
+  const prev = id ? await getRoutine(id) : null;
+  const same = prev && prev.name === name && prev.description === description && JSON.stringify(prev.exercises.map((e) => [e.name, e.description, e.muscle_groups])) === JSON.stringify(exercises.map((e) => [e.name, e.description, e.muscle_groups]));
+  const i18n = same ? prev.i18n : await routineI18n({ name, description, exercises });
+  const vals = [name, description, clean(form.get("type"), 30) || "funcional", int(form.get("duration_minutes"), 20, 1, 240), clean(form.get("difficulty"), 20) || "beginner", JSON.stringify(exercises), form.get("free") === "on", int(form.get("sort"), 100, 0, 999), coach.id, JSON.stringify(i18n)];
+  if (id) await db().query("update routines set name=$1, description=$2, type=$3, duration_minutes=$4, difficulty=$5, exercises=$6, free=$7, sort=$8, updated_by=$9, i18n=$10, updated_at=now() where id=$11", [...vals, id]);
+  else await db().query("insert into routines (name, description, type, duration_minutes, difficulty, exercises, free, sort, updated_by, i18n) values ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10)", vals);
+  redirect(`/coach/routines?ok=1${same ? "" : "&tr=" + (Object.keys(i18n).length ? "ok" : "no")}`);
 }
 
 export async function deleteRoutine(form: FormData) {
@@ -47,10 +51,14 @@ export async function saveMenu(form: FormData) {
     name: n.trim().slice(0, 80), steps: clean(form.getAll("rec_steps")[i] ?? "", 500), kcal: int(form.getAll("rec_kcal")[i] ?? "", 0, 0, 5000),
   })).filter((r) => r.name);
   const kcal = int(form.get("kcal"), 0, 0, 10000) || meals.reduce((a, m) => a + m.kcal, 0);
-  const vals = [name, kcal, clean(form.get("macros"), 60), clean(form.get("goal"), 40) || "Salud integral", JSON.stringify(meals), JSON.stringify(recipes), clean(form.get("brands"), 500), form.get("free") === "on", int(form.get("sort"), 100, 0, 999), coach.id];
-  if (id) await db().query("update menus set name=$1, kcal=$2, macros=$3, goal=$4, meals=$5, recipes=$6, brands=$7, free=$8, sort=$9, updated_by=$10, updated_at=now() where id=$11", [...vals, id]);
-  else await db().query("insert into menus (name, kcal, macros, goal, meals, recipes, brands, free, sort, updated_by) values ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10)", vals);
-  redirect("/coach/menus?ok=1");
+  const brands = clean(form.get("brands"), 500);
+  const prev = id ? await getMenu(id) : null;
+  const same = prev && prev.name === name && prev.brands === brands && JSON.stringify(prev.meals.map((x) => [x.name, x.description])) === JSON.stringify(meals.map((x) => [x.name, x.description])) && JSON.stringify(prev.recipes.map((x) => [x.name, x.steps])) === JSON.stringify(recipes.map((x) => [x.name, x.steps]));
+  const i18n = same ? prev.i18n : await menuI18n({ name, meals, recipes, brands });
+  const vals = [name, kcal, clean(form.get("macros"), 60), clean(form.get("goal"), 40) || "Salud integral", JSON.stringify(meals), JSON.stringify(recipes), brands, form.get("free") === "on", int(form.get("sort"), 100, 0, 999), coach.id, JSON.stringify(i18n)];
+  if (id) await db().query("update menus set name=$1, kcal=$2, macros=$3, goal=$4, meals=$5, recipes=$6, brands=$7, free=$8, sort=$9, updated_by=$10, i18n=$11, updated_at=now() where id=$12", [...vals, id]);
+  else await db().query("insert into menus (name, kcal, macros, goal, meals, recipes, brands, free, sort, updated_by, i18n) values ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)", vals);
+  redirect(`/coach/menus?ok=1${same ? "" : "&tr=" + (Object.keys(i18n).length ? "ok" : "no")}`);
 }
 
 export async function deleteMenu(form: FormData) {
@@ -78,8 +86,9 @@ export async function deleteRecommendation(form: FormData) {
 }
 
 // ---------- Recetario y hacks (la coach edita en español; la app traduce sola a EN/PT) ----------
-import { seedRecetario, getRecipe, getLesson, RECIPE_CATEGORIES } from "@/lib/library";
+import { seedRecetario, getRecipe, getLesson, getRoutine, getMenu, RECIPE_CATEGORIES } from "@/lib/library";
 import { translateContent } from "@/lib/translate";
+import { routineI18n, menuI18n } from "@/lib/library-i18n";
 
 const lines = (v: FormDataEntryValue | null, max = 40, each = 240) => String(v ?? "").split("\n").map((s) => s.trim().replace(/^[-•]\s*/, "")).filter(Boolean).slice(0, max).map((s) => s.slice(0, each));
 

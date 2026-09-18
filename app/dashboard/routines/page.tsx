@@ -3,19 +3,21 @@ import { VideoCard } from "@/components/VideoCard";
 import { Timer } from "@/components/Timer";
 import { requireUser } from "@/lib/auth";
 import { tr } from "@/lib/i18n";
-import { listRoutines, listRecommendations } from "@/lib/library";
+import { listRoutines, listRecommendations, localizeRoutine } from "@/lib/library";
 
 export default async function Routines({ searchParams }: { searchParams: Promise<{ r?: string }> }) {
-  const [user, { L }] = await Promise.all([requireUser(), tr()]);
+  const [user, { lang, L }] = await Promise.all([requireUser(), tr()]);
   const { r } = await searchParams;
   const [routines, recs] = await Promise.all([listRoutines(), listRecommendations(user.id, "entreno", 3)]);
   const sel = routines.find((x) => x.id === r) || routines[0];
   if (!sel) return <AppShell title={L.routines.title}><div className="row p-6 muted">—</div></AppShell>;
-  const t = (id: string) => L.content.routines[id as keyof typeof L.content.routines];
-  const name = (x: typeof sel) => t(x.id)?.[0] ?? x.name;
-  const desc = (x: typeof sel) => t(x.id)?.[1] ?? x.description;
+  const t = (id: string) => L.content.routines[id as keyof typeof L.content.routines] as [string, string] | undefined;
+  const loc = (x: typeof sel) => localizeRoutine(x, lang, t(x.id));
+  const name = (x: typeof sel) => loc(x).name;
+  const desc = (x: typeof sel) => loc(x).description;
+  const exercises = loc(sel).exercises;
   const calm = ["estiramientos", "yoga", "pilates"].includes(sel.type);
-  const steps = sel.exercises.flatMap((e, i) => {
+  const steps = exercises.flatMap((e, i) => {
     const work = { name: e.name, seconds: sel.type === "estiramientos" ? 40 : 45, kind: "work" as const };
     return i < sel.exercises.length - 1 ? [work, { name: L.routines.descansoT, seconds: Math.min(e.rest_seconds, 30), kind: "rest" as const }] : [work];
   });
@@ -52,7 +54,7 @@ export default async function Routines({ searchParams }: { searchParams: Promise
             <div className="card p-6">
               <div className="eyebrow mb-3">{L.routines.ejercicios}</div>
               <div className="space-y-2">
-                {sel.exercises.map((e, i) => (
+                {exercises.map((e, i) => (
                   <div key={i} className="row p-4">
                     <div className="display">{i + 1}. {e.name}</div>
                     {e.description && <div className="muted text-sm mb-3">{e.description}</div>}

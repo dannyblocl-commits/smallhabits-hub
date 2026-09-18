@@ -9,7 +9,7 @@ import { getAssignment } from "@/app/actions/assign";
 import { unreadCount } from "@/app/actions/chat";
 import { myCoach } from "@/app/actions/coaches";
 import { wearableStatus } from "@/app/actions/wearables";
-import { listRoutines, listRecommendations } from "@/lib/library";
+import { listRoutines, listRecommendations, localizeRoutine, type Routine } from "@/lib/library";
 
 const goalKcal: Record<string, number> = { "Perder peso": 1500, Tonificar: 1800, "Ganar fuerza": 2600, Resistencia: 2200, Flexibilidad: 1900, "Salud integral": 1900 };
 
@@ -19,7 +19,8 @@ export default async function Dashboard() {
   const steps = w.today?.steps ?? null;
   const assigned = a?.routine_id ? routines.find((r) => r.id === a.routine_id) : undefined;
   const todayRoutine = assigned ?? (routines.find((r) => r.free) ?? routines[0]) ?? { id: "routine_1", name: "Calistenia", duration_minutes: 30, exercises: [], type: "calistenia" };
-  const rt = L.content.routines[todayRoutine.id as keyof typeof L.content.routines];
+  const rt = L.content.routines[todayRoutine.id as keyof typeof L.content.routines] as [string, string] | undefined;
+  const todayName = (todayRoutine as Partial<Routine>).i18n ? localizeRoutine(todayRoutine as Routine, lang, rt).name : (rt?.[0] ?? todayRoutine.name);
   const goal = goalKcal[user.goal] ?? 1800;
   const pct = Math.min(100, Math.round((s.kcalToday / goal) * 100));
   const first = user.name.trim().split(" ")[0];
@@ -36,7 +37,7 @@ export default async function Dashboard() {
         <div className="relative p-6 w-full flex flex-wrap items-end justify-between gap-4">
           <div>
             <span className="pill pill-f">{assigned ? `${L.dash.asignadoPor} ${a?.coach_name ?? ""}` : L.dash.hoyToca}</span>
-            <h2 className="text-3xl mt-2">{rt?.[0] ?? todayRoutine.name} · {todayRoutine.duration_minutes} {L.common.min}</h2>
+            <h2 className="text-3xl mt-2">{todayName} · {todayRoutine.duration_minutes} {L.common.min}</h2>
             <p className="muted text-sm">{a?.note ?? (s.workoutsWeek === 0 ? L.dash.empiezaSuave : `${todayRoutine.exercises.length} ${L.common.ejercicios} · ${todayRoutine.type}`)}</p>
           </div>
           <Link href={`/dashboard/routines?r=${todayRoutine.id}`} className="btn btn-go text-lg px-8">GO ▶</Link>

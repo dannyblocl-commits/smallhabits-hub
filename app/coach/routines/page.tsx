@@ -7,7 +7,7 @@ import { Logo } from "@/components/Leaves";
 const TYPES = ["funcional", "calistenia", "pilates", "yoga", "estiramientos"];
 const DIFF = [["beginner", "Principiante"], ["intermediate", "Intermedio"], ["advanced", "Avanzado"]];
 
-export default async function CoachRoutines({ searchParams }: { searchParams: Promise<{ id?: string; new?: string; ok?: string }> }) {
+export default async function CoachRoutines({ searchParams }: { searchParams: Promise<{ id?: string; new?: string; ok?: string; tr?: string }> }) {
   await requireCoach();
   const sp = await searchParams;
   const routines = await listRoutines();
@@ -27,7 +27,7 @@ export default async function CoachRoutines({ searchParams }: { searchParams: Pr
       <div className="max-w-7xl mx-auto px-5 py-6 grid lg:grid-cols-[380px_1fr] gap-6">
         <aside>
           <div className="flex items-center justify-between mb-3"><div className="eyebrow" style={{ color: "var(--fucsia)" }}>Biblioteca</div><Link href="/coach/routines?new=1" className="btn btn-go btn-sm">+ Nueva</Link></div>
-          {sp.ok && <div className="row p-3 mb-3 text-sm" style={{ borderColor: "var(--sage)" }}>Guardado. Las miembros ya lo ven.</div>}
+          {sp.ok && <div className="row p-3 mb-3 text-sm" style={{ borderColor: "var(--sage)" }}>Guardado. Las miembros ya lo ven.{sp.tr === "ok" && " Traducido a inglés y portugués."}{sp.tr === "no" && " No se pudo traducir: se verá en español hasta que lo guardes otra vez."}</div>}
           <div className="space-y-2">
             {routines.map((r) => (
               <Link key={r.id} href={`/coach/routines?id=${r.id}`} className={`row block p-4 ${editing?.id === r.id ? "!border-[var(--fucsia)]" : ""}`}>

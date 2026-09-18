@@ -3,15 +3,17 @@ import { AppShell, Badge, Locked } from "@/components/AppShell";
 import { VideoCard } from "@/components/VideoCard";
 import { requireUser } from "@/lib/auth";
 import { tr } from "@/lib/i18n";
-import { listMenus, listRecommendations } from "@/lib/library";
+import { listMenus, listRecommendations, localizeMenu } from "@/lib/library";
 
 export default async function Nutrition({ searchParams }: { searchParams: Promise<{ m?: string }> }) {
-  const [user, { L }] = await Promise.all([requireUser(), tr()]);
+  const [user, { lang, L }] = await Promise.all([requireUser(), tr()]);
   const { m } = await searchParams;
   const [menus, recs] = await Promise.all([listMenus(), listRecommendations(user.id, "nutricion", 3)]);
   const sel = menus.find((x) => x.id === m) || menus[0];
   if (!sel) return <AppShell title={L.nutrition.title}><div className="row p-6 muted">—</div></AppShell>;
-  const name = (x: typeof sel) => L.content.menus[x.id as keyof typeof L.content.menus] ?? x.name;
+  const loc = (x: typeof sel) => localizeMenu(x, lang, L.content.menus[x.id as keyof typeof L.content.menus]);
+  const name = (x: typeof sel) => loc(x).name;
+  const selT = loc(sel);
   const goal = (g: string) => L.goals[g as keyof typeof L.goals] ?? g;
 
   return (
@@ -43,17 +45,17 @@ export default async function Nutrition({ searchParams }: { searchParams: Promis
               <div className="mt-4"><VideoCard src={`/api/content/video/${sel.id}`} fallback="/videos/comer-bien.mp4" title={name(sel)} emoji="◐" /></div>
               <div className="eyebrow mt-6 mb-2">{L.nutrition.planDia}</div>
               <div className="space-y-2">
-                {sel.meals.map((x, i) => (
+                {selT.meals.map((x, i) => (
                   <div key={i} className="row p-3 flex items-center gap-4"><div className="num text-sm w-12" style={{ color: "var(--sage)" }}>{x.time}</div><div className="flex-1"><div className="display text-sm">{x.name}</div><div className="muted text-xs">{x.description}</div></div><div className="num">{x.kcal}</div></div>
                 ))}
               </div>
-              {sel.recipes.length > 0 && <>
+              {selT.recipes.length > 0 && <>
                 <div className="eyebrow mt-6 mb-2">{L.nutrition.recetas}</div>
                 <div className="grid sm:grid-cols-2 gap-2">
-                  {sel.recipes.map((r, i) => (<div key={i} className="row p-4"><div className="display text-sm">{r.name}</div><div className="muted text-xs my-1">{r.steps}</div><div className="num text-xs" style={{ color: "var(--sage)" }}>{r.kcal} kcal</div></div>))}
+                  {selT.recipes.map((r, i) => (<div key={i} className="row p-4"><div className="display text-sm">{r.name}</div><div className="muted text-xs my-1">{r.steps}</div><div className="num text-xs" style={{ color: "var(--sage)" }}>{r.kcal} kcal</div></div>))}
                 </div>
               </>}
-              {sel.brands && <div className="row p-4 mt-4 text-sm muted"><b className="display text-[var(--text)]">{L.nutrition.marcas}</b> {sel.brands}</div>}
+              {selT.brands && <div className="row p-4 mt-4 text-sm muted"><b className="display text-[var(--text)]">{L.nutrition.marcas}</b> {selT.brands}</div>}
             </div>
           </Locked>
         </section>

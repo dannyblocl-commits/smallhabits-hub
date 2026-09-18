@@ -6,7 +6,7 @@ import { Logo } from "@/components/Leaves";
 
 const GOALS = ["Tonificar", "Perder peso", "Ganar fuerza", "Resistencia", "Flexibilidad", "Salud integral"];
 
-export default async function CoachMenus({ searchParams }: { searchParams: Promise<{ id?: string; new?: string; ok?: string }> }) {
+export default async function CoachMenus({ searchParams }: { searchParams: Promise<{ id?: string; new?: string; ok?: string; tr?: string }> }) {
   await requireCoach();
   const sp = await searchParams;
   const menus = await listMenus();
@@ -27,7 +27,7 @@ export default async function CoachMenus({ searchParams }: { searchParams: Promi
       <div className="max-w-7xl mx-auto px-5 py-6 grid lg:grid-cols-[380px_1fr] gap-6">
         <aside>
           <div className="flex items-center justify-between mb-3"><div className="eyebrow" style={{ color: "var(--sage)" }}>Biblioteca</div><Link href="/coach/menus?new=1" className="btn btn-balance btn-sm">+ Nuevo</Link></div>
-          {sp.ok && <div className="row p-3 mb-3 text-sm" style={{ borderColor: "var(--sage)" }}>Guardado. Las miembros ya lo ven.</div>}
+          {sp.ok && <div className="row p-3 mb-3 text-sm" style={{ borderColor: "var(--sage)" }}>Guardado. Las miembros ya lo ven.{sp.tr === "ok" && " Traducido a inglés y portugués."}{sp.tr === "no" && " No se pudo traducir: se verá en español hasta que lo guardes otra vez."}</div>}
           <div className="space-y-2">
             {menus.map((m) => (
               <Link key={m.id} href={`/coach/menus?id=${m.id}`} className={`row block p-4 ${editing?.id === m.id ? "!border-[var(--sage)]" : ""}`}>
