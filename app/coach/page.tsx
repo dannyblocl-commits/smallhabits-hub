@@ -61,7 +61,7 @@ export default async function CoachPanel() {
       <div className="max-w-7xl mx-auto px-5 py-6 grid lg:grid-cols-[220px_1fr] gap-6">
         <aside className="space-y-4">
           <div className="hidden lg:block text-sm space-y-1">
-            <div className="px-3 py-2 rounded-[12px] row" style={{ color: "var(--sage)" }}>Miembros</div>
+            <Link href="/coach/members" className="px-3 py-2 rounded-[12px] row" style={{ color: "var(--sage)" }}>👥 Mis miembros</Link>
             <Link href="/coach/routines" className="block px-3 py-2 rounded-[12px] muted hover:text-[var(--text)]">Rutinas</Link>
             <Link href="/coach/menus" className="block px-3 py-2 rounded-[12px] muted hover:text-[var(--text)]">Planes de alimentación</Link>
             <Link href="/coach/recipes" className="block px-3 py-2 rounded-[12px] muted hover:text-[var(--text)]">Recetario</Link>
