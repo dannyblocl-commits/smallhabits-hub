@@ -201,7 +201,7 @@ export default function HomePage() {
             {[
               {
                 name: "Básico",
-                price: "$12.99",
+                price: "$19.99",
                 period: "/mes",
                 desc: "Perfecto para empezar",
                 features: ["Biblioteca de 20+ rutinas", "Recetario de 92 recetas", "Chat de soporte", "Acceso a comunidad", "7 días gratis"],
@@ -226,7 +226,7 @@ export default function HomePage() {
               },
               {
                 name: "Elite",
-                price: "$129.99",
+                price: "$199",
                 period: "/mes",
                 desc: "Transformación garantizada",
                 features: [
@@ -274,15 +274,18 @@ export default function HomePage() {
                   ))}
                 </ul>
 
-                <button
-                  className="w-full py-3 font-bold rounded-lg"
+                <a
+                  href={plan.name === "Básico" ? process.env.NEXT_PUBLIC_STRIPE_LINK_BASICO : plan.name === "Pro" ? process.env.NEXT_PUBLIC_STRIPE_LINK_PRO : process.env.NEXT_PUBLIC_STRIPE_LINK_ELITE}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full py-3 font-bold rounded-lg inline-block text-center"
                   style={{
                     background: plan.highlight ? "#0B0B0F" : "#FF2D8A",
                     color: plan.highlight ? "#FF2D8A" : "#F5F2F0",
                   }}
                 >
                   {plan.cta}
-                </button>
+                </a>
               </div>
             ))}
           </div>
