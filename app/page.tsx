@@ -9,7 +9,7 @@ export default function HomePage() {
   return (
     <div className="min-h-screen" style={{ background: "#0B0B0F" }}>
       {/* HERO PREMIUM */}
-      <section className="relative w-full min-h-[100vh] flex items-center justify-center overflow-hidden">
+      <section className="relative w-full min-h-[60vh] flex items-center justify-center overflow-hidden">
         <video
           autoPlay
           muted
