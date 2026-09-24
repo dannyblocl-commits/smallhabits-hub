@@ -35,15 +35,21 @@ export async function createFreeAccount(email: string, password_hash: string, na
   const trial_end = new Date();
   trial_end.setDate(trial_end.getDate() + 3); // 3 días gratis
 
-  const result = await db().query(
-    `insert into users
-      (email, password_hash, name, plan_level, trial_end, role)
-    values ($1, $2, $3, $4, $5, $6)
-    returning id, email, plan_level, trial_end`,
-    [email, password_hash, name, "basico", trial_end, "member"]
-  );
+  try {
+    const result = await db().query(
+      `insert into users
+        (email, password_hash, name, plan_level, trial_end, role)
+      values ($1, $2, $3, $4, $5, $6)
+      returning id, email, plan_level, trial_end`,
+      [email, password_hash, name, "basico", trial_end, "member"]
+    );
 
-  return result.rows[0];
+    console.log("createFreeAccount result:", result.rows[0]);
+    return result.rows[0];
+  } catch (error: any) {
+    console.error("createFreeAccount error:", error.message, error.code);
+    throw error;
+  }
 }
 
 export async function getPaymentHistory(userId: string) {
