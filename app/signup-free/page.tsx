@@ -1,7 +1,12 @@
 import { redirect } from "next/navigation";
 import { getUser } from "@/lib/auth";
-import { signupFree } from "@/app/actions/auth";
+import { signupFree as signupFreeAction } from "@/app/actions/auth";
 import Link from "next/link";
+
+async function handleSignupFree(formData: FormData) {
+  "use server";
+  return signupFreeAction(undefined, formData);
+}
 
 export const metadata = {
   title: "Prueba Gratuita — Small Habits by Maleja",
@@ -21,7 +26,7 @@ export default async function SignupFreePage() {
           <p style={{ color: "#A8A3AE" }}>3 días gratis. Sin tarjeta.</p>
         </div>
 
-        <form action={signupFree} className="space-y-4">
+        <form action={handleSignupFree} className="space-y-4">
           <div>
             <label className="block text-sm font-bold mb-2" style={{ color: "#F5F2F0" }}>
               Nombre
