@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import Stripe from "stripe";
 import { ensureSchema } from "@/lib/db";
-import { applySubscription, stripe } from "@/lib/stripe-sync";
+import { applyReto, applySubscription, sessionIsReto, stripe } from "@/lib/stripe-sync";
 
 // Fuente de verdad del plan: lo que Stripe confirma, casado por email del cliente.
 export async function POST(req: NextRequest) {
@@ -29,6 +29,9 @@ export async function POST(req: NextRequest) {
         const sub = await s.subscriptions.retrieve(String(session.subscription));
         const r = await applySubscription(email, sub);
         console.log("[stripe] checkout", email, r);
+      } else if (email && session.payment_status === "paid" && (await sessionIsReto(s, session.id))) {
+        const r = await applyReto(email, session.created);
+        console.log("[stripe] reto", email, r);
       }
     } else if (event.type === "customer.subscription.updated" || event.type === "customer.subscription.deleted") {
       const sub = event.data.object;
