@@ -31,7 +31,11 @@ export async function POST(req: NextRequest) {
       trialEnd.setDate(trialEnd.getDate() + daysOfAccess);
 
       await db().query(
-        "UPDATE users SET trial_end = $1, plan_level = 'basico', plan = case when plan = 'free' then 'basico' else plan end WHERE id = $2",
+        `UPDATE users
+           SET trial_end = $1,
+               plan = case when plan = 'free' then 'basico' else plan end,
+               plan_level = case when plan = 'free' then 'basico' else plan_level end
+         WHERE id = $2`,
         [trialEnd, userId]
       );
       return NextResponse.json({

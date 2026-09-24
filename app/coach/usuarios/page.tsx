@@ -98,8 +98,11 @@ export default function UsuariosPage() {
         <h1 style={{ color: "#F5F2F0", marginBottom: "10px" }}>
           👥 Usuarios ({users.length})
         </h1>
-        <p style={{ color: "#A8A3AE", marginBottom: "20px" }}>
+        <p style={{ color: "#A8A3AE", marginBottom: "6px" }}>
           Gestiona planes, accesos y estado de los usuarios
+        </p>
+        <p style={{ color: "#BA8E54", marginBottom: "20px", fontSize: "13px" }}>
+          Combo Farmasi: pulsa <b>Pro</b> y luego <b>+30d</b>. Cada recompra, otros +30d. El acceso vence solo.
         </p>
 
         <div style={{ overflowX: "auto", marginTop: "20px" }}>
@@ -197,21 +200,25 @@ export default function UsuariosPage() {
                       >
                         Pro
                       </button>
-                      <button
-                        onClick={() => giveAccess(user.id, 1)}
-                        disabled={updating === user.id}
-                        style={{
-                          padding: "5px 10px",
-                          fontSize: "12px",
-                          background: "#BA8E54",
-                          color: "#0B0B0F",
-                          border: "none",
-                          borderRadius: "4px",
-                          cursor: "pointer",
-                        }}
-                      >
-                        +1 día
-                      </button>
+                      {[7, 30, 90].map((d) => (
+                        <button
+                          key={d}
+                          onClick={() => giveAccess(user.id, d)}
+                          disabled={updating === user.id}
+                          title={`Acceso ${d} días desde hoy`}
+                          style={{
+                            padding: "5px 10px",
+                            fontSize: "12px",
+                            background: "#BA8E54",
+                            color: "#0B0B0F",
+                            border: "none",
+                            borderRadius: "4px",
+                            cursor: "pointer",
+                          }}
+                        >
+                          +{d}d
+                        </button>
+                      ))}
                     </div>
                   </td>
                 </tr>
