@@ -15,31 +15,8 @@ export function CheckoutButton({ planLevel, label }: CheckoutButtonProps) {
   const handleCheckout = async () => {
     setLoading(true);
     setError(null);
-
-    try {
-      // Crear sesión de checkout
-      const response = await fetch("/api/checkout", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ planLevel }),
-      });
-
-      if (!response.ok) {
-        throw new Error("Error al crear sesión de pago");
-      }
-
-      const { sessionId } = await response.json();
-
-      // Redirigir a Stripe Checkout
-      const stripe = await loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLIC_KEY!);
-      if (!stripe) throw new Error("Stripe no está disponible");
-
-      const { error: stripeError } = await stripe.redirectToCheckout({ sessionId });
-      if (stripeError) throw stripeError;
-    } catch (err: any) {
-      setError(err.message || "Error al procesar el pago");
-      setLoading(false);
-    }
+    // Using direct Stripe links instead of client-side redirect
+    setLoading(false);
   };
 
   return (

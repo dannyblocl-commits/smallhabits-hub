@@ -4,7 +4,7 @@ import Stripe from "stripe";
 import { db } from "./db";
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY || "", {
-  apiVersion: "2024-12-18.acacia",
+  apiVersion: "2024-10-28.acacia",
 });
 
 export async function createCheckoutSession(
@@ -52,7 +52,6 @@ export async function createCheckoutSession(
           unit_amount: plan.price,
           recurring: {
             interval: "month",
-            trial_period_days: 3,
           },
         },
         quantity: 1,
@@ -61,6 +60,14 @@ export async function createCheckoutSession(
     mode: "subscription",
     success_url: successUrl,
     cancel_url: cancelUrl,
+    subscription_data: {
+      trial_settings: {
+        end_behavior: {
+          missing_payment_method: "create_invoice",
+        },
+      } as any,
+      trial_period_days: 3,
+    } as any,
     metadata: {
       userId,
       planLevel,
@@ -105,11 +112,12 @@ export async function handleSubscriptionUpdated(event: Stripe.CustomerSubscripti
   if (!userId) return;
 
   // Actualizar estado de la suscripción
+  const endDate = subscription.trial_end || (subscription as any).current_period_end;
   await db().query(
     `update users
      set subscription_id = $1, trial_end = $2
      where id = $3`,
-    [subscription.id, new Date((subscription.trial_end || subscription.current_period_end) * 1000), userId]
+    [subscription.id, new Date(endDate * 1000), userId]
   );
 }
 

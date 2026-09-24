@@ -5,7 +5,7 @@ import Link from "next/link";
 
 async function handleSignupFree(formData: FormData) {
   "use server";
-  return signupFreeAction(undefined, formData);
+  await signupFreeAction(undefined, formData);
 }
 
 export const metadata = {
