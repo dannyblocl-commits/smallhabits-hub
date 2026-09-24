@@ -9,7 +9,7 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "No autorizado" }, { status: 401 });
     }
 
-    const { userId, action, planLevel, daysOfAccess } = await req.json();
+    const { userId, action, planLevel, daysOfAccess, track } = await req.json();
 
     await ensureSchema();
 
@@ -50,11 +50,12 @@ export async function POST(req: NextRequest) {
       await db().query(
         `UPDATE users
            SET reto_start = now(),
+               reto_track = $3,
                trial_end = $1,
                plan = case when plan = 'elite' then plan else 'pro' end,
                plan_level = case when plan_level = 'elite' then plan_level else 'pro' end
          WHERE id = $2 AND role = 'member'`,
-        [trialEnd, userId]
+        [trialEnd, userId, track === "hombre" ? "hombre" : "mujer"]
       );
       return NextResponse.json({ success: true, message: "Reto de 30 días asignado" });
     }

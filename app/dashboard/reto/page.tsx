@@ -3,11 +3,10 @@ import { AppShell } from "@/components/AppShell";
 import { requireUser } from "@/lib/auth";
 import { tr, locale } from "@/lib/i18n";
 import { RETO } from "@/lib/reto-i18n";
-import { RETO_WEEKS, retoProgress } from "@/lib/reto-plan";
-import { getRoutine, getMenu, localizeRoutine, localizeMenu } from "@/lib/library";
+import { RETO_TRAINING, RETO_MEALS, RETO_SUPPLEMENTS, RETO_HABITS, retoProgress, trackOf } from "@/lib/reto-plan";
 
 export default async function RetoDashboard() {
-  const [user, { lang, L }] = await Promise.all([requireUser(), tr()]);
+  const [user, { lang }] = await Promise.all([requireUser(), tr()]);
   const t = RETO[lang];
   const p = retoProgress(user.reto_start);
 
@@ -23,13 +22,12 @@ export default async function RetoDashboard() {
     );
   }
 
-  const wk = RETO_WEEKS[p.week - 1];
+  const track = trackOf(user.reto_track);
   const weekText = t.weeks[p.week - 1];
-  const [routine, menu] = await Promise.all([getRoutine(wk.routine), getMenu(wk.menu)]);
-  const rt = L.content.routines[wk.routine as keyof typeof L.content.routines] as [string, string] | undefined;
-  const mn = L.content.menus[wk.menu as keyof typeof L.content.menus] as string | undefined;
-  const r = routine ? localizeRoutine(routine, lang, rt) : null;
-  const m = menu ? localizeMenu(menu, lang, mn) : null;
+  const habits = RETO_HABITS[p.week - 1][lang];
+  const training = RETO_TRAINING[track];
+  const meals = RETO_MEALS[track];
+  const sup = RETO_SUPPLEMENTS[lang];
 
   return (
     <AppShell title={t.app.title} kicker={t.app.kicker}>
@@ -56,29 +54,59 @@ export default async function RetoDashboard() {
         </div>
       )}
 
-      <div className="grid md:grid-cols-2 gap-4 mb-5">
-        <div className="card lift p-5">
-          <div className="eyebrow" style={{ color: "var(--fucsia)" }}>{t.app.routine}</div>
-          <h3 className="text-xl mt-1">{r?.name ?? wk.routine}</h3>
-          {routine && <p className="muted text-sm">{routine.duration_minutes} {L.common.min} · {r?.exercises.length} {L.common.ejercicios}</p>}
-          <Link href={`/dashboard/routines?r=${wk.routine}`} className="btn btn-go btn-sm mt-4">{t.app.go} ▶</Link>
-        </div>
-        <div className="card lift-sage p-5">
-          <div className="eyebrow" style={{ color: "var(--sage)" }}>{t.app.menu}</div>
-          <h3 className="text-xl mt-1">{m?.name ?? wk.menu}</h3>
-          {menu && <p className="muted text-sm">{menu.kcal} kcal · {menu.macros}</p>}
-          <Link href={`/dashboard/menus?m=${wk.menu}`} className="btn btn-balance btn-sm mt-4">{t.app.open}</Link>
-        </div>
-      </div>
-
       <div className="card p-5 mb-5">
         <div className="eyebrow mb-3" style={{ color: "var(--sage)" }}>{t.app.habits}</div>
         <ul className="space-y-2">
-          {wk.habits[lang].map((h, i) => (
+          {habits.map((h, i) => (
             <li key={h} className="flex items-center gap-3"><span className="num text-sm w-6" style={{ color: "var(--fucsia)" }}>{String(i + 1).padStart(2, "0")}</span><span>{h}</span></li>
           ))}
         </ul>
       </div>
+
+      <section className="mb-5">
+        <div className="eyebrow mb-1" style={{ color: "var(--fucsia)" }}>{t.app.training}</div>
+        <p className="muted text-sm mb-3">{t.app.warmup}</p>
+        <div className="grid md:grid-cols-2 gap-3">
+          {training.map((d) => (
+            <div key={d.day.es} className="card lift p-5">
+              <div className="flex items-baseline justify-between"><span className="pill pill-f">{d.day[lang]}</span><span className="display">{d.focus[lang]}</span></div>
+              <ul className="mt-3 space-y-1 text-sm">
+                {d.exercises.map((e) => (
+                  <li key={e.name} className="flex justify-between gap-3"><span>{e.name}</span><span className="num faint whitespace-nowrap">{e.sets} × {e.reps}</span></li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="mb-5">
+        <div className="eyebrow mb-1" style={{ color: "var(--sage)" }}>{t.app.meals}</div>
+        <p className="muted text-sm mb-3">{t.app.mealsNote}</p>
+        <div className="space-y-3">
+          {meals.map((m) => (
+            <div key={m.name.es} className="card lift-sage p-5">
+              <div className="display mb-2">{m.name[lang]}</div>
+              <ul className="space-y-1 text-sm">
+                {m.options[lang].map((o, i) => (
+                  <li key={o} className="flex gap-3"><span className="num w-6 shrink-0" style={{ color: "var(--sage)" }}>{i + 1}</span><span>{o}</span></li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="card p-5 mb-5" style={{ borderColor: "rgba(186,142,84,0.45)" }}>
+        <div className="eyebrow mb-1" style={{ color: "#BA8E54" }}>{sup.title}</div>
+        <p className="muted text-sm mb-3">{sup.intro}</p>
+        <ul className="space-y-2 text-sm">
+          {sup.steps.map(([k, v]) => (
+            <li key={k}><b>{k}:</b> {v}</li>
+          ))}
+        </ul>
+        <p className="faint text-xs mt-4">{sup.note}</p>
+      </section>
 
       <div className="grid md:grid-cols-2 gap-4">
         <Link href="/dashboard/chat" className="card p-5 hover:border-[var(--line-strong)] transition">

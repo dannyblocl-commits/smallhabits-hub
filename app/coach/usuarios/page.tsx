@@ -81,13 +81,13 @@ export default function UsuariosPage() {
     }
   };
 
-  const startReto = async (userId: string) => {
+  const startReto = async (userId: string, track: "mujer" | "hombre") => {
     setUpdating(userId);
     try {
       const res = await fetch("/api/coach/update-user", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ userId, action: "start-reto" }),
+        body: JSON.stringify({ userId, action: "start-reto", track }),
       });
       if (res.ok) {
         const end = new Date();
@@ -126,7 +126,7 @@ export default function UsuariosPage() {
           Gestiona planes, accesos y estado de los usuarios
         </p>
         <p style={{ color: "#BA8E54", marginBottom: "20px", fontSize: "13px" }}>
-          <b>Reto 30d</b> = Pro + 30 días + camino semana a semana en la app (la persona lo ve en su inicio). Cada recompra, otro <b>Reto 30d</b> o <b>+30d</b>. El acceso vence solo.
+          <b>Reto ♀ / Reto ♂</b> = Pro + 30 días + guía completa en la app (rutina de 5 días, menú con opciones, rutina del combo). La persona lo ve en su inicio. Cada recompra, otro <b>Reto</b> o <b>+30d</b>. El acceso vence solo.
         </p>
 
         <div style={{ overflowX: "auto", marginTop: "20px" }}>
@@ -195,23 +195,26 @@ export default function UsuariosPage() {
                   </td>
                   <td style={{ padding: "10px" }}>
                     <div style={{ display: "flex", gap: "5px", flexWrap: "wrap" }}>
-                      <button
-                        onClick={() => startReto(user.id)}
-                        disabled={updating === user.id}
-                        title="Asigna el Reto 30 días: Pro + 30 días de acceso + camino semana a semana"
-                        style={{
-                          padding: "5px 10px",
-                          fontSize: "12px",
-                          background: "#F5F2F0",
-                          color: "#0B0B0F",
-                          border: "2px solid #FF2D8A",
-                          borderRadius: "4px",
-                          cursor: "pointer",
-                          fontWeight: "bold",
-                        }}
-                      >
-                        Reto 30d
-                      </button>
+                      {(["mujer", "hombre"] as const).map((tk) => (
+                        <button
+                          key={tk}
+                          onClick={() => startReto(user.id, tk)}
+                          disabled={updating === user.id}
+                          title={`Asigna el Reto 30 días (guía ${tk}): Pro + 30 días + rutina, menú y combo en la app`}
+                          style={{
+                            padding: "5px 10px",
+                            fontSize: "12px",
+                            background: "#F5F2F0",
+                            color: "#0B0B0F",
+                            border: "2px solid #FF2D8A",
+                            borderRadius: "4px",
+                            cursor: "pointer",
+                            fontWeight: "bold",
+                          }}
+                        >
+                          Reto {tk === "mujer" ? "♀" : "♂"}
+                        </button>
+                      ))}
                       <button
                         onClick={() => changePlan(user.id, "basico")}
                         disabled={updating === user.id}

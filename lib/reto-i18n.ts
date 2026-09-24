@@ -37,6 +37,12 @@ export type RetoDict = {
     go: string;
     open: string;
     ends: string;
+    training: string;
+    warmup: string;
+    sets: string;
+    meals: string;
+    mealsNote: string;
+    choose: string;
   };
 };
 
@@ -92,6 +98,12 @@ const es: RetoDict = {
     go: "Entrenar",
     open: "Ver menú",
     ends: "Termina el",
+    training: "Tu entrenamiento de la semana",
+    warmup: "Calienta 8-10 min (bici, elíptica o caminadora) y estira 10 s por músculo al terminar. Gym o casa: con mancuernas o bandas.",
+    sets: "series",
+    meals: "Tu menú del reto",
+    mealsNote: "Elige una opción por comida. Porciones orientativas; el shake o la proteína en polvo son opcionales. Café y té sin azúcar, sí.",
+    choose: "opciones",
   },
 };
 
@@ -147,6 +159,12 @@ const en: RetoDict = {
     go: "Train",
     open: "See menu",
     ends: "Ends on",
+    training: "Your workouts this week",
+    warmup: "Warm up 8-10 min (bike, elliptical or treadmill) and stretch 10 s per muscle when done. Gym or home: dumbbells or bands.",
+    sets: "sets",
+    meals: "Your challenge meal plan",
+    mealsNote: "Pick one option per meal. Portions are a guide; shake or protein powder are optional. Unsweetened coffee and tea are fine.",
+    choose: "options",
   },
 };
 
@@ -202,6 +220,12 @@ const pt: RetoDict = {
     go: "Treinar",
     open: "Ver cardápio",
     ends: "Termina em",
+    training: "Seu treino da semana",
+    warmup: "Aqueça 8-10 min (bike, elíptico ou esteira) e alongue 10 s por músculo ao terminar. Academia ou casa: halteres ou elásticos.",
+    sets: "séries",
+    meals: "Seu cardápio do desafio",
+    mealsNote: "Escolha uma opção por refeição. Porções orientativas; o shake ou a proteína em pó são opcionais. Café e chá sem açúcar, sim.",
+    choose: "opções",
   },
 };
 
