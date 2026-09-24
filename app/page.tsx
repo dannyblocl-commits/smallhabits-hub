@@ -5,6 +5,12 @@ export const metadata = {
   description: "Pequeños hábitos, grandes resultados. Coaching 1:1 personalizado con Maleja, coach certificada ISSA.",
 };
 
+const STRIPE_LINKS = {
+  basico: "https://buy.stripe.com/6oUcN4cHIbKb9oj2rW8og04",
+  pro: "https://buy.stripe.com/00w6oG378aG75838Qk8og05",
+  elite: "https://buy.stripe.com/3cIdR85fg7tV583aYs8og06",
+};
+
 export default function HomePage() {
   return (
     <div className="min-h-screen" style={{ background: "#0B0B0F" }}>
@@ -275,7 +281,7 @@ export default function HomePage() {
                 </ul>
 
                 <a
-                  href={plan.name === "Básico" ? process.env.NEXT_PUBLIC_STRIPE_LINK_BASICO : plan.name === "Pro" ? process.env.NEXT_PUBLIC_STRIPE_LINK_PRO : process.env.NEXT_PUBLIC_STRIPE_LINK_ELITE}
+                  href={plan.name === "Básico" ? STRIPE_LINKS.basico : plan.name === "Pro" ? STRIPE_LINKS.pro : STRIPE_LINKS.elite}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full py-3 font-bold rounded-lg inline-block text-center"
