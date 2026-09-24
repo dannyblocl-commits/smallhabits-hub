@@ -6,13 +6,6 @@ export const metadata = {
   description: "90 días con Maleja: plan Pro completo, check-in semanal, fotos de progreso y premio final. Pago único.",
 };
 
-const FARMASI =
-  process.env.NEXT_PUBLIC_FARMASI_LINK ||
-  "https://www.farmasius.com/malejacuna/product-detail/womens-balance-system-for-beauty-relief?pid=PK93249";
-const WHATSAPP = (process.env.NEXT_PUBLIC_MALEJA_WHATSAPP || "").replace(/\D/g, "");
-const WA_MSG = encodeURIComponent("Hola Maleja, quiero el combo de suplementos del reto de 90 días. ¿Me ayudas con el pedido?");
-const WA_LINK = WHATSAPP ? `https://wa.me/${WHATSAPP}?text=${WA_MSG}` : "";
-
 function proximoLunes() {
   const d = new Date();
   const delta = (8 - d.getDay()) % 7 || 7;
@@ -32,7 +25,6 @@ const FAQ = [
   ["¿Necesito experiencia?", "No. Las rutinas tienen nivel inicial, intermedio y avanzado, y Maleja te dice por cuál empezar."],
   ["¿Qué pasa cuando terminan los 90 días?", "Tu acceso Pro termina y decides si sigues con un plan mensual. No hay cobro automático."],
   ["¿Puedo empezar otro día?", "Cada edición arranca un lunes para que todo el grupo vaya junto. Si compras hoy, entras en la próxima."],
-  ["¿Los suplementos son obligatorios?", "No. El reto funciona con entrenamiento y comida. Los productos son lo que Maleja usa y los ofrece aparte."],
 ];
 
 export default function RetoPage() {
@@ -90,42 +82,6 @@ export default function RetoPage() {
               <p style={{ color: "#A8A3AE" }}>{d}</p>
             </div>
           ))}
-        </div>
-      </section>
-
-      <section className="px-6 py-16 max-w-4xl mx-auto">
-        <div className="rounded-3xl p-8 md:p-10" style={{ background: "#141419", border: "1px solid rgba(186,142,84,0.35)" }}>
-          <p className="text-sm font-bold mb-2" style={{ color: "#BA8E54" }}>OPCIONAL · LO QUE MALEJA USA</p>
-          <h2 className="text-3xl font-black mb-4">El combo del reto</h2>
-          <p className="mb-6" style={{ color: "#A8A3AE" }}>
-            Maleja acompaña sus 90 días con el <strong style={{ color: "#F5F2F0" }}>Women&apos;s Balance System</strong> de
-            Farmasi, el sistema que ella misma toma. No se compra aquí: le escribes, ella te dice qué te conviene, te ayuda
-            con el pedido y te entrega su guía de cómo tomarlo durante el reto. No cambia el precio del reto.
-          </p>
-          <div className="flex flex-wrap gap-3">
-            <a
-              href={WA_LINK || FARMASI}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-block px-8 py-4 rounded-xl font-bold"
-              style={{ background: WA_LINK ? "#25D366" : "#BA8E54", color: "#0B0B0F" }}
-            >
-              {WA_LINK ? "Escribirle a Maleja por WhatsApp" : "Pedir el combo a Maleja"}
-            </a>
-            <a
-              href={FARMASI}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-block px-8 py-4 rounded-xl font-bold border"
-              style={{ borderColor: "#BA8E54", color: "#BA8E54" }}
-            >
-              Ver el producto
-            </a>
-          </div>
-          <p className="mt-5 text-xs" style={{ color: "#A8A3AE" }}>
-            Los suplementos no son necesarios para hacer el reto ni sustituyen una alimentación equilibrada. Consulta con tu médico
-            antes de tomar cualquier suplemento, especialmente si estás embarazada, lactando o tomas medicación.
-          </p>
         </div>
       </section>
 
