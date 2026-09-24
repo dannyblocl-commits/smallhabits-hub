@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { loadStripe } from "@stripe/js";
+import { loadStripe } from "@stripe/stripe-js";
 
 interface CheckoutButtonProps {
   planLevel: "basico" | "pro" | "elite";
