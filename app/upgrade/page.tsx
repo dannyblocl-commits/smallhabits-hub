@@ -1,6 +1,7 @@
 import { getUser } from "@/lib/auth";
 import { redirect } from "next/navigation";
 import Link from "next/link";
+import { CheckoutButton } from "@/components/CheckoutButton";
 
 export const metadata = {
   title: "Elige tu plan — Small Habits",
@@ -90,18 +91,10 @@ export default async function UpgradePage() {
                 ))}
               </ul>
 
-              <a
-                href={plan.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full py-3 font-bold rounded-lg inline-block text-center"
-                style={{
-                  background: plan.highlight ? "#0B0B0F" : "#FF2D8A",
-                  color: plan.highlight ? "#FF2D8A" : "#F5F2F0",
-                }}
-              >
-                {plan.name === "Básico" ? "Continuar con Básico" : "Elegir " + plan.name}
-              </a>
+              <CheckoutButton
+                planLevel={plan.name.toLowerCase() as "basico" | "pro" | "elite"}
+                label={plan.name === "Básico" ? "Continuar con Básico" : "Elegir " + plan.name}
+              />
             </div>
           ))}
         </div>
