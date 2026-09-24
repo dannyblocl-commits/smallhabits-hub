@@ -37,6 +37,8 @@ export default async function Dashboard() {
         trialEnd={sub.trialEnd}
         planLevel={sub.planLevel}
         daysRemaining={daysRemaining}
+        isActive={sub.isActive}
+        staff={sub.staff}
       />
       <p className="quote text-xl muted -mt-3 mb-6">{L.dash.quote}</p>
 

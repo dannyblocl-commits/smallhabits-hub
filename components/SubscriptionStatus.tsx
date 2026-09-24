@@ -5,6 +5,8 @@ interface SubscriptionStatusProps {
   trialEnd?: string | null;
   planLevel: string;
   daysRemaining?: number;
+  isActive?: boolean;
+  staff?: boolean;
 }
 
 export function SubscriptionStatus({
@@ -12,7 +14,32 @@ export function SubscriptionStatus({
   trialEnd,
   planLevel,
   daysRemaining = 0,
+  isActive = true,
+  staff = false,
 }: SubscriptionStatusProps) {
+  if (staff) return null;
+
+  if (!isActive) {
+    return (
+      <div
+        className="px-4 py-3 rounded-lg mb-4 border-2"
+        style={{
+          background: "#A8A3AE/10",
+          borderColor: "#A8A3AE",
+          color: "#F5F2F0",
+        }}
+      >
+        <p className="font-bold text-sm">Estás en el plan gratis</p>
+        <p className="text-xs mt-1 opacity-80">
+          Desbloquea rutinas, recetas y chat con la coach.{" "}
+          <a href="/upgrade" className="underline font-bold" style={{ color: "#FF2D8A" }}>
+            Ver planes
+          </a>
+        </p>
+      </div>
+    );
+  }
+
   if (inTrial && daysRemaining > 0) {
     return (
       <div

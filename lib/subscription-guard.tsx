@@ -1,25 +1,24 @@
-import { getUser } from "./auth";
+import { getUser, isAdmin } from "./auth";
 import { getUserSubscription, isUserInTrial, PLAN_CONFIG } from "./subscriptions";
 import { redirect } from "next/navigation";
 
+// Lo gratis se queda gratis: sin trial ni pago el miembro sigue entrando con el
+// tier gratuito; solo se le muestra el aviso para mejorar. Nunca se le expulsa.
 export async function requireSubscription() {
   const user = await getUser();
   if (!user) redirect("/login");
 
   const sub = await getUserSubscription(user.id);
   const inTrial = await isUserInTrial(user.id);
-
-  // Si no tiene suscripción activa Y no está en trial, redirigir a planes
-  if (!sub?.subscription_id && !inTrial) {
-    redirect("/upgrade");
-  }
+  const staff = user.role === "coach" || isAdmin(user);
 
   return {
     userId: user.id,
     planLevel: sub?.plan_level || "basico",
     inTrial,
     trialEnd: sub?.trial_end,
-    isActive: !!sub?.subscription_id || inTrial,
+    isActive: staff || !!sub?.subscription_id || inTrial,
+    staff,
   };
 }
 
