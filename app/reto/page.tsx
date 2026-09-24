@@ -1,6 +1,5 @@
-import Link from "next/link";
 import { PLANS, RETO_LINK, RETO_PRICE_LABEL } from "@/lib/plan";
-import { getLang, locale } from "@/lib/i18n";
+import { getLang } from "@/lib/i18n";
 import { RETO } from "@/lib/reto-i18n";
 import { LangSwitch } from "@/components/LangSwitch";
 
@@ -9,17 +8,9 @@ export async function generateMetadata() {
   return { title: t.metaTitle, description: t.metaDesc };
 }
 
-function proximoLunes(loc: string) {
-  const d = new Date();
-  const delta = (8 - d.getDay()) % 7 || 7;
-  d.setDate(d.getDate() + delta);
-  return d.toLocaleDateString(loc, { weekday: "long", day: "numeric", month: "long" });
-}
-
 export default async function RetoPage() {
   const lang = await getLang();
   const t = RETO[lang];
-  const inicio = proximoLunes(locale(lang));
 
   return (
     <div className="min-h-screen" style={{ background: "#0B0B0F", color: "#F5F2F0" }}>
@@ -28,9 +19,6 @@ export default async function RetoPage() {
       </div>
 
       <section className="px-6 pt-12 pb-16 text-center max-w-3xl mx-auto">
-        <div className="inline-block mb-5 px-4 py-2 rounded-full border" style={{ borderColor: "#FF2D8A", color: "#FF2D8A", fontSize: 13, fontWeight: 700 }}>
-          {t.nextEdition}: {inicio}
-        </div>
         <h1 className="text-5xl md:text-7xl font-black mb-6" style={{ letterSpacing: "-0.03em" }}>
           {t.h1a} <span style={{ color: "#FF2D8A" }}>{t.h1b}</span>
           <br />
@@ -85,12 +73,6 @@ export default async function RetoPage() {
         <a href={RETO_LINK} className="inline-block px-10 py-5 rounded-xl font-black text-xl" style={{ background: "#FF2D8A", color: "#F5F2F0" }}>
           {t.cta} — {RETO_PRICE_LABEL}
         </a>
-        <p className="mt-4 text-sm" style={{ color: "#A8A3AE" }}>
-          {t.monthly}{" "}
-          <Link href="/#planes" className="underline font-bold" style={{ color: "#7FC29B" }}>
-            {t.seePlans}
-          </Link>
-        </p>
       </section>
     </div>
   );

@@ -3,7 +3,6 @@ import type { Lang } from "@/lib/i18n";
 export type RetoDict = {
   metaTitle: string;
   metaDesc: string;
-  nextEdition: string;
   h1a: string;
   h1b: string;
   h1c: string;
@@ -18,14 +17,11 @@ export type RetoDict = {
   weeks: [string, string][];
   faqTitle: string;
   faq: [string, string][];
-  monthly: string;
-  seePlans: string;
 };
 
 const es: RetoDict = {
   metaTitle: "Reto de Transformación 30 Días — Small Habits by Maleja",
   metaDesc: "30 días con Maleja: plan Pro completo, check-in semanal, fotos de progreso y premio final. Pago único.",
-  nextEdition: "Próxima edición",
   h1a: "Reto de",
   h1b: "transformación",
   h1c: "30 días",
@@ -38,7 +34,7 @@ const es: RetoDict = {
     ["30 días de plan Pro", "Todas las rutinas, las 92 recetas, menús, meditaciones y el asistente IA sin límite."],
     ["Check-in semanal con Maleja", "Cada semana revisas tu avance en grupo: peso, fotos, energía y qué ajustar."],
     ["Fotos de progreso privadas", "Antes y después. Solo las ves tú y Maleja."],
-    ["Comunidad del reto", "Entras con un grupo que empieza el mismo día. Nadie lo hace sola."],
+    ["Comunidad del reto", "Entras a un grupo que ya está en marcha. Nadie lo hace sola."],
     ["Premio final", "La transformación más constante gana un mes de Elite con sesión 1:1."],
   ],
   howTitle: "Cómo funciona",
@@ -53,16 +49,13 @@ const es: RetoDict = {
   faq: [
     ["¿Necesito experiencia?", "No. Las rutinas tienen nivel inicial, intermedio y avanzado, y Maleja te dice por cuál empezar."],
     ["¿Qué pasa cuando terminan los 30 días?", "Tu acceso Pro termina y decides si sigues con un plan mensual. No hay cobro automático."],
-    ["¿Puedo empezar otro día?", "Cada edición arranca un lunes para que todo el grupo vaya junto. Si compras hoy, entras en la próxima."],
+    ["¿Cuándo empiezo?", "El día que quieras. Tus 30 días cuentan desde que entras, y Maleja te suma al grupo esa misma semana."],
   ],
-  monthly: "¿Prefieres ir mes a mes?",
-  seePlans: "Ver planes",
 };
 
 const en: RetoDict = {
   metaTitle: "30-Day Transformation Challenge — Small Habits by Maleja",
   metaDesc: "30 days with Maleja: full Pro plan, weekly check-in, progress photos and a final prize. One-time payment.",
-  nextEdition: "Next edition",
   h1a: "30-day",
   h1b: "transformation",
   h1c: "challenge",
@@ -75,7 +68,7 @@ const en: RetoDict = {
     ["30 days of the Pro plan", "Every workout, the 92 recipes, meal plans, meditations and the AI assistant with no limits."],
     ["Weekly check-in with Maleja", "Every week you review your progress as a group: weight, photos, energy and what to adjust."],
     ["Private progress photos", "Before and after. Only you and Maleja can see them."],
-    ["Challenge community", "You start with a group on the same day. Nobody does it alone."],
+    ["Challenge community", "You join a group that is already going. Nobody does it alone."],
     ["Final prize", "The most consistent transformation wins a month of Elite with a 1:1 session."],
   ],
   howTitle: "How it works",
@@ -90,16 +83,13 @@ const en: RetoDict = {
   faq: [
     ["Do I need experience?", "No. Workouts come in beginner, intermediate and advanced levels, and Maleja tells you where to start."],
     ["What happens after the 30 days?", "Your Pro access ends and you decide whether to continue on a monthly plan. Nothing renews automatically."],
-    ["Can I start on a different day?", "Each edition starts on a Monday so the whole group moves together. Buy today and you join the next one."],
+    ["When do I start?", "Whenever you want. Your 30 days count from the moment you join, and Maleja adds you to the group that same week."],
   ],
-  monthly: "Prefer month to month?",
-  seePlans: "See plans",
 };
 
 const pt: RetoDict = {
   metaTitle: "Desafio de Transformação 30 Dias — Small Habits by Maleja",
   metaDesc: "30 dias com a Maleja: plano Pro completo, check-in semanal, fotos de progresso e prêmio final. Pagamento único.",
-  nextEdition: "Próxima edição",
   h1a: "Desafio de",
   h1b: "transformação",
   h1c: "30 dias",
@@ -112,7 +102,7 @@ const pt: RetoDict = {
     ["30 dias de plano Pro", "Todos os treinos, as 92 receitas, cardápios, meditações e o assistente IA sem limite."],
     ["Check-in semanal com a Maleja", "Toda semana você revisa seu avanço em grupo: peso, fotos, energia e o que ajustar."],
     ["Fotos de progresso privadas", "Antes e depois. Só você e a Maleja veem."],
-    ["Comunidade do desafio", "Você entra com um grupo que começa no mesmo dia. Ninguém faz sozinha."],
+    ["Comunidade do desafio", "Você entra num grupo que já está em andamento. Ninguém faz sozinha."],
     ["Prêmio final", "A transformação mais constante ganha um mês de Elite com sessão 1:1."],
   ],
   howTitle: "Como funciona",
@@ -127,10 +117,8 @@ const pt: RetoDict = {
   faq: [
     ["Preciso de experiência?", "Não. Os treinos têm nível iniciante, intermediário e avançado, e a Maleja diz por onde começar."],
     ["O que acontece quando os 30 dias terminam?", "Seu acesso Pro termina e você decide se continua com um plano mensal. Não há cobrança automática."],
-    ["Posso começar em outro dia?", "Cada edição começa numa segunda-feira para o grupo ir junto. Comprando hoje, você entra na próxima."],
+    ["Quando eu começo?", "No dia que quiser. Seus 30 dias contam a partir da entrada, e a Maleja te adiciona ao grupo na mesma semana."],
   ],
-  monthly: "Prefere mês a mês?",
-  seePlans: "Ver planos",
 };
 
 export const RETO: Record<Lang, RetoDict> = { es, en, pt };
