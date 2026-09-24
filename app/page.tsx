@@ -6,9 +6,9 @@ export const metadata = {
 };
 
 const STRIPE_LINKS = {
-  basico: "https://buy.stripe.com/6oUcN4cHIbKb9oj2rW8og04",
-  pro: "https://buy.stripe.com/00w6oG378aG75838Qk8og05",
-  elite: "https://buy.stripe.com/3cIdR85fg7tV583aYs8og06",
+  basico: "https://buy.stripe.com/bJedR88rs8xZ6c76Ic8og07",
+  pro: "https://buy.stripe.com/eVqcN42343dF6c77Mg8og08",
+  elite: "https://buy.stripe.com/bJeaEWePQ29B7gb3w08og09",
 };
 
 export default function HomePage() {
@@ -207,7 +207,7 @@ export default function HomePage() {
             {[
               {
                 name: "Básico",
-                price: "$9.99",
+                price: "$19.99",
                 period: "/mes",
                 desc: "Perfecto para empezar",
                 features: ["Biblioteca de 20+ rutinas", "Recetario de 92 recetas", "Chat de soporte", "Acceso a comunidad", "7 días gratis"],
@@ -216,7 +216,7 @@ export default function HomePage() {
               },
               {
                 name: "Pro",
-                price: "$19.99",
+                price: "$39",
                 period: "/mes",
                 desc: "La más popular",
                 features: [
@@ -232,7 +232,7 @@ export default function HomePage() {
               },
               {
                 name: "Elite",
-                price: "$49.99",
+                price: "$199",
                 period: "/mes",
                 desc: "Transformación garantizada",
                 features: [

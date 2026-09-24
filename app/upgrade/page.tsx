@@ -32,7 +32,7 @@ export default async function UpgradePage() {
               desc: "Perfecto para empezar",
               features: ["Biblioteca de 20+ rutinas", "Recetario de 92 recetas", "Chat de soporte", "Acceso a comunidad"],
               color: "#FF2D8A",
-              link: "https://buy.stripe.com/6oUcN4cHIbKb9oj2rW8og04",
+              link: "https://buy.stripe.com/bJedR88rs8xZ6c76Ic8og07",
               highlight: false,
             },
             {
@@ -42,7 +42,7 @@ export default async function UpgradePage() {
               desc: "La más popular",
               features: ["TODO de Básico", "Rutinas PERSONALIZADAS", "Plan nutricional ajustado", "Seguimiento semanal", "Prioridad en soporte"],
               color: "#FF2D8A",
-              link: "https://buy.stripe.com/00w6oG378aG75838Qk8og05",
+              link: "https://buy.stripe.com/eVqcN42343dF6c77Mg8og08",
               highlight: true,
             },
             {
@@ -52,7 +52,7 @@ export default async function UpgradePage() {
               desc: "Transformación garantizada",
               features: ["TODO de Pro", "Sesiones 1:1 (2/mes)", "Estrategia personalizada", "Acceso VIP", "Prioridad máxima"],
               color: "#FF2D8A",
-              link: "https://buy.stripe.com/3cIdR85fg7tV583aYs8og06",
+              link: "https://buy.stripe.com/bJeaEWePQ29B7gb3w08og09",
               highlight: false,
             },
           ].map((plan) => (

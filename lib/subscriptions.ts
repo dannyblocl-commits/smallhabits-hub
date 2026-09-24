@@ -10,9 +10,9 @@ export const PLAN_CONFIG: Record<PlanLevel, {
   messages: number | null;
   sessions_1on1: number;
 }> = {
-  basico: { price: 9.99, name: "Básico", routines: 3, recipes: 10, messages: 50, sessions_1on1: 0 },
-  pro: { price: 19.99, name: "Pro", routines: 20, recipes: 50, messages: null, sessions_1on1: 0 },
-  elite: { price: 49.99, name: "Elite", routines: 999, recipes: 999, messages: null, sessions_1on1: 2 },
+  basico: { price: 19.99, name: "Básico", routines: 3, recipes: 10, messages: 50, sessions_1on1: 0 },
+  pro: { price: 39, name: "Pro", routines: 20, recipes: 50, messages: null, sessions_1on1: 0 },
+  elite: { price: 199, name: "Elite", routines: 999, recipes: 999, messages: null, sessions_1on1: 2 },
 };
 
 export async function getUserSubscription(userId: string) {
