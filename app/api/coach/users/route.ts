@@ -1,11 +1,11 @@
 import { NextResponse } from "next/server";
-import { getUser } from "@/lib/auth";
+import { getUser, isAdmin } from "@/lib/auth";
 import { db, ensureSchema } from "@/lib/db";
 
 export async function GET() {
   try {
     const user = await getUser();
-    if (!user || user.role !== "coach") {
+    if (!user || (user.role !== "coach" && !isAdmin(user))) {
       return NextResponse.json({ error: "No autorizado" }, { status: 401 });
     }
 

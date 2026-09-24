@@ -1,11 +1,11 @@
 import { NextRequest, NextResponse } from "next/server";
-import { getUser } from "@/lib/auth";
+import { getUser, isAdmin } from "@/lib/auth";
 import { db, ensureSchema } from "@/lib/db";
 
 export async function POST(req: NextRequest) {
   try {
     const coach = await getUser();
-    if (!coach || coach.role !== "coach") {
+    if (!coach || (coach.role !== "coach" && !isAdmin(coach))) {
       return NextResponse.json({ error: "No autorizado" }, { status: 401 });
     }
 
