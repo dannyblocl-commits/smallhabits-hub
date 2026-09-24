@@ -68,17 +68,30 @@ export async function signupFree(_: AuthState, form: FormData): Promise<AuthStat
   const exists = await db().query("select 1 from users where email = $1", [email]);
   if (exists.rowCount) return { error: "Ya existe una cuenta con ese email." };
 
-  const password_hash = await hashPassword(password);
-  const user = await createFreeAccount(email, password_hash, name);
+  try {
+    const password_hash = await hashPassword(password);
+    const user = await createFreeAccount(email, password_hash, name);
 
-  // Notificar a Maleja
-  const coaches = await db().query("select id from users where role = 'coach' limit 1");
-  if (coaches.rowCount) {
-    await notifyCoach(coaches.rows[0].id, "Nuevo usuario", `${name} (${email}) se registró en prueba gratis.`);
+    if (!user?.id) {
+      return { error: "Error al crear la cuenta. Intenta de nuevo." };
+    }
+
+    // Notificar a Maleja
+    try {
+      const coaches = await db().query("select id from users where role = 'coach' limit 1");
+      if (coaches.rowCount) {
+        await notifyCoach(coaches.rows[0].id, "Nuevo usuario", `${name} (${email}) se registró en prueba gratis.`);
+      }
+    } catch (e) {
+      console.error("Error notificando coach:", e);
+    }
+
+    await createSession(user.id);
+    redirect("/dashboard");
+  } catch (error: any) {
+    console.error("SignupFree error:", error.message);
+    return { error: "Error al registrarse. Intenta de nuevo." };
   }
-
-  await createSession(user.id);
-  redirect("/dashboard");
 }
 
 // Cuentas creadas con Google no pasan por el formulario de registro: aquí una coach canjea su código desde su perfil.
