@@ -31,10 +31,11 @@ export const STRIPE_PRICES: Record<Exclude<Plan, "free">, string> = {
   elite: process.env.STRIPE_PRICE_ELITE || "price_1UJHuiCJarrQxraeSw76KkhB",
 };
 
-// Reto 90 días: pago único que da Pro durante 90 días.
-export const RETO_PRICE = process.env.STRIPE_PRICE_RETO || "price_1UJJ6sCJarrQxraekN8VEzkt";
-export const RETO_DAYS = 90;
-export const RETO_LINK = process.env.NEXT_PUBLIC_STRIPE_LINK_RETO || "https://buy.stripe.com/fZudR8bDEcOf9oj9Uo8og0a";
+// Reto 30 días: pago único que da Pro durante 30 días.
+export const RETO_PRICE = process.env.STRIPE_PRICE_RETO || "price_1UJKGiCJarrQxraefeIe5byQ";
+export const RETO_DAYS = 30;
+export const RETO_LINK = process.env.NEXT_PUBLIC_STRIPE_LINK_RETO || "https://buy.stripe.com/14AbJ09vw29BcAv8Qk8og0b";
+export const RETO_PRICE_LABEL = "$49";
 
 // Precios anteriores ($9.99/$19.99/$49.99): suscripciones ya cobradas siguen valiendo.
 const LEGACY_PRICES: Record<string, Exclude<Plan, "free">> = {
