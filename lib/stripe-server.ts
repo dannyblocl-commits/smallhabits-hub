@@ -3,9 +3,7 @@
 import Stripe from "stripe";
 import { db } from "./db";
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY || "", {
-  apiVersion: "2024-10-28.acacia",
-});
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY || "");
 
 export async function createCheckoutSession(
   userId: string,
