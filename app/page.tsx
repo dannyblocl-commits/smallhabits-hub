@@ -207,7 +207,7 @@ export default function HomePage() {
             {[
               {
                 name: "Básico",
-                price: "$19.99",
+                price: "$9.99",
                 period: "/mes",
                 desc: "Perfecto para empezar",
                 features: ["Biblioteca de 20+ rutinas", "Recetario de 92 recetas", "Chat de soporte", "Acceso a comunidad", "7 días gratis"],
@@ -216,7 +216,7 @@ export default function HomePage() {
               },
               {
                 name: "Pro",
-                price: "$29.99",
+                price: "$19.99",
                 period: "/mes",
                 desc: "La más popular",
                 features: [
@@ -232,7 +232,7 @@ export default function HomePage() {
               },
               {
                 name: "Elite",
-                price: "$199",
+                price: "$49.99",
                 period: "/mes",
                 desc: "Transformación garantizada",
                 features: [

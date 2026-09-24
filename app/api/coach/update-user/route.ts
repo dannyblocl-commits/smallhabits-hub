@@ -15,8 +15,11 @@ export async function POST(req: NextRequest) {
 
     if (action === "change-plan") {
       // Cambiar plan de un usuario
+      if (!["basico", "pro", "elite"].includes(planLevel)) {
+        return NextResponse.json({ error: "Plan inválido" }, { status: 400 });
+      }
       await db().query(
-        "UPDATE users SET plan_level = $1 WHERE id = $2 AND role = 'member'",
+        "UPDATE users SET plan_level = $1, plan = $1 WHERE id = $2 AND role = 'member'",
         [planLevel, userId]
       );
       return NextResponse.json({ success: true, message: `Plan cambiado a ${planLevel}` });
@@ -28,7 +31,7 @@ export async function POST(req: NextRequest) {
       trialEnd.setDate(trialEnd.getDate() + daysOfAccess);
 
       await db().query(
-        "UPDATE users SET trial_end = $1, plan_level = 'basico' WHERE id = $2",
+        "UPDATE users SET trial_end = $1, plan_level = 'basico', plan = case when plan = 'free' then 'basico' else plan end WHERE id = $2",
         [trialEnd, userId]
       );
       return NextResponse.json({

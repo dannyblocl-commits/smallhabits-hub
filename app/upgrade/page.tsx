@@ -1,6 +1,7 @@
 import { getUser } from "@/lib/auth";
 import { redirect } from "next/navigation";
 import Link from "next/link";
+import { PLANS } from "@/lib/plan";
 
 export const metadata = {
   title: "Elige tu plan — Small Habits",
@@ -26,7 +27,7 @@ export default async function UpgradePage() {
           {[
             {
               name: "Básico",
-              price: "$19.99",
+              price: PLANS.basico.price,
               period: "/mes",
               desc: "Perfecto para empezar",
               features: ["Biblioteca de 20+ rutinas", "Recetario de 92 recetas", "Chat de soporte", "Acceso a comunidad"],
@@ -36,7 +37,7 @@ export default async function UpgradePage() {
             },
             {
               name: "Pro",
-              price: "$39",
+              price: PLANS.pro.price,
               period: "/mes",
               desc: "La más popular",
               features: ["TODO de Básico", "Rutinas PERSONALIZADAS", "Plan nutricional ajustado", "Seguimiento semanal", "Prioridad en soporte"],
@@ -46,7 +47,7 @@ export default async function UpgradePage() {
             },
             {
               name: "Elite",
-              price: "$199",
+              price: PLANS.elite.price,
               period: "/mes",
               desc: "Transformación garantizada",
               features: ["TODO de Pro", "Sesiones 1:1 (2/mes)", "Estrategia personalizada", "Acceso VIP", "Prioridad máxima"],
