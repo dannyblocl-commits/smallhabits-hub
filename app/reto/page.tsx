@@ -1,97 +1,78 @@
 import Link from "next/link";
 import { PLANS, RETO_LINK, RETO_PRICE_LABEL } from "@/lib/plan";
+import { getLang, locale } from "@/lib/i18n";
+import { RETO } from "@/lib/reto-i18n";
+import { LangSwitch } from "@/components/LangSwitch";
 
-export const metadata = {
-  title: "Reto de Transformación 30 Días — Small Habits by Maleja",
-  description: "30 días con Maleja: plan Pro completo, check-in semanal, fotos de progreso y premio final. Pago único.",
-};
+export async function generateMetadata() {
+  const t = RETO[await getLang()];
+  return { title: t.metaTitle, description: t.metaDesc };
+}
 
-function proximoLunes() {
+function proximoLunes(loc: string) {
   const d = new Date();
   const delta = (8 - d.getDay()) % 7 || 7;
   d.setDate(d.getDate() + delta);
-  return d.toLocaleDateString("es-ES", { weekday: "long", day: "numeric", month: "long" });
+  return d.toLocaleDateString(loc, { weekday: "long", day: "numeric", month: "long" });
 }
 
-const INCLUYE = [
-  ["30 días de plan Pro", "Todas las rutinas, las 92 recetas, menús, meditaciones y el asistente IA sin límite."],
-  ["Check-in semanal con Maleja", "Cada semana revisas tu avance en grupo: peso, fotos, energía y qué ajustar."],
-  ["Fotos de progreso privadas", "Antes y después. Solo las ves tú y Maleja."],
-  ["Comunidad del reto", "Entras con un grupo que empieza el mismo día. Nadie lo hace sola."],
-  ["Premio final", "La transformación más constante gana un mes de Elite con sesión 1:1."],
-];
-
-const SEMANAS = [
-  ["Semana 1 · Base", "Aprendes a entrenar y a comer sin dietas. Rutinas de 20-30 min y recetas de la casa."],
-  ["Semana 2 · Ritmo", "Subes intensidad y registras comidas con foto. Primer ajuste con Maleja."],
-  ["Semana 3 · Constancia", "El hábito ya existe. Toca sostenerlo cuando la motivación baja."],
-  ["Semana 4 · Resultado", "Foto final, medidas y el premio para la más constante."],
-];
-
-const FAQ = [
-  ["¿Necesito experiencia?", "No. Las rutinas tienen nivel inicial, intermedio y avanzado, y Maleja te dice por cuál empezar."],
-  ["¿Qué pasa cuando terminan los 30 días?", "Tu acceso Pro termina y decides si sigues con un plan mensual. No hay cobro automático."],
-  ["¿Puedo empezar otro día?", "Cada edición arranca un lunes para que todo el grupo vaya junto. Si compras hoy, entras en la próxima."],
-];
-
-export default function RetoPage() {
-  const inicio = proximoLunes();
-  const mensual = PLANS.pro.price;
+export default async function RetoPage() {
+  const lang = await getLang();
+  const t = RETO[lang];
+  const inicio = proximoLunes(locale(lang));
 
   return (
     <div className="min-h-screen" style={{ background: "#0B0B0F", color: "#F5F2F0" }}>
-      <section className="px-6 pt-20 pb-16 text-center max-w-3xl mx-auto">
+      <div className="flex justify-end px-6 pt-5 max-w-4xl mx-auto">
+        <LangSwitch lang={lang} next="/reto" />
+      </div>
+
+      <section className="px-6 pt-12 pb-16 text-center max-w-3xl mx-auto">
         <div className="inline-block mb-5 px-4 py-2 rounded-full border" style={{ borderColor: "#FF2D8A", color: "#FF2D8A", fontSize: 13, fontWeight: 700 }}>
-          Próxima edición: {inicio}
+          {t.nextEdition}: {inicio}
         </div>
         <h1 className="text-5xl md:text-7xl font-black mb-6" style={{ letterSpacing: "-0.03em" }}>
-          Reto de <span style={{ color: "#FF2D8A" }}>transformación</span>
+          {t.h1a} <span style={{ color: "#FF2D8A" }}>{t.h1b}</span>
           <br />
-          <span style={{ color: "#7FC29B" }}>30 días</span>
+          <span style={{ color: "#7FC29B" }}>{t.h1c}</span>
         </h1>
-        <p className="text-xl mb-4" style={{ color: "#A8A3AE" }}>
-          Un mes con Maleja, un grupo que empieza contigo y un plan que cabe en tu vida real.
-        </p>
-        <p className="text-lg mb-10" style={{ color: "#BA8E54", fontWeight: 600 }}>
-          Pequeños hábitos, grandes resultados.
-        </p>
+        <p className="text-xl mb-4" style={{ color: "#A8A3AE" }}>{t.sub}</p>
+        <p className="text-lg mb-10" style={{ color: "#BA8E54", fontWeight: 600 }}>{t.motto}</p>
         <a href={RETO_LINK} className="inline-block px-10 py-5 rounded-xl font-black text-xl" style={{ background: "#FF2D8A", color: "#F5F2F0" }}>
-          Entrar al reto — {RETO_PRICE_LABEL}
+          {t.cta} — {RETO_PRICE_LABEL}
         </a>
-        <p className="mt-3 text-sm" style={{ color: "#A8A3AE" }}>
-          Pago único, sin renovación. Incluye el plan Pro ({mensual}/mes) más el acompañamiento del grupo.
-        </p>
+        <p className="mt-3 text-sm" style={{ color: "#A8A3AE" }}>{t.ctaNote.replace("{pro}", PLANS.pro.price)}</p>
       </section>
 
       <section className="px-6 py-16 max-w-4xl mx-auto">
-        <h2 className="text-3xl font-black mb-10 text-center">Qué incluye</h2>
+        <h2 className="text-3xl font-black mb-10 text-center">{t.includesTitle}</h2>
         <div className="grid md:grid-cols-2 gap-5">
-          {INCLUYE.map(([t, d]) => (
-            <div key={t} className="rounded-2xl p-6" style={{ background: "#141419", border: "1px solid rgba(127,194,155,0.25)" }}>
-              <p className="font-bold text-lg mb-2" style={{ color: "#7FC29B" }}>✓ {t}</p>
-              <p style={{ color: "#A8A3AE" }}>{d}</p>
+          {t.includes.map(([title, desc]) => (
+            <div key={title} className="rounded-2xl p-6" style={{ background: "#141419", border: "1px solid rgba(127,194,155,0.25)" }}>
+              <p className="font-bold text-lg mb-2" style={{ color: "#7FC29B" }}>✓ {title}</p>
+              <p style={{ color: "#A8A3AE" }}>{desc}</p>
             </div>
           ))}
         </div>
       </section>
 
       <section className="px-6 py-16 max-w-4xl mx-auto">
-        <h2 className="text-3xl font-black mb-3 text-center">Cómo funciona</h2>
-        <p className="text-center mb-10" style={{ color: "#A8A3AE" }}>Cuatro semanas, un objetivo por semana.</p>
+        <h2 className="text-3xl font-black mb-3 text-center">{t.howTitle}</h2>
+        <p className="text-center mb-10" style={{ color: "#A8A3AE" }}>{t.howSub}</p>
         <div className="grid md:grid-cols-2 gap-5">
-          {SEMANAS.map(([t, d]) => (
-            <div key={t} className="rounded-2xl p-6" style={{ background: "#141419" }}>
-              <p className="font-bold mb-2" style={{ color: "#FF2D8A" }}>{t}</p>
-              <p style={{ color: "#A8A3AE" }}>{d}</p>
+          {t.weeks.map(([title, desc]) => (
+            <div key={title} className="rounded-2xl p-6" style={{ background: "#141419" }}>
+              <p className="font-bold mb-2" style={{ color: "#FF2D8A" }}>{title}</p>
+              <p style={{ color: "#A8A3AE" }}>{desc}</p>
             </div>
           ))}
         </div>
       </section>
 
       <section className="px-6 py-16 max-w-3xl mx-auto">
-        <h2 className="text-3xl font-black mb-8 text-center">Preguntas</h2>
+        <h2 className="text-3xl font-black mb-8 text-center">{t.faqTitle}</h2>
         <div className="space-y-4">
-          {FAQ.map(([q, a]) => (
+          {t.faq.map(([q, a]) => (
             <div key={q} className="rounded-2xl p-6" style={{ background: "#141419" }}>
               <p className="font-bold mb-1">{q}</p>
               <p style={{ color: "#A8A3AE" }}>{a}</p>
@@ -102,12 +83,12 @@ export default function RetoPage() {
 
       <section className="px-6 py-20 text-center">
         <a href={RETO_LINK} className="inline-block px-10 py-5 rounded-xl font-black text-xl" style={{ background: "#FF2D8A", color: "#F5F2F0" }}>
-          Entrar al reto — {RETO_PRICE_LABEL}
+          {t.cta} — {RETO_PRICE_LABEL}
         </a>
         <p className="mt-4 text-sm" style={{ color: "#A8A3AE" }}>
-          ¿Prefieres ir mes a mes?{" "}
+          {t.monthly}{" "}
           <Link href="/#planes" className="underline font-bold" style={{ color: "#7FC29B" }}>
-            Ver planes
+            {t.seePlans}
           </Link>
         </p>
       </section>
