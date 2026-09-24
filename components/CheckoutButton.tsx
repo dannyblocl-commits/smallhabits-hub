@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { loadStripe } from "@stripe/stripe-js";
+// Stripe redirect removed - using direct payment links instead
 
 interface CheckoutButtonProps {
   planLevel: "basico" | "pro" | "elite";
