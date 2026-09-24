@@ -213,6 +213,45 @@ export function ensureSchema() {
       create index if not exists ai_usage_user_at on ai_usage(user_id, at desc);
       create index if not exists food_user_at on food_entries(user_id, at desc);
       create index if not exists progress_user_at on progress_entries(user_id, at desc);
+
+      alter table users add column if not exists stripe_customer_id text unique;
+      alter table users add column if not exists plan_level text not null default 'basico';
+      alter table users add column if not exists subscription_id text;
+      alter table users add column if not exists trial_end timestamptz;
+
+      create table if not exists payments (
+        id uuid primary key default gen_random_uuid(),
+        user_id uuid references users(id) on delete cascade,
+        stripe_payment_id text unique,
+        amount numeric not null,
+        currency text default 'USD',
+        plan_level text not null,
+        status text not null default 'pending',
+        created_at timestamptz default now(),
+        updated_at timestamptz default now()
+      );
+      create index if not exists payments_user_at on payments(user_id, created_at desc);
+
+      create table if not exists plan_limits (
+        id uuid primary key default gen_random_uuid(),
+        plan_level text not null unique,
+        max_routines int not null,
+        max_recipes int not null,
+        max_messages int,
+        max_1on1_sessions int,
+        features jsonb default '{}',
+        created_at timestamptz default now()
+      );
+
+      create table if not exists notifications (
+        id uuid primary key default gen_random_uuid(),
+        user_id uuid references users(id) on delete cascade,
+        title text not null,
+        body text not null,
+        read_at timestamptz,
+        created_at timestamptz default now()
+      );
+      create index if not exists notifications_user_at on notifications(user_id, created_at desc);
     `).then(() => undefined);
   }
   return global.__shSchema;

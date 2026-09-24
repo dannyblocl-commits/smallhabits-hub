@@ -3,6 +3,7 @@
 import { redirect } from "next/navigation";
 import { db, ensureSchema } from "@/lib/db";
 import { createSession, destroySession, hashPassword, requireUser, verifyPassword } from "@/lib/auth";
+import { createFreeAccount, notifyCoach } from "@/lib/subscriptions";
 
 export type AuthState = { error?: string } | undefined;
 
@@ -51,6 +52,32 @@ export async function updateProfile(_: AuthState, form: FormData): Promise<AuthS
   if (name.length < 2) return { error: "El nombre es muy corto." };
   await db().query("update users set name=$1, goal=$2, weight=$3, height=$4 where id=$5", [name, goal, weight, height, user.id]);
   if (weight) await db().query("insert into progress_entries (user_id, weight) values ($1,$2)", [user.id, weight]);
+  redirect("/dashboard");
+}
+
+export async function signupFree(_: AuthState, form: FormData): Promise<AuthState> {
+  const email = String(form.get("email") || "").trim().toLowerCase();
+  const password = String(form.get("password") || "");
+  const name = String(form.get("name") || "").trim();
+
+  if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) return { error: "Email inválido." };
+  if (password.length < 6) return { error: "La contraseña necesita al menos 6 caracteres." };
+  if (name.length < 2) return { error: "Escribe tu nombre." };
+
+  await ensureSchema();
+  const exists = await db().query("select 1 from users where email = $1", [email]);
+  if (exists.rowCount) return { error: "Ya existe una cuenta con ese email." };
+
+  const password_hash = await hashPassword(password);
+  const user = await createFreeAccount(email, password_hash, name);
+
+  // Notificar a Maleja
+  const coaches = await db().query("select id from users where role = 'coach' limit 1");
+  if (coaches.rowCount) {
+    await notifyCoach(coaches.rows[0].id, "Nuevo usuario", `${name} (${email}) se registró en prueba gratis.`);
+  }
+
+  await createSession(user.id);
   redirect("/dashboard");
 }
 

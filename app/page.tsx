@@ -281,9 +281,9 @@ export default function HomePage() {
                 </ul>
 
                 <a
-                  href={plan.name === "Básico" ? STRIPE_LINKS.basico : plan.name === "Pro" ? STRIPE_LINKS.pro : STRIPE_LINKS.elite}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href={plan.name === "Básico" ? "/signup-free" : plan.name === "Pro" ? STRIPE_LINKS.pro : STRIPE_LINKS.elite}
+                  target={plan.name === "Básico" ? "_self" : "_blank"}
+                  rel={plan.name === "Básico" ? "" : "noopener noreferrer"}
                   className="w-full py-3 font-bold rounded-lg inline-block text-center"
                   style={{
                     background: plan.highlight ? "#0B0B0F" : "#FF2D8A",
