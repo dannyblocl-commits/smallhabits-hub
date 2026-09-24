@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { AppShell, Badge } from "@/components/AppShell";
 import { HeroVideo } from "@/components/HeroVideo";
+import { SubscriptionStatus, UpgradePrompt } from "@/components/SubscriptionStatus";
 import { requireUser } from "@/lib/auth";
 import { tr, fill, locale } from "@/lib/i18n";
 import { stats } from "@/app/actions/food";
@@ -10,11 +11,13 @@ import { unreadCount } from "@/app/actions/chat";
 import { myCoach } from "@/app/actions/coaches";
 import { wearableStatus } from "@/app/actions/wearables";
 import { listRoutines, listRecommendations, localizeRoutine, type Routine } from "@/lib/library";
+import { requireSubscription, getTrialDaysRemaining } from "@/lib/subscription-guard";
 
 const goalKcal: Record<string, number> = { "Perder peso": 1500, Tonificar: 1800, "Ganar fuerza": 2600, Resistencia: 2200, Flexibilidad: 1900, "Salud integral": 1900 };
 
 export default async function Dashboard() {
-  const [user, { lang, L }] = await Promise.all([requireUser(), tr()]);
+  const [user, { lang, L }, sub] = await Promise.all([requireUser(), tr(), requireSubscription()]);
+  const daysRemaining = getTrialDaysRemaining(sub.trialEnd);
   const [s, a, unread, coach, w, routines, recs] = await Promise.all([stats(), getAssignment(), unreadCount(), myCoach(), wearableStatus(), listRoutines(), listRecommendations(user.id, undefined, 3)]);
   const steps = w.today?.steps ?? null;
   const assigned = a?.routine_id ? routines.find((r) => r.id === a.routine_id) : undefined;
@@ -29,6 +32,12 @@ export default async function Dashboard() {
 
   return (
     <AppShell title={`${L.dash.hola}, ${first}`} kicker={`${today} · ${L.dash.objetivo}: ${goalLabel}`}>
+      <SubscriptionStatus
+        inTrial={sub.inTrial}
+        trialEnd={sub.trialEnd}
+        planLevel={sub.planLevel}
+        daysRemaining={daysRemaining}
+      />
       <p className="quote text-xl muted -mt-3 mb-6">{L.dash.quote}</p>
 
       <div className="relative rounded-[28px] overflow-hidden min-h-[260px] flex items-end mb-5 lift">
