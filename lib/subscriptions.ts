@@ -1,5 +1,3 @@
-"use server";
-
 import { db } from "./db";
 
 export type PlanLevel = "basico" | "pro" | "elite";
