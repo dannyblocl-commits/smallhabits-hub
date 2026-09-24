@@ -35,10 +35,11 @@ export async function applyReto(email: string, paidAtUnix: number) {
     `update users
        set plan = case when plan = 'elite' then plan else 'pro' end,
            plan_level = case when plan_level = 'elite' then plan_level else 'pro' end,
-           trial_end = $1
+           trial_end = $1,
+           reto_start = to_timestamp($3)
      where lower(email) = lower($2)
      returning id`,
-    [until, email]
+    [until, email, paidAtUnix]
   );
   return { plan: "pro" as Plan, matched: r.rowCount ?? 0, until };
 }

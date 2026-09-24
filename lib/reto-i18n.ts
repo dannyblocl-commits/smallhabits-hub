@@ -17,6 +17,27 @@ export type RetoDict = {
   weeks: [string, string][];
   faqTitle: string;
   faq: [string, string][];
+  app: {
+    title: string;
+    kicker: string;
+    day: string;
+    weekOf: string;
+    routine: string;
+    menu: string;
+    habits: string;
+    checkin: string;
+    checkinBody: string;
+    photos: string;
+    photosBody: string;
+    done: string;
+    doneBody: string;
+    none: string;
+    noneBody: string;
+    join: string;
+    go: string;
+    open: string;
+    ends: string;
+  };
 };
 
 const es: RetoDict = {
@@ -51,6 +72,27 @@ const es: RetoDict = {
     ["¿Qué pasa cuando terminan los 30 días?", "Tu acceso Pro termina y decides si sigues con un plan mensual. No hay cobro automático."],
     ["¿Cuándo empiezo?", "El día que quieras. Tus 30 días cuentan desde que entras, y Maleja te suma al grupo esa misma semana."],
   ],
+  app: {
+    title: "Reto 30 días",
+    kicker: "Tu camino, semana a semana",
+    day: "Día {d} de 30",
+    weekOf: "Semana {w} de 4",
+    routine: "Tu rutina de esta semana",
+    menu: "Tu menú de esta semana",
+    habits: "Tus 3 hábitos de la semana",
+    checkin: "Check-in con Maleja",
+    checkinBody: "Cada semana cuéntale cómo vas: peso, energía, qué te costó. Ella ajusta el plan.",
+    photos: "Fotos de progreso",
+    photosBody: "Solo las ves tú y Maleja. Sube la de inicio hoy y la final el día 30.",
+    done: "¡Reto completado!",
+    doneBody: "30 días. Lo hiciste. Escríbele a Maleja para cerrar con tu foto final y tu resultado.",
+    none: "Todavía no estás en el reto",
+    noneBody: "30 días con Maleja, un grupo y un plan semana a semana.",
+    join: "Ver el reto",
+    go: "Entrenar",
+    open: "Ver menú",
+    ends: "Termina el",
+  },
 };
 
 const en: RetoDict = {
@@ -85,6 +127,27 @@ const en: RetoDict = {
     ["What happens after the 30 days?", "Your Pro access ends and you decide whether to continue on a monthly plan. Nothing renews automatically."],
     ["When do I start?", "Whenever you want. Your 30 days count from the moment you join, and Maleja adds you to the group that same week."],
   ],
+  app: {
+    title: "30-Day Challenge",
+    kicker: "Your path, week by week",
+    day: "Day {d} of 30",
+    weekOf: "Week {w} of 4",
+    routine: "This week's workout",
+    menu: "This week's meal plan",
+    habits: "Your 3 habits this week",
+    checkin: "Check-in with Maleja",
+    checkinBody: "Every week tell her how it's going: weight, energy, what was hard. She adjusts the plan.",
+    photos: "Progress photos",
+    photosBody: "Only you and Maleja can see them. Upload your starting photo today and the final one on day 30.",
+    done: "Challenge complete!",
+    doneBody: "30 days. You did it. Message Maleja to close with your final photo and your result.",
+    none: "You're not in the challenge yet",
+    noneBody: "30 days with Maleja, a group and a week-by-week plan.",
+    join: "See the challenge",
+    go: "Train",
+    open: "See menu",
+    ends: "Ends on",
+  },
 };
 
 const pt: RetoDict = {
@@ -119,6 +182,27 @@ const pt: RetoDict = {
     ["O que acontece quando os 30 dias terminam?", "Seu acesso Pro termina e você decide se continua com um plano mensal. Não há cobrança automática."],
     ["Quando eu começo?", "No dia que quiser. Seus 30 dias contam a partir da entrada, e a Maleja te adiciona ao grupo na mesma semana."],
   ],
+  app: {
+    title: "Desafio 30 dias",
+    kicker: "Seu caminho, semana a semana",
+    day: "Dia {d} de 30",
+    weekOf: "Semana {w} de 4",
+    routine: "Seu treino desta semana",
+    menu: "Seu cardápio desta semana",
+    habits: "Seus 3 hábitos da semana",
+    checkin: "Check-in com a Maleja",
+    checkinBody: "Toda semana conte como está indo: peso, energia, o que foi difícil. Ela ajusta o plano.",
+    photos: "Fotos de progresso",
+    photosBody: "Só você e a Maleja veem. Envie a foto inicial hoje e a final no dia 30.",
+    done: "Desafio concluído!",
+    doneBody: "30 dias. Você conseguiu. Fale com a Maleja para fechar com sua foto final e seu resultado.",
+    none: "Você ainda não está no desafio",
+    noneBody: "30 dias com a Maleja, um grupo e um plano semana a semana.",
+    join: "Ver o desafio",
+    go: "Treinar",
+    open: "Ver cardápio",
+    ends: "Termina em",
+  },
 };
 
 export const RETO: Record<Lang, RetoDict> = { es, en, pt };

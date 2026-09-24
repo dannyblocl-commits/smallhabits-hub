@@ -21,9 +21,12 @@ export async function GET() {
         trial_end,
         subscription_id,
         created_at,
+        reto_start,
         CASE
-          WHEN trial_end > NOW() THEN 'En trial'
+          WHEN reto_start IS NOT NULL AND reto_start > NOW() - interval '30 days'
+            THEN 'Reto día ' || (floor(extract(epoch from (NOW() - reto_start)) / 86400) + 1)::int
           WHEN subscription_id IS NOT NULL THEN 'Activa'
+          WHEN trial_end > NOW() THEN 'En trial'
           ELSE 'Sin suscripción'
         END as status
       FROM users

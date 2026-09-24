@@ -218,6 +218,7 @@ export function ensureSchema() {
       alter table users add column if not exists plan_level text not null default 'basico';
       alter table users add column if not exists subscription_id text;
       alter table users add column if not exists trial_end timestamptz;
+      alter table users add column if not exists reto_start timestamptz;
 
       create table if not exists payments (
         id uuid primary key default gen_random_uuid(),

@@ -44,6 +44,21 @@ export async function POST(req: NextRequest) {
       });
     }
 
+    if (action === "start-reto") {
+      const trialEnd = new Date();
+      trialEnd.setDate(trialEnd.getDate() + 30);
+      await db().query(
+        `UPDATE users
+           SET reto_start = now(),
+               trial_end = $1,
+               plan = case when plan = 'elite' then plan else 'pro' end,
+               plan_level = case when plan_level = 'elite' then plan_level else 'pro' end
+         WHERE id = $2 AND role = 'member'`,
+        [trialEnd, userId]
+      );
+      return NextResponse.json({ success: true, message: "Reto de 30 días asignado" });
+    }
+
     return NextResponse.json({ error: "Acción inválida" }, { status: 400 });
   } catch (error: any) {
     console.error("Update user error:", error);

@@ -81,6 +81,30 @@ export default function UsuariosPage() {
     }
   };
 
+  const startReto = async (userId: string) => {
+    setUpdating(userId);
+    try {
+      const res = await fetch("/api/coach/update-user", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ userId, action: "start-reto" }),
+      });
+      if (res.ok) {
+        const end = new Date();
+        end.setDate(end.getDate() + 30);
+        setUsers(
+          users.map((u) =>
+            u.id === userId
+              ? { ...u, plan_level: u.plan_level === "elite" ? "elite" : "pro", trial_end: end.toISOString(), status: "Reto día 1" }
+              : u
+          )
+        );
+      }
+    } finally {
+      setUpdating(null);
+    }
+  };
+
   const formatDate = (date: string | null) => {
     if (!date) return "—";
     return new Date(date).toLocaleDateString("es-ES");
@@ -102,7 +126,7 @@ export default function UsuariosPage() {
           Gestiona planes, accesos y estado de los usuarios
         </p>
         <p style={{ color: "#BA8E54", marginBottom: "20px", fontSize: "13px" }}>
-          Combo Farmasi: pulsa <b>Pro</b> y luego <b>+30d</b>. Cada recompra, otros +30d. El acceso vence solo.
+          <b>Reto 30d</b> = Pro + 30 días + camino semana a semana en la app (la persona lo ve en su inicio). Cada recompra, otro <b>Reto 30d</b> o <b>+30d</b>. El acceso vence solo.
         </p>
 
         <div style={{ overflowX: "auto", marginTop: "20px" }}>
@@ -157,9 +181,10 @@ export default function UsuariosPage() {
                         color:
                           user.status === "Activa"
                             ? "#7FC29B"
-                            : user.status === "En trial"
+                            : user.status === "En trial" || user.status.startsWith("Reto")
                               ? "#FF2D8A"
                               : "#A8A3AE",
+                        fontWeight: user.status.startsWith("Reto") ? "bold" : "normal",
                       }}
                     >
                       {user.status}
@@ -169,7 +194,24 @@ export default function UsuariosPage() {
                     {formatDate(user.trial_end)}
                   </td>
                   <td style={{ padding: "10px" }}>
-                    <div style={{ display: "flex", gap: "5px" }}>
+                    <div style={{ display: "flex", gap: "5px", flexWrap: "wrap" }}>
+                      <button
+                        onClick={() => startReto(user.id)}
+                        disabled={updating === user.id}
+                        title="Asigna el Reto 30 días: Pro + 30 días de acceso + camino semana a semana"
+                        style={{
+                          padding: "5px 10px",
+                          fontSize: "12px",
+                          background: "#F5F2F0",
+                          color: "#0B0B0F",
+                          border: "2px solid #FF2D8A",
+                          borderRadius: "4px",
+                          cursor: "pointer",
+                          fontWeight: "bold",
+                        }}
+                      >
+                        Reto 30d
+                      </button>
                       <button
                         onClick={() => changePlan(user.id, "basico")}
                         disabled={updating === user.id}

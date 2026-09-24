@@ -11,6 +11,8 @@ import { unreadCount } from "@/app/actions/chat";
 import { myCoach } from "@/app/actions/coaches";
 import { wearableStatus } from "@/app/actions/wearables";
 import { listRoutines, listRecommendations, localizeRoutine, type Routine } from "@/lib/library";
+import { retoProgress } from "@/lib/reto-plan";
+import { RETO } from "@/lib/reto-i18n";
 import { requireSubscription, getTrialDaysRemaining } from "@/lib/subscription-guard";
 
 const goalKcal: Record<string, number> = { "Perder peso": 1500, Tonificar: 1800, "Ganar fuerza": 2600, Resistencia: 2200, Flexibilidad: 1900, "Salud integral": 1900 };
@@ -18,6 +20,7 @@ const goalKcal: Record<string, number> = { "Perder peso": 1500, Tonificar: 1800,
 export default async function Dashboard() {
   const [user, { lang, L }, sub] = await Promise.all([requireUser(), tr(), requireSubscription()]);
   const daysRemaining = getTrialDaysRemaining(sub.trialEnd);
+  const reto = retoProgress(user.reto_start);
   const [s, a, unread, coach, w, routines, recs] = await Promise.all([stats(), getAssignment(), unreadCount(), myCoach(), wearableStatus(), listRoutines(), listRecommendations(user.id, undefined, 3)]);
   const steps = w.today?.steps ?? null;
   const assigned = a?.routine_id ? routines.find((r) => r.id === a.routine_id) : undefined;
@@ -41,6 +44,17 @@ export default async function Dashboard() {
         staff={sub.staff}
       />
       <p className="quote text-xl muted -mt-3 mb-6">{L.dash.quote}</p>
+
+      {reto && (
+        <Link href="/dashboard/reto" className="card lift p-5 mb-5 flex items-center justify-between gap-4 hover:border-[var(--line-strong)] transition">
+          <div>
+            <span className="pill pill-f">{RETO[lang].app.day.replace("{d}", String(reto.day))}</span>
+            <h3 className="text-xl mt-2">{RETO[lang].app.title} · {RETO[lang].weeks[reto.week - 1][0]}</h3>
+            <div className="progress mt-3" style={{ maxWidth: 320 }}><i style={{ width: `${reto.pct}%` }} /></div>
+          </div>
+          <span className="btn btn-go btn-sm">{RETO[lang].app.kicker} →</span>
+        </Link>
+      )}
 
       <div className="relative rounded-[28px] overflow-hidden min-h-[260px] flex items-end mb-5 lift">
         <HeroVideo src="/api/content/video/entrenar" poster="/img/gal_fuerza.jpg" className="absolute inset-0 w-full h-full object-cover object-[center_30%]" label="Maleja" />

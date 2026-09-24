@@ -6,7 +6,7 @@ import { db, ensureSchema } from "@/lib/db";
 import type { Plan } from "@/lib/plan";
 
 export type Role = "member" | "coach";
-export type User = { id: string; email: string; name: string; goal: string; weight: number | null; height: number | null; plan: Plan; role: Role; coach_id: string | null; created_at: string; subscription_id: string | null; trial_end: string | null };
+export type User = { id: string; email: string; name: string; goal: string; weight: number | null; height: number | null; plan: Plan; role: Role; coach_id: string | null; created_at: string; subscription_id: string | null; trial_end: string | null; reto_start: string | null };
 
 const COOKIE = "sh_session";
 const secret = () => new TextEncoder().encode(process.env.AUTH_SECRET || "dev-secret-change-me");
@@ -24,7 +24,7 @@ export async function getUser(): Promise<User | null> {
   try {
     const { payload } = await jwtVerify(token, secret());
     await ensureSchema();
-    const r = await db().query("select id, email, name, goal, weight, height, plan, role, coach_id, created_at, subscription_id, trial_end from users where id = $1", [payload.uid]);
+    const r = await db().query("select id, email, name, goal, weight, height, plan, role, coach_id, created_at, subscription_id, trial_end, reto_start from users where id = $1", [payload.uid]);
     if (!r.rows[0]) return null;
     const u = r.rows[0];
     return { ...u, weight: u.weight === null ? null : Number(u.weight), height: u.height === null ? null : Number(u.height) };
