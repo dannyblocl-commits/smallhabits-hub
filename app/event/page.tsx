@@ -47,13 +47,6 @@ export default function EventPage() {
 
           <div className="flex gap-4 justify-center flex-wrap">
             <a
-              href="https://apps.apple.com/app/small-habits"
-              className="px-8 py-4 rounded-lg font-bold text-lg"
-              style={{ background: "#FF2D8A", color: "#F5F2F0" }}
-            >
-              Descargar App
-            </a>
-            <a
               href="#features"
               className="px-8 py-4 rounded-lg font-bold text-lg border-2"
               style={{ borderColor: "#7FC29B", color: "#7FC29B" }}
