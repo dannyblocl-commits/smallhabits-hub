@@ -3,6 +3,7 @@ import { AppShell, Badge, Locked } from "@/components/AppShell";
 import { requireUser } from "@/lib/auth";
 import { tr, fill } from "@/lib/i18n";
 import { listRecipes, listRecommendations, localizeRecipe, categoryName, RECIPE_CATEGORIES } from "@/lib/library";
+import { listRecipeMedia, mediaUrl } from "@/lib/media";
 
 const norm = (s: string) => s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "");
 
@@ -16,6 +17,7 @@ export default async function Recipes({ searchParams }: { searchParams: Promise<
   const list = all.filter((r) => (!cat || r.category === cat) && (!q || norm([loc(r).name, ...loc(r).ingredients, ...r.tags].join(" ")).includes(norm(q))));
   const sel = all.find((r) => r.id === sp.r) ?? null;
   const selT = sel ? loc(sel) : null;
+  const media = sel ? await listRecipeMedia(sel.id) : [];
   const href = (p: { c?: string; r?: string; q?: string }) => { const u = new URLSearchParams(); const c = p.c ?? cat, r = p.r ?? "", qq = p.q ?? q; if (c) u.set("c", c); if (r) u.set("r", r); if (qq) u.set("q", qq); const s = u.toString(); return `/dashboard/recipes${s ? "?" + s : ""}`; };
   const counts = Object.fromEntries(RECIPE_CATEGORIES.map((c) => [c.id, all.filter((r) => r.category === c.id).length]));
 
@@ -36,6 +38,13 @@ export default async function Recipes({ searchParams }: { searchParams: Promise<
                 <div><span className="pill pill-s">{categoryName(sel.category, lang)}</span><h2 className="text-3xl mt-2">{selT.name}</h2>{sel.tags.length > 0 && <div className="faint text-xs mt-1">{sel.tags.join(" · ")}</div>}</div>
                 <Badge free={sel.free} L={L} />
               </div>
+              {media.length > 0 && (
+                <div className={`grid gap-3 mt-5 ${media.length > 1 ? "sm:grid-cols-2" : ""}`}>
+                  {media.map((m) => m.content_type.startsWith("video/")
+                    ? <video key={m.key} src={mediaUrl(m.key)} controls playsInline preload="metadata" className="w-full rounded-[16px] bg-black" style={{ maxHeight: 420 }} />
+                    : <img key={m.key} src={mediaUrl(m.key)} alt={selT.name} className="w-full rounded-[16px] object-cover" style={{ maxHeight: 420 }} />)}
+                </div>
+              )}
               <div className="grid md:grid-cols-[1fr_1.4fr] gap-6 mt-5">
                 <div>
                   <div className="eyebrow mb-2" style={{ color: "var(--sage)" }}>{L.recipes.ingredientes}</div>

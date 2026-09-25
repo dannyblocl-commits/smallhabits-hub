@@ -1,14 +1,17 @@
 import Link from "next/link";
-import { requireCoach } from "@/lib/auth";
+import { requireStaff } from "@/lib/auth";
 import { listRecipes, getRecipe, RECIPE_CATEGORIES } from "@/lib/library";
 import { saveRecipe, deleteRecipe } from "@/app/actions/library";
+import { uploadContent, removeContent } from "@/app/actions/content";
+import { listRecipeMedia, recipeMediaKey, mediaUrl, RECIPE_SLOTS } from "@/lib/media";
 import { Logo } from "@/components/Leaves";
 
 export default async function CoachRecipes({ searchParams }: { searchParams: Promise<{ id?: string; new?: string; ok?: string; c?: string; tr?: string }> }) {
-  await requireCoach();
+  await requireStaff();
   const sp = await searchParams;
   const cat = RECIPE_CATEGORIES.some((c) => c.id === sp.c) ? sp.c! : RECIPE_CATEGORIES[0].id;
-  const [recipes, editing] = await Promise.all([listRecipes(cat), sp.id ? getRecipe(sp.id) : null]);
+  const [recipes, editing, media] = await Promise.all([listRecipes(cat), sp.id ? getRecipe(sp.id) : null, sp.id ? listRecipeMedia(sp.id) : []]);
+  const back = editing ? `/coach/recipes?c=${cat}&id=${editing.id}` : "";
   const showForm = !!editing || sp.new === "1";
 
   return (
@@ -55,6 +58,33 @@ export default async function CoachRecipes({ searchParams }: { searchParams: Pro
                 <div className="flex gap-3 flex-wrap"><button className="btn btn-balance">Guardar receta</button><Link href={`/coach/recipes?c=${cat}`} className="btn btn-ghost">Cancelar</Link></div>
                 <p className="fine">Al guardar, la app traduce la receta a inglés y portugués (tarda unos segundos). Si solo cambias el orden o si es gratis, no vuelve a traducir.</p>
               </form>
+            )}
+            {editing && (
+              <div className="card p-6 mt-4">
+                <h2 className="text-xl mb-1">Fotos y videos de la preparación</h2>
+                <p className="muted text-sm mb-4">Hasta 4 archivos por receta (foto o video, opcional). Las miembros los ven arriba de la receta. Graba vertical, con luz de ventana.</p>
+                <div className="grid sm:grid-cols-2 gap-3">
+                  {RECIPE_SLOTS.map((slot) => {
+                    const k = recipeMediaKey(editing.id, slot);
+                    const m = media.find((x) => x.key === k);
+                    const src = mediaUrl(k);
+                    return (
+                      <div key={slot} className="row p-3 space-y-2">
+                        <div className="faint text-xs">Archivo {slot}{m ? ` · ${m.content_type.startsWith("video/") ? "video" : "foto"} · ${((m.size ?? 0) / 1_000_000).toFixed(1)} MB` : " · vacío"}</div>
+                        {m && (m.content_type.startsWith("video/")
+                          ? <video src={src} controls preload="metadata" className="w-full rounded-[8px] bg-black" style={{ maxHeight: 220 }} />
+                          : <img src={src} alt="" className="w-full rounded-[8px] object-cover" style={{ maxHeight: 220 }} />)}
+                        <form action={uploadContent} className="flex items-center gap-2 flex-wrap">
+                          <input type="hidden" name="key" value={k} /><input type="hidden" name="back" value={back} />
+                          <input type="file" name="file" accept="image/*,video/*" required className="text-xs muted max-w-[190px]" />
+                          <button className="btn btn-balance btn-sm">{m ? "Reemplazar" : "Subir"}</button>
+                        </form>
+                        {m && <form action={removeContent}><input type="hidden" name="key" value={k} /><input type="hidden" name="back" value={back} /><button className="faint text-xs hover:text-[#FF8A8A]">Quitar</button></form>}
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
             )}
             {editing && <form action={deleteRecipe} className="mt-4 text-right"><input type="hidden" name="id" value={editing.id} /><button className="faint text-xs hover:text-[#FF8A8A]">Eliminar esta receta</button></form>}
           </main>

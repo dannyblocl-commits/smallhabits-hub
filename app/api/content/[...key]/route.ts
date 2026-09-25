@@ -16,6 +16,7 @@ export async function GET(req: NextRequest, ctx: { params: Promise<{ key: string
   const r = await db().query("select pathname, content_type, size from content_media where key=$1", [`${kind}:${id}`]);
   const row = r.rows[0];
   if (!row) {
+    if (kind === "recipe") return new NextResponse(null, { status: 404 });
     if (kind !== "video") return NextResponse.redirect(new URL(`/audio/${id}.mp3`, req.url));
     if (existsSync(join(process.cwd(), "public", "videos", `${id}.mp4`))) return NextResponse.redirect(new URL(`/videos/${id}.mp4`, req.url));
     // Sin video propio ni archivo por defecto: clip AI de ambiente según el tipo (los mismos que ve el miembro).
