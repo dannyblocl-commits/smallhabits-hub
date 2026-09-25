@@ -9,13 +9,15 @@ import videosJson from "@/data/reto-videos.json";
 import type { Lang } from "@/lib/i18n";
 
 type MwVideo = { url: string; poster?: string | null };
-type MwExercise = { name: string; steps: Partial<Record<Lang, string[]>>; videos: Record<string, Record<string, MwVideo>> };
+type MwCue = { breathing: string; mistake: string; feel: string };
+type MwExercise = { name: string; steps: Partial<Record<Lang, string[]>>; cues?: Partial<Record<Lang, MwCue>>; videos: Record<string, Record<string, MwVideo>> };
 const VIDEOS = videosJson as Record<string, MwExercise>;
 
-function ExerciseCard({ e, gender, lang, token, t }: { e: RetoExercise; gender: "male" | "female"; lang: Lang; token: string | null; t: { how: string; gym: string; home: string; side: string } }) {
+function ExerciseCard({ e, gender, lang, token, t }: { e: RetoExercise; gender: "male" | "female"; lang: Lang; token: string | null; t: { how: string; gym: string; home: string; side: string; breathing: string; mistake: string; feel: string } }) {
   const ids = e.mw ? (e.mw[0] === e.mw[1] ? [e.mw[0]] : e.mw) : [];
   const variants = ids.map((id, i) => ({ id, label: ids.length > 1 ? (i === 0 ? t.gym : t.home) : null, x: VIDEOS[String(id)] })).filter((v) => v.x);
   const steps = variants[0]?.x.steps[lang] ?? variants[0]?.x.steps.en ?? [];
+  const cue = variants[0]?.x.cues?.[lang] ?? variants[0]?.x.cues?.en;
   return (
     <li className="py-3" style={{ borderTop: "1px solid var(--line)" }}>
       <div className="flex justify-between gap-3"><span className="font-semibold">{e.name}</span><span className="num faint whitespace-nowrap">{e.sets} × {e.reps}</span></div>
@@ -35,6 +37,13 @@ function ExerciseCard({ e, gender, lang, token, t }: { e: RetoExercise; gender: 
               </div>
             );
           })}
+        </div>
+      )}
+      {cue && (
+        <div className="mt-2 text-sm space-y-1">
+          <p><span className="font-semibold" style={{ color: "var(--sage)" }}>{t.breathing}:</span> <span className="muted">{cue.breathing}</span></p>
+          <p><span className="font-semibold" style={{ color: "var(--fucsia)" }}>{t.mistake}:</span> <span className="muted">{cue.mistake}</span></p>
+          <p><span className="font-semibold" style={{ color: "#BA8E54" }}>{t.feel}:</span> <span className="muted">{cue.feel}</span></p>
         </div>
       )}
       {steps.length > 0 && (

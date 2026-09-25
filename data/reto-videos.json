@@ -43,6 +43,23 @@
      "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Dumbbells-dumbbell-curl-side.jpg"
     }
    }
+  },
+  "cues": {
+   "es": {
+    "breathing": "Exhala al subir el dumbbell, inhala al bajarlo con control",
+    "mistake": "Balancear el cuerpo para impulsar el peso; mantén el torso fijo y solo mueve el brazo",
+    "feel": "Siente el bíceps trabajando en cada repetición"
+   },
+   "en": {
+    "breathing": "Exhale as you curl the dumbbell up, inhale as you lower it back down.",
+    "mistake": "Swinging the body for momentum — keep elbows pinned to your sides and curl slowly.",
+    "feel": "Feel it in your biceps, not your shoulders or back."
+   },
+   "pt": {
+    "breathing": "Expire ao levantar o haltere, inspire ao descer com controle.",
+    "mistake": "Balançar o corpo para impulsionar o peso; fixe o cotovelo e mova só o antebraço.",
+    "feel": "Sinta o bíceps trabalhando na frente do braço."
+   }
   }
  },
  "3": {
@@ -88,6 +105,23 @@
      "url": "https://api.musclewiki.com/stream/videos/branded/female-Dumbbells-dumbbell-hammer-curl-side.mp4",
      "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Dumbbells-dumbbell-hammer-curl-side.jpg"
     }
+   }
+  },
+  "cues": {
+   "es": {
+    "breathing": "Exhala al levantar hacia el pecho, inhala al bajar",
+    "mistake": "Usar impulso con el hombro; mantén el codo pegado al cuerpo",
+    "feel": "Bíceps y antebrazo son los protagonistas"
+   },
+   "en": {
+    "breathing": "Exhale lifting the dumbbells up, inhale lowering them down.",
+    "mistake": "Letting elbows drift forward — keep them locked at your sides throughout.",
+    "feel": "Feel the work in your biceps and forearms."
+   },
+   "pt": {
+    "breathing": "Expire ao subir o haltere, inspire ao descer.",
+    "mistake": "Girar o pulso durante o movimento; mantenha a pegada neutra o tempo todo.",
+    "feel": "Sinta o bíceps e o antebraço contraindo."
    }
   }
  },
@@ -137,6 +171,23 @@
      "url": "https://api.musclewiki.com/stream/videos/branded/female-Barbell-barbell-squat-side.mp4",
      "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Barbell-barbell-squat-side.jpg"
     }
+   }
+  },
+  "cues": {
+   "es": {
+    "breathing": "Inhala al bajar, exhala con fuerza al subir",
+    "mistake": "Redondear la espalda baja; mantén el pecho arriba y el core apretado",
+    "feel": "Cuádriceps, glúteos y core trabajando juntos"
+   },
+   "en": {
+    "breathing": "Inhale and brace before descending, exhale as you drive up out of the hole.",
+    "mistake": "Knees caving in or chest collapsing forward — keep chest up and knees tracking toes.",
+    "feel": "Feel your quads, glutes, and core driving the movement."
+   },
+   "pt": {
+    "breathing": "Inspire antes de descer, segure o ar na descida e expire ao subir.",
+    "mistake": "Deixar o joelho cair para dentro; empurre-o na direção dos dedos dos pés.",
+    "feel": "Sinta quadríceps, glúteos e core estabilizando o tronco."
    }
   }
  },
@@ -188,6 +239,23 @@
      "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Machine-machine-leg-press-side.jpg"
     }
    }
+  },
+  "cues": {
+   "es": {
+    "breathing": "Inhala al bajar el peso, exhala al empujar",
+    "mistake": "Despegar la espalda baja del respaldo; controla el rango y no bajes de más",
+    "feel": "Cuádriceps y glúteos empujando la plataforma"
+   },
+   "en": {
+    "breathing": "Inhale as you lower the platform, exhale as you press it away.",
+    "mistake": "Letting your lower back round off the pad — only go as low as your back stays flat.",
+    "feel": "Feel your quads and glutes pushing the weight."
+   },
+   "pt": {
+    "breathing": "Inspire ao descer o peso, expire ao empurrar a plataforma.",
+    "mistake": "Descolar o quadril do banco; controle a amplitude para proteger a lombar.",
+    "feel": "Sinta quadríceps e glúteos empurrando o peso."
+   }
   }
  },
  "10": {
@@ -230,6 +298,23 @@
      "url": "https://api.musclewiki.com/stream/videos/branded/female-machine-leg-extension-side.mp4",
      "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-machine-leg-extension-side.jpg"
     }
+   }
+  },
+  "cues": {
+   "es": {
+    "breathing": "Exhala al extender la pierna, inhala al bajar",
+    "mistake": "Usar impulso o ir muy rápido; controla el movimiento en ambas direcciones",
+    "feel": "Cuádriceps al frente del muslo"
+   },
+   "en": {
+    "breathing": "Exhale as you extend your knees, inhale as you lower back down.",
+    "mistake": "Using momentum to swing the weight up — move slow and controlled.",
+    "feel": "Feel it isolated in your quads."
+   },
+   "pt": {
+    "breathing": "Expire ao estender as pernas, inspire ao voltar.",
+    "mistake": "Usar impulso e jogar o peso; faça o movimento lento e controlado.",
+    "feel": "Sinta o quadríceps trabalhando na frente da coxa."
    }
   }
  },
@@ -278,6 +363,23 @@
      "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-dumbbell-goblet-squat-side.jpg"
     }
    }
+  },
+  "cues": {
+   "es": {
+    "breathing": "Inhala al bajar, exhala al subir",
+    "mistake": "Dejar caer las rodillas hacia adentro; empújalas hacia afuera con los codos",
+    "feel": "Cuádriceps y glúteos, pecho firme sosteniendo el peso"
+   },
+   "en": {
+    "breathing": "Inhale as you sink into the squat, exhale as you stand back up.",
+    "mistake": "Letting elbows drift outside the knees — keep them tracking inside your knee line.",
+    "feel": "Feel your quads and glutes doing the work, core staying tight."
+   },
+   "pt": {
+    "breathing": "Inspire ao descer no agachamento, expire ao subir.",
+    "mistake": "Deixar o peso puxar o tronco para frente; mantenha o peito erguido.",
+    "feel": "Sinta quadríceps, glúteos e core firmes."
+   }
   }
  },
  "16": {
@@ -324,6 +426,23 @@
      "url": "https://api.musclewiki.com/stream/videos/branded/female-Dumbbells-dumbbell-seated-overhead-tricep-extension-side.mp4",
      "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Dumbbells-dumbbell-seated-overhead-tricep-extension-side.jpg"
     }
+   }
+  },
+  "cues": {
+   "es": {
+    "breathing": "Inhala al bajar detrás de la cabeza, exhala al extender",
+    "mistake": "Abrir los codos hacia los lados; mantenlos apuntando al frente",
+    "feel": "Tríceps trabajando en la parte trasera del brazo"
+   },
+   "en": {
+    "breathing": "Inhale as you lower the weight behind your head, exhale as you press it back up.",
+    "mistake": "Flaring elbows out wide — keep them pointed forward and stationary.",
+    "feel": "Feel the stretch and contraction in your triceps."
+   },
+   "pt": {
+    "breathing": "Inspire ao descer o peso atrás da cabeça, expire ao estender os braços.",
+    "mistake": "Abrir os cotovelos; mantenha-os apontando para frente e fixos.",
+    "feel": "Sinta o tríceps alongando e contraindo atrás do braço."
    }
   }
  },
@@ -374,6 +493,23 @@
      "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Bodyweight-bench-dips-side.jpg"
     }
    }
+  },
+  "cues": {
+   "es": {
+    "breathing": "Inhala al bajar el cuerpo, exhala al empujar hacia arriba",
+    "mistake": "Dejar que los hombros se hundan hacia adelante; mantenlos alejados de las orejas",
+    "feel": "Tríceps y hombros empujando tu peso"
+   },
+   "en": {
+    "breathing": "Inhale as you lower your body, exhale as you press back up.",
+    "mistake": "Letting shoulders shrug up toward your ears — keep them pulled down and back.",
+    "feel": "Feel your triceps and chest working, not your wrists."
+   },
+   "pt": {
+    "breathing": "Inspire ao descer o corpo, expire ao empurrar para cima.",
+    "mistake": "Descer rápido demais e sobrecarregar os ombros; controle a descida.",
+    "feel": "Sinta o tríceps e peito trabalhando no fundo do movimento."
+   }
   }
  },
  "20": {
@@ -421,6 +557,23 @@
      "url": "https://api.musclewiki.com/stream/videos/branded/female-Dumbbells-dumbbell-lateral-raise-side.mp4",
      "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Dumbbells-dumbbell-lateral-raise-side.jpg"
     }
+   }
+  },
+  "cues": {
+   "es": {
+    "breathing": "Exhala al levantar los brazos, inhala al bajar",
+    "mistake": "Usar impulso con la espalda; sube con control usando solo el hombro",
+    "feel": "Hombros (deltoides laterales) elevando el peso"
+   },
+   "en": {
+    "breathing": "Exhale as you raise your arms, inhale as you lower them.",
+    "mistake": "Shrugging the shoulders to lift the weight — raise from the shoulder joint, not the traps.",
+    "feel": "Feel it in your side delts, not your neck or traps."
+   },
+   "pt": {
+    "breathing": "Expire ao levantar os braços, inspire ao descer.",
+    "mistake": "Usar impulso e elevar demais os ombros; suba só até a linha dos ombros.",
+    "feel": "Sinta o ombro lateral (deltoide) trabalhando."
    }
   }
  },
@@ -471,6 +624,23 @@
      "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-machine-pulldown-side.jpg"
     }
    }
+  },
+  "cues": {
+   "es": {
+    "breathing": "Exhala al jalar la barra hacia abajo, inhala al soltar",
+    "mistake": "Jalar con los brazos en vez de la espalda; lleva los codos hacia abajo y atrás",
+    "feel": "Dorsales de la espalda haciendo el trabajo principal"
+   },
+   "en": {
+    "breathing": "Exhale as you pull the bar down, inhale as you let it rise back up.",
+    "mistake": "Leaning back too far and using body momentum — control it with your back muscles.",
+    "feel": "Feel your lats squeezing, not just your arms pulling."
+   },
+   "pt": {
+    "breathing": "Expire ao puxar a barra para baixo, inspire ao retornar.",
+    "mistake": "Puxar com os braços em vez das costas; foque em juntar as escápulas.",
+    "feel": "Sinta as costas (dorsais) puxando o peso."
+   }
   }
  },
  "26": {
@@ -517,6 +687,23 @@
      "url": "https://api.musclewiki.com/stream/videos/branded/female-Dumbbells-dumbbell-row-bilateral-side.mp4",
      "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Dumbbells-dumbbell-row-bilateral-side.jpg"
     }
+   }
+  },
+  "cues": {
+   "es": {
+    "breathing": "Exhala al jalar el codo hacia atrás, inhala al bajar",
+    "mistake": "Redondear la espalda; mantenla plana durante todo el movimiento",
+    "feel": "Espalda media y dorsales jalando el peso"
+   },
+   "en": {
+    "breathing": "Exhale as you pull the dumbbells up, inhale as you lower them down.",
+    "mistake": "Rounding the lower back — keep your spine flat and hinge from the hips.",
+    "feel": "Feel your back and lats doing the pulling, not your arms."
+   },
+   "pt": {
+    "breathing": "Expire ao puxar o cotovelo para trás, inspire ao descer.",
+    "mistake": "Girar o tronco durante a puxada; mantenha o corpo estável e a coluna neutra.",
+    "feel": "Sinta as costas puxando, não só o braço."
    }
   }
  },
@@ -567,6 +754,23 @@
      "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Barbell-barbell-hip-thrust-side.jpg"
     }
    }
+  },
+  "cues": {
+   "es": {
+    "breathing": "Exhala al empujar las caderas arriba, inhala al bajar",
+    "mistake": "Hiperextender la espalda baja arriba; aprieta glúteos, no arquees",
+    "feel": "Glúteos apretando fuerte en la parte alta"
+   },
+   "en": {
+    "breathing": "Exhale as you drive your hips up, inhale as you lower back down.",
+    "mistake": "Overextending the lower back at the top — squeeze glutes instead of arching.",
+    "feel": "Feel your glutes powering the movement, not your lower back."
+   },
+   "pt": {
+    "breathing": "Inspire antes de subir o quadril, expire no topo do movimento.",
+    "mistake": "Hiperestender a lombar no topo; contraia o glúteo em vez de arquear as costas.",
+    "feel": "Sinta o glúteo apertando forte no topo."
+   }
   }
  },
  "35": {
@@ -612,6 +816,23 @@
      "url": "https://api.musclewiki.com/stream/videos/branded/female-bodyweight-crunch-side.mp4",
      "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-bodyweight-crunch-side.jpg"
     }
+   }
+  },
+  "cues": {
+   "es": {
+    "breathing": "Exhala al subir hombros y cabeza, inhala al bajar",
+    "mistake": "Jalar el cuello con las manos; deja que el abdomen haga el trabajo",
+    "feel": "Abdomen contrayéndose, no el cuello"
+   },
+   "en": {
+    "breathing": "Exhale as you curl up, inhale as you lower back down.",
+    "mistake": "Pulling on your neck with your hands — let your abs do the lifting.",
+    "feel": "Feel your upper abs contracting, not your neck straining."
+   },
+   "pt": {
+    "breathing": "Expire ao subir o tronco, inspire ao descer.",
+    "mistake": "Puxar o pescoço com as mãos; deixe o abdômen fazer o trabalho.",
+    "feel": "Sinta o abdômen contraindo na parte superior."
    }
   }
  },
@@ -663,6 +884,23 @@
      "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Barbell-barbell-deadlift-side.jpg"
     }
    }
+  },
+  "cues": {
+   "es": {
+    "breathing": "Inhala antes de levantar, exhala al llegar arriba",
+    "mistake": "Redondear la espalda al levantar; mantenla recta y pecho arriba",
+    "feel": "Piernas, glúteos y espalda baja trabajando juntos"
+   },
+   "en": {
+    "breathing": "Inhale and brace before pulling, exhale as you stand up with the bar.",
+    "mistake": "Rounding the back at the start — keep your chest up and spine neutral.",
+    "feel": "Feel your hamstrings, glutes, and back working together."
+   },
+   "pt": {
+    "breathing": "Inspire antes de puxar, segure o ar na subida e expire no topo.",
+    "mistake": "Arredondar as costas; mantenha a coluna neutra o tempo todo.",
+    "feel": "Sinta pernas, glúteos e costas trabalhando juntos."
+   }
   }
  },
  "42": {
@@ -709,6 +947,23 @@
      "url": "https://api.musclewiki.com/stream/videos/branded/female-Bodyweight-bulgarian-split-squat-side.mp4",
      "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Bodyweight-bulgarian-split-squat-side.jpg"
     }
+   }
+  },
+  "cues": {
+   "es": {
+    "breathing": "Inhala al bajar, exhala al subir",
+    "mistake": "Inclinar el torso muy adelante; mantente más vertical",
+    "feel": "Cuádriceps y glúteo de la pierna de adelante"
+   },
+   "en": {
+    "breathing": "Inhale as you lower down, exhale as you push back up.",
+    "mistake": "Letting the front knee shoot past the toes — keep your weight balanced through the heel.",
+    "feel": "Feel your front quad and glute doing most of the work."
+   },
+   "pt": {
+    "breathing": "Inspire ao descer, expire ao subir.",
+    "mistake": "Deixar o joelho da frente passar muito à frente do pé; mantenha o peso no calcanhar.",
+    "feel": "Sinta quadríceps e glúteo da perna da frente."
    }
   }
  },
@@ -758,6 +1013,23 @@
      "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-dumbbell-seated-overhead-press-side.jpg"
     }
    }
+  },
+  "cues": {
+   "es": {
+    "breathing": "Exhala al empujar arriba, inhala al bajar",
+    "mistake": "Arquear la espalda baja excesivamente; mantén el core firme",
+    "feel": "Hombros empujando el peso hacia el techo"
+   },
+   "en": {
+    "breathing": "Exhale as you press up, inhale as you lower back down.",
+    "mistake": "Arching the lower back excessively — keep your core braced throughout.",
+    "feel": "Feel your shoulders pressing the weight, core staying tight."
+   },
+   "pt": {
+    "breathing": "Expire ao empurrar os halteres para cima, inspire ao descer.",
+    "mistake": "Arquear demais a lombar; mantenha o core firme e as costas no banco.",
+    "feel": "Sinta o ombro empurrando o peso para cima."
+   }
   }
  },
  "46": {
@@ -805,6 +1077,23 @@
      "url": "https://api.musclewiki.com/stream/videos/branded/female-Dumbbells-dumbbell-front-raise-side.mp4",
      "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Dumbbells-dumbbell-front-raise-side.jpg"
     }
+   }
+  },
+  "cues": {
+   "es": {
+    "breathing": "Exhala al subir los brazos, inhala al bajar",
+    "mistake": "Usar impulso con la cadera; sube con control sin balancear",
+    "feel": "Parte frontal del hombro haciendo el esfuerzo"
+   },
+   "en": {
+    "breathing": "Exhale as you raise the dumbbells, inhale as you lower them.",
+    "mistake": "Using momentum to swing the weight up — move slow and controlled.",
+    "feel": "Feel it in the front of your shoulders."
+   },
+   "pt": {
+    "breathing": "Expire ao levantar os braços, inspire ao descer.",
+    "mistake": "Usar impulso do corpo; levante só com o ombro, sem balançar.",
+    "feel": "Sinta a parte da frente do ombro trabalhando."
    }
   }
  },
@@ -855,6 +1144,23 @@
      "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Bodyweight-single-leg-glute-bridge-side.jpg"
     }
    }
+  },
+  "cues": {
+   "es": {
+    "breathing": "Exhala al subir la cadera, inhala al bajar",
+    "mistake": "Dejar caer la cadera hacia un lado; mantenla nivelada",
+    "feel": "Glúteo de la pierna de apoyo apretando fuerte"
+   },
+   "en": {
+    "breathing": "Exhale as you drive your hips up, inhale as you lower down.",
+    "mistake": "Letting hips tilt to one side — keep them square and level throughout.",
+    "feel": "Feel your working glute doing all the lifting."
+   },
+   "pt": {
+    "breathing": "Expire ao subir o quadril, inspire ao descer.",
+    "mistake": "Deixar o quadril cair para o lado; mantenha-o alinhado e estável.",
+    "feel": "Sinta o glúteo da perna de apoio contraindo forte."
+   }
   }
  },
  "189": {
@@ -903,6 +1209,23 @@
      "url": "https://api.musclewiki.com/stream/videos/branded/female-bodyweight-side-lunge-side.mp4",
      "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-bodyweight-side-lunge-side.jpg"
     }
+   }
+  },
+  "cues": {
+   "es": {
+    "breathing": "Inhala al bajar hacia el lado, exhala al volver al centro",
+    "mistake": "Dejar que la rodilla se vaya hacia adentro; empújala en línea con el pie",
+    "feel": "Glúteos y cuádriceps de la pierna que trabaja"
+   },
+   "en": {
+    "breathing": "Inhale as you step and lower, exhale as you push back to center.",
+    "mistake": "Letting the knee cave inward — keep it tracking over your foot.",
+    "feel": "Feel your inner thighs and glutes engaging."
+   },
+   "pt": {
+    "breathing": "Inspire ao descer para o lado, expire ao voltar ao centro.",
+    "mistake": "Deixar o joelho ultrapassar demais a linha do pé; empurre o quadril para trás.",
+    "feel": "Sinta a perna de trabalho, glúteo e interno da coxa."
    }
   }
  },
@@ -954,6 +1277,23 @@
      "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Bodyweight-forward-lunges-side.jpg"
     }
    }
+  },
+  "cues": {
+   "es": {
+    "breathing": "Inhala al bajar, exhala al subir",
+    "mistake": "Dejar que la rodilla de adelante pase la punta del pie; mantenla alineada",
+    "feel": "Cuádriceps y glúteo de la pierna delantera"
+   },
+   "en": {
+    "breathing": "Inhale as you step and lower, exhale as you push back up.",
+    "mistake": "Letting the front knee travel past the toes — step far enough forward to stay stacked.",
+    "feel": "Feel your front leg's quad and glute working."
+   },
+   "pt": {
+    "breathing": "Inspire ao descer, expire ao subir.",
+    "mistake": "Deixar o joelho da frente passar do pé; desça na vertical.",
+    "feel": "Sinta quadríceps e glúteo da perna da frente."
+   }
   }
  },
  "191": {
@@ -1000,6 +1340,23 @@
      "url": "https://api.musclewiki.com/stream/videos/branded/female-Bodyweight-jump-squats-side.mp4",
      "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Bodyweight-jump-squats-side.jpg"
     }
+   }
+  },
+  "cues": {
+   "es": {
+    "breathing": "Inhala al bajar, exhala fuerte al saltar",
+    "mistake": "Aterrizar con las piernas rígidas; amortigua flexionando las rodillas",
+    "feel": "Piernas explosivas, glúteos y cuádriceps"
+   },
+   "en": {
+    "breathing": "Inhale as you squat down, exhale explosively as you jump.",
+    "mistake": "Landing stiff-legged — land softly by bending your knees immediately.",
+    "feel": "Feel your quads and glutes powering the jump."
+   },
+   "pt": {
+    "breathing": "Inspire antes do agachamento, expire explosivamente no salto.",
+    "mistake": "Aterrissar com joelhos travados; amorteça flexionando os joelhos.",
+    "feel": "Sinta pernas e glúteos gerando potência."
    }
   }
  },
@@ -1051,6 +1408,23 @@
      "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Bodyweight-bodyweight-squat-side.jpg"
     }
    }
+  },
+  "cues": {
+   "es": {
+    "breathing": "Inhala al bajar, exhala al subir",
+    "mistake": "Levantar los talones del piso; mantén el peso repartido en todo el pie",
+    "feel": "Cuádriceps y glúteos trabajando al bajar y subir"
+   },
+   "en": {
+    "breathing": "Inhale as you lower down, exhale as you stand back up.",
+    "mistake": "Letting heels lift off the ground — keep weight balanced through your whole foot.",
+    "feel": "Feel your quads and glutes controlling the squat."
+   },
+   "pt": {
+    "breathing": "Inspire ao descer, expire ao subir.",
+    "mistake": "Levantar os calcanhares do chão; mantenha o peso distribuído no pé todo.",
+    "feel": "Sinta quadríceps e glúteos trabalhando."
+   }
   }
  },
  "204": {
@@ -1096,6 +1470,23 @@
      "url": "https://api.musclewiki.com/stream/videos/branded/female-Bodyweight-forearm-plank-side.mp4",
      "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Bodyweight-forearm-plank-side.jpg"
     }
+   }
+  },
+  "cues": {
+   "es": {
+    "breathing": "Respira de forma constante y controlada, sin aguantar el aire",
+    "mistake": "Dejar caer la cadera; mantén el cuerpo en línea recta",
+    "feel": "Core apretado sosteniendo todo el cuerpo"
+   },
+   "en": {
+    "breathing": "Breathe steadily throughout, don't hold your breath.",
+    "mistake": "Letting hips sag or pike up — keep a straight line from head to heels.",
+    "feel": "Feel your core bracing hard, like you're about to be punched."
+   },
+   "pt": {
+    "breathing": "Respire de forma constante e controlada, sem prender o ar.",
+    "mistake": "Deixar o quadril cair ou subir demais; mantenha o corpo em linha reta.",
+    "feel": "Sinta o abdômen e core segurando a posição."
    }
   }
  },
@@ -1143,6 +1534,23 @@
      "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Band-band-glute-kickback-side.jpg"
     }
    }
+  },
+  "cues": {
+   "es": {
+    "breathing": "Exhala al extender la pierna atrás, inhala al regresar",
+    "mistake": "Arquear la espalda baja; mantén el core firme y el movimiento aislado",
+    "feel": "Glúteo de la pierna que trabaja"
+   },
+   "en": {
+    "breathing": "Exhale as you kick back, inhale as you return to start.",
+    "mistake": "Arching the lower back to gain range — keep your core braced and move from the hip.",
+    "feel": "Feel your glute squeezing at the top of the kick."
+   },
+   "pt": {
+    "breathing": "Expire ao estender a perna para trás, inspire ao voltar.",
+    "mistake": "Arquear a lombar para ganhar amplitude; mova só o quadril e joelho.",
+    "feel": "Sinta o glúteo contraindo na extensão."
+   }
   }
  },
  "266": {
@@ -1186,6 +1594,23 @@
      "url": "https://api.musclewiki.com/stream/videos/branded/female-Band-band-leg-press-side.mp4",
      "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Band-band-leg-press-side.jpg"
     }
+   }
+  },
+  "cues": {
+   "es": {
+    "breathing": "Exhala al extender las piernas, inhala al flexionar",
+    "mistake": "Bloquear las rodillas al extender; mantén un poco de flexión",
+    "feel": "Cuádriceps y glúteos empujando la banda"
+   },
+   "en": {
+    "breathing": "Exhale as you press through, inhale as you return.",
+    "mistake": "Locking out the knees hard — keep a slight bend to protect the joint.",
+    "feel": "Feel your quads and glutes pushing the resistance."
+   },
+   "pt": {
+    "breathing": "Expire ao estender as pernas, inspire ao dobrar.",
+    "mistake": "Travar os joelhos no final; controle a extensão sem forçar a articulação.",
+    "feel": "Sinta quadríceps e glúteos empurrando."
    }
   }
  },
@@ -1234,6 +1659,23 @@
      "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Dumbbells-dumbbell-row-unilateral-side.jpg"
     }
    }
+  },
+  "cues": {
+   "es": {
+    "breathing": "Exhala al jalar el codo atrás, inhala al bajar",
+    "mistake": "Rotar el torso al jalar; mantén el cuerpo estable y fijo",
+    "feel": "Espalda y dorsal del lado que trabaja"
+   },
+   "en": {
+    "breathing": "Exhale as you pull your elbow back, inhale as you lower the weight.",
+    "mistake": "Rotating the torso to cheat the weight up — keep your torso still and square.",
+    "feel": "Feel your lat and back doing the pulling."
+   },
+   "pt": {
+    "breathing": "Expire ao puxar o cotovelo para trás, inspire ao descer.",
+    "mistake": "Girar o tronco na puxada; mantenha o corpo estável e firme.",
+    "feel": "Sinta as costas puxando o peso, não o braço."
+   }
   }
  },
  "286": {
@@ -1279,6 +1721,23 @@
      "url": "https://api.musclewiki.com/stream/videos/branded/female-Dumbbells-dumbbell-hip-thrust-side.mp4",
      "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Dumbbells-dumbbell-hip-thrust-side.jpg"
     }
+   }
+  },
+  "cues": {
+   "es": {
+    "breathing": "Exhala al empujar la cadera arriba, inhala al bajar",
+    "mistake": "No llegar a la extensión completa de cadera; busca el rango máximo",
+    "feel": "Glúteos contrayendo fuerte arriba"
+   },
+   "en": {
+    "breathing": "Exhale as you push your hips up, inhale as you lower down.",
+    "mistake": "Letting heels lift off the ground — keep them planted and drive through them.",
+    "feel": "Feel your glutes squeezing hard at the top."
+   },
+   "pt": {
+    "breathing": "Expire ao subir o quadril, inspire ao descer.",
+    "mistake": "Deixar os calcanhares saírem do chão; mantenha o pé firme e plantado.",
+    "feel": "Sinta o glúteo contraindo forte no topo."
    }
   }
  },
@@ -1329,6 +1788,23 @@
      "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Dumbbells-dumbbell-romanian-deadlift-side.jpg"
     }
    }
+  },
+  "cues": {
+   "es": {
+    "breathing": "Inhala al bajar empujando la cadera atrás, exhala al subir",
+    "mistake": "Doblar mucho las rodillas convirtiéndolo en sentadilla; mantenlas casi rectas",
+    "feel": "Isquiotibiales estirándose y glúteos al subir"
+   },
+   "en": {
+    "breathing": "Inhale as you push your hips back, exhale as you return to standing.",
+    "mistake": "Rounding your back or bending the knees too much — hinge with a flat back.",
+    "feel": "Feel a stretch and pull in your hamstrings."
+   },
+   "pt": {
+    "breathing": "Inspire ao empurrar o quadril para trás, expire ao voltar em pé.",
+    "mistake": "Arredondar as costas na descida; mantenha a coluna neutra.",
+    "feel": "Sinta o alongamento e contração do posterior de coxa."
+   }
   }
  },
  "313": {
@@ -1376,6 +1852,23 @@
      "url": "https://api.musclewiki.com/stream/videos/branded/female-Barbell-barbell-romanian-deadlift-side.mp4",
      "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Barbell-barbell-romanian-deadlift-side.jpg"
     }
+   }
+  },
+  "cues": {
+   "es": {
+    "breathing": "Inhala al bajar, exhala al volver a pararte",
+    "mistake": "Redondear la espalda baja; mantenla recta todo el tiempo",
+    "feel": "Isquiotibiales y glúteos, no la espalda baja"
+   },
+   "en": {
+    "breathing": "Inhale as you push hips back, exhale as you return to standing.",
+    "mistake": "Squatting the weight down instead of hinging — push hips back, not knees forward.",
+    "feel": "Feel the stretch and work in your hamstrings and glutes."
+   },
+   "pt": {
+    "breathing": "Inspire ao empurrar o quadril para trás, expire ao voltar em pé.",
+    "mistake": "Dobrar demais os joelhos, virando agachamento; mantenha-os quase estendidos.",
+    "feel": "Sinta o posterior de coxa alongando e depois contraindo."
    }
   }
  },
@@ -1427,6 +1920,23 @@
      "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Dumbbells-dumbbell-bulgarian-split-squat-side.jpg"
     }
    }
+  },
+  "cues": {
+   "es": {
+    "breathing": "Inhala al bajar, exhala al subir",
+    "mistake": "Perder el equilibrio por ir muy rápido; controla el descenso",
+    "feel": "Cuádriceps y glúteo de la pierna delantera"
+   },
+   "en": {
+    "breathing": "Inhale as you lower down, exhale as you push back up.",
+    "mistake": "Letting the front knee cave in or shoot forward — keep it stacked over your ankle.",
+    "feel": "Feel your front leg's quad and glute working hardest."
+   },
+   "pt": {
+    "breathing": "Inspire ao descer, expire ao subir.",
+    "mistake": "Deixar o joelho de trás bater com força no chão; desça com controle.",
+    "feel": "Sinta quadríceps e glúteo da perna da frente."
+   }
   }
  },
  "373": {
@@ -1473,6 +1983,23 @@
      "url": "https://api.musclewiki.com/stream/videos/branded/female-Bodyweight-bodyweight-reverse-lunge-side.mp4",
      "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Bodyweight-bodyweight-reverse-lunge-side.jpg"
     }
+   }
+  },
+  "cues": {
+   "es": {
+    "breathing": "Inhala al dar el paso atrás y bajar, exhala al subir",
+    "mistake": "Inclinar el torso hacia adelante; mantente erguido",
+    "feel": "Cuádriceps y glúteo de la pierna delantera"
+   },
+   "en": {
+    "breathing": "Inhale as you step back and lower, exhale as you return to standing.",
+    "mistake": "Leaning too far forward — keep your torso upright throughout the movement.",
+    "feel": "Feel your front leg's quad and glute doing the work."
+   },
+   "pt": {
+    "breathing": "Inspire ao dar o passo para trás e descer, expire ao voltar.",
+    "mistake": "Perder o equilíbrio inclinando o tronco à frente; mantenha o peito erguido.",
+    "feel": "Sinta quadríceps e glúteo da perna da frente."
    }
   }
  },
@@ -1522,6 +2049,23 @@
      "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Dumbbells-dumbbell-laying-reverse-fly-side.jpg"
     }
    }
+  },
+  "cues": {
+   "es": {
+    "breathing": "Exhala al levantar los brazos, inhala al bajar",
+    "mistake": "Usar impulso levantando muy rápido; sube lento y controlado",
+    "feel": "Parte trasera del hombro y espalda alta"
+   },
+   "en": {
+    "breathing": "Exhale as you raise your arms, inhale as you lower them.",
+    "mistake": "Using momentum or too heavy a weight — keep the motion slow and controlled.",
+    "feel": "Feel it in your rear shoulders and upper back."
+   },
+   "pt": {
+    "breathing": "Expire ao levantar os braços, inspire ao descer.",
+    "mistake": "Usar impulso ou elevar os ombros; mova só os braços com controle.",
+    "feel": "Sinta a parte de trás do ombro e as costas superiores."
+   }
   }
  },
  "423": {
@@ -1570,6 +2114,23 @@
      "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Dumbbells-dumbbell-arnold-press-side.jpg"
     }
    }
+  },
+  "cues": {
+   "es": {
+    "breathing": "Exhala al empujar arriba rotando, inhala al bajar",
+    "mistake": "Ir muy rápido perdiendo la rotación; hazlo lento y controlado",
+    "feel": "Hombros trabajando en todos los ángulos"
+   },
+   "en": {
+    "breathing": "Exhale as you press up and rotate, inhale as you lower and rotate back.",
+    "mistake": "Rushing the rotation — keep it smooth and controlled through the whole range.",
+    "feel": "Feel your shoulders working through the full rotation."
+   },
+   "pt": {
+    "breathing": "Expire ao empurrar para cima, inspire ao descer e girar os punhos.",
+    "mistake": "Fazer a rotação rápido demais; controle o giro do punho durante o movimento.",
+    "feel": "Sinta o ombro trabalhando em todos os ângulos."
+   }
   }
  },
  "431": {
@@ -1613,6 +2174,23 @@
      "url": "https://api.musclewiki.com/stream/videos/branded/female-dumbbell-heels-up-narrow-goblet-squat-side.mp4",
      "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-dumbbell-heels-up-narrow-goblet-squat-side.jpg"
     }
+   }
+  },
+  "cues": {
+   "es": {
+    "breathing": "Inhala al bajar, exhala al subir",
+    "mistake": "Dejar que las rodillas se abran o cierren mucho; mantenlas alineadas con los pies",
+    "feel": "Cuádriceps al frente, con más énfasis por los talones elevados"
+   },
+   "en": {
+    "breathing": "Inhale as you sink into the squat, exhale as you stand back up.",
+    "mistake": "Letting knees drift inward — push them out in line with your toes.",
+    "feel": "Feel your quads working hard due to the narrow, heels-up stance."
+   },
+   "pt": {
+    "breathing": "Inspire ao descer, expire ao subir.",
+    "mistake": "Deixar os joelhos colarem por causa da posição estreita; mantenha-os alinhados com o pé.",
+    "feel": "Sinta o quadríceps na frente da coxa."
    }
   }
  },
@@ -1662,6 +2240,23 @@
      "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Dumbbells-dumbbell-neutral-overhead-press-side.jpg"
     }
    }
+  },
+  "cues": {
+   "es": {
+    "breathing": "Exhala al empujar arriba, inhala al bajar",
+    "mistake": "Arquear la espalda baja al fatigarte; aprieta el core para evitarlo",
+    "feel": "Hombros empujando el peso hacia arriba"
+   },
+   "en": {
+    "breathing": "Exhale as you press up, inhale as you lower back down.",
+    "mistake": "Arching your back as you fatigue — keep your core braced and ribs down.",
+    "feel": "Feel your shoulders pressing the weight overhead."
+   },
+   "pt": {
+    "breathing": "Expire ao empurrar para cima, inspire ao descer.",
+    "mistake": "Arquear a lombar ao cansar; mantenha o core apertado.",
+    "feel": "Sinta o ombro empurrando o peso para cima."
+   }
   }
  },
  "467": {
@@ -1710,6 +2305,23 @@
      "url": "https://api.musclewiki.com/stream/videos/branded/female-Dumbbells-dumbbell-sumo-squat-side.mp4",
      "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Dumbbells-dumbbell-sumo-squat-side.jpg"
     }
+   }
+  },
+  "cues": {
+   "es": {
+    "breathing": "Inhala al bajar, exhala al subir",
+    "mistake": "Dejar caer el pecho hacia adelante; mantenlo erguido todo el tiempo",
+    "feel": "Cuádriceps, glúteos e interior del muslo"
+   },
+   "en": {
+    "breathing": "Inhale as you lower down, exhale as you stand back up.",
+    "mistake": "Letting your back round forward — keep chest up and spine neutral.",
+    "feel": "Feel your inner thighs and glutes working with your quads."
+   },
+   "pt": {
+    "breathing": "Inspire ao descer, expire ao subir.",
+    "mistake": "Deixar o joelho cair para dentro; empurre-o na direção dos dedos do pé.",
+    "feel": "Sinta glúteo e interno da coxa trabalhando."
    }
   }
  },
@@ -1764,6 +2376,23 @@
      "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-bodyweight-burpee-side.jpg"
     }
    }
+  },
+  "cues": {
+   "es": {
+    "breathing": "Exhala en el salto final, inhala al bajar a la sentadilla",
+    "mistake": "Perder la forma por ir muy rápido; prioriza técnica sobre velocidad",
+    "feel": "Todo el cuerpo trabajando, especialmente piernas y core"
+   },
+   "en": {
+    "breathing": "Exhale during the push-up and jump, inhale as you drop into the squat.",
+    "mistake": "Sagging hips during the plank/push-up — keep your core tight throughout.",
+    "feel": "Feel your whole body working, legs and chest driving the pace."
+   },
+   "pt": {
+    "breathing": "Inspire ao agachar, expire ao saltar e ao empurrar no push-up.",
+    "mistake": "Perder a postura na prancha; mantenha o corpo alinhado e o core firme.",
+    "feel": "Sinta o corpo todo trabalhando, com foco em pernas e core."
+   }
   }
  },
  "512": {
@@ -1810,6 +2439,23 @@
      "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-band-leg-curl-side.jpg"
     }
    }
+  },
+  "cues": {
+   "es": {
+    "breathing": "Exhala al llevar los talones hacia los glúteos, inhala al extender",
+    "mistake": "Levantar la cadera del piso; mantenla pegada al suelo",
+    "feel": "Isquiotibiales haciendo el esfuerzo principal"
+   },
+   "en": {
+    "breathing": "Exhale as you curl your heels in, inhale as you extend back out.",
+    "mistake": "Letting hips lift off the ground — keep them pressed down throughout.",
+    "feel": "Feel your hamstrings doing the curling."
+   },
+   "pt": {
+    "breathing": "Expire ao puxar os calcanhares, inspire ao estender.",
+    "mistake": "Levantar o quadril do chão; mantenha-o fixo durante o movimento.",
+    "feel": "Sinta o posterior de coxa contraindo."
+   }
   }
  },
  "514": {
@@ -1855,6 +2501,23 @@
      "url": "https://api.musclewiki.com/stream/videos/branded/female-band-leg-extension-side.mp4",
      "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-band-leg-extension-side.jpg"
     }
+   }
+  },
+  "cues": {
+   "es": {
+    "breathing": "Exhala al extender la rodilla, inhala al flexionar",
+    "mistake": "Ir muy rápido sin control; hazlo lento sintiendo el músculo",
+    "feel": "Cuádriceps al frente del muslo"
+   },
+   "en": {
+    "breathing": "Exhale as you extend your knees, inhale as you flex back.",
+    "mistake": "Using momentum instead of control — move slow through the full range.",
+    "feel": "Feel it isolated in your quads."
+   },
+   "pt": {
+    "breathing": "Expire ao estender o joelho, inspire ao flexionar.",
+    "mistake": "Fazer o movimento rápido demais; controle a subida e descida.",
+    "feel": "Sinta o quadríceps trabalhando na frente da coxa."
    }
   }
  },
@@ -1903,6 +2566,23 @@
      "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Machine-seated-leg-curl-side.jpg"
     }
    }
+  },
+  "cues": {
+   "es": {
+    "breathing": "Exhala al curvar las piernas, inhala al extender",
+    "mistake": "Hiperextender las rodillas al final; para justo antes de estirar del todo",
+    "feel": "Isquiotibiales flexionando la pierna"
+   },
+   "en": {
+    "breathing": "Exhale as you curl your legs in, inhale as you extend back out.",
+    "mistake": "Hyperextending the knees at the top — stop just short of fully straight.",
+    "feel": "Feel your hamstrings doing all the curling work."
+   },
+   "pt": {
+    "breathing": "Expire ao curvar as pernas, inspire ao estender.",
+    "mistake": "Hiperestender o joelho no final; pare a extensão de forma controlada.",
+    "feel": "Sinta o posterior de coxa contraindo forte."
+   }
   }
  },
  "882": {
@@ -1948,6 +2628,23 @@
      "url": "https://api.musclewiki.com/stream/videos/branded/female-Bodyweight-reverse-crunch-side.mp4",
      "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Bodyweight-reverse-crunch-side.jpg"
     }
+   }
+  },
+  "cues": {
+   "es": {
+    "breathing": "Exhala al llevar piernas y torso juntos, inhala al extender",
+    "mistake": "Usar impulso con las piernas; deja que el abdomen jale el movimiento",
+    "feel": "Abdomen bajo contrayéndose"
+   },
+   "en": {
+    "breathing": "Exhale as you pull knees and torso together, inhale as you extend back out.",
+    "mistake": "Using momentum to rock back and forth — move slow and controlled.",
+    "feel": "Feel your lower abs pulling the movement."
+   },
+   "pt": {
+    "breathing": "Expire ao puxar as pernas ao tronco, inspire ao estender.",
+    "mistake": "Usar o impulso das pernas em vez do abdômen; controle o movimento com o core.",
+    "feel": "Sinta o abdômen inferior trabalhando."
    }
   }
  },
@@ -1995,6 +2692,23 @@
      "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Cables-cable-standing-kickback-side.jpg"
     }
    }
+  },
+  "cues": {
+   "es": {
+    "breathing": "Exhala al empujar el tobillo atrás, inhala al regresar",
+    "mistake": "Usar la espalda baja para impulsar; aísla el movimiento en la cadera",
+    "feel": "Glúteo de la pierna que trabaja"
+   },
+   "en": {
+    "breathing": "Exhale as you kick back, inhale as you return to start.",
+    "mistake": "Arching your lower back to get more range — keep your core braced.",
+    "feel": "Feel your glute squeezing hard at the back of the movement."
+   },
+   "pt": {
+    "breathing": "Expire ao empurrar a perna para trás, inspire ao voltar.",
+    "mistake": "Arquear a lombar para ganhar amplitude; mova só pelo quadril.",
+    "feel": "Sinta o glúteo contraindo na extensão."
+   }
   }
  },
  "1023": {
@@ -2037,6 +2751,23 @@
      "url": "https://api.musclewiki.com/stream/videos/branded/female-Cables-cable-bar-pushdown-side.mp4",
      "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Cables-cable-bar-pushdown-side.jpg"
     }
+   }
+  },
+  "cues": {
+   "es": {
+    "breathing": "Exhala al extender los codos hacia abajo, inhala al subir",
+    "mistake": "Separar los codos del cuerpo; mantenlos pegados a las costillas",
+    "feel": "Tríceps en la parte trasera del brazo"
+   },
+   "en": {
+    "breathing": "Exhale as you push down, inhale as you let the bar rise back up.",
+    "mistake": "Letting elbows flare away from your body — keep them glued to your sides.",
+    "feel": "Feel your triceps doing all the pressing."
+   },
+   "pt": {
+    "breathing": "Expire ao empurrar a barra para baixo, inspire ao voltar.",
+    "mistake": "Mover o cotovelo para frente; mantenha-o colado ao corpo.",
+    "feel": "Sinta o tríceps contraindo atrás do braço."
    }
   }
  },
@@ -2081,6 +2812,23 @@
      "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Bodyweight-bodyweight-hip-abduction-side.jpg"
     }
    }
+  },
+  "cues": {
+   "es": {
+    "breathing": "Exhala al levantar la pierna hacia el lado, inhala al bajar",
+    "mistake": "Inclinar el torso para ganar altura; mantente derecho y usa solo la cadera",
+    "feel": "Glúteo medio, al costado de la cadera"
+   },
+   "en": {
+    "breathing": "Exhale as you lift your leg out, inhale as you lower back down.",
+    "mistake": "Leaning your torso to swing the leg up — keep hips stable and isolate the movement.",
+    "feel": "Feel it in the outer hip and glute of the working leg."
+   },
+   "pt": {
+    "breathing": "Expire ao afastar a perna, inspire ao voltar.",
+    "mistake": "Inclinar o tronco para o lado; mantenha o quadril estável.",
+    "feel": "Sinta o lado do quadril e glúteo médio trabalhando."
+   }
   }
  },
  "1147": {
@@ -2123,6 +2871,23 @@
      "url": "https://api.musclewiki.com/stream/videos/branded/female-Bodyweight-bodyweight-plank-up-down-side.mp4",
      "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Bodyweight-bodyweight-plank-up-down-side.jpg"
     }
+   }
+  },
+  "cues": {
+   "es": {
+    "breathing": "Respira de forma constante mientras alternas los apoyos",
+    "mistake": "Balancear la cadera de lado a lado; mantenla estable y fija",
+    "feel": "Core y hombros estabilizando todo el cuerpo"
+   },
+   "en": {
+    "breathing": "Breathe steadily, avoid holding your breath as you move.",
+    "mistake": "Rocking your hips side to side — keep your core tight and hips still.",
+    "feel": "Feel your core and shoulders stabilizing the whole time."
+   },
+   "pt": {
+    "breathing": "Respire de forma constante, sem prender o ar.",
+    "mistake": "Balançar o quadril de um lado para o outro; mantenha o core firme.",
+    "feel": "Sinta o abdômen e ombros estabilizando o corpo."
    }
   }
  },
@@ -2171,6 +2936,23 @@
      "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Recovery-lunge-walking-side.jpg"
     }
    }
+  },
+  "cues": {
+   "es": {
+    "breathing": "Inhala al bajar, exhala al empujar hacia el siguiente paso",
+    "mistake": "Dar pasos muy cortos; busca una zancada amplia y controlada",
+    "feel": "Cuádriceps y glúteos impulsando cada paso"
+   },
+   "en": {
+    "breathing": "Inhale as you step and lower, exhale as you stand and step through.",
+    "mistake": "Taking too short a step — lengthen your stride so the front knee stays over the ankle.",
+    "feel": "Feel your front leg's quad and glute driving each step."
+   },
+   "pt": {
+    "breathing": "Inspire ao dar o passo e descer, expire ao subir.",
+    "mistake": "Deixar o tronco inclinar para frente; mantenha o peito erguido.",
+    "feel": "Sinta quadríceps e glúteo da perna da frente."
+   }
   }
  },
  "1499": {
@@ -2218,6 +3000,23 @@
      "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Machine-machine-hack-squat-side.jpg"
     }
    }
+  },
+  "cues": {
+   "es": {
+    "breathing": "Inhala al bajar, exhala al subir",
+    "mistake": "Despegar la espalda del respaldo; mantente pegado durante todo el movimiento",
+    "feel": "Cuádriceps y glúteos empujando la plataforma"
+   },
+   "en": {
+    "breathing": "Inhale as you lower into the squat, exhale as you press back up.",
+    "mistake": "Letting knees cave inward — push them out in line with your toes.",
+    "feel": "Feel your quads and glutes doing the pressing."
+   },
+   "pt": {
+    "breathing": "Inspire ao descer, expire ao subir.",
+    "mistake": "Tirar a lombar do encosto; mantenha as costas apoiadas o tempo todo.",
+    "feel": "Sinta quadríceps e glúteos empurrando o peso."
+   }
   }
  },
  "1596": {
@@ -2263,6 +3062,23 @@
      "url": "https://api.musclewiki.com/stream/videos/branded/female-Bodyweight-wall-sit-side.mp4",
      "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Bodyweight-wall-sit-side.jpg"
     }
+   }
+  },
+  "cues": {
+   "es": {
+    "breathing": "Respira de forma constante mientras mantienes la posición",
+    "mistake": "Dejar que las rodillas pasen la punta de los pies; ajusta la posición de los pies",
+    "feel": "Cuádriceps trabajando de forma isométrica"
+   },
+   "en": {
+    "breathing": "Breathe steadily throughout, don't hold your breath while holding the position.",
+    "mistake": "Letting knees drift past the toes — keep them stacked above your ankles.",
+    "feel": "Feel your quads burning as they hold you up."
+   },
+   "pt": {
+    "breathing": "Respire de forma constante enquanto segura a posição.",
+    "mistake": "Deixar o joelho passar da linha do pé; ajuste a posição dos pés.",
+    "feel": "Sinta o quadríceps queimando durante a pausa."
    }
   }
  },
@@ -2310,6 +3126,23 @@
      "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Band-band-seated-pulldown-side.jpg"
     }
    }
+  },
+  "cues": {
+   "es": {
+    "breathing": "Exhala al jalar los codos hacia las costillas, inhala al extender",
+    "mistake": "Encoger los hombros al jalar; mantenlos abajo y relajados",
+    "feel": "Espalda alta y dorsales contrayéndose"
+   },
+   "en": {
+    "breathing": "Exhale as you pull elbows down, inhale as you return to the stretch.",
+    "mistake": "Leaning back to use momentum — keep your chest up and pull with your back.",
+    "feel": "Feel your lats squeezing at the bottom of the pull."
+   },
+   "pt": {
+    "breathing": "Expire ao puxar os cotovelos para baixo, inspire ao voltar.",
+    "mistake": "Puxar só com os braços; puxe com as costas, contraindo as escápulas.",
+    "feel": "Sinta as costas (dorsais) contraindo."
+   }
   }
  },
  "2211": {
@@ -2352,6 +3185,23 @@
      "url": "https://api.musclewiki.com/stream/videos/branded/female-Band-mini-band-tricep-pushdown-side.mp4",
      "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Band-mini-band-tricep-pushdown-side.jpg"
     }
+   }
+  },
+  "cues": {
+   "es": {
+    "breathing": "Exhala al empujar hacia abajo, inhala al subir",
+    "mistake": "Mover el hombro en vez del codo; mantén el brazo de arriba fijo",
+    "feel": "Tríceps de la mano que empuja hacia abajo"
+   },
+   "en": {
+    "breathing": "Exhale as you press down, inhale as you return to start.",
+    "mistake": "Letting the top elbow drift away from your body — keep it pinned at shoulder height.",
+    "feel": "Feel your triceps doing all the pressing work."
+   },
+   "pt": {
+    "breathing": "Expire ao empurrar a mão para baixo, inspire ao voltar.",
+    "mistake": "Mover o ombro junto; mantenha-o fixo e mova só o cotovelo.",
+    "feel": "Sinta o tríceps contraindo atrás do braço."
    }
   }
  }

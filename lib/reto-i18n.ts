@@ -49,6 +49,9 @@ export type RetoDict = {
     front: string;
     side: string;
     videoBy: string;
+    breathing: string;
+    mistake: string;
+    feel: string;
   };
   ctaForm: string;
   ctaFormNote: string;
@@ -149,6 +152,9 @@ const es: RetoDict = {
     front: "Frente",
     side: "Lado",
     videoBy: "Videos de demostración: MuscleWiki",
+    breathing: "Respiración",
+    mistake: "Ojo con",
+    feel: "Debes sentirlo en",
   },
   ctaForm: "Quiero entrar al reto",
   ctaFormNote: "Llenas tus datos y tu objetivo, Maleja te escribe y activa tu mes.",
@@ -249,6 +255,9 @@ const en: RetoDict = {
     front: "Front",
     side: "Side",
     videoBy: "Demo videos: MuscleWiki",
+    breathing: "Breathing",
+    mistake: "Watch out for",
+    feel: "You should feel it in",
   },
   ctaForm: "I want to join the challenge",
   ctaFormNote: "Fill in your details and your goal; Maleja messages you and activates your month.",
@@ -349,6 +358,9 @@ const pt: RetoDict = {
     front: "Frente",
     side: "Lado",
     videoBy: "Vídeos de demonstração: MuscleWiki",
+    breathing: "Respiração",
+    mistake: "Cuidado com",
+    feel: "Você deve sentir em",
   },
   ctaForm: "Quero entrar no desafio",
   ctaFormNote: "Preencha seus dados e seu objetivo; a Maleja te escreve e ativa seu mês.",
