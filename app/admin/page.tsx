@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { requireAdmin } from "@/lib/auth";
 import { logout } from "@/app/actions/auth";
-import { listAllUsers, adminUpdateUser, adminDeleteUser } from "@/app/actions/admin";
+import { listAllUsers, adminUpdateUser, adminDeleteUser, adminStartReto, adminStopReto } from "@/app/actions/admin";
+import { retoProgress } from "@/lib/reto-plan";
 import { PLANS } from "@/lib/plan";
 import { Logo } from "@/components/Leaves";
 
@@ -22,6 +23,8 @@ export default async function Admin() {
           <div className="flex items-center gap-3 text-sm">
             <span className="muted hidden sm:inline">{admin.name}</span>
             {admin.role === "coach" && <Link href="/coach" className="btn btn-ghost btn-sm">Panel coach</Link>}
+            <Link href="/coach/reto" className="btn btn-ghost btn-sm">🏁 Inscripciones</Link>
+            <Link href="/dashboard/reto" className="btn btn-ghost btn-sm">Ver reto</Link>
             <Link href="/dashboard" className="btn btn-ghost btn-sm">App</Link>
             <form action={logout}><button className="faint text-xs">Salir</button></form>
           </div>
@@ -43,7 +46,7 @@ export default async function Admin() {
         <div className="card overflow-x-auto">
           <table className="w-full text-sm">
             <thead><tr className="text-left" style={{ color: "var(--text-3)" }}>
-              {["Usuario", "Rol", "Plan", "Coach", "Registro", "Última actividad", ""].map((h) => <th key={h} className="px-3 py-3 eyebrow font-semibold">{h}</th>)}
+              {["Usuario", "Rol", "Plan", "Coach", "Reto 30 días", "Registro", "Última actividad", ""].map((h) => <th key={h} className="px-3 py-3 eyebrow font-semibold">{h}</th>)}
             </tr></thead>
             <tbody>
               {users.map((u) => (
@@ -57,6 +60,26 @@ export default async function Admin() {
                       <select name="coach_id" defaultValue={u.coach_id ?? ""} className="input input-s !w-auto !py-1.5" disabled={u.role === "coach"}><option value="">— coach —</option>{coaches.map((c) => <option key={c.id} value={c.id}>{c.name}</option>)}</select>
                       <button className="btn btn-balance btn-sm">Guardar</button>
                     </form>
+                  </td>
+                  <td className="px-3 py-2">
+                    {u.role === "member" && (() => {
+                      const p = retoProgress(u.reto_start);
+                      return p && !p.done ? (
+                        <div className="flex items-center gap-2 text-xs">
+                          <span className="pill pill-f">Día {p.day}/30 {u.reto_track === "hombre" ? "♂" : "♀"}</span>
+                          <form action={adminStopReto}><input type="hidden" name="id" value={u.id} /><button className="faint hover:text-[#FF8A8A]" title="Quitar el reto (no cambia el plan)">quitar</button></form>
+                        </div>
+                      ) : (
+                        <div className="flex gap-1">
+                          {(["mujer", "hombre"] as const).map((tk) => (
+                            <form key={tk} action={adminStartReto}>
+                              <input type="hidden" name="id" value={u.id} /><input type="hidden" name="track" value={tk} />
+                              <button className="btn btn-ghost btn-sm" title={`Asignar Reto 30 días (guía ${tk}): Pro + 30 días + guía en la app`}>Reto {tk === "mujer" ? "♀" : "♂"}</button>
+                            </form>
+                          ))}
+                        </div>
+                      );
+                    })()}
                   </td>
                   <td className="px-3 py-3 muted">{fmt(u.created_at)}</td>
                   <td className="px-3 py-3 muted">{fmt(u.last_seen)}</td>
