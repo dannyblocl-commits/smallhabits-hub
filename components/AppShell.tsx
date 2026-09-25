@@ -24,6 +24,7 @@ export async function AppShell({ children, title, kicker, requires }: { children
     { href: "/dashboard/menus", label: L.menus.title },
     { href: "/dashboard/photos", label: L.photos.title },
     { href: "/dashboard/chat", label: L.nav.chat },
+    { href: "/dashboard/sessions", label: L.nav.sesiones },
     { href: "/dashboard/tickets", label: L.nav.soporte },
     { href: "/dashboard/coaches", label: L.nav.micoach },
     { href: "/dashboard/wearables", label: L.wearables.title },

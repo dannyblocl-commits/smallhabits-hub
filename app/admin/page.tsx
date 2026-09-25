@@ -24,6 +24,8 @@ export default async function Admin() {
             <span className="muted hidden sm:inline">{admin.name}</span>
             {admin.role === "coach" && <Link href="/coach" className="btn btn-ghost btn-sm">Panel coach</Link>}
             <Link href="/coach/reto" className="btn btn-ghost btn-sm">🏁 Inscripciones</Link>
+            <Link href="/coach/tickets" className="btn btn-ghost btn-sm">🎫 Tickets</Link>
+            <Link href="/coach/ingresos" className="btn btn-ghost btn-sm">💰 Ingresos</Link>
             <Link href="/dashboard/reto" className="btn btn-ghost btn-sm">Ver reto</Link>
             <Link href="/dashboard" className="btn btn-ghost btn-sm">App</Link>
             <form action={logout}><button className="faint text-xs">Salir</button></form>

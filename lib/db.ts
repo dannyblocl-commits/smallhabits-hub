@@ -241,6 +241,19 @@ export function ensureSchema() {
         created_at timestamptz default now()
       );
       create index if not exists reto_leads_at on reto_leads(created_at desc);
+      create table if not exists tickets (
+        id uuid primary key default gen_random_uuid(),
+        user_id uuid references users(id) on delete cascade,
+        subject text not null,
+        category text not null default 'Otro',
+        body text not null default '',
+        status text not null default 'abierto',
+        reply text,
+        replied_by uuid references users(id) on delete set null,
+        replied_at timestamptz,
+        created_at timestamptz default now()
+      );
+      create index if not exists tickets_user_at on tickets(user_id, created_at desc);
 
       create table if not exists payments (
         id uuid primary key default gen_random_uuid(),

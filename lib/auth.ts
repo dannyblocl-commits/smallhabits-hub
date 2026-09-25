@@ -49,6 +49,12 @@ export function isAdmin(u: User | null) {
   return list.includes(u.email.toLowerCase());
 }
 
+export async function requireStaff(): Promise<User> {
+  const u = await requireUser();
+  if (u.role !== "coach" && !isAdmin(u)) redirect("/dashboard");
+  return u;
+}
+
 export async function requireAdmin(): Promise<User> {
   const u = await requireUser();
   if (!isAdmin(u)) redirect("/dashboard");

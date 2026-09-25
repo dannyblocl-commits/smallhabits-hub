@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { openTicketsCount } from "@/app/actions/tickets";
 import { requireCoach, isAdmin } from "@/lib/auth";
 import { logout } from "@/app/actions/auth";
 import { listMembers, coachSummary, type MemberRow } from "@/app/actions/coach";
@@ -39,7 +40,7 @@ const head = ["Miembro", "Objetivo", "Plan", "Kcal hoy", "Entrenos sem.", "Últi
 
 export default async function CoachPanel() {
   const coach = await requireCoach();
-  const [members, s, prof] = await Promise.all([listMembers(), coachSummary(), db().query("select bio, specialties from users where id=$1", [coach.id])]);
+  const [members, s, prof, openTickets] = await Promise.all([listMembers(), coachSummary(), db().query("select bio, specialties from users where id=$1", [coach.id]), openTicketsCount()]);
   const mine = members.filter((m) => m.mine);
   const free = members.filter((m) => !m.mine);
   const code = process.env.COACH_INVITE_CODE;
@@ -70,7 +71,9 @@ export default async function CoachPanel() {
             <Link href="/coach/recipes" className="block px-3 py-2 rounded-[12px] muted hover:text-[var(--text)]">Recetario</Link>
             <Link href="/coach/learn" className="block px-3 py-2 rounded-[12px] muted hover:text-[var(--text)]">Hacks nutricionales</Link>
             <Link href="/coach/content" className="block px-3 py-2 rounded-[12px] muted hover:text-[var(--text)]">Videos y audios</Link>
-            {["Sesiones 1:1", "Ingresos"].map((l) => <div key={l} className="px-3 py-2 rounded-[12px] faint">{l}</div>)}
+            <Link href="/coach/tickets" className="block px-3 py-2 rounded-[12px] muted hover:text-[var(--text)]">Tickets de soporte{openTickets > 0 ? <span className="pill pill-w ml-2">{openTickets}</span> : null}</Link>
+            <Link href="/coach/sesiones" className="block px-3 py-2 rounded-[12px] muted hover:text-[var(--text)]">Sesiones 1:1</Link>
+            <Link href="/coach/ingresos" className="block px-3 py-2 rounded-[12px] muted hover:text-[var(--text)]">Ingresos</Link>
           </div>
           <form action={updateCoachProfile} className="card p-4 space-y-2">
             <div className="eyebrow" style={{ color: "var(--sage)" }}>Mi perfil público</div>
