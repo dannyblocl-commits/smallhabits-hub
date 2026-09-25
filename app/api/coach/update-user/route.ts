@@ -19,7 +19,7 @@ export async function POST(req: NextRequest) {
         return NextResponse.json({ error: "Plan inválido" }, { status: 400 });
       }
       await db().query(
-        "UPDATE users SET plan_level = $1, plan = $1 WHERE id = $2 AND role = 'member'",
+        "UPDATE users SET plan_level = $1, plan = $1 WHERE id = $2",
         [planLevel, userId]
       );
       return NextResponse.json({ success: true, message: `Plan cambiado a ${planLevel}` });
@@ -54,7 +54,7 @@ export async function POST(req: NextRequest) {
                trial_end = $1,
                plan = case when plan = 'elite' then plan else 'pro' end,
                plan_level = case when plan_level = 'elite' then plan_level else 'pro' end
-         WHERE id = $2 AND role = 'member'`,
+         WHERE id = $2`,
         [trialEnd, userId, track === "hombre" ? "hombre" : "mujer"]
       );
       return NextResponse.json({ success: true, message: "Reto de 30 días asignado" });

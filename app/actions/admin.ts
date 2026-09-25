@@ -28,7 +28,7 @@ export async function adminStartReto(form: FormData) {
        set reto_start = now(), reto_track = $2, trial_end = now() + interval '30 days',
            plan = case when plan = 'elite' then plan else 'pro' end,
            plan_level = case when plan_level = 'elite' then plan_level else 'pro' end
-     where id = $1 and role = 'member'`,
+     where id = $1`,
     [id, track]
   );
   redirect("/admin");
