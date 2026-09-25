@@ -220,6 +220,27 @@ export function ensureSchema() {
       alter table users add column if not exists trial_end timestamptz;
       alter table users add column if not exists reto_start timestamptz;
       alter table users add column if not exists reto_track text;
+      create table if not exists reto_leads (
+        id uuid primary key default gen_random_uuid(),
+        name text not null,
+        email text not null,
+        phone text not null,
+        address1 text not null,
+        address2 text,
+        city text not null,
+        state text not null,
+        zip text not null,
+        country text not null default 'US',
+        track text not null default 'mujer',
+        goal text not null,
+        level text not null,
+        health text,
+        notes text,
+        lang text not null default 'es',
+        status text not null default 'nuevo',
+        created_at timestamptz default now()
+      );
+      create index if not exists reto_leads_at on reto_leads(created_at desc);
 
       create table if not exists payments (
         id uuid primary key default gen_random_uuid(),

@@ -44,6 +44,39 @@ export type RetoDict = {
     mealsNote: string;
     choose: string;
   };
+  ctaForm: string;
+  ctaFormNote: string;
+  soloReto: string;
+  form: {
+    title: string;
+    kicker: string;
+    name: string;
+    email: string;
+    phone: string;
+    shipping: string;
+    address1: string;
+    address2: string;
+    city: string;
+    state: string;
+    zip: string;
+    country: string;
+    about: string;
+    track: string;
+    tracks: [string, string];
+    goal: string;
+    goals: [string, string, string, string];
+    level: string;
+    levels: [string, string, string];
+    health: string;
+    healthPh: string;
+    notes: string;
+    notesPh: string;
+    consent: string;
+    submit: string;
+    thanksTitle: string;
+    thanksBody: string;
+    thanksCta: string;
+  };
 };
 
 const es: RetoDict = {
@@ -104,6 +137,39 @@ const es: RetoDict = {
     meals: "Tu menú del reto",
     mealsNote: "Elige una opción por comida. Porciones orientativas; el shake o la proteína en polvo son opcionales. Café y té sin azúcar, sí.",
     choose: "opciones",
+  },
+  ctaForm: "Quiero entrar al reto",
+  ctaFormNote: "Llenas tus datos y tu objetivo, Maleja te escribe y activa tu mes.",
+  soloReto: "¿Solo el reto, sin kit? {price} pago único",
+  form: {
+    title: "Inscripción al reto",
+    kicker: "2 minutos. Maleja te contacta para activar tu mes.",
+    name: "Nombre completo",
+    email: "Email (con el que entrarás a la app)",
+    phone: "WhatsApp",
+    shipping: "Dirección de envío de tu kit",
+    address1: "Calle y número",
+    address2: "Apto / unidad (opcional)",
+    city: "Ciudad",
+    state: "Estado",
+    zip: "Código postal",
+    country: "País",
+    about: "Sobre ti",
+    track: "Guía",
+    tracks: ["Mujer", "Hombre"],
+    goal: "Tu objetivo principal",
+    goals: ["Perder grasa", "Tonificar", "Ganar músculo", "Energía y hábitos"],
+    level: "Tu nivel",
+    levels: ["Principiante", "Intermedio", "Avanzado"],
+    health: "¿Alguna condición de salud, embarazo, lactancia o medicación?",
+    healthPh: "Si no, escribe 'ninguna'",
+    notes: "Cuéntale a Maleja lo que quieras (opcional)",
+    notesPh: "Horarios, lesiones, qué has intentado antes…",
+    consent: "Acepto que Maleja me contacte por WhatsApp y email para activar mi reto.",
+    submit: "Enviar inscripción",
+    thanksTitle: "¡Listo! Ya estás en la lista",
+    thanksBody: "Maleja te escribe por WhatsApp en las próximas horas para activar tu mes. Mientras, crea tu cuenta gratis con el mismo email para que el reto aparezca en tu inicio.",
+    thanksCta: "Crear mi cuenta",
   },
 };
 
@@ -166,6 +232,39 @@ const en: RetoDict = {
     mealsNote: "Pick one option per meal. Portions are a guide; shake or protein powder are optional. Unsweetened coffee and tea are fine.",
     choose: "options",
   },
+  ctaForm: "I want to join the challenge",
+  ctaFormNote: "Fill in your details and your goal; Maleja messages you and activates your month.",
+  soloReto: "Just the challenge, no kit? {price} one-time",
+  form: {
+    title: "Challenge sign-up",
+    kicker: "2 minutes. Maleja contacts you to activate your month.",
+    name: "Full name",
+    email: "Email (the one you'll use in the app)",
+    phone: "WhatsApp",
+    shipping: "Shipping address for your kit",
+    address1: "Street and number",
+    address2: "Apt / unit (optional)",
+    city: "City",
+    state: "State",
+    zip: "ZIP code",
+    country: "Country",
+    about: "About you",
+    track: "Guide",
+    tracks: ["Women", "Men"],
+    goal: "Your main goal",
+    goals: ["Lose fat", "Tone up", "Build muscle", "Energy & habits"],
+    level: "Your level",
+    levels: ["Beginner", "Intermediate", "Advanced"],
+    health: "Any health condition, pregnancy, nursing or medication?",
+    healthPh: "If none, write 'none'",
+    notes: "Anything you want Maleja to know (optional)",
+    notesPh: "Schedule, injuries, what you've tried before…",
+    consent: "I agree that Maleja may contact me on WhatsApp and email to activate my challenge.",
+    submit: "Send sign-up",
+    thanksTitle: "Done! You're on the list",
+    thanksBody: "Maleja will message you on WhatsApp within a few hours to activate your month. Meanwhile, create your free account with the same email so the challenge shows up on your home.",
+    thanksCta: "Create my account",
+  },
 };
 
 const pt: RetoDict = {
@@ -226,6 +325,39 @@ const pt: RetoDict = {
     meals: "Seu cardápio do desafio",
     mealsNote: "Escolha uma opção por refeição. Porções orientativas; o shake ou a proteína em pó são opcionais. Café e chá sem açúcar, sim.",
     choose: "opções",
+  },
+  ctaForm: "Quero entrar no desafio",
+  ctaFormNote: "Preencha seus dados e seu objetivo; a Maleja te escreve e ativa seu mês.",
+  soloReto: "Só o desafio, sem kit? {price} pagamento único",
+  form: {
+    title: "Inscrição no desafio",
+    kicker: "2 minutos. A Maleja entra em contato para ativar seu mês.",
+    name: "Nome completo",
+    email: "Email (o que você usará no app)",
+    phone: "WhatsApp",
+    shipping: "Endereço de envio do seu kit",
+    address1: "Rua e número",
+    address2: "Apto / unidade (opcional)",
+    city: "Cidade",
+    state: "Estado",
+    zip: "CEP / ZIP",
+    country: "País",
+    about: "Sobre você",
+    track: "Guia",
+    tracks: ["Mulher", "Homem"],
+    goal: "Seu objetivo principal",
+    goals: ["Perder gordura", "Tonificar", "Ganhar músculo", "Energia e hábitos"],
+    level: "Seu nível",
+    levels: ["Iniciante", "Intermediário", "Avançado"],
+    health: "Alguma condição de saúde, gravidez, amamentação ou medicação?",
+    healthPh: "Se não, escreva 'nenhuma'",
+    notes: "Conte à Maleja o que quiser (opcional)",
+    notesPh: "Horários, lesões, o que já tentou antes…",
+    consent: "Aceito que a Maleja entre em contato por WhatsApp e email para ativar meu desafio.",
+    submit: "Enviar inscrição",
+    thanksTitle: "Pronto! Você está na lista",
+    thanksBody: "A Maleja te escreve no WhatsApp nas próximas horas para ativar seu mês. Enquanto isso, crie sua conta grátis com o mesmo email para o desafio aparecer no seu início.",
+    thanksCta: "Criar minha conta",
   },
 };
 

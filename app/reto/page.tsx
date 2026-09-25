@@ -1,4 +1,5 @@
-import { PLANS, RETO_LINK, RETO_PRICE_LABEL } from "@/lib/plan";
+import Link from "next/link";
+import { RETO_LINK, RETO_PRICE_LABEL } from "@/lib/plan";
 import { getLang } from "@/lib/i18n";
 import { RETO } from "@/lib/reto-i18n";
 import { LangSwitch } from "@/components/LangSwitch";
@@ -26,10 +27,10 @@ export default async function RetoPage() {
         </h1>
         <p className="text-xl mb-4" style={{ color: "#A8A3AE" }}>{t.sub}</p>
         <p className="text-lg mb-10" style={{ color: "#BA8E54", fontWeight: 600 }}>{t.motto}</p>
-        <a href={RETO_LINK} className="inline-block px-10 py-5 rounded-xl font-black text-xl" style={{ background: "#FF2D8A", color: "#F5F2F0" }}>
-          {t.cta} — {RETO_PRICE_LABEL}
-        </a>
-        <p className="mt-3 text-sm" style={{ color: "#A8A3AE" }}>{t.ctaNote.replace("{pro}", PLANS.pro.price)}</p>
+        <Link href="/reto/inscripcion" className="inline-block px-10 py-5 rounded-xl font-black text-xl" style={{ background: "#FF2D8A", color: "#F5F2F0" }}>
+          {t.ctaForm}
+        </Link>
+        <p className="mt-3 text-sm" style={{ color: "#A8A3AE" }}>{t.ctaFormNote}</p>
       </section>
 
       <section className="px-6 py-16 max-w-4xl mx-auto">
@@ -70,9 +71,12 @@ export default async function RetoPage() {
       </section>
 
       <section className="px-6 py-20 text-center">
-        <a href={RETO_LINK} className="inline-block px-10 py-5 rounded-xl font-black text-xl" style={{ background: "#FF2D8A", color: "#F5F2F0" }}>
-          {t.cta} — {RETO_PRICE_LABEL}
-        </a>
+        <Link href="/reto/inscripcion" className="inline-block px-10 py-5 rounded-xl font-black text-xl" style={{ background: "#FF2D8A", color: "#F5F2F0" }}>
+          {t.ctaForm}
+        </Link>
+        <p className="mt-5 text-sm" style={{ color: "#A8A3AE" }}>
+          <a href={RETO_LINK} className="underline">{t.soloReto.replace("{price}", RETO_PRICE_LABEL)}</a>
+        </p>
       </section>
     </div>
   );
