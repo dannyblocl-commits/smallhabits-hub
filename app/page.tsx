@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { HeroVideo } from "@/components/HeroVideo";
 
 export const metadata = {
   title: "Small Habits by Maleja — Coaching de Transformación Personal",
@@ -15,51 +16,58 @@ export default function HomePage() {
   return (
     <div className="min-h-screen" style={{ background: "#0B0B0F" }}>
       {/* HERO PREMIUM */}
-      <section className="relative w-full min-h-[60vh] flex items-center justify-center overflow-hidden">
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover"
-          src="/videos/hero.mp4"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/40 to-[#0B0B0F]" />
+      <section className="relative overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none" style={{ background: "radial-gradient(55% 55% at 72% 45%, rgba(255,45,138,0.22), transparent 70%), radial-gradient(40% 40% at 15% 80%, rgba(127,194,155,0.12), transparent 70%)" }} />
+        <div className="relative max-w-6xl mx-auto px-6 pt-14 pb-12 md:pt-24 md:pb-20 grid md:grid-cols-[1.1fr_0.9fr] gap-10 md:gap-14 items-center">
+          <div className="text-center md:text-left order-2 md:order-1">
+            <div className="inline-block mb-4 px-4 py-2 rounded-full" style={{ background: "rgba(255, 45, 138, 0.1)", borderColor: "#FF2D8A", borderWidth: 1 }}>
+              <p style={{ color: "#FF2D8A", fontSize: "14px", fontWeight: 600 }}>Transformación certificada en 30 días</p>
+            </div>
 
-        <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
-          <div className="inline-block mb-4 px-4 py-2 rounded-full" style={{ background: "rgba(255, 45, 138, 0.1)", borderColor: "#FF2D8A", borderWidth: 1 }}>
-            <p style={{ color: "#FF2D8A", fontSize: "14px", fontWeight: 600 }}>Transformación certificada en 90 días</p>
+            <h1 className="text-5xl md:text-7xl font-black mb-6" style={{ letterSpacing: "-0.03em", color: "#F5F2F0", lineHeight: 1.02 }}>
+              <span style={{ color: "#FF2D8A" }}>Pequeños</span> hábitos,
+              <br />
+              <span style={{ color: "#7FC29B" }}>grandes resultados</span>
+            </h1>
+
+            <p className="text-lg md:text-xl mb-6" style={{ color: "#A8A3AE" }}>
+              Coaching personalizado de transformación física y mental con Maleja, coach certificada ISSA.
+            </p>
+
+            <p className="text-base md:text-lg mb-10" style={{ color: "#BA8E54", fontWeight: 600 }}>
+              500+ personas transformadas. Tú eres el siguiente.
+            </p>
+
+            <div className="flex gap-4 justify-center md:justify-start flex-wrap">
+              <a
+                href="#planes"
+                className="px-8 py-4 rounded-lg font-bold text-lg"
+                style={{ background: "#FF2D8A", color: "#F5F2F0" }}
+              >
+                Ver planes
+              </a>
+              <a
+                href="#sobre"
+                className="px-8 py-4 rounded-lg font-bold text-lg border-2"
+                style={{ borderColor: "#7FC29B", color: "#7FC29B" }}
+              >
+                Conocer a Maleja
+              </a>
+            </div>
           </div>
 
-          <h1 className="text-6xl md:text-8xl font-black mb-6" style={{ letterSpacing: "-0.03em", color: "#F5F2F0" }}>
-            <span style={{ color: "#FF2D8A" }}>Pequeños</span> hábitos,
-            <br />
-            <span style={{ color: "#7FC29B" }}>grandes resultados</span>
-          </h1>
-
-          <p className="text-xl md:text-2xl mb-8" style={{ color: "#A8A3AE" }}>
-            Coaching personalizado de transformación física y mental con Maleja, coach certificada ISSA.
-          </p>
-
-          <p className="text-lg mb-12" style={{ color: "#BA8E54", fontWeight: 600 }}>
-            500+ personas transformadas. Tú eres el siguiente.
-          </p>
-
-          <div className="flex gap-4 justify-center flex-wrap">
-            <a
-              href="#planes"
-              className="px-8 py-4 rounded-lg font-bold text-lg"
-              style={{ background: "#FF2D8A", color: "#F5F2F0" }}
+          <div className="order-1 md:order-2 mx-auto w-full max-w-[300px] md:max-w-[380px]">
+            <div
+              className="relative rounded-[32px] overflow-hidden"
+              style={{ aspectRatio: "9 / 16", border: "1px solid rgba(255,255,255,0.08)", boxShadow: "0 30px 80px rgba(255,45,138,0.18), 0 10px 30px rgba(0,0,0,0.5)" }}
             >
-              Ver planes
-            </a>
-            <a
-              href="#sobre"
-              className="px-8 py-4 rounded-lg font-bold text-lg border-2"
-              style={{ borderColor: "#7FC29B", color: "#7FC29B" }}
-            >
-              Conocer a Maleja
-            </a>
+              <HeroVideo src="/videos/hero.mp4" poster="/img/miphoto.jpg" className="absolute inset-0 w-full h-full object-cover" label="Maleja" />
+              <div className="absolute inset-x-0 bottom-0 h-1/3 pointer-events-none" style={{ background: "linear-gradient(to top, rgba(11,11,15,0.85), transparent)" }} />
+              <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between">
+                <span className="text-sm font-bold" style={{ color: "#F5F2F0" }}>Maleja</span>
+                <span className="text-xs px-2 py-1 rounded-full" style={{ background: "rgba(255,45,138,0.9)", color: "#F5F2F0" }}>Coach ISSA</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -69,7 +77,7 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="rounded-2xl overflow-hidden">
-              <video autoPlay muted loop playsInline className="w-full aspect-square object-cover" src="/videos/ad.mp4" />
+              <HeroVideo src="/videos/ad.mp4" poster="/img/miphoto.jpg" className="w-full aspect-[4/5] object-cover object-top" label="Maleja entrenando" />
             </div>
             <div>
               <h2 className="text-5xl font-black mb-6" style={{ color: "#F5F2F0" }}>
