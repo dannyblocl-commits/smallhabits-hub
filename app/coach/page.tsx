@@ -64,6 +64,7 @@ export default async function CoachPanel() {
             <Link href="/coach/members" className="px-3 py-2 rounded-[12px] row" style={{ color: "var(--sage)" }}>👥 Mis miembros</Link>
             <Link href="/coach/reto" className="block px-3 py-2 rounded-[12px]" style={{ color: "var(--fucsia)" }}>🏁 Inscripciones al reto</Link>
             <Link href="/coach/usuarios" className="block px-3 py-2 rounded-[12px] muted hover:text-[var(--text)]">Planes y accesos</Link>
+            <Link href="/dashboard/reto" className="block px-3 py-2 rounded-[12px] muted hover:text-[var(--text)]">Ver el reto (vista previa)</Link>
             <Link href="/coach/routines" className="block px-3 py-2 rounded-[12px] muted hover:text-[var(--text)]">Rutinas</Link>
             <Link href="/coach/menus" className="block px-3 py-2 rounded-[12px] muted hover:text-[var(--text)]">Planes de alimentación</Link>
             <Link href="/coach/recipes" className="block px-3 py-2 rounded-[12px] muted hover:text-[var(--text)]">Recetario</Link>

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { AppShell } from "@/components/AppShell";
-import { requireUser } from "@/lib/auth";
+import { requireUser, isAdmin } from "@/lib/auth";
 import { tr, locale } from "@/lib/i18n";
 import { RETO } from "@/lib/reto-i18n";
 import { RETO_TRAINING, RETO_MEALS, RETO_SUPPLEMENTS, RETO_HABITS, retoProgress, trackOf, type RetoExercise } from "@/lib/reto-plan";
@@ -47,10 +47,18 @@ function ExerciseCard({ e, gender, lang, token, t }: { e: RetoExercise; gender: 
   );
 }
 
-export default async function RetoDashboard() {
-  const [user, { lang }] = await Promise.all([requireUser(), tr()]);
+export default async function RetoDashboard({ searchParams }: { searchParams: Promise<{ track?: string; day?: string }> }) {
+  const [user, { lang }, sp] = await Promise.all([requireUser(), tr(), searchParams]);
   const t = RETO[lang];
-  const p = retoProgress(user.reto_start);
+  const staff = user.role === "coach" || isAdmin(user);
+  let p = retoProgress(user.reto_start);
+  let preview = false;
+
+  if (!p && staff) {
+    preview = true;
+    const day = Math.min(30, Math.max(1, Number(sp.day) || 1));
+    p = { day, week: Math.min(4, Math.ceil(day / 7)), done: false, pct: Math.round((day / 30) * 100), end: new Date(Date.now() + (30 - day + 1) * 86400000) };
+  }
 
   if (!p) {
     return (
@@ -64,7 +72,7 @@ export default async function RetoDashboard() {
     );
   }
 
-  const track = trackOf(user.reto_track);
+  const track = trackOf(preview ? sp.track : user.reto_track);
   const weekText = t.weeks[p.week - 1];
   const habits = RETO_HABITS[p.week - 1][lang];
   const training = RETO_TRAINING[track];
@@ -75,6 +83,17 @@ export default async function RetoDashboard() {
 
   return (
     <AppShell title={t.app.title} kicker={t.app.kicker}>
+      {preview && (
+        <div className="card p-4 mb-5 flex flex-wrap items-center justify-between gap-3" style={{ borderColor: "#BA8E54" }}>
+          <span className="text-sm" style={{ color: "#BA8E54" }}>Vista previa (coach/admin) — así lo ve una persona en el día {p.day}. Nada se guarda en tu cuenta.</span>
+          <div className="flex gap-2 text-xs">
+            <Link href="/dashboard/reto?track=mujer" className={`pill ${track === "mujer" ? "pill-f" : ""}`}>♀ Mujer</Link>
+            <Link href="/dashboard/reto?track=hombre" className={`pill ${track === "hombre" ? "pill-f" : ""}`}>♂ Hombre</Link>
+            <Link href={`/dashboard/reto?track=${track}&day=8`} className="pill">Día 8</Link>
+            <Link href={`/dashboard/reto?track=${track}&day=30`} className="pill">Día 30</Link>
+          </div>
+        </div>
+      )}
       <div className="card lift p-6 mb-5">
         <div className="flex flex-wrap items-end justify-between gap-3">
           <div>
