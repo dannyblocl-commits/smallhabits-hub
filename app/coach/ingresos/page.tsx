@@ -12,12 +12,20 @@ export default async function CoachIngresos() {
   const s = stripe();
   const since30 = Math.floor(Date.now() / 1000) - 30 * 86400;
 
-  const [subs, charges] = await Promise.all([
-    s.subscriptions.list({ status: "active", limit: 100, expand: ["data.customer"] }),
-    s.charges.list({ limit: 100, created: { gte: Math.floor(Date.now() / 1000) - 90 * 86400 } }),
-  ]);
+  let subs: Awaited<ReturnType<typeof s.subscriptions.list>>["data"] = [];
+  let intents: Awaited<ReturnType<typeof s.paymentIntents.list>>["data"] = [];
+  let warn = "";
+  try {
+    const [a, b] = await Promise.all([
+      s.subscriptions.list({ status: "active", limit: 100, expand: ["data.customer"] }),
+      s.paymentIntents.list({ limit: 100, created: { gte: Math.floor(Date.now() / 1000) - 90 * 86400 } }),
+    ]);
+    subs = a.data; intents = b.data;
+  } catch (e) {
+    warn = e instanceof Error ? e.message : "No se pudo leer Stripe";
+  }
 
-  const active = subs.data.filter((x) => ["active", "trialing", "past_due"].includes(x.status));
+  const active = subs.filter((x) => ["active", "trialing", "past_due"].includes(x.status));
   const byPlan: Record<string, number> = { basico: 0, pro: 0, elite: 0 };
   let mrr = 0;
   for (const x of active) {
@@ -27,9 +35,9 @@ export default async function CoachIngresos() {
     mrr += (item?.price.unit_amount ?? 0) * (item?.quantity ?? 1);
   }
 
-  const paid = charges.data.filter((c) => c.status === "succeeded" && !c.refunded);
-  const last30 = paid.filter((c) => c.created >= since30).reduce((a, c) => a + c.amount, 0);
-  const last90 = paid.reduce((a, c) => a + c.amount, 0);
+  const paid = intents.filter((c) => c.status === "succeeded");
+  const last30 = paid.filter((c) => c.created >= since30).reduce((a, c) => a + c.amount_received, 0);
+  const last90 = paid.reduce((a, c) => a + c.amount_received, 0);
   const retoCount = paid.filter((c) => (c.description || "").toLowerCase().includes("reto") || c.metadata?.price === RETO_PRICE).length;
 
   return (
@@ -38,6 +46,7 @@ export default async function CoachIngresos() {
         <Link href="/coach" style={{ color: "var(--fucsia)" }}>← Volver</Link>
         <h1 className="text-3xl mt-3 mb-1">💰 Ingresos</h1>
         <p className="muted text-sm mb-6">Datos reales de Stripe, en vivo. Lo que se cobra en Farmasi no aparece aquí.</p>
+        {warn && <div className="card p-4 mb-6 text-sm" style={{ borderColor: "var(--fucsia)" }}>Stripe no dejó leer parte de los datos: <span className="muted">{warn}</span></div>}
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
           {[
@@ -83,9 +92,9 @@ export default async function CoachIngresos() {
               {paid.slice(0, 50).map((c) => (
                 <tr key={c.id} style={{ borderTop: "1px solid var(--line)" }}>
                   <td className="px-4 py-2 muted">{fmt(c.created)}</td>
-                  <td className="px-4 py-2">{c.billing_details?.email || c.receipt_email || "—"}</td>
+                  <td className="px-4 py-2">{c.receipt_email || (typeof c.customer === "string" ? c.customer : "—")}</td>
                   <td className="px-4 py-2 muted">{c.description || "Suscripción"}</td>
-                  <td className="px-4 py-2 num">{usd(c.amount)}</td>
+                  <td className="px-4 py-2 num">{usd(c.amount_received)}</td>
                   <td className="px-4 py-2"><span className="pill pill-s">{c.status}</span></td>
                 </tr>
               ))}
