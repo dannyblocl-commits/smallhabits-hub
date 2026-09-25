@@ -22,6 +22,9 @@ export function FoodTracker({ aiEnabled, initial, goal, L, gratis, premium }: { 
   const [result, setResult] = useState<Analysis | null>(null);
   const [note, setNote] = useState("");
   const [manual, setManual] = useState({ name: "", kcal: "" });
+  const [manualMacros, setManualMacros] = useState<{ protein: number; carbs: number; fat: number; note: string } | null>(null);
+  const [estimating, setEstimating] = useState(false);
+  const [resultKcal, setResultKcal] = useState("");
   const [pending, start] = useTransition();
   const [err, setErr] = useState("");
 
@@ -36,7 +39,7 @@ export function FoodTracker({ aiEnabled, initial, goal, L, gratis, premium }: { 
       const r = await fetch("/api/assistant", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ image: img.data, media_type: img.type }) });
       const d = await r.json();
       if (r.status === 429) setErr(L.desdeBasico);
-      else if (d.food) { setResult(d.food); setNote(d.food.note || ""); }
+      else if (d.food) { setResult(d.food); setResultKcal(String(d.food.kcal)); setNote(d.food.note || ""); }
       else if (d.error === "not_food") setNote(d.note || "?");
       else setErr(L.err);
     } catch { setErr(L.err); }
@@ -47,7 +50,20 @@ export function FoodTracker({ aiEnabled, initial, goal, L, gratis, premium }: { 
     start(async () => { try { const saved = await addFoodEntry(e); setLog((l) => [...l, saved]); } catch { setErr(L.err); } });
   }
   function remove(id: string) { setLog((l) => l.filter((x) => x.id !== id)); start(() => deleteFoodEntry(id).catch(() => {})); }
-  function addManual(ev: React.FormEvent) { ev.preventDefault(); const k = parseInt(manual.kcal, 10); if (!manual.name.trim() || !k) return; save({ name: manual.name, kcal: k }); setManual({ name: "", kcal: "" }); }
+  function addManual(ev: React.FormEvent) { ev.preventDefault(); const k = parseInt(manual.kcal, 10); if (!manual.name.trim() || !k) return; save({ name: manual.name, kcal: k, ...(manualMacros ? { protein: manualMacros.protein, carbs: manualMacros.carbs, fat: manualMacros.fat } : {}) }); setManual({ name: "", kcal: "" }); setManualMacros(null); }
+  async function estimate() {
+    if (!manual.name.trim()) return;
+    setEstimating(true); setErr(""); setManualMacros(null);
+    try {
+      const r = await fetch("/api/assistant", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ food_text: manual.name }) });
+      const d = await r.json();
+      if (r.status === 429) setErr(L.desdeBasico);
+      else if (d.food && d.food.kcal > 0) { setManual({ name: d.food.name || manual.name, kcal: String(d.food.kcal) }); setManualMacros({ protein: d.food.protein, carbs: d.food.carbs, fat: d.food.fat, note: d.food.note || "" }); }
+      else if (d.error === "not_food") setErr(d.note || "?");
+      else setErr(L.err);
+    } catch { setErr(L.err); }
+    finally { setEstimating(false); }
+  }
 
   return (
     <div className="grid lg:grid-cols-[340px_1fr] gap-4">
@@ -64,19 +80,33 @@ export function FoodTracker({ aiEnabled, initial, goal, L, gratis, premium }: { 
           {result && (
             <div className="row p-3 mt-3 fade-in">
               <div className="flex items-center justify-between"><div className="display text-sm">{result.name}</div><span className={`pill ${result.confidence === "high" ? "pill-s" : result.confidence === "medium" ? "" : "pill-w"}`}>{result.confidence}</span></div>
-              <div className="num text-2xl" style={{ color: "var(--sage)" }}>{result.kcal} <span className="text-xs muted font-normal">kcal</span></div>
-              <div className="faint text-xs">P {result.protein}g · C {result.carbs}g · G {result.fat}g</div>
+              <div className="flex items-center gap-2 mt-1">
+                <input type="number" inputMode="numeric" value={resultKcal} onChange={(e) => setResultKcal(e.target.value)} className="input input-s !w-24 num text-xl" style={{ color: "var(--sage)" }} aria-label="kcal" />
+                <span className="text-xs muted">kcal</span>
+              </div>
+              <div className="faint text-xs mt-1">P {result.protein}g · C {result.carbs}g · G {result.fat}g</div>
               {note && <div className="faint text-[.65rem] mt-1 italic">{note}</div>}
-              <button onClick={() => { save({ name: result.name, kcal: result.kcal, protein: result.protein, carbs: result.carbs, fat: result.fat, photo: "📷" }); setResult(null); setNote(""); }} className="btn btn-balance btn-sm w-full mt-2">+</button>
+              <div className="faint text-[.65rem] mt-1">{L.ajusta}</div>
+              <button
+                type="button"
+                disabled={pending || !(parseInt(resultKcal, 10) > 0)}
+                onClick={() => { const k = parseInt(resultKcal, 10) || result.kcal; save({ name: result.name, kcal: k, protein: result.protein, carbs: result.carbs, fat: result.fat, photo: "📷" }); setResult(null); setNote(""); setResultKcal(""); }}
+                className="btn btn-go w-full mt-3 text-base py-3"
+              >
+                {pending ? L.guardando : L.agregar.replace("{n}", String(parseInt(resultKcal, 10) || result.kcal))}
+              </button>
+              <button type="button" onClick={() => { setResult(null); setNote(""); setResultKcal(""); }} className="faint text-xs w-full mt-2">✕</button>
             </div>
           )}
           {err && <p className="text-xs mt-2" style={{ color: "#FF8A8A" }}>{err}</p>}
         </div>
         <form onSubmit={addManual} className="card p-5">
           <div className="flex justify-between items-center mb-3"><div className="eyebrow">{L.manual}</div><span className="pill pill-s">{gratis}</span></div>
-          <input id="food-name" value={manual.name} onChange={(e) => setManual({ ...manual, name: e.target.value })} placeholder={L.quecomiste} className="input input-s mb-2" />
-          <input id="food-kcal" value={manual.kcal} onChange={(e) => setManual({ ...manual, kcal: e.target.value })} placeholder={L.calorias} type="number" className="input input-s mb-3" />
-          <button disabled={pending} className="btn btn-sm w-full">{pending ? L.guardando : "+"}</button>
+          <input id="food-name" value={manual.name} onChange={(e) => { setManual({ ...manual, name: e.target.value }); setManualMacros(null); }} placeholder={L.quecomiste} className="input input-s mb-2" />
+          <button type="button" onClick={estimate} disabled={estimating || !manual.name.trim()} className="btn btn-balance btn-sm w-full mb-2">{estimating ? L.estimando : `◐ ${L.estimar}`}</button>
+          <input id="food-kcal" value={manual.kcal} onChange={(e) => setManual({ ...manual, kcal: e.target.value })} placeholder={L.calorias} type="number" inputMode="numeric" className="input input-s mb-1" />
+          {manualMacros && <div className="faint text-xs mb-2">P {manualMacros.protein}g · C {manualMacros.carbs}g · G {manualMacros.fat}g{manualMacros.note ? ` · ${manualMacros.note}` : ""}</div>}
+          <button disabled={pending || !manual.name.trim() || !(parseInt(manual.kcal, 10) > 0)} className="btn btn-go w-full mt-2 py-3 text-base">{pending ? L.guardando : (parseInt(manual.kcal, 10) > 0 ? L.agregar.replace("{n}", manual.kcal) : "+")}</button>
         </form>
       </div>
 

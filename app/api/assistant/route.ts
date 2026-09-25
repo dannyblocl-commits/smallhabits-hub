@@ -7,7 +7,7 @@ import { getLang } from "@/lib/i18n";
 import { demoRoutines } from "@/data/routines";
 
 const MODEL = "claude-opus-5";
-const LIMITS = { chat: { free: 5, basico: 40, pro: Infinity, elite: Infinity }, photo: { free: 0, basico: 10, pro: Infinity, elite: Infinity } } as const;
+const LIMITS = { chat: { free: 5, basico: 40, pro: Infinity, elite: Infinity }, photo: { free: 0, basico: 10, pro: Infinity, elite: Infinity }, estimate: { free: 5, basico: 40, pro: Infinity, elite: Infinity } } as const;
 const LANG_NAME = { es: "Spanish", en: "English", pt: "Brazilian Portuguese" } as const;
 
 const SYSTEM = `You are the Small Habits assistant, the in-app helper of "Small Habits by Maleja" — a wellness app built on the idea "small habits, big results" (pequeños hábitos, grandes resultados). Maleja is an ISSA-certified coach (CPT, Nutrition Coach, Strength & Conditioning).
@@ -21,6 +21,8 @@ How you behave:
 
 const PHOTO_PROMPT = `Look at this meal photo and estimate its nutrition. Respond ONLY with JSON, no prose: {"name": "<short dish name in the member's language>", "kcal": <integer>, "protein_g": <integer>, "carbs_g": <integer>, "fat_g": <integer>, "confidence": "low"|"medium"|"high", "note": "<one short sentence in the member's language about what you assumed, e.g. portion size>"}. If it is not food, return {"name": "", "kcal": 0, "protein_g": 0, "carbs_g": 0, "fat_g": 0, "confidence": "low", "note": "<why>"}.`;
 
+const TEXT_PROMPT = `The member typed what they ate. Estimate the nutrition of that meal for a typical adult portion unless a quantity is given. Respond ONLY with JSON, no prose: {"name": "<short clean dish name in the member's language>", "kcal": <integer>, "protein_g": <integer>, "carbs_g": <integer>, "fat_g": <integer>, "confidence": "low"|"medium"|"high", "note": "<one short sentence in the member's language about the portion you assumed>"}. If the text is not food, return {"name": "", "kcal": 0, "protein_g": 0, "carbs_g": 0, "fat_g": 0, "confidence": "low", "note": "<why>"}.`;
+
 export async function POST(req: NextRequest) {
   const user = await getUser();
   if (!user) return NextResponse.json({ error: "unauthorized" }, { status: 401 });
@@ -28,11 +30,11 @@ export async function POST(req: NextRequest) {
   await ensureSchema();
   const lang = await getLang();
 
-  const body = (await req.json().catch(() => ({}))) as { message?: string; history?: { role: "user" | "assistant"; text: string }[]; image?: string; media_type?: string };
-  const kind: "chat" | "photo" = body.image ? "photo" : "chat";
+  const body = (await req.json().catch(() => ({}))) as { message?: string; history?: { role: "user" | "assistant"; text: string }[]; image?: string; media_type?: string; food_text?: string };
+  const kind: "chat" | "photo" | "estimate" = body.image ? "photo" : body.food_text ? "estimate" : "chat";
   const limit = LIMITS[kind][user.plan];
   const used = (await db().query("select count(*)::int as n from ai_usage where user_id=$1 and kind=$2 and at >= date_trunc('day', now())", [user.id, kind])).rows[0].n as number;
-  if (used >= limit) return NextResponse.json({ error: "limit", used, limit: Number.isFinite(limit) ? limit : null, upgrade: kind === "photo" ? "basico" : "pro" }, { status: 429 });
+  if (used >= limit) return NextResponse.json({ error: "limit", used, limit: Number.isFinite(limit) ? limit : null, upgrade: kind === "photo" ? "basico" : kind === "estimate" ? "basico" : "pro" }, { status: 429 });
 
   const [kcal, assign] = await Promise.all([
     db().query("select coalesce(sum(kcal),0)::int as kcal from food_entries where user_id=$1 and at >= date_trunc('day', now())", [user.id]),
@@ -50,6 +52,10 @@ export async function POST(req: NextRequest) {
     const text = (body.message ?? "").trim().slice(0, 2000);
     if (!text) return NextResponse.json({ error: "empty" }, { status: 400 });
     messages.push({ role: "user", content: text });
+  } else if (kind === "estimate") {
+    const text = (body.food_text ?? "").trim().slice(0, 500);
+    if (!text) return NextResponse.json({ error: "empty" }, { status: 400 });
+    messages.push({ role: "user", content: `${TEXT_PROMPT}\n\nMeal: ${text}` });
   } else {
     const media = (body.media_type ?? "image/jpeg") as "image/jpeg" | "image/png" | "image/webp" | "image/gif";
     messages.push({ role: "user", content: [{ type: "image", source: { type: "base64", media_type: media, data: body.image!.replace(/^data:[^;]+;base64,/, "") } }, { type: "text", text: PHOTO_PROMPT }] });
