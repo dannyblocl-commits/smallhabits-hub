@@ -43,6 +43,12 @@ export type RetoDict = {
     meals: string;
     mealsNote: string;
     choose: string;
+    how: string;
+    gym: string;
+    home: string;
+    front: string;
+    side: string;
+    videoBy: string;
   };
   ctaForm: string;
   ctaFormNote: string;
@@ -137,6 +143,12 @@ const es: RetoDict = {
     meals: "Tu menú del reto",
     mealsNote: "Elige una opción por comida. Porciones orientativas; el shake o la proteína en polvo son opcionales. Café y té sin azúcar, sí.",
     choose: "opciones",
+    how: "Cómo hacerlo",
+    gym: "Gym",
+    home: "Casa",
+    front: "Frente",
+    side: "Lado",
+    videoBy: "Videos de demostración: MuscleWiki",
   },
   ctaForm: "Quiero entrar al reto",
   ctaFormNote: "Llenas tus datos y tu objetivo, Maleja te escribe y activa tu mes.",
@@ -231,6 +243,12 @@ const en: RetoDict = {
     meals: "Your challenge meal plan",
     mealsNote: "Pick one option per meal. Portions are a guide; shake or protein powder are optional. Unsweetened coffee and tea are fine.",
     choose: "options",
+    how: "How to do it",
+    gym: "Gym",
+    home: "Home",
+    front: "Front",
+    side: "Side",
+    videoBy: "Demo videos: MuscleWiki",
   },
   ctaForm: "I want to join the challenge",
   ctaFormNote: "Fill in your details and your goal; Maleja messages you and activates your month.",
@@ -325,6 +343,12 @@ const pt: RetoDict = {
     meals: "Seu cardápio do desafio",
     mealsNote: "Escolha uma opção por refeição. Porções orientativas; o shake ou a proteína em pó são opcionais. Café e chá sem açúcar, sim.",
     choose: "opções",
+    how: "Como fazer",
+    gym: "Academia",
+    home: "Casa",
+    front: "Frente",
+    side: "Lado",
+    videoBy: "Vídeos de demonstração: MuscleWiki",
   },
   ctaForm: "Quero entrar no desafio",
   ctaFormNote: "Preencha seus dados e seu objetivo; a Maleja te escreve e ativa seu mês.",

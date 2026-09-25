@@ -1,0 +1,2358 @@
+{
+ "2": {
+  "name": "Dumbbell Curl",
+  "category": "Dumbbells",
+  "muscles": [
+   "Biceps"
+  ],
+  "steps": {
+   "en": [
+    "Stand up straight with a dumbbell in each hand at arm's length.",
+    "Raise one dumbbell and twist your forearm until it is vertical and your palm faces the shoulder.",
+    "Lower to original position and repeat with opposite arm"
+   ],
+   "es": [
+    "Ponte de pie con una mancuerna en cada mano a lo largo del brazo.",
+    "Levanta una mancuerna y gira el antebrazo hasta que quede vertical y la palma mire hacia el hombro.",
+    "Baja a la posición inicial y repite con el brazo opuesto."
+   ],
+   "pt": [
+    "Fique em pé com um haltere em cada mão, com os braços estendidos.",
+    "Levante um haltere e gire o antebraço até que fique na vertical e a palma da mão fique voltada para o ombro.",
+    "Abaixe até a posição inicial e repita com o braço oposto"
+   ]
+  },
+  "videos": {
+   "male": {
+    "front": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/male-Dumbbells-dumbbell-curl-front.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-male-Dumbbells-dumbbell-curl-front.jpg"
+    },
+    "side": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/male-Dumbbells-dumbbell-curl-side.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-male-Dumbbells-dumbbell-curl-side.jpg"
+    }
+   },
+   "female": {
+    "front": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/female-Dumbbells-dumbbell-curl-front.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Dumbbells-dumbbell-curl-front.jpg"
+    },
+    "side": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/female-Dumbbells-dumbbell-curl-side.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Dumbbells-dumbbell-curl-side.jpg"
+    }
+   }
+  }
+ },
+ "3": {
+  "name": "Dumbbell Hammer Curl",
+  "category": "Dumbbells",
+  "muscles": [
+   "Biceps"
+  ],
+  "steps": {
+   "en": [
+    "Hold the dumbbells with a neutral grip (thumbs facing the ceiling).",
+    "Slowly lift the dumbbell up to chest height",
+    "Return to starting position and repeat."
+   ],
+   "es": [
+    "Sostén las mancuernas con un agarre neutro (pulgares hacia el techo).",
+    "Levanta lentamente la mancuerna hasta la altura del pecho.",
+    "Vuelve a la posición inicial y repite."
+   ],
+   "pt": [
+    "Segure os halteres com pegada neutra (polegares apontando para o teto).",
+    "Levante lentamente o haltere até a altura do peito",
+    "Volte à posição inicial e repita."
+   ]
+  },
+  "videos": {
+   "male": {
+    "front": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/male-Dumbbells-dumbbell-hammer-curl-front.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-male-Dumbbells-dumbbell-hammer-curl-front.jpg"
+    },
+    "side": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/male-Dumbbells-dumbbell-hammer-curl-side.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-male-Dumbbells-dumbbell-hammer-curl-side.jpg"
+    }
+   },
+   "female": {
+    "front": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/female-Dumbbells-dumbbell-hammer-curl-front.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Dumbbells-dumbbell-hammer-curl-front.jpg"
+    },
+    "side": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/female-Dumbbells-dumbbell-hammer-curl-side.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Dumbbells-dumbbell-hammer-curl-side.jpg"
+    }
+   }
+  }
+ },
+ "8": {
+  "name": "Barbell Squat",
+  "category": "Barbell",
+  "muscles": [
+   "Quads"
+  ],
+  "steps": {
+   "en": [
+    "Stand with your feet shoulder-width apart. Maintain the natural arch in your back, squeezing your shoulder blades and raising your chest.",
+    "Grip the bar across your shoulders and support it on your upper back. Unwrack the bar by straightening your legs, and take a step back.",
+    "Bend your knees as you lower the weight without altering the form of your back until your hips are below your knees.",
+    "Raise the bar back to starting position, lift with your legs and exhale at the top."
+   ],
+   "es": [
+    "Párate con los pies separados al ancho de los hombros. Mantén el arco natural de tu espalda, junta los omóplatos y levanta el pecho.",
+    "Agarra la barra sobre tus hombros y apóyala en la parte superior de tu espalda. Desengancha la barra estirando las piernas y da un paso atrás.",
+    "Flexiona las rodillas mientras bajas el peso sin alterar la forma de tu espalda hasta que tus caderas queden debajo de tus rodillas.",
+    "Sube la barra de vuelta a la posición inicial, empuja con las piernas y exhala en la parte superior."
+   ],
+   "pt": [
+    "Fique em pé com os pés na largura dos ombros. Mantenha o arco natural das costas, contraindo as escápulas e projetando o peito para cima.",
+    "Segure a barra sobre os ombros, apoiando-a na parte superior das costas. Retire a barra do suporte esticando as pernas e dê um passo para trás.",
+    "Dobre os joelhos ao abaixar o peso sem alterar a postura das costas, até que os quadris fiquem abaixo dos joelhos.",
+    "Suba a barra de volta à posição inicial, empurrando com as pernas e soltando o ar no topo do movimento."
+   ]
+  },
+  "videos": {
+   "male": {
+    "front": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/male-Barbell-barbell-squat-front.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-male-Barbell-barbell-squat-front.jpg"
+    },
+    "side": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/male-Barbell-barbell-squat-side.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-male-Barbell-barbell-squat-side.jpg"
+    }
+   },
+   "female": {
+    "front": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/female-Barbell-barbell-squat-front.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Barbell-barbell-squat-front.jpg"
+    },
+    "side": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/female-Barbell-barbell-squat-side.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Barbell-barbell-squat-side.jpg"
+    }
+   }
+  }
+ },
+ "9": {
+  "name": "Machine Leg Press",
+  "category": "Machine",
+  "muscles": [
+   "Glutes",
+   "Quads"
+  ],
+  "steps": {
+   "en": [
+    "Place your legs on the platform with your feet at shoulder width.",
+    "Release the weight and extend your legs fully, without locking your knees.",
+    "Lower the weight until your legs are at a 90° angle (but DO NOT allow your butt and lower back to rise off of the pad. This will put your lower back in a rounded position, which is very dangerous.)",
+    "Raise the weight back to starting position."
+   ],
+   "es": [
+    "Coloca las piernas en la plataforma con los pies al ancho de los hombros.",
+    "Suelta el peso y extiende las piernas completamente, sin bloquear las rodillas.",
+    "Baja el peso hasta que tus piernas formen un ángulo de 90° (pero NO permitas que tu glúteo y espalda baja se levanten del respaldo. Esto pondría tu espalda baja en una posición redondeada, lo cual es muy peligroso.)",
+    "Sube el peso de vuelta a la posición inicial."
+   ],
+   "pt": [
+    "Posicione as pernas na plataforma com os pés na largura dos ombros.",
+    "Solte a trava e estenda totalmente as pernas, sem travar os joelhos.",
+    "Abaixe o peso até que suas pernas formem um ângulo de 90° (mas NÃO deixe o quadril e a lombar saírem do apoio. Isso deixaria sua lombar arredondada, o que é muito perigoso.)",
+    "Suba o peso de volta à posição inicial."
+   ]
+  },
+  "videos": {
+   "male": {
+    "front": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/male-Machine-machine-leg-press-front.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-male-Machine-machine-leg-press-front.jpg"
+    },
+    "side": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/male-Machine-machine-leg-press-side.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-male-Machine-machine-leg-press-side.jpg"
+    }
+   },
+   "female": {
+    "front": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/female-Machine-machine-leg-press-front.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Machine-machine-leg-press-front.jpg"
+    },
+    "side": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/female-Machine-machine-leg-press-side.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Machine-machine-leg-press-side.jpg"
+    }
+   }
+  }
+ },
+ "10": {
+  "name": "Machine Leg Extension",
+  "category": "Machine",
+  "muscles": [
+   "Quads"
+  ],
+  "steps": {
+   "en": [
+    "Sit on the machine with your back against the cushion and adjust the machine you are using so that your knees are at a 90 degree angle at the starting position.",
+    "Raise the weight by extending your knees outward, then lower your leg to the starting position. Both movements should be done in a slow, controlled motion."
+   ],
+   "es": [
+    "Siéntate en la máquina con la espalda contra el respaldo y ajusta la máquina que estés usando para que tus rodillas queden a 90 grados en la posición inicial.",
+    "Levanta el peso extendiendo las rodillas hacia afuera, luego baja la pierna a la posición inicial. Ambos movimientos deben hacerse de forma lenta y controlada."
+   ],
+   "pt": [
+    "Sente-se na máquina com as costas apoiadas no encosto e ajuste o aparelho para que seus joelhos fiquem a 90 graus na posição inicial.",
+    "Levante o peso estendendo os joelhos para fora e depois abaixe a perna até a posição inicial. Ambos os movimentos devem ser feitos de forma lenta e controlada."
+   ]
+  },
+  "videos": {
+   "male": {
+    "front": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/male-machine-leg-extension-front.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-male-machine-leg-extension-front.jpg"
+    },
+    "side": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/male-machine-leg-extension-side.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-male-machine-leg-extension-side.jpg"
+    }
+   },
+   "female": {
+    "front": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/female-machine-leg-extension-front.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-machine-leg-extension-front.jpg"
+    },
+    "side": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/female-machine-leg-extension-side.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-machine-leg-extension-side.jpg"
+    }
+   }
+  }
+ },
+ "11": {
+  "name": "Dumbbell Goblet Squat",
+  "category": "Dumbbells",
+  "muscles": [
+   "Glutes",
+   "Quads"
+  ],
+  "steps": {
+   "en": [
+    "Hold the weight tucked into your upper chest area, keeping your elbows in. Your feet should be slightly wider than shoulder width.",
+    "Sink down into the squat, keeping your elbows inside the track of your knees.",
+    "Push through your heels while keeping your chest up and return to starting position."
+   ],
+   "es": [
+    "Sostén el peso pegado a la parte superior de tu pecho, manteniendo los codos adentro. Tus pies deben estar un poco más separados que el ancho de los hombros.",
+    "Baja hacia la sentadilla, manteniendo los codos dentro de la trayectoria de las rodillas.",
+    "Empuja a través de los talones mientras mantienes el pecho arriba y vuelve a la posición inicial."
+   ],
+   "pt": [
+    "Segure o peso apoiado na parte superior do peito, mantendo os cotovelos para dentro. Seus pés devem ficar um pouco mais afastados que a largura dos ombros.",
+    "Desça no agachamento, mantendo os cotovelos dentro da linha dos joelhos.",
+    "Empurre pelos calcanhares mantendo o peito erguido e retorne à posição inicial."
+   ]
+  },
+  "videos": {
+   "male": {
+    "front": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/male-dumbbell-goblet-squat-front.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-male-dumbbell-goblet-squat-front.jpg"
+    },
+    "side": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/male-dumbbell-goblet-squat-side.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-male-dumbbell-goblet-squat-side.jpg"
+    }
+   },
+   "female": {
+    "front": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/female-dumbbell-goblet-squat-front.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-dumbbell-goblet-squat-front.jpg"
+    },
+    "side": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/female-dumbbell-goblet-squat-side.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-dumbbell-goblet-squat-side.jpg"
+    }
+   }
+  }
+ },
+ "16": {
+  "name": "Dumbbell Seated Overhead Tricep Extension",
+  "category": "Dumbbells",
+  "muscles": [
+   "Triceps",
+   "Long Head Tricep"
+  ],
+  "steps": {
+   "en": [
+    "Sit on the bench and hold a dumbbell with both hands. Raise the dumbbell overhead at arms length, holding the weight up with the palms of your hands.",
+    "Keep your elbows in while you lower the weight behind your head, your upper arms stationary.",
+    "Raise the weight back to starting position."
+   ],
+   "es": [
+    "Siéntate en el banco y sostén una mancuerna con ambas manos. Levanta la mancuerna por encima de la cabeza con los brazos extendidos, sosteniendo el peso con las palmas de las manos.",
+    "Mantén los codos adentro mientras bajas el peso detrás de tu cabeza, con la parte superior de los brazos fija.",
+    "Sube el peso de vuelta a la posición inicial."
+   ],
+   "pt": [
+    "Sente-se no banco e segure um haltere com as duas mãos. Levante o haltere acima da cabeça, com os braços estendidos, segurando o peso com as palmas das mãos.",
+    "Mantenha os cotovelos para dentro enquanto abaixa o peso atrás da cabeça, mantendo a parte superior dos braços parada.",
+    "Suba o peso de volta à posição inicial."
+   ]
+  },
+  "videos": {
+   "male": {
+    "front": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/male-Dumbbells-dumbbell-seated-overhead-tricep-extension-front.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-male-Dumbbells-dumbbell-seated-overhead-tricep-extension-front.jpg"
+    },
+    "side": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/male-Dumbbells-dumbbell-seated-overhead-tricep-extension-side.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-male-Dumbbells-dumbbell-seated-overhead-tricep-extension-side.jpg"
+    }
+   },
+   "female": {
+    "front": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/female-Dumbbells-dumbbell-seated-overhead-tricep-extension-front.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Dumbbells-dumbbell-seated-overhead-tricep-extension-front.jpg"
+    },
+    "side": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/female-Dumbbells-dumbbell-seated-overhead-tricep-extension-side.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Dumbbells-dumbbell-seated-overhead-tricep-extension-side.jpg"
+    }
+   }
+  }
+ },
+ "18": {
+  "name": "Bench Dips",
+  "category": "Bodyweight",
+  "muscles": [
+   "Triceps"
+  ],
+  "steps": {
+   "en": [
+    "Grip the edge of the bench with your hands, Keep your feet together and legs straight.",
+    "Lower your body straight down.",
+    "Slowly press back up to the starting point.",
+    "TIP: Make this harder by raising your feet off the floor and adding weight."
+   ],
+   "es": [
+    "Agarra el borde del banco con las manos, mantén los pies juntos y las piernas rectas.",
+    "Baja tu cuerpo en línea recta.",
+    "Empuja lentamente hacia arriba hasta el punto inicial.",
+    "CONSEJO: Hazlo más difícil levantando los pies del suelo y agregando peso."
+   ],
+   "pt": [
+    "Segure a borda do banco com as mãos, mantenha os pés juntos e as pernas retas.",
+    "Abaixe o corpo diretamente para baixo.",
+    "Empurre lentamente de volta para cima até a posição inicial.",
+    "DICA: Torne mais difícil elevando os pés do chão e adicionando peso."
+   ]
+  },
+  "videos": {
+   "male": {
+    "front": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/male-Bodyweight-bench-dips-front.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-male-Bodyweight-bench-dips-front.jpg"
+    },
+    "side": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/male-Bodyweight-bench-dips-side.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-male-Bodyweight-bench-dips-side.jpg"
+    }
+   },
+   "female": {
+    "front": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/female-Bodyweight-bench-dips-front.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Bodyweight-bench-dips-front.jpg"
+    },
+    "side": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/female-Bodyweight-bench-dips-side.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Bodyweight-bench-dips-side.jpg"
+    }
+   }
+  }
+ },
+ "20": {
+  "name": "Dumbbell Lateral Raise",
+  "category": "Dumbbells",
+  "muscles": [
+   "Shoulders",
+   "Lateral Deltoid",
+   "Front Shoulders"
+  ],
+  "steps": {
+   "en": [
+    "Stand up straight with dumbbells at either side, palms facing your hips.",
+    "Raise your arms on either side with a slight bend in your elbow until they are parallel with the floor. Pause at the top of the motion.",
+    "Slowly return your arms down to starting position."
+   ],
+   "es": [
+    "Párate derecho con mancuernas a cada lado, palmas mirando hacia las caderas.",
+    "Levanta los brazos hacia los lados con una ligera flexión en los codos hasta que queden paralelos al piso. Haz una pausa en la parte alta del movimiento.",
+    "Baja lentamente los brazos a la posición inicial."
+   ],
+   "pt": [
+    "Fique em pé com halteres nas laterais do corpo, palmas voltadas para o quadril.",
+    "Levante os braços para os lados com uma leve flexão nos cotovelos até ficarem paralelos ao chão. Pause no topo do movimento.",
+    "Abaixe lentamente os braços de volta à posição inicial."
+   ]
+  },
+  "videos": {
+   "male": {
+    "front": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/male-Dumbbells-dumbbell-lateral-raise-front.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-male-Dumbbells-dumbbell-lateral-raise-front.jpg"
+    },
+    "side": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/male-Dumbbells-dumbbell-lateral-raise-side.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-male-Dumbbells-dumbbell-lateral-raise-side.jpg"
+    }
+   },
+   "female": {
+    "front": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/female-Dumbbells-dumbbell-lateral-raise-front.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Dumbbells-dumbbell-lateral-raise-front.jpg"
+    },
+    "side": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/female-Dumbbells-dumbbell-lateral-raise-side.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Dumbbells-dumbbell-lateral-raise-side.jpg"
+    }
+   }
+  }
+ },
+ "23": {
+  "name": "Machine Pulldown",
+  "category": "Machine",
+  "muscles": [
+   "Lats"
+  ],
+  "steps": {
+   "en": [
+    "Grip the bar with the palms facing forward, your hands need to be spaced out at a distance wider than shoulder width.",
+    "As you have both arms extended in front of you holding the bar, bring your torso back around 30 degrees while sticking your chest out.",
+    "Pull the bar down to about chin level or a little lower in a smooth movement whilst squeezing the shoulder blades together.",
+    "After a second of squeezing, slowly raise the bar back to the starting position when your arms are fully extended."
+   ],
+   "es": [
+    "Agarra la barra con las palmas hacia adelante, tus manos deben estar separadas a una distancia mayor que el ancho de los hombros.",
+    "Con ambos brazos extendidos frente a ti sosteniendo la barra, inclina el torso hacia atrás unos 30 grados sacando el pecho.",
+    "Jala la barra hacia abajo hasta más o menos el nivel de la barbilla o un poco más abajo, en un movimiento suave, juntando los omóplatos.",
+    "Después de apretar un segundo, sube lentamente la barra de vuelta a la posición inicial cuando los brazos estén completamente extendidos."
+   ],
+   "pt": [
+    "Segure a barra com as palmas voltadas para frente, com as mãos afastadas a uma distância maior que a largura dos ombros.",
+    "Com os dois braços estendidos à frente segurando a barra, incline o tronco cerca de 30 graus para trás enquanto projeta o peito para frente.",
+    "Puxe a barra para baixo até a altura do queixo ou um pouco abaixo, em um movimento suave, contraindo as escápulas.",
+    "Após um segundo de contração, suba lentamente a barra de volta à posição inicial com os braços totalmente estendidos."
+   ]
+  },
+  "videos": {
+   "male": {
+    "front": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/male-machine-pulldown-front.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-male-machine-pulldown-front.jpg"
+    },
+    "side": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/male-machine-pulldown-side.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-male-machine-pulldown-side.jpg"
+    }
+   },
+   "female": {
+    "front": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/female-machine-pulldown-front.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-machine-pulldown-front.jpg"
+    },
+    "side": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/female-machine-pulldown-side.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-machine-pulldown-side.jpg"
+    }
+   }
+  }
+ },
+ "26": {
+  "name": "Dumbbell Row Bilateral",
+  "category": "Dumbbells",
+  "muscles": [
+   "Traps (mid-back)",
+   "Lats"
+  ],
+  "steps": {
+   "en": [
+    "Grab both dumbbells and hinge forward at the hips. Make sure you keep a flat back.",
+    "The closer your torso is to parallel with the ground the longer the range of motion will be at your shoulder. The better the results you'll get from the exercise.",
+    "Let your arms hang freely, and then pull your elbow joint straight back toward the ceiling."
+   ],
+   "es": [
+    "Toma ambas mancuernas y flexiona la cadera hacia adelante. Asegúrate de mantener la espalda plana.",
+    "Mientras más cerca esté tu torso de estar paralelo al piso, mayor será el rango de movimiento en el hombro. Mejores serán los resultados que obtendrás del ejercicio.",
+    "Deja que tus brazos cuelguen libremente y luego jala la articulación del codo directo hacia el techo."
+   ],
+   "pt": [
+    "Segure os dois halteres e incline o tronco para frente a partir do quadril. Mantenha as costas retas.",
+    "Quanto mais próximo seu tronco estiver paralelo ao chão, maior será a amplitude de movimento no ombro. Melhores serão os resultados do exercício.",
+    "Deixe os braços pendurados livremente e depois puxe a articulação do cotovelo diretamente para trás, em direção ao teto."
+   ]
+  },
+  "videos": {
+   "male": {
+    "front": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/male-Dumbbells-dumbbell-row-bilateral-front.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-male-Dumbbells-dumbbell-row-bilateral-front.jpg"
+    },
+    "side": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/male-Dumbbells-dumbbell-row-bilateral-side.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-male-Dumbbells-dumbbell-row-bilateral-side.jpg"
+    }
+   },
+   "female": {
+    "front": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/female-Dumbbells-dumbbell-row-bilateral-front.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Dumbbells-dumbbell-row-bilateral-front.jpg"
+    },
+    "side": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/female-Dumbbells-dumbbell-row-bilateral-side.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Dumbbells-dumbbell-row-bilateral-side.jpg"
+    }
+   }
+  }
+ },
+ "30": {
+  "name": "Barbell Hip Thrust",
+  "category": "Barbell",
+  "muscles": [
+   "Glutes"
+  ],
+  "steps": {
+   "en": [
+    "Sit on the ground with a bench behind you. Have the barbell over your legs just above your hips.",
+    "Lean back against the bench so that your shoulders are resting upon it, stretch your arms out to either side using the bench as support.",
+    "Raise the weight by driving through your feet and extending your hips upwards. Support the weight with your shoulders and feet.",
+    "Slowly extend as far as you can, and then slowly return to the starting position."
+   ],
+   "es": [
+    "Siéntate en el suelo con un banco detrás de ti. Ten la barra sobre tus piernas justo arriba de las caderas.",
+    "Recuéstate contra el banco para que tus hombros descansen sobre él, extiende los brazos a los lados usando el banco como apoyo.",
+    "Levanta el peso empujando con los pies y extendiendo las caderas hacia arriba. Sostén el peso con los hombros y los pies.",
+    "Extiende lentamente lo más que puedas y luego vuelve lentamente a la posición inicial."
+   ],
+   "pt": [
+    "Sente-se no chão com um banco atrás de você. Posicione a barra sobre as pernas, logo acima do quadril.",
+    "Incline-se para trás contra o banco de forma que os ombros fiquem apoiados nele, estenda os braços para os lados usando o banco como apoio.",
+    "Levante o peso empurrando pelos pés e estendendo o quadril para cima. Sustente o peso com os ombros e os pés.",
+    "Estenda lentamente o máximo possível e depois volte devagar à posição inicial."
+   ]
+  },
+  "videos": {
+   "male": {
+    "front": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/male-Barbell-barbell-hip-thrust-front.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-male-Barbell-barbell-hip-thrust-front.jpg"
+    },
+    "side": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/male-Barbell-barbell-hip-thrust-side.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-male-Barbell-barbell-hip-thrust-side.jpg"
+    }
+   },
+   "female": {
+    "front": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/female-Barbell-barbell-hip-thrust-front.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Barbell-barbell-hip-thrust-front.jpg"
+    },
+    "side": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/female-Barbell-barbell-hip-thrust-side.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Barbell-barbell-hip-thrust-side.jpg"
+    }
+   }
+  }
+ },
+ "35": {
+  "name": "Crunches",
+  "category": "Bodyweight",
+  "muscles": [
+   "Abdominals"
+  ],
+  "steps": {
+   "en": [
+    "Lay flat on your back with your knees bent and your feet flat on the ground, about a foot from your lower back.",
+    "Place your fingertips on your temples with your palms facing out.",
+    "Draw your belly into the base of your spine to engage the muscles, then raise your head and shoulders off the floor. Return to starting position and repeat."
+   ],
+   "es": [
+    "Acuéstate boca arriba con las rodillas dobladas y los pies planos en el piso, aproximadamente a un pie de distancia de tu espalda baja.",
+    "Coloca las yemas de los dedos en tus sienes con las palmas hacia afuera.",
+    "Mete el abdomen hacia la base de tu columna para activar los músculos, luego levanta la cabeza y los hombros del piso. Vuelve a la posición inicial y repite."
+   ],
+   "pt": [
+    "Deite-se de costas com os joelhos dobrados e os pés apoiados no chão, cerca de 30 cm da lombar.",
+    "Coloque as pontas dos dedos nas têmporas com as palmas voltadas para fora.",
+    "Puxe a barriga em direção à base da coluna para ativar os músculos, depois levante a cabeça e os ombros do chão. Volte à posição inicial e repita."
+   ]
+  },
+  "videos": {
+   "male": {
+    "front": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/male-bodyweight-crunch-front.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-male-bodyweight-crunch-front.jpg"
+    },
+    "side": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/male-bodyweight-crunch-side.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-male-bodyweight-crunch-side.jpg"
+    }
+   },
+   "female": {
+    "front": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/female-bodyweight-crunch-front.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-bodyweight-crunch-front.jpg"
+    },
+    "side": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/female-bodyweight-crunch-side.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-bodyweight-crunch-side.jpg"
+    }
+   }
+  }
+ },
+ "39": {
+  "name": "Barbell Deadlift",
+  "category": "Barbell",
+  "muscles": [
+   "Traps (mid-back)",
+   "Lower back"
+  ],
+  "steps": {
+   "en": [
+    "Stand with your mid-foot under the bar and grip the bar with your hands, about a shoulder width apart.",
+    "Bend your knees, then lift the bar by straightening your back. It is important to keep your back straight.",
+    "Stand to your full height and hold.",
+    "Lower the bar to the floor by bending your knees and keeping your back straight."
+   ],
+   "es": [
+    "Párate con la mitad de tu pie debajo de la barra y agarra la barra con las manos, aproximadamente al ancho de los hombros.",
+    "Flexiona las rodillas, luego levanta la barra enderezando la espalda. Es importante mantener la espalda recta.",
+    "Ponte de pie a tu altura completa y sostén la posición.",
+    "Baja la barra al piso flexionando las rodillas y manteniendo la espalda recta."
+   ],
+   "pt": [
+    "Fique em pé com o meio do pé sob a barra e segure-a com as mãos, com uma distância aproximada da largura dos ombros.",
+    "Dobre os joelhos e levante a barra esticando as costas. É importante manter as costas retas.",
+    "Fique totalmente em pé e segure a posição.",
+    "Abaixe a barra até o chão dobrando os joelhos e mantendo as costas retas."
+   ]
+  },
+  "videos": {
+   "male": {
+    "front": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/male-Barbell-barbell-deadlift-front.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-male-Barbell-barbell-deadlift-front.jpg"
+    },
+    "side": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/male-Barbell-barbell-deadlift-side.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-male-Barbell-barbell-deadlift-side.jpg"
+    }
+   },
+   "female": {
+    "front": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/female-Barbell-barbell-deadlift-front.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Barbell-barbell-deadlift-front.jpg"
+    },
+    "side": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/female-Barbell-barbell-deadlift-side.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Barbell-barbell-deadlift-side.jpg"
+    }
+   }
+  }
+ },
+ "42": {
+  "name": "Bulgarian Split Squat",
+  "category": "Bodyweight",
+  "muscles": [
+   "Glutes",
+   "Quads"
+  ],
+  "steps": {
+   "en": [
+    "Stand with your back to a bench (or raised surface) and place one of your feet on the bench.",
+    "Squat down until your front leg is about parallel to the floor.",
+    "Go back to the starting position. After completing the desired amount of reps, switch legs and repeat."
+   ],
+   "es": [
+    "Párate de espaldas a un banco (o superficie elevada) y coloca uno de tus pies sobre el banco.",
+    "Baja en sentadilla hasta que tu pierna delantera quede aproximadamente paralela al piso.",
+    "Vuelve a la posición inicial. Después de completar la cantidad deseada de repeticiones, cambia de pierna y repite."
+   ],
+   "pt": [
+    "Fique de costas para um banco (ou superfície elevada) e apoie um dos pés sobre o banco.",
+    "Agache até que a perna da frente fique quase paralela ao chão.",
+    "Volte à posição inicial. Após completar o número desejado de repetições, troque de perna e repita."
+   ]
+  },
+  "videos": {
+   "male": {
+    "front": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/male-Bodyweight-bulgarian-split-squat-front.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-male-Bodyweight-bulgarian-split-squat-front.jpg"
+    },
+    "side": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/male-Bodyweight-bulgarian-split-squat-side.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-male-Bodyweight-bulgarian-split-squat-side.jpg"
+    }
+   },
+   "female": {
+    "front": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/female-Bodyweight-bulgarian-split-squat-front.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Bodyweight-bulgarian-split-squat-front.jpg"
+    },
+    "side": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/female-Bodyweight-bulgarian-split-squat-side.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Bodyweight-bulgarian-split-squat-side.jpg"
+    }
+   }
+  }
+ },
+ "45": {
+  "name": "Dumbbell Seated Overhead Press",
+  "category": "Dumbbells",
+  "muscles": [
+   "Shoulders",
+   "Anterior Deltoid",
+   "Front Shoulders"
+  ],
+  "steps": {
+   "en": [
+    "Sit on a bench with back support. Raise the dumbbells to shoulder height with your palms forward.",
+    "Raise the dumbbells upwards and pause at the contracted position.",
+    "Lower the weights back to starting position."
+   ],
+   "es": [
+    "Siéntate en un banco con soporte para la espalda. Levanta las mancuernas hasta la altura de los hombros con las palmas hacia adelante.",
+    "Levanta las mancuernas hacia arriba y haz una pausa en la posición contraída.",
+    "Baja los pesos de vuelta a la posición inicial."
+   ],
+   "pt": [
+    "Sente-se em um banco com apoio para as costas. Levante os halteres até a altura dos ombros com as palmas voltadas para frente.",
+    "Levante os halteres para cima e pause na posição contraída.",
+    "Abaixe os pesos de volta à posição inicial."
+   ]
+  },
+  "videos": {
+   "male": {
+    "front": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/male-dumbbell-seated-overhead-press-front.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-male-dumbbell-seated-overhead-press-front.jpg"
+    },
+    "side": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/male-dumbbell-seated-overhead-press-side.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-male-dumbbell-seated-overhead-press-side.jpg"
+    }
+   },
+   "female": {
+    "front": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/female-dumbbell-seated-overhead-press-front.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-dumbbell-seated-overhead-press-front.jpg"
+    },
+    "side": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/female-dumbbell-seated-overhead-press-side.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-dumbbell-seated-overhead-press-side.jpg"
+    }
+   }
+  }
+ },
+ "46": {
+  "name": "Dumbbell Front Raise",
+  "category": "Dumbbells",
+  "muscles": [
+   "Shoulders",
+   "Anterior Deltoid",
+   "Front Shoulders"
+  ],
+  "steps": {
+   "en": [
+    "Grab two dumbbells while standing upright with the dumbbells at your side.",
+    "Raise the two dumbbells with your elbows being fully extended until the dumbbells are eye level.",
+    "Lower the weights in a controlled manner to the starting position and repeat."
+   ],
+   "es": [
+    "Toma dos mancuernas parado erguido con las mancuernas a los lados.",
+    "Levanta las dos mancuernas con los codos completamente extendidos hasta que las mancuernas queden a la altura de los ojos.",
+    "Baja los pesos de manera controlada a la posición inicial y repite."
+   ],
+   "pt": [
+    "Segure dois halteres em pé, com os halteres ao lado do corpo.",
+    "Levante os dois halteres com os cotovelos totalmente estendidos até que fiquem na altura dos olhos.",
+    "Abaixe os pesos de forma controlada até a posição inicial e repita."
+   ]
+  },
+  "videos": {
+   "male": {
+    "front": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/male-Dumbbells-dumbbell-front-raise-front.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-male-Dumbbells-dumbbell-front-raise-front.jpg"
+    },
+    "side": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/male-Dumbbells-dumbbell-front-raise-side.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-male-Dumbbells-dumbbell-front-raise-side.jpg"
+    }
+   },
+   "female": {
+    "front": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/female-Dumbbells-dumbbell-front-raise-front.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Dumbbells-dumbbell-front-raise-front.jpg"
+    },
+    "side": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/female-Dumbbells-dumbbell-front-raise-side.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Dumbbells-dumbbell-front-raise-side.jpg"
+    }
+   }
+  }
+ },
+ "50": {
+  "name": "Single Leg Glute Bridge",
+  "category": "Bodyweight",
+  "muscles": [
+   "Glutes"
+  ],
+  "steps": {
+   "en": [
+    "Tense your glutes and raise your hips towards the ceiling.",
+    "Once you are at the highest point you can manage, hold the position for a few seconds, and then slowly return to the starting position.",
+    "Push your hips up, so that your butt is elevated and your back straight.",
+    "Lie down with one knee bent and and one with a slight bend."
+   ],
+   "es": [
+    "Tensa los glúteos y levanta las caderas hacia el techo.",
+    "Una vez que llegues al punto más alto que puedas, sostén la posición unos segundos y luego vuelve lentamente a la posición inicial.",
+    "Empuja las caderas hacia arriba para que el glúteo quede elevado y la espalda recta.",
+    "Acuéstate con una rodilla doblada y la otra con una ligera flexión."
+   ],
+   "pt": [
+    "Contraia os glúteos e levante o quadril em direção ao teto.",
+    "Ao chegar no ponto mais alto que conseguir, segure a posição por alguns segundos e depois volte lentamente à posição inicial.",
+    "Empurre o quadril para cima, de forma que o bumbum fique elevado e as costas retas.",
+    "Deite-se com um joelho dobrado e o outro com uma leve flexão."
+   ]
+  },
+  "videos": {
+   "male": {
+    "front": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/male-Bodyweight-single-leg-glute-bridge-front.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-male-Bodyweight-single-leg-glute-bridge-front.jpg"
+    },
+    "side": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/male-Bodyweight-single-leg-glute-bridge-side.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-male-Bodyweight-single-leg-glute-bridge-side.jpg"
+    }
+   },
+   "female": {
+    "front": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/female-Bodyweight-single-leg-glute-bridge-front.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Bodyweight-single-leg-glute-bridge-front.jpg"
+    },
+    "side": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/female-Bodyweight-single-leg-glute-bridge-side.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Bodyweight-single-leg-glute-bridge-side.jpg"
+    }
+   }
+  }
+ },
+ "189": {
+  "name": "Side Lunges",
+  "category": "Bodyweight",
+  "muscles": [
+   "Quads"
+  ],
+  "steps": {
+   "en": [
+    "Take a slow, lateral step to the right.",
+    "Extend the left knee, and drive your weight into your right side.",
+    "Flex your knee and lower your body.",
+    "Push back to the starting position."
+   ],
+   "es": [
+    "Da un paso lateral lento hacia la derecha.",
+    "Extiende la rodilla izquierda y lleva tu peso hacia el lado derecho.",
+    "Flexiona la rodilla y baja tu cuerpo.",
+    "Regresa a la posición inicial."
+   ],
+   "pt": [
+    "Dê um passo lateral lento para a direita.",
+    "Estenda o joelho esquerdo e desloque o peso para o lado direito.",
+    "Flexione o joelho e abaixe o corpo.",
+    "Empurre de volta até a posição inicial."
+   ]
+  },
+  "videos": {
+   "male": {
+    "front": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/male-bodyweight-side-lunge-front.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-male-bodyweight-side-lunge-front.jpg"
+    },
+    "side": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/male-bodyweight-side-lunge-side.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-male-bodyweight-side-lunge-side.jpg"
+    }
+   },
+   "female": {
+    "front": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/female-bodyweight-side-lunge-front.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-bodyweight-side-lunge-front.jpg"
+    },
+    "side": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/female-bodyweight-side-lunge-side.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-bodyweight-side-lunge-side.jpg"
+    }
+   }
+  }
+ },
+ "190": {
+  "name": "Forward Lunges",
+  "category": "Bodyweight",
+  "muscles": [
+   "Glutes",
+   "Quads"
+  ],
+  "steps": {
+   "en": [
+    "Step forward with one leg.",
+    "Lower your body until your rear knee nearly touches the ground.",
+    "Ensure you remain upright, and your front knee stay above the front foot.",
+    "Push off the floor with your front foot until you return to the starting position. Switch legs."
+   ],
+   "es": [
+    "Da un paso adelante con una pierna.",
+    "Baja tu cuerpo hasta que la rodilla trasera casi toque el piso.",
+    "Asegúrate de mantenerte erguido y que tu rodilla delantera se mantenga sobre el pie delantero.",
+    "Empuja el piso con tu pie delantero hasta volver a la posición inicial. Cambia de pierna."
+   ],
+   "pt": [
+    "Dê um passo à frente com uma perna.",
+    "Abaixe o corpo até que o joelho de trás quase toque o chão.",
+    "Certifique-se de manter o tronco ereto e o joelho da frente alinhado acima do pé da frente.",
+    "Empurre o chão com o pé da frente até retornar à posição inicial. Troque de perna."
+   ]
+  },
+  "videos": {
+   "male": {
+    "front": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/male-Bodyweight-forward-lunges-front.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-male-Bodyweight-forward-lunges-front.jpg"
+    },
+    "side": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/male-Bodyweight-forward-lunges-side.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-male-Bodyweight-forward-lunges-side.jpg"
+    }
+   },
+   "female": {
+    "front": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/female-Bodyweight-forward-lunges-front.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Bodyweight-forward-lunges-front.jpg"
+    },
+    "side": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/female-Bodyweight-forward-lunges-side.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Bodyweight-forward-lunges-side.jpg"
+    }
+   }
+  }
+ },
+ "191": {
+  "name": "Jump Squats",
+  "category": "Bodyweight",
+  "muscles": [
+   "Glutes",
+   "Quads"
+  ],
+  "steps": {
+   "en": [
+    "Stand with your feet shoulder-width apart.",
+    "Start by doing a regular squat, then engage your core and jump up explosively.",
+    "When you land, lower your body back into the squat position."
+   ],
+   "es": [
+    "Párate con los pies separados al ancho de los hombros.",
+    "Empieza haciendo una sentadilla normal, luego activa el core y salta hacia arriba explosivamente.",
+    "Cuando aterrices, baja tu cuerpo de vuelta a la posición de sentadilla."
+   ],
+   "pt": [
+    "Fique em pé com os pés na largura dos ombros.",
+    "Comece com um agachamento normal, então contraia o core e salte para cima de forma explosiva.",
+    "Ao aterrissar, abaixe o corpo de volta para a posição de agachamento."
+   ]
+  },
+  "videos": {
+   "male": {
+    "front": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/male-Bodyweight-jump-squats-front.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-male-Bodyweight-jump-squats-front.jpg"
+    },
+    "side": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/male-Bodyweight-jump-squats-side.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-male-Bodyweight-jump-squats-side.jpg"
+    }
+   },
+   "female": {
+    "front": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/female-Bodyweight-jump-squats-front.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Bodyweight-jump-squats-front.jpg"
+    },
+    "side": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/female-Bodyweight-jump-squats-side.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Bodyweight-jump-squats-side.jpg"
+    }
+   }
+  }
+ },
+ "192": {
+  "name": "Bodyweight Squat",
+  "category": "Bodyweight",
+  "muscles": [
+   "Glutes",
+   "Quads"
+  ],
+  "steps": {
+   "en": [
+    "Stand with your feet shoulder width apart.",
+    "flex your knees and hips and sit back into the squat while lowering your body",
+    "Continue down to full depth",
+    "Return to starting position."
+   ],
+   "es": [
+    "Párate con los pies separados al ancho de los hombros.",
+    "Flexiona las rodillas y las caderas, y siéntate hacia atrás en la sentadilla mientras bajas el cuerpo.",
+    "Continúa bajando hasta la profundidad máxima.",
+    "Vuelve a la posición inicial."
+   ],
+   "pt": [
+    "Fique em pé com os pés na largura dos ombros.",
+    "Flexione os joelhos e o quadril, sentando-se para trás no agachamento enquanto abaixa o corpo",
+    "Continue descendo até a profundidade máxima",
+    "Volte à posição inicial."
+   ]
+  },
+  "videos": {
+   "male": {
+    "front": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/male-Bodyweight-bodyweight-squat-front.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-male-Bodyweight-bodyweight-squat-front.jpg"
+    },
+    "side": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/male-Bodyweight-bodyweight-squat-side.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-male-Bodyweight-bodyweight-squat-side.jpg"
+    }
+   },
+   "female": {
+    "front": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/female-Bodyweight-bodyweight-squat-front.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Bodyweight-bodyweight-squat-front.jpg"
+    },
+    "side": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/female-Bodyweight-bodyweight-squat-side.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Bodyweight-bodyweight-squat-side.jpg"
+    }
+   }
+  }
+ },
+ "204": {
+  "name": "Forearm Plank",
+  "category": "Bodyweight",
+  "muscles": [
+   "Abdominals"
+  ],
+  "steps": {
+   "en": [
+    "Place forearms on the ground with your elbows bent at a 90° angle aligned beneath your shoulders, with your arms parallel at shoulder-width.",
+    "Your feet should be together, with only your toes touching the floor.",
+    "Lift your belly off the floor and form a straight line from your heels to the crown of your head and hold."
+   ],
+   "es": [
+    "Coloca los antebrazos en el suelo con los codos flexionados en un ángulo de 90° alineados debajo de los hombros, con los brazos paralelos al ancho de los hombros.",
+    "Tus pies deben estar juntos, con solo los dedos tocando el piso.",
+    "Levanta el abdomen del piso y forma una línea recta desde los talones hasta la coronilla, y mantén la posición."
+   ],
+   "pt": [
+    "Apoie os antebraços no chão com os cotovelos flexionados em um ângulo de 90° alinhados abaixo dos ombros, com os braços paralelos na largura dos ombros.",
+    "Seus pés devem ficar juntos, apenas os dedos tocando o chão.",
+    "Levante a barriga do chão formando uma linha reta dos calcanhares até o topo da cabeça e segure a posição."
+   ]
+  },
+  "videos": {
+   "male": {
+    "front": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/male-Bodyweight-forearm-plank-front.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-male-Bodyweight-forearm-plank-front.jpg"
+    },
+    "side": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/male-Bodyweight-forearm-plank-side.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-male-Bodyweight-forearm-plank-side.jpg"
+    }
+   },
+   "female": {
+    "front": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/female-Bodyweight-forearm-plank-front.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Bodyweight-forearm-plank-front.jpg"
+    },
+    "side": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/female-Bodyweight-forearm-plank-side.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Bodyweight-forearm-plank-side.jpg"
+    }
+   }
+  }
+ },
+ "263": {
+  "name": "Band Glute Kickback",
+  "category": "Band",
+  "muscles": [
+   "Glutes"
+  ],
+  "steps": {
+   "en": [
+    "Get into a quadruped position. Loop the band around both of your wrists and one of your feet.",
+    "Extend your knee and hip straight back until you feel like contraction in the glutes.",
+    "Flex at the knee until back in the starting position."
+   ],
+   "es": [
+    "Ponte en posición de cuadrupedia. Enrolla la banda alrededor de ambas muñecas y uno de tus pies.",
+    "Extiende la rodilla y la cadera hacia atrás hasta sentir la contracción en los glúteos.",
+    "Flexiona la rodilla hasta volver a la posición inicial."
+   ],
+   "pt": [
+    "Fique na posição de quatro apoios. Passe a faixa elástica ao redor dos dois punhos e de um dos pés.",
+    "Estenda o joelho e o quadril diretamente para trás até sentir a contração nos glúteos.",
+    "Flexione o joelho até voltar à posição inicial."
+   ]
+  },
+  "videos": {
+   "male": {
+    "front": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/male-Band-band-glute-kickback-front.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-male-Band-band-glute-kickback-front.jpg"
+    },
+    "side": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/male-Band-band-glute-kickback-side.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-male-Band-band-glute-kickback-side.jpg"
+    }
+   },
+   "female": {
+    "front": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/female-Band-band-glute-kickback-front.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Band-band-glute-kickback-front.jpg"
+    },
+    "side": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/female-Band-band-glute-kickback-side.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Band-band-glute-kickback-side.jpg"
+    }
+   }
+  }
+ },
+ "266": {
+  "name": "Band Leg Press",
+  "category": "Band",
+  "muscles": [
+   "Glutes",
+   "Quads"
+  ],
+  "steps": {
+   "en": [
+    "Lay flat on the ground with your head by the anchor point of the band, which should be 6 to 12 inches above your head",
+    "Place the band around your midfoot and extend at the knees and hip."
+   ],
+   "es": [
+    "Acuéstate boca arriba con la cabeza cerca del punto de anclaje de la banda, que debe estar de 15 a 30 centímetros arriba de tu cabeza.",
+    "Coloca la banda alrededor de la mitad del pie y extiende las rodillas y la cadera."
+   ],
+   "pt": [
+    "Deite-se de costas com a cabeça próxima ao ponto de fixação da faixa, que deve estar de 15 a 30 cm acima da sua cabeça",
+    "Coloque a faixa em volta do meio do pé e estenda os joelhos e o quadril."
+   ]
+  },
+  "videos": {
+   "male": {
+    "front": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/male-Band-band-leg-press-front.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-male-Band-band-leg-press-front.jpg"
+    },
+    "side": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/male-Band-band-leg-press-side.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-male-Band-band-leg-press-side.jpg"
+    }
+   },
+   "female": {
+    "front": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/female-Band-band-leg-press-front.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Band-band-leg-press-front.jpg"
+    },
+    "side": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/female-Band-band-leg-press-side.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Band-band-leg-press-side.jpg"
+    }
+   }
+  }
+ },
+ "282": {
+  "name": "Dumbbell Row Unilateral",
+  "category": "Dumbbells",
+  "muscles": [
+   "Traps (mid-back)",
+   "Lats"
+  ],
+  "steps": {
+   "en": [
+    "Brace your off arm against something stable (bench, box). Stagger your stance so your leg on the side of your working arm is back.",
+    "Try to get your torso to parallel with the ground. That will extend your range of motion.",
+    "Let your arm hang freely and then pull your elbow back. Imagine you've got a tennis ball in your armpit and squeeze it each rep."
+   ],
+   "es": [
+    "Apoya el brazo libre contra algo estable (banco, cajón). Coloca los pies en posición escalonada de manera que la pierna del lado del brazo que trabaja quede atrás.",
+    "Trata de que tu torso quede paralelo al piso. Eso extenderá tu rango de movimiento.",
+    "Deja que tu brazo cuelgue libremente y luego jala el codo hacia atrás. Imagina que tienes una pelota de tenis en la axila y apriétala en cada repetición."
+   ],
+   "pt": [
+    "Apoie o braço livre em algo estável (banco, caixa). Fique com os pés escalonados, com a perna do lado do braço de trabalho atrás.",
+    "Tente deixar o tronco paralelo ao chão. Isso vai aumentar sua amplitude de movimento.",
+    "Deixe o braço pendurado livremente e depois puxe o cotovelo para trás. Imagine que há uma bolinha de tênis na sua axila e aperte-a a cada repetição."
+   ]
+  },
+  "videos": {
+   "male": {
+    "front": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/male-Dumbbells-dumbbell-row-unilateral-front.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-male-Dumbbells-dumbbell-row-unilateral-front.jpg"
+    },
+    "side": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/male-Dumbbells-dumbbell-row-unilateral-side.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-male-Dumbbells-dumbbell-row-unilateral-side.jpg"
+    }
+   },
+   "female": {
+    "front": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/female-Dumbbells-dumbbell-row-unilateral-front.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Dumbbells-dumbbell-row-unilateral-front.jpg"
+    },
+    "side": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/female-Dumbbells-dumbbell-row-unilateral-side.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Dumbbells-dumbbell-row-unilateral-side.jpg"
+    }
+   }
+  }
+ },
+ "286": {
+  "name": "Dumbbell Hip Thrust",
+  "category": "Dumbbells",
+  "muscles": [
+   "Glutes"
+  ],
+  "steps": {
+   "en": [
+    "Place your shoulder blades against a box or bench that won't move.",
+    "Both your feet should be planted and your heels should not come off the floor. Point your toes forward.",
+    "Break at the hips. Seek the longest range of motion possible. Focus on the top end of the movement. Push your hips as high as possible on each rep."
+   ],
+   "es": [
+    "Coloca los omóplatos contra un cajón o banco que no se mueva.",
+    "Ambos pies deben estar plantados y tus talones no deben despegarse del piso. Apunta los dedos de los pies hacia adelante.",
+    "Flexiona en las caderas. Busca el mayor rango de movimiento posible. Enfócate en la parte alta del movimiento. Empuja las caderas lo más alto posible en cada repetición."
+   ],
+   "pt": [
+    "Posicione as escápulas contra uma caixa ou banco que não se mova.",
+    "Ambos os pés devem estar apoiados no chão e os calcanhares não devem sair do chão. Aponte os dedos dos pés para frente.",
+    "Quebre o movimento pelo quadril. Busque a maior amplitude de movimento possível. Foque na parte final do movimento. Empurre o quadril o mais alto possível em cada repetição."
+   ]
+  },
+  "videos": {
+   "male": {
+    "front": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/male-Dumbbells-dumbbell-hip-thrust-front.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-male-Dumbbells-dumbbell-hip-thrust-front.jpg"
+    },
+    "side": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/male-Dumbbells-dumbbell-hip-thrust-side.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-male-Dumbbells-dumbbell-hip-thrust-side.jpg"
+    }
+   },
+   "female": {
+    "front": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/female-Dumbbells-dumbbell-hip-thrust-front.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Dumbbells-dumbbell-hip-thrust-front.jpg"
+    },
+    "side": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/female-Dumbbells-dumbbell-hip-thrust-side.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Dumbbells-dumbbell-hip-thrust-side.jpg"
+    }
+   }
+  }
+ },
+ "291": {
+  "name": "Dumbbell Romanian Deadlift",
+  "category": "Dumbbells",
+  "muscles": [
+   "Glutes",
+   "Gluteus Maximus",
+   "Hamstrings",
+   "Lateral Hamstrings"
+  ],
+  "steps": {
+   "en": [
+    "Stand with a shoulder width stance. Push your butt back while leaving your knees MOSTLY extended.",
+    "You should feel a stretch in your hamstrings. When you feel the stretch, push your hips forward to complete the rep.",
+    "Do not push your hips all the way forward. This will hyperextend your spine. Just go to a normal standing position."
+   ],
+   "es": [
+    "Párate con una postura al ancho de los hombros. Empuja el glúteo hacia atrás dejando las rodillas CASI extendidas.",
+    "Debes sentir un estiramiento en los isquiotibiales. Cuando sientas el estiramiento, empuja las caderas hacia adelante para completar la repetición.",
+    "No empujes las caderas completamente hacia adelante. Esto hiperextendería tu columna. Solo llega a una posición normal de pie."
+   ],
+   "pt": [
+    "Fique em pé com os pés na largura dos ombros. Empurre o quadril para trás mantendo os joelhos QUASE totalmente estendidos.",
+    "Você deve sentir um alongamento nos posteriores de coxa. Ao sentir o alongamento, empurre o quadril para frente para completar a repetição.",
+    "Não empurre o quadril totalmente para frente. Isso vai hiperestender a coluna. Apenas volte à posição normal em pé."
+   ]
+  },
+  "videos": {
+   "male": {
+    "front": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/male-Dumbbells-dumbbell-romanian-deadlift-front.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-male-Dumbbells-dumbbell-romanian-deadlift-front.jpg"
+    },
+    "side": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/male-Dumbbells-dumbbell-romanian-deadlift-side.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-male-Dumbbells-dumbbell-romanian-deadlift-side.jpg"
+    }
+   },
+   "female": {
+    "front": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/female-Dumbbells-dumbbell-romanian-deadlift-front.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Dumbbells-dumbbell-romanian-deadlift-front.jpg"
+    },
+    "side": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/female-Dumbbells-dumbbell-romanian-deadlift-side.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Dumbbells-dumbbell-romanian-deadlift-side.jpg"
+    }
+   }
+  }
+ },
+ "313": {
+  "name": "Barbell Romanian Deadlift",
+  "category": "Barbell",
+  "muscles": [
+   "Glutes",
+   "Hamstrings",
+   "Lateral Hamstrings"
+  ],
+  "steps": {
+   "en": [
+    "Take a shoulder width, double overhand or mixed grip.",
+    "Push your hips back while leaving your knees mostly extended. Look for a stretch in your hamstrings.",
+    "When you feel the stretch, push your hips forward until you're back in a standing position."
+   ],
+   "es": [
+    "Toma un agarre al ancho de los hombros, doble pronado o mixto.",
+    "Empuja las caderas hacia atrás dejando las rodillas casi extendidas. Busca un estiramiento en los isquiotibiales.",
+    "Cuando sientas el estiramiento, empuja las caderas hacia adelante hasta que estés de pie nuevamente."
+   ],
+   "pt": [
+    "Faça uma pegada na largura dos ombros, pronada dupla ou mista.",
+    "Empurre o quadril para trás mantendo os joelhos quase totalmente estendidos. Busque sentir um alongamento nos posteriores de coxa.",
+    "Ao sentir o alongamento, empurre o quadril para frente até voltar à posição em pé."
+   ]
+  },
+  "videos": {
+   "male": {
+    "front": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/male-Barbell-barbell-romanian-deadlift-front.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-male-Barbell-barbell-romanian-deadlift-front.jpg"
+    },
+    "side": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/male-Barbell-barbell-romanian-deadlift-side_dnNh5UH.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-male-Barbell-barbell-romanian-deadlift-side.jpg"
+    }
+   },
+   "female": {
+    "front": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/female-Barbell-barbell-romanian-deadlift-front.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Barbell-barbell-romanian-deadlift-front.jpg"
+    },
+    "side": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/female-Barbell-barbell-romanian-deadlift-side.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Barbell-barbell-romanian-deadlift-side.jpg"
+    }
+   }
+  }
+ },
+ "317": {
+  "name": "Dumbbell Bulgarian Split Squat",
+  "category": "Dumbbells",
+  "muscles": [
+   "Glutes",
+   "Quads"
+  ],
+  "steps": {
+   "en": [
+    "Find a box or bench that is roughly knee height or a few inches lower. (The lower the box is the lower the mobility requirement).",
+    "You can either place your toes or the top of your foot on the box. Point your front foot forward or slightly turned outwards and break at the knees and hips simultaneously.",
+    "Aim to get your front leg to hit parallel depth (hamstring parallel with the ground) or lower.",
+    "The further forward your front foot is, the longer the Range of Motion is at your hips. The further back your front foot is, the longer the ROM at your knees."
+   ],
+   "es": [
+    "Busca un cajón o banco que esté aproximadamente a la altura de la rodilla o un poco más bajo. (Mientras más bajo sea el cajón, menor será el requisito de movilidad).",
+    "Puedes colocar los dedos del pie o la parte superior del pie sobre el cajón. Apunta el pie delantero hacia adelante o ligeramente hacia afuera y flexiona las rodillas y caderas simultáneamente.",
+    "Trata de que tu pierna delantera llegue a la profundidad paralela (isquiotibial paralelo al piso) o más abajo.",
+    "Mientras más adelante esté tu pie delantero, mayor será el rango de movimiento en las caderas. Mientras más atrás esté tu pie delantero, mayor será el rango de movimiento en las rodillas."
+   ],
+   "pt": [
+    "Encontre uma caixa ou banco de altura próxima ao joelho ou alguns centímetros mais baixo. (Quanto mais baixa a caixa, menor a exigência de mobilidade).",
+    "Você pode apoiar os dedos ou a parte superior do pé na caixa. Aponte o pé da frente para frente ou levemente para fora e quebre o movimento pelos joelhos e quadril simultaneamente.",
+    "Busque fazer com que a perna da frente alcance a profundidade paralela (posterior de coxa paralelo ao chão) ou mais baixo.",
+    "Quanto mais à frente o pé da frente estiver, maior será a amplitude de movimento no quadril. Quanto mais atrás o pé da frente estiver, maior será a amplitude no joelho."
+   ]
+  },
+  "videos": {
+   "male": {
+    "front": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/male-Dumbbells-dumbbell-bulgarian-split-squat-front_P7GOi9A.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-male-Dumbbells-dumbbell-bulgarian-split-squat-front.jpg"
+    },
+    "side": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/male-Dumbbells-dumbbell-bulgarian-split-squat-side.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-male-Dumbbells-dumbbell-bulgarian-split-squat-side.jpg"
+    }
+   },
+   "female": {
+    "front": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/female-Dumbbells-dumbbell-bulgarian-split-squat-front_aqF5Hdt.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Dumbbells-dumbbell-bulgarian-split-squat-front.jpg"
+    },
+    "side": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/female-Dumbbells-dumbbell-bulgarian-split-squat-side.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Dumbbells-dumbbell-bulgarian-split-squat-side.jpg"
+    }
+   }
+  }
+ },
+ "373": {
+  "name": "Bodyweight Reverse Lunge",
+  "category": "Bodyweight",
+  "muscles": [
+   "Glutes",
+   "Quads"
+  ],
+  "steps": {
+   "en": [
+    "Take a big step backwards with your left leg, lowering your body until your left thigh is parallel to the ground and your right knee is bent at a 90-degree angle.",
+    "Push through your right heel to return to standing, bringing your left leg back to starting position.",
+    "Repeat the movement on the other side, stepping backwards with your right leg and lowering your body until your right thigh is parallel to the ground and your left knee is bent at a 90-degree angle."
+   ],
+   "es": [
+    "Da un paso grande hacia atrás con tu pierna izquierda, bajando tu cuerpo hasta que tu muslo izquierdo quede paralelo al piso y tu rodilla derecha esté flexionada en un ángulo de 90 grados.",
+    "Empuja a través de tu talón derecho para volver de pie, llevando tu pierna izquierda de vuelta a la posición inicial.",
+    "Repite el movimiento del otro lado, dando un paso atrás con tu pierna derecha y bajando tu cuerpo hasta que tu muslo derecho quede paralelo al piso y tu rodilla izquierda esté flexionada en un ángulo de 90 grados."
+   ],
+   "pt": [
+    "Dê um passo grande para trás com a perna esquerda, abaixando o corpo até que a coxa esquerda fique paralela ao chão e o joelho direito dobrado em um ângulo de 90 graus.",
+    "Empurre pelo calcanhar direito para voltar à posição em pé, trazendo a perna esquerda de volta à posição inicial.",
+    "Repita o movimento do outro lado, dando um passo para trás com a perna direita e abaixando o corpo até que a coxa direita fique paralela ao chão e o joelho esquerdo dobrado em 90 graus."
+   ]
+  },
+  "videos": {
+   "male": {
+    "front": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/male-Bodyweight-bodyweight-reverse-lunge-front.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-male-Bodyweight-bodyweight-reverse-lunge-front.jpg"
+    },
+    "side": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/male-Bodyweight-bodyweight-reverse-lunge-side.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-male-Bodyweight-bodyweight-reverse-lunge-side.jpg"
+    }
+   },
+   "female": {
+    "front": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/female-Bodyweight-bodyweight-reverse-lunge-front.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Bodyweight-bodyweight-reverse-lunge-front.jpg"
+    },
+    "side": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/female-Bodyweight-bodyweight-reverse-lunge-side.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Bodyweight-bodyweight-reverse-lunge-side.jpg"
+    }
+   }
+  }
+ },
+ "407": {
+  "name": "Dumbbell Laying Reverse Fly",
+  "category": "Dumbbells",
+  "muscles": [
+   "Shoulders",
+   "Posterior Deltoid",
+   "Rear Shoulders"
+  ],
+  "steps": {
+   "en": [
+    "With dumbbells in either hand, lay on an incline bench that's at about 15-30 degrees.",
+    "With bent elbows, raise your arms up to shoulder level, pausing at the at the end of the motion.",
+    "Slowly lower your arms back to starting position."
+   ],
+   "es": [
+    "Con mancuernas en ambas manos, recuéstate en un banco inclinado a unos 15-30 grados.",
+    "Con los codos flexionados, levanta los brazos hasta la altura de los hombros, haciendo una pausa al final del movimiento.",
+    "Baja lentamente los brazos a la posición inicial."
+   ],
+   "pt": [
+    "Com um haltere em cada mão, deite-se em um banco inclinado a cerca de 15-30 graus.",
+    "Com os cotovelos dobrados, levante os braços até a altura dos ombros, pausando no final do movimento.",
+    "Abaixe lentamente os braços de volta à posição inicial."
+   ]
+  },
+  "videos": {
+   "male": {
+    "front": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/male-Dumbbells-dumbbell-laying-reverse-fly-front.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-male-Dumbbells-dumbbell-laying-reverse-fly-front.jpg"
+    },
+    "side": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/male-Dumbbells-dumbbell-laying-reverse-fly-side.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-male-Dumbbells-dumbbell-laying-reverse-fly-side.jpg"
+    }
+   },
+   "female": {
+    "front": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/female-Dumbbells-dumbbell-laying-reverse-fly-front.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Dumbbells-dumbbell-laying-reverse-fly-front.jpg"
+    },
+    "side": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/female-Dumbbells-dumbbell-laying-reverse-fly-side.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Dumbbells-dumbbell-laying-reverse-fly-side.jpg"
+    }
+   }
+  }
+ },
+ "423": {
+  "name": "Dumbbell Arnold Press",
+  "category": "Dumbbells",
+  "muscles": [
+   "Shoulders",
+   "Anterior Deltoid",
+   "Front Shoulders"
+  ],
+  "steps": {
+   "en": [
+    "Stand with both palms facing you.",
+    "Begin to press the dumbbells to the ceiling while rotating your palms.",
+    "When you reach elbow extension, your palms should be facing forward."
+   ],
+   "es": [
+    "Párate con ambas palmas mirando hacia ti.",
+    "Comienza a presionar las mancuernas hacia el techo mientras rotas las palmas.",
+    "Cuando llegues a la extensión completa del codo, tus palmas deben estar mirando hacia adelante."
+   ],
+   "pt": [
+    "Fique em pé com as palmas das mãos voltadas para você.",
+    "Comece a empurrar os halteres em direção ao teto enquanto gira as palmas das mãos.",
+    "Ao atingir a extensão total dos cotovelos, as palmas das mãos devem estar voltadas para frente."
+   ]
+  },
+  "videos": {
+   "male": {
+    "front": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/male-Dumbbells-dumbbell-arnold-press-front.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-male-Dumbbells-dumbbell-arnold-press-front.jpg"
+    },
+    "side": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/male-Dumbbells-dumbbell-arnold-press-side.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-male-Dumbbells-dumbbell-arnold-press-side.jpg"
+    }
+   },
+   "female": {
+    "front": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/female-Dumbbells-dumbbell-arnold-press-front.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Dumbbells-dumbbell-arnold-press-front.jpg"
+    },
+    "side": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/female-Dumbbells-dumbbell-arnold-press-side.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Dumbbells-dumbbell-arnold-press-side.jpg"
+    }
+   }
+  }
+ },
+ "431": {
+  "name": "Dumbbell Heels Up Narrow Goblet Squat",
+  "category": "Dumbbells",
+  "muscles": [
+   "Glutes",
+   "Quads"
+  ],
+  "steps": {
+   "en": [
+    "Stand with your feet on a plate. Your feet should be very close to one another, but not touching.",
+    "Begin your squat by pushing your hips back and breaking at the knees. Try to keep your chest tall while squatting."
+   ],
+   "es": [
+    "Párate con los pies sobre un disco. Tus pies deben estar muy cerca uno del otro, pero sin tocarse.",
+    "Comienza tu sentadilla empujando las caderas hacia atrás y flexionando las rodillas. Trata de mantener el pecho erguido mientras haces la sentadilla."
+   ],
+   "pt": [
+    "Fique em pé com os pés sobre uma anilha. Seus pés devem ficar bem próximos um do outro, mas sem se tocar.",
+    "Comece o agachamento empurrando o quadril para trás e quebrando o movimento pelos joelhos. Tente manter o peito erguido durante o agachamento."
+   ]
+  },
+  "videos": {
+   "male": {
+    "front": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/male-dumbbell-heels-up-narrow-goblet-squat-front.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-male-dumbbell-heels-up-narrow-goblet-squat-front.jpg"
+    },
+    "side": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/male-dumbbell-heels-up-narrow-goblet-squat-side.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-male-dumbbell-heels-up-narrow-goblet-squat-side.jpg"
+    }
+   },
+   "female": {
+    "front": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/female-dumbbell-heels-up-narrow-goblet-squat-front.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-dumbbell-heels-up-narrow-goblet-squat-front.jpg"
+    },
+    "side": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/female-dumbbell-heels-up-narrow-goblet-squat-side.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-dumbbell-heels-up-narrow-goblet-squat-side.jpg"
+    }
+   }
+  }
+ },
+ "439": {
+  "name": "Dumbbell Neutral Overhead Press",
+  "category": "Dumbbells",
+  "muscles": [
+   "Shoulders",
+   "Anterior Deltoid",
+   "Front Shoulders"
+  ],
+  "steps": {
+   "en": [
+    "Start with both dumbbells near your shoulders in a neutral grip.",
+    "Press the dumbbells toward the ceiling.",
+    "Make sure you don't arch your back as you fatigue."
+   ],
+   "es": [
+    "Comienza con ambas mancuernas cerca de los hombros con un agarre neutro.",
+    "Empuja las mancuernas hacia el techo.",
+    "Asegúrate de no arquear la espalda a medida que te fatigues."
+   ],
+   "pt": [
+    "Comece com os dois halteres próximos aos ombros, em pegada neutra.",
+    "Empurre os halteres em direção ao teto.",
+    "Certifique-se de não arquear as costas conforme for fatigando."
+   ]
+  },
+  "videos": {
+   "male": {
+    "front": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/male-Dumbbells-dumbbell-neutral-overhead-press-front.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-male-Dumbbells-dumbbell-neutral-overhead-press-front.jpg"
+    },
+    "side": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/male-Dumbbells-dumbbell-neutral-overhead-press-side.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-male-Dumbbells-dumbbell-neutral-overhead-press-side.jpg"
+    }
+   },
+   "female": {
+    "front": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/female-Dumbbells-dumbbell-neutral-overhead-press-front.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Dumbbells-dumbbell-neutral-overhead-press-front.jpg"
+    },
+    "side": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/female-Dumbbells-dumbbell-neutral-overhead-press-side.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Dumbbells-dumbbell-neutral-overhead-press-side.jpg"
+    }
+   }
+  }
+ },
+ "467": {
+  "name": "Dumbbell Sumo Squat",
+  "category": "Dumbbells",
+  "muscles": [
+   "Glutes"
+  ],
+  "steps": {
+   "en": [
+    "Start by standing with your feet wider than shoulder-width apart and holding a dumbbell in each hand.",
+    "Place the dumbbells on the ground between your feet.",
+    "From this starting position, bend your knees and lower your body down into a squat.",
+    "Make sure to keep your core engaged and your back straight throughout the movement."
+   ],
+   "es": [
+    "Comienza de pie con los pies más separados que el ancho de los hombros, sosteniendo una mancuerna en cada mano.",
+    "Coloca las mancuernas en el suelo entre tus pies.",
+    "Desde esta posición inicial, flexiona las rodillas y baja tu cuerpo en sentadilla.",
+    "Asegúrate de mantener el core activado y la espalda recta durante todo el movimiento."
+   ],
+   "pt": [
+    "Comece em pé com os pés mais afastados que a largura dos ombros, segurando um haltere em cada mão.",
+    "Coloque os halteres no chão entre os pés.",
+    "A partir dessa posição inicial, dobre os joelhos e abaixe o corpo em um agachamento.",
+    "Certifique-se de manter o core ativado e as costas retas durante todo o movimento."
+   ]
+  },
+  "videos": {
+   "male": {
+    "front": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/male-Dumbbells-dumbbell-sumo-squat-front.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-male-Dumbbells-dumbbell-sumo-squat-front.jpg"
+    },
+    "side": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/male-Dumbbells-dumbbell-sumo-squat-side.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-male-Dumbbells-dumbbell-sumo-squat-side.jpg"
+    }
+   },
+   "female": {
+    "front": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/female-Dumbbells-dumbbell-sumo-squat-front.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Dumbbells-dumbbell-sumo-squat-front.jpg"
+    },
+    "side": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/female-Dumbbells-dumbbell-sumo-squat-side.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Dumbbells-dumbbell-sumo-squat-side.jpg"
+    }
+   }
+  }
+ },
+ "475": {
+  "name": "Burpee",
+  "category": "Bodyweight",
+  "muscles": [
+   "Abdominals",
+   "Chest"
+  ],
+  "steps": {
+   "en": [
+    "Start standing with your feet hip-width apart. Lower your body into a squat position, placing your hands on the ground in front of you.",
+    "Quickly jump your feet back into a plank position, keeping your body in a straight line from your head to your toes.",
+    "Perform a push-up, keeping your core tight and your elbows close to your body.",
+    "Jump your feet back towards your hands, and then jump up into the air, reaching your arms overhead.",
+    "Land softly and immediately lower your body back into the squat position to repeat the movement."
+   ],
+   "es": [
+    "Comienza de pie con los pies separados al ancho de la cadera. Baja tu cuerpo a una posición de sentadilla, colocando las manos en el piso frente a ti.",
+    "Salta rápidamente los pies hacia atrás a una posición de plancha, manteniendo tu cuerpo en línea recta desde la cabeza hasta los pies.",
+    "Realiza una flexión de pecho, manteniendo el core apretado y los codos cerca del cuerpo.",
+    "Salta los pies de vuelta hacia las manos y luego salta hacia arriba, llevando los brazos por encima de la cabeza.",
+    "Aterriza suavemente y baja inmediatamente tu cuerpo de vuelta a la posición de sentadilla para repetir el movimiento."
+   ],
+   "pt": [
+    "Comece em pé com os pés na largura do quadril. Abaixe o corpo em posição de agachamento, colocando as mãos no chão à sua frente.",
+    "Salte rapidamente os pés para trás até a posição de prancha, mantendo o corpo alinhado da cabeça aos pés.",
+    "Execute uma flexão de braço, mantendo o core contraído e os cotovelos próximos ao corpo.",
+    "Salte os pés de volta em direção às mãos e depois salte para cima, estendendo os braços acima da cabeça.",
+    "Aterrisse suavemente e abaixe o corpo imediatamente de volta à posição de agachamento para repetir o movimento."
+   ]
+  },
+  "videos": {
+   "male": {
+    "front": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/male-bodyweight-burpee-front.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-male-bodyweight-burpee-front.jpg"
+    },
+    "side": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/male-bodyweight-burpee-side.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-male-bodyweight-burpee-side.jpg"
+    }
+   },
+   "female": {
+    "front": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/female-bodyweight-burpee-front.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-bodyweight-burpee-front.jpg"
+    },
+    "side": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/female-bodyweight-burpee-side.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-bodyweight-burpee-side.jpg"
+    }
+   }
+  }
+ },
+ "512": {
+  "name": "Band Leg Curl",
+  "category": "Band",
+  "muscles": [
+   "Hamstrings"
+  ],
+  "steps": {
+   "en": [
+    "Loop the band around a sturdy anchor point such as a weightlifting rack or a door handle.",
+    "Lie on your back with your heels placed inside the band. Make sure the band is centered under your heels and your feet are hip-width apart.",
+    "Using your hamstrings, curl your heels towards your glutes while keeping your hips on the ground."
+   ],
+   "es": [
+    "Enrolla la banda alrededor de un punto de anclaje resistente, como un rack de pesas o el picaporte de una puerta.",
+    "Acuéstate boca arriba con los talones dentro de la banda. Asegúrate de que la banda esté centrada debajo de tus talones y tus pies estén separados al ancho de la cadera.",
+    "Usando los isquiotibiales, curva los talones hacia los glúteos manteniendo las caderas en el piso."
+   ],
+   "pt": [
+    "Prenda a faixa elástica em um ponto de fixação firme, como um rack de musculação ou uma maçaneta de porta.",
+    "Deite-se de costas com os calcanhares dentro da faixa. Certifique-se de que a faixa esteja centralizada sob os calcanhares e os pés na largura do quadril.",
+    "Usando os posteriores de coxa, flexione os calcanhares em direção aos glúteos mantendo o quadril no chão."
+   ]
+  },
+  "videos": {
+   "male": {
+    "front": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/male-band-leg-curl-front.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-male-band-leg-curl-front.jpg"
+    },
+    "side": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/male-band-leg-curl-side.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-male-band-leg-curl-side.jpg"
+    }
+   },
+   "female": {
+    "front": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/female-band-leg-curl-front.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-band-leg-curl-front.jpg"
+    },
+    "side": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/female-band-leg-curl-side.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-band-leg-curl-side.jpg"
+    }
+   }
+  }
+ },
+ "514": {
+  "name": "Band Leg Extension",
+  "category": "Band",
+  "muscles": [
+   "Quads"
+  ],
+  "steps": {
+   "en": [
+    "Anchor a band to something stable and set up a bench.",
+    "Run through the band underneath the bench and loop around your feet.",
+    "Flex and extend your knees."
+   ],
+   "es": [
+    "Ancla una banda a algo estable y coloca un banco.",
+    "Pasa la banda por debajo del banco y enróllala alrededor de tus pies.",
+    "Flexiona y extiende las rodillas."
+   ],
+   "pt": [
+    "Prenda uma faixa elástica em algo estável e posicione um banco.",
+    "Passe a faixa por baixo do banco e a enlace ao redor dos pés.",
+    "Flexione e estenda os joelhos."
+   ]
+  },
+  "videos": {
+   "male": {
+    "front": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/male-band-leg-extension-front.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-male-band-leg-extension-front.jpg"
+    },
+    "side": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/male-band-leg-extension-side.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-male-band-leg-extension-side.jpg"
+    }
+   },
+   "female": {
+    "front": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/female-band-leg-extension-front.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-band-leg-extension-front.jpg"
+    },
+    "side": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/female-band-leg-extension-side.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-band-leg-extension-side.jpg"
+    }
+   }
+  }
+ },
+ "828": {
+  "name": "Seated Leg Curl",
+  "category": "Machine",
+  "muscles": [
+   "Hamstrings",
+   "Medial Hamstrings"
+  ],
+  "steps": {
+   "en": [
+    "Sit on the machine. Adjust the back pad to where the leg pad is just above your knees.",
+    "Adjust the leg pad that goes on your lower leg until it's on your achilles.",
+    "Use the two handles to push your self back in the chair. Curl your legs as far as possible, and then extend your knees. (Do not hyperextend)"
+   ],
+   "es": [
+    "Siéntate en la máquina. Ajusta el respaldo hasta que la almohadilla de la pierna quede justo arriba de tus rodillas.",
+    "Ajusta la almohadilla que va en la parte baja de tu pierna hasta que quede sobre el tendón de Aquiles.",
+    "Usa las dos manijas para empujarte hacia atrás en el asiento. Flexiona las piernas lo más posible y luego extiende las rodillas. (No hiperextiendas)"
+   ],
+   "pt": [
+    "Sente-se na máquina. Ajuste o encosto de forma que a almofada da perna fique logo acima dos joelhos.",
+    "Ajuste a almofada que fica na parte inferior da perna até que fique no tendão de Aquiles.",
+    "Use as duas alças para se puxar de volta contra o encosto. Flexione as pernas o máximo possível e depois estenda os joelhos. (Não hiperestenda)"
+   ]
+  },
+  "videos": {
+   "male": {
+    "front": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/male-Machine-seated-leg-curl-front.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-male-Machine-seated-leg-curl-front.jpg"
+    },
+    "side": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/male-Machine-seated-leg-curl-side.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-male-Machine-seated-leg-curl-side.jpg"
+    }
+   },
+   "female": {
+    "front": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/female-Machine-seated-leg-curl-front.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Machine-seated-leg-curl-front.jpg"
+    },
+    "side": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/female-Machine-seated-leg-curl-side.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Machine-seated-leg-curl-side.jpg"
+    }
+   }
+  }
+ },
+ "882": {
+  "name": "Reverse Crunch",
+  "category": "Bodyweight",
+  "muscles": [
+   "Lower Abdominals"
+  ],
+  "steps": {
+   "en": [
+    "Sit in a v position.",
+    "Pull legs and torso together.",
+    "Extend back into the starting position."
+   ],
+   "es": [
+    "Siéntate en posición de V.",
+    "Junta las piernas y el torso.",
+    "Extiende de vuelta a la posición inicial."
+   ],
+   "pt": [
+    "Sente-se em posição de V.",
+    "Puxe as pernas e o tronco juntos.",
+    "Estenda de volta à posição inicial."
+   ]
+  },
+  "videos": {
+   "male": {
+    "front": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/male-Bodyweight-reverse-crunch-front.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-male-Bodyweight-reverse-crunch-front.jpg"
+    },
+    "side": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/male-Bodyweight-reverse-crunch-side.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-male-Bodyweight-reverse-crunch-side.jpg"
+    }
+   },
+   "female": {
+    "front": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/female-Bodyweight-reverse-crunch-front.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Bodyweight-reverse-crunch-front.jpg"
+    },
+    "side": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/female-Bodyweight-reverse-crunch-side.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Bodyweight-reverse-crunch-side.jpg"
+    }
+   }
+  }
+ },
+ "1012": {
+  "name": "Cable Standing Glute Kickback",
+  "category": "Cables",
+  "muscles": [
+   "Glutes"
+  ],
+  "steps": {
+   "en": [
+    "Use an ankle attachment. The cable should be set to the bottom of the crossover machine.",
+    "Break at the knee, push your ankle straight back, extending at the hip. Hold for a one count when you feel a contraction in your glutes.",
+    "Then flex at the hips until you are back into your original position."
+   ],
+   "es": [
+    "Usa un aditamento para tobillo. El cable debe estar ajustado en la parte inferior de la máquina de poleas cruzadas.",
+    "Flexiona la rodilla, empuja el tobillo hacia atrás, extendiendo la cadera. Sostén por un conteo de uno cuando sientas la contracción en los glúteos.",
+    "Luego flexiona las caderas hasta volver a tu posición original."
+   ],
+   "pt": [
+    "Use um acessório de tornozelo. O cabo deve estar ajustado na parte inferior da estação de cross.",
+    "Quebre o movimento pelo joelho, empurre o tornozelo diretamente para trás, estendendo o quadril. Segure por um segundo ao sentir a contração nos glúteos.",
+    "Depois flexione o quadril até voltar à posição inicial."
+   ]
+  },
+  "videos": {
+   "male": {
+    "front": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/male-Cables-cable-standing-kickback-front.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-male-Cables-cable-standing-kickback-front.jpg"
+    },
+    "side": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/male-Cables-cable-standing-kickback-side.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-male-Cables-cable-standing-kickback-side.jpg"
+    }
+   },
+   "female": {
+    "front": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/female-Cables-cable-standing-kickback-front.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Cables-cable-standing-kickback-front.jpg"
+    },
+    "side": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/female-Cables-cable-standing-kickback-side.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Cables-cable-standing-kickback-side.jpg"
+    }
+   }
+  }
+ },
+ "1023": {
+  "name": "Cable Bar Pushdown",
+  "category": "Cables",
+  "muscles": [
+   "Triceps"
+  ],
+  "steps": {
+   "en": [
+    "Use the bar attachment. The cable should be set all the way at the top of the machine.",
+    "Make sure to keep your upper arm glued at your side. Extend your elbows until you feel your triceps contract."
+   ],
+   "es": [
+    "Usa el aditamento de barra. El cable debe estar ajustado hasta arriba de la máquina.",
+    "Asegúrate de mantener la parte superior del brazo pegada a tu costado. Extiende los codos hasta sentir la contracción de los tríceps."
+   ],
+   "pt": [
+    "Use o acessório de barra. O cabo deve estar ajustado no topo da máquina.",
+    "Certifique-se de manter a parte superior do braço colada ao corpo. Estenda os cotovelos até sentir a contração no tríceps."
+   ]
+  },
+  "videos": {
+   "male": {
+    "front": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/male-Cables-cable-bar-pushdown-front.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-male-Cables-cable-bar-pushdown-front.jpg"
+    },
+    "side": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/male-Cables-cable-bar-pushdown-side.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-male-Cables-cable-bar-pushdown-side.jpg"
+    }
+   },
+   "female": {
+    "front": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/female-Cables-cable-bar-pushdown-front.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Cables-cable-bar-pushdown-front.jpg"
+    },
+    "side": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/female-Cables-cable-bar-pushdown-side.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Cables-cable-bar-pushdown-side.jpg"
+    }
+   }
+  }
+ },
+ "1140": {
+  "name": "Bodyweight Hip Abduction",
+  "category": "Bodyweight",
+  "muscles": [
+   "Glutes"
+  ],
+  "steps": {
+   "en": [
+    "Abduct at the hips and raise your leg out to the side.",
+    "Return to the starting position and stop just short of your foot touching back to the ground (to keep tension on the muscle)."
+   ],
+   "es": [
+    "Abduce en las caderas y levanta la pierna hacia el lado.",
+    "Vuelve a la posición inicial y detente justo antes de que el pie toque el piso (para mantener la tensión en el músculo)."
+   ],
+   "pt": [
+    "Abduza o quadril e levante a perna para o lado.",
+    "Volte à posição inicial e pare pouco antes do pé tocar o chão (para manter a tensão no músculo)."
+   ]
+  },
+  "videos": {
+   "male": {
+    "front": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/male-Bodyweight-bodyweight-hip-abduction-front.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-male-Bodyweight-bodyweight-hip-abduction-front.jpg"
+    },
+    "side": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/male-Bodyweight-bodyweight-hip-abduction-side.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-male-Bodyweight-bodyweight-hip-abduction-side.jpg"
+    }
+   },
+   "female": {
+    "front": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/female-Bodyweight-bodyweight-hip-abduction-front.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Bodyweight-bodyweight-hip-abduction-front.jpg"
+    },
+    "side": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/female-Bodyweight-bodyweight-hip-abduction-side.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Bodyweight-bodyweight-hip-abduction-side.jpg"
+    }
+   }
+  }
+ },
+ "1147": {
+  "name": "Bodyweight Plank Up Down",
+  "category": "Bodyweight",
+  "muscles": [
+   "Abdominals"
+  ],
+  "steps": {
+   "en": [
+    "Start from a plank position.",
+    "Go to one elbow then the other. Try to avoid rocking back and forth."
+   ],
+   "es": [
+    "Comienza en posición de plancha.",
+    "Pasa a un codo y luego al otro. Trata de evitar balancearte de un lado a otro."
+   ],
+   "pt": [
+    "Comece na posição de prancha.",
+    "Vá para um cotovelo e depois para o outro. Tente evitar balançar o corpo para frente e para trás."
+   ]
+  },
+  "videos": {
+   "male": {
+    "front": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/male-Bodyweight-bodyweight-plank-up-down-front.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-male-Bodyweight-bodyweight-plank-up-down-front.jpg"
+    },
+    "side": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/male-Bodyweight-bodyweight-plank-up-down-side.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-male-Bodyweight-bodyweight-plank-up-down-side.jpg"
+    }
+   },
+   "female": {
+    "front": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/female-Bodyweight-bodyweight-plank-up-down-front.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Bodyweight-bodyweight-plank-up-down-front.jpg"
+    },
+    "side": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/female-Bodyweight-bodyweight-plank-up-down-side.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Bodyweight-bodyweight-plank-up-down-side.jpg"
+    }
+   }
+  }
+ },
+ "1384": {
+  "name": "Walking Lunge",
+  "category": "Bodyweight",
+  "muscles": [
+   "Glutes",
+   "Quads"
+  ],
+  "steps": {
+   "en": [
+    "Take a step forward shifting your weight onto the front leg.",
+    "Bend the knee of the front leg so the knee of the back leg comes close to the ground.",
+    "Stand up and go into lunging with the opposite leg."
+   ],
+   "es": [
+    "Da un paso adelante trasladando tu peso a la pierna delantera.",
+    "Flexiona la rodilla de la pierna delantera para que la rodilla de la pierna trasera se acerque al piso.",
+    "Ponte de pie y continúa con la zancada con la pierna opuesta."
+   ],
+   "pt": [
+    "Dê um passo à frente transferindo o peso para a perna da frente.",
+    "Dobre o joelho da perna da frente para que o joelho da perna de trás fique próximo ao chão.",
+    "Levante-se e faça o avanço com a perna oposta."
+   ]
+  },
+  "videos": {
+   "male": {
+    "front": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/male-Recovery-lunge-walking-front.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-male-Recovery-lunge-walking-front.jpg"
+    },
+    "side": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/male-Recovery-lunge-walking-side.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-male-Recovery-lunge-walking-side.jpg"
+    }
+   },
+   "female": {
+    "front": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/female-Recovery-lunge-walking-front.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Recovery-lunge-walking-front.jpg"
+    },
+    "side": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/female-Recovery-lunge-walking-side.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Recovery-lunge-walking-side.jpg"
+    }
+   }
+  }
+ },
+ "1499": {
+  "name": "Machine Hack Squat",
+  "category": "Machine",
+  "muscles": [
+   "Glutes",
+   "Quads"
+  ],
+  "steps": {
+   "en": [
+    "Position yourself in the hack squat machine with your back against the pad and shoulders under the shoulder pads.",
+    "Place feet shoulder-width apart on the platform. Keep your back straight, and slowly lower into a squat position.",
+    "Press through your heels to return to the starting position, keeping your core engaged. Repeat for desired reps and sets."
+   ],
+   "es": [
+    "Colócate en la máquina de sentadilla hack con la espalda contra el respaldo y los hombros debajo de las almohadillas de hombros.",
+    "Coloca los pies separados al ancho de los hombros sobre la plataforma. Mantén la espalda recta y baja lentamente a una posición de sentadilla.",
+    "Empuja a través de los talones para volver a la posición inicial, manteniendo el core activado. Repite las repeticiones y series deseadas."
+   ],
+   "pt": [
+    "Posicione-se na máquina de agachamento hack com as costas apoiadas no encosto e os ombros sob as almofadas.",
+    "Coloque os pés na largura dos ombros sobre a plataforma. Mantenha as costas retas e abaixe lentamente até a posição de agachamento.",
+    "Empurre pelos calcanhares para retornar à posição inicial, mantendo o core ativado. Repita pelo número desejado de repetições e séries."
+   ]
+  },
+  "videos": {
+   "male": {
+    "front": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/male-Machine-machine-hack-squat-front.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-male-Machine-machine-hack-squat-front.jpg"
+    },
+    "side": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/male-Machine-machine-hack-squat-side.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-male-Machine-machine-hack-squat-side.jpg"
+    }
+   },
+   "female": {
+    "front": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/female-Machine-machine-hack-squat-front.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Machine-machine-hack-squat-front.jpg"
+    },
+    "side": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/female-Machine-machine-hack-squat-side.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Machine-machine-hack-squat-side.jpg"
+    }
+   }
+  }
+ },
+ "1596": {
+  "name": "Wall Sit",
+  "category": "Bodyweight",
+  "muscles": [
+   "Quads"
+  ],
+  "steps": {
+   "en": [
+    "Press your back against a wall, feet shoulder-width apart.",
+    "Lower into a squat position, thighs parallel to the floor, knees above ankles.",
+    "Hold the position, maintaining tension in your core and legs."
+   ],
+   "es": [
+    "Presiona tu espalda contra una pared, con los pies separados al ancho de los hombros.",
+    "Baja a una posición de sentadilla, con los muslos paralelos al piso y las rodillas sobre los tobillos.",
+    "Sostén la posición, manteniendo la tensión en el core y las piernas."
+   ],
+   "pt": [
+    "Pressione as costas contra uma parede, com os pés na largura dos ombros.",
+    "Abaixe até a posição de agachamento, com as coxas paralelas ao chão e os joelhos acima dos tornozelos.",
+    "Segure a posição, mantendo a tensão no core e nas pernas."
+   ]
+  },
+  "videos": {
+   "male": {
+    "front": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/male-Bodyweight-wall-sit-front.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-male-Bodyweight-wall-sit-front.jpg"
+    },
+    "side": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/male-Bodyweight-wall-sit-side.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-male-Bodyweight-wall-sit-side.jpg"
+    }
+   },
+   "female": {
+    "front": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/female-Bodyweight-wall-sit-front.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Bodyweight-wall-sit-front.jpg"
+    },
+    "side": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/female-Bodyweight-wall-sit-side.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Bodyweight-wall-sit-side.jpg"
+    }
+   }
+  }
+ },
+ "1886": {
+  "name": "Band Seated Pulldown",
+  "category": "Band",
+  "muscles": [
+   "Lats"
+  ],
+  "steps": {
+   "en": [
+    "Sit facing anchor with band overhead and arms extended.",
+    "Pull elbows down toward ribs while keeping chest lifted.",
+    "Squeeze lats at the bottom, then return slowly to full stretch."
+   ],
+   "es": [
+    "Siéntate frente al anclaje con la banda por encima de la cabeza y los brazos extendidos.",
+    "Jala los codos hacia abajo, hacia las costillas, manteniendo el pecho elevado.",
+    "Aprieta el dorsal en la parte baja, luego vuelve lentamente al estiramiento completo."
+   ],
+   "pt": [
+    "Sente-se de frente para o ponto de fixação com a faixa elástica acima da cabeça e os braços estendidos.",
+    "Puxe os cotovelos para baixo, em direção às costelas, mantendo o peito erguido.",
+    "Contraia as costas na parte final do movimento e depois volte lentamente ao alongamento total."
+   ]
+  },
+  "videos": {
+   "male": {
+    "front": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/male-Band-band-seated-pulldown-front.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-male-Band-band-seated-pulldown-front.jpg"
+    },
+    "side": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/male-Band-band-seated-pulldown-side.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-male-Band-band-seated-pulldown-side.jpg"
+    }
+   },
+   "female": {
+    "front": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/female-Band-band-seated-pulldown-front.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Band-band-seated-pulldown-front.jpg"
+    },
+    "side": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/female-Band-band-seated-pulldown-side.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Band-band-seated-pulldown-side.jpg"
+    }
+   }
+  }
+ },
+ "2211": {
+  "name": "Mini Band Tricep Pushdown",
+  "category": "Band",
+  "muscles": [
+   "Triceps"
+  ],
+  "steps": {
+   "en": [
+    "Loop band around wrists.",
+    "Keep one hand at shoulder height and press your other hand down."
+   ],
+   "es": [
+    "Enrolla la banda alrededor de las muñecas.",
+    "Mantén una mano a la altura del hombro y presiona la otra mano hacia abajo."
+   ],
+   "pt": [
+    "Passe a faixa elástica ao redor dos punhos.",
+    "Mantenha uma mão na altura do ombro e empurre a outra mão para baixo."
+   ]
+  },
+  "videos": {
+   "male": {
+    "front": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/male-Band-mini-band-tricep-pushdown-front.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-male-Band-mini-band-tricep-pushdown-front.jpg"
+    },
+    "side": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/male-Band-mini-band-tricep-pushdown-side.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-male-Band-mini-band-tricep-pushdown-side.jpg"
+    }
+   },
+   "female": {
+    "front": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/female-Band-mini-band-tricep-pushdown-front.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Band-mini-band-tricep-pushdown-front.jpg"
+    },
+    "side": {
+     "url": "https://api.musclewiki.com/stream/videos/branded/female-Band-mini-band-tricep-pushdown-side.mp4",
+     "poster": "https://api.musclewiki.com/stream/images/og_images/og-female-Band-mini-band-tricep-pushdown-side.jpg"
+    }
+   }
+  }
+ }
+}

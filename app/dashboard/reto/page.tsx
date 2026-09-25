@@ -3,7 +3,49 @@ import { AppShell } from "@/components/AppShell";
 import { requireUser } from "@/lib/auth";
 import { tr, locale } from "@/lib/i18n";
 import { RETO } from "@/lib/reto-i18n";
-import { RETO_TRAINING, RETO_MEALS, RETO_SUPPLEMENTS, RETO_HABITS, retoProgress, trackOf } from "@/lib/reto-plan";
+import { RETO_TRAINING, RETO_MEALS, RETO_SUPPLEMENTS, RETO_HABITS, retoProgress, trackOf, type RetoExercise } from "@/lib/reto-plan";
+import { mediaToken, withToken } from "@/lib/musclewiki";
+import videosJson from "@/data/reto-videos.json";
+import type { Lang } from "@/lib/i18n";
+
+type MwVideo = { url: string; poster?: string | null };
+type MwExercise = { name: string; steps: Partial<Record<Lang, string[]>>; videos: Record<string, Record<string, MwVideo>> };
+const VIDEOS = videosJson as Record<string, MwExercise>;
+
+function ExerciseCard({ e, gender, lang, token, t }: { e: RetoExercise; gender: "male" | "female"; lang: Lang; token: string | null; t: { how: string; gym: string; home: string; side: string } }) {
+  const ids = e.mw ? (e.mw[0] === e.mw[1] ? [e.mw[0]] : e.mw) : [];
+  const variants = ids.map((id, i) => ({ id, label: ids.length > 1 ? (i === 0 ? t.gym : t.home) : null, x: VIDEOS[String(id)] })).filter((v) => v.x);
+  const steps = variants[0]?.x.steps[lang] ?? variants[0]?.x.steps.en ?? [];
+  return (
+    <li className="py-3" style={{ borderTop: "1px solid var(--line)" }}>
+      <div className="flex justify-between gap-3"><span className="font-semibold">{e.name}</span><span className="num faint whitespace-nowrap">{e.sets} × {e.reps}</span></div>
+      {variants.length > 0 && (
+        <div className={`grid gap-3 mt-2 ${variants.length > 1 ? "grid-cols-2" : "grid-cols-1 max-w-[260px]"}`}>
+          {variants.map((v) => {
+            const g = v.x.videos[gender] ?? v.x.videos.male ?? {};
+            const front = g.front, side = g.side;
+            if (!front) return null;
+            return (
+              <div key={v.id}>
+                <video controls playsInline preload="none" muted loop className="w-full rounded-xl" style={{ background: "#000", aspectRatio: "1 / 1" }} poster={front.poster ? withToken(front.poster, token) : undefined} src={withToken(front.url, token)} />
+                <div className="flex justify-between text-xs mt-1">
+                  <span className="faint">{v.label ?? v.x.name}</span>
+                  {side && <a href={withToken(side.url, token)} target="_blank" rel="noreferrer" className="underline" style={{ color: "var(--sage)" }}>{t.side} ↗</a>}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      )}
+      {steps.length > 0 && (
+        <details className="mt-2 text-sm">
+          <summary className="cursor-pointer" style={{ color: "var(--sage)" }}>{t.how}</summary>
+          <ol className="list-decimal pl-5 mt-1 space-y-1 muted">{steps.map((s) => <li key={s}>{s}</li>)}</ol>
+        </details>
+      )}
+    </li>
+  );
+}
 
 export default async function RetoDashboard() {
   const [user, { lang }] = await Promise.all([requireUser(), tr()]);
@@ -28,6 +70,8 @@ export default async function RetoDashboard() {
   const training = RETO_TRAINING[track];
   const meals = RETO_MEALS[track];
   const sup = RETO_SUPPLEMENTS[lang];
+  const token = await mediaToken();
+  const gender = track === "hombre" ? "male" : "female";
 
   return (
     <AppShell title={t.app.title} kicker={t.app.kicker}>
@@ -69,15 +113,14 @@ export default async function RetoDashboard() {
         <div className="grid md:grid-cols-2 gap-3">
           {training.map((d) => (
             <div key={d.day.es} className="card lift p-5">
-              <div className="flex items-baseline justify-between"><span className="pill pill-f">{d.day[lang]}</span><span className="display">{d.focus[lang]}</span></div>
-              <ul className="mt-3 space-y-1 text-sm">
-                {d.exercises.map((e) => (
-                  <li key={e.name} className="flex justify-between gap-3"><span>{e.name}</span><span className="num faint whitespace-nowrap">{e.sets} × {e.reps}</span></li>
-                ))}
+              <div className="flex items-baseline justify-between mb-2"><span className="pill pill-f">{d.day[lang]}</span><span className="display">{d.focus[lang]}</span></div>
+              <ul className="text-sm">
+                {d.exercises.map((e, i) => <ExerciseCard key={`${e.name}-${i}`} e={e} gender={gender} lang={lang} token={token} t={t.app} />)}
               </ul>
             </div>
           ))}
         </div>
+        <p className="faint text-xs mt-3">{t.app.videoBy}</p>
       </section>
 
       <section className="mb-5">

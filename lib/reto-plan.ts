@@ -3,7 +3,7 @@ import { RETO_DAYS } from "@/lib/plan";
 
 export type RetoTrack = "mujer" | "hombre";
 type T3 = Record<Lang, string>;
-export type RetoExercise = { name: string; sets: number; reps: string };
+export type RetoExercise = { name: string; sets: number; reps: string; mw?: [number, number] };
 export type RetoDay = { day: T3; focus: T3; exercises: RetoExercise[] };
 export type RetoMeal = { name: T3; options: Record<Lang, string[]> };
 
@@ -14,28 +14,28 @@ const t3 = (es: string, en: string, pt: string): T3 => ({ es, en, pt });
 export const RETO_TRAINING: Record<RetoTrack, RetoDay[]> = {
   mujer: [
     { day: t3("Lunes", "Monday", "Segunda"), focus: t3("Glúteo e isquios", "Glutes & hamstrings", "Glúteo e posteriores"), exercises: [
-      { name: "Hip thrust", sets: 3, reps: "8 + 8 hold + 8 pulse" }, { name: "Romanian deadlift", sets: 4, reps: "12" }, { name: "Leg curl (hold 2s)", sets: 4, reps: "12" },
-      { name: "Bulgarian split squat", sets: 4, reps: "12 / pierna" }, { name: "Glute kickback (cable o banda)", sets: 4, reps: "12" } ] },
+      { name: "Hip thrust", mw: [30, 286], sets: 3, reps: "8 + 8 hold + 8 pulse" }, { name: "Romanian deadlift", mw: [313, 291], sets: 4, reps: "12" }, { name: "Leg curl (hold 2s)", mw: [828, 512], sets: 4, reps: "12" },
+      { name: "Bulgarian split squat", mw: [317, 42], sets: 4, reps: "12 / pierna" }, { name: "Glute kickback (cable o banda)", mw: [1012, 263], sets: 4, reps: "12" } ] },
     { day: t3("Martes", "Tuesday", "Terça"), focus: t3("Hombro y tríceps", "Shoulders & triceps", "Ombro e tríceps"), exercises: [
-      { name: "Dumbbell shoulder press", sets: 4, reps: "12" }, { name: "Lateral raises", sets: 3, reps: "12" }, { name: "Front raises", sets: 3, reps: "12" }, { name: "Tricep pushdown (cable o banda)", sets: 3, reps: "15" } ] },
+      { name: "Dumbbell shoulder press", mw: [45, 439], sets: 4, reps: "12" }, { name: "Lateral raises", mw: [20, 20], sets: 3, reps: "12" }, { name: "Front raises", mw: [46, 46], sets: 3, reps: "12" }, { name: "Tricep pushdown (cable o banda)", mw: [1023, 2211], sets: 3, reps: "15" } ] },
     { day: t3("Miércoles", "Wednesday", "Quarta"), focus: t3("Cuádriceps", "Quads", "Quadríceps"), exercises: [
-      { name: "Hack squat o sentadilla goblet", sets: 4, reps: "12" }, { name: "Leg press", sets: 4, reps: "12" }, { name: "Leg extensions", sets: 4, reps: "15" }, { name: "Walking lunges", sets: 4, reps: "10 / pierna" }, { name: "Static lunge", sets: 4, reps: "12" } ] },
+      { name: "Hack squat o sentadilla goblet", mw: [1499, 11], sets: 4, reps: "12" }, { name: "Leg press", mw: [9, 266], sets: 4, reps: "12" }, { name: "Leg extensions", mw: [10, 514], sets: 4, reps: "15" }, { name: "Walking lunges", mw: [1384, 1384], sets: 4, reps: "10 / pierna" }, { name: "Static lunge", mw: [190, 190], sets: 4, reps: "12" } ] },
     { day: t3("Jueves", "Thursday", "Quinta"), focus: t3("Espalda y bíceps", "Back & biceps", "Costas e bíceps"), exercises: [
-      { name: "Lat pulldown o jalón con banda", sets: 4, reps: "12" }, { name: "Dumbbell row", sets: 3, reps: "12" }, { name: "Bicep curls", sets: 4, reps: "12" }, { name: "Hammer curls", sets: 4, reps: "12" } ] },
+      { name: "Lat pulldown o jalón con banda", mw: [23, 1886], sets: 4, reps: "12" }, { name: "Dumbbell row", mw: [26, 26], sets: 3, reps: "12" }, { name: "Bicep curls", mw: [2, 2], sets: 4, reps: "12" }, { name: "Hammer curls", mw: [3, 3], sets: 4, reps: "12" } ] },
     { day: t3("Viernes", "Friday", "Sexta"), focus: t3("Pierna completa", "Full legs", "Perna completa"), exercises: [
-      { name: "Hip thrust", sets: 3, reps: "8 + 8 hold + 8 pulse" }, { name: "Barbell o goblet squat", sets: 4, reps: "12" }, { name: "Romanian deadlift", sets: 4, reps: "12" }, { name: "Leg press", sets: 4, reps: "12" }, { name: "Leg curl", sets: 4, reps: "12" } ] },
+      { name: "Hip thrust", mw: [30, 286], sets: 3, reps: "8 + 8 hold + 8 pulse" }, { name: "Barbell o goblet squat", mw: [8, 11], sets: 4, reps: "12" }, { name: "Romanian deadlift", mw: [313, 291], sets: 4, reps: "12" }, { name: "Leg press", mw: [9, 266], sets: 4, reps: "12" }, { name: "Leg curl", mw: [828, 512], sets: 4, reps: "12" } ] },
   ],
   hombre: [
     { day: t3("Lunes", "Monday", "Segunda"), focus: t3("Hombro y tríceps", "Shoulders & triceps", "Ombro e tríceps"), exercises: [
-      { name: "Arnold press", sets: 3, reps: "15" }, { name: "Alternating front raise", sets: 3, reps: "15" }, { name: "Lateral raises", sets: 3, reps: "15" }, { name: "Tricep dips", sets: 3, reps: "15" }, { name: "Overhead tricep extension", sets: 3, reps: "15" } ] },
+      { name: "Arnold press", mw: [423, 423], sets: 3, reps: "15" }, { name: "Alternating front raise", mw: [46, 46], sets: 3, reps: "15" }, { name: "Lateral raises", mw: [20, 20], sets: 3, reps: "15" }, { name: "Tricep dips", mw: [18, 18], sets: 3, reps: "15" }, { name: "Overhead tricep extension", mw: [16, 16], sets: 3, reps: "15" } ] },
     { day: t3("Martes", "Tuesday", "Terça"), focus: t3("Cuádriceps", "Quads", "Quadríceps"), exercises: [
-      { name: "Side lunge", sets: 4, reps: "12" }, { name: "Elevated squat", sets: 4, reps: "12" }, { name: "Squat iso hold", sets: 3, reps: "30 s" }, { name: "Jump squat", sets: 4, reps: "12" }, { name: "Regular squat", sets: 4, reps: "12" }, { name: "Single-leg glute bridge", sets: 3, reps: "15 / lado" } ] },
+      { name: "Side lunge", mw: [189, 189], sets: 4, reps: "12" }, { name: "Elevated squat", mw: [431, 431], sets: 4, reps: "12" }, { name: "Squat iso hold", mw: [1596, 1596], sets: 3, reps: "30 s" }, { name: "Jump squat", mw: [191, 191], sets: 4, reps: "12" }, { name: "Regular squat", mw: [192, 192], sets: 4, reps: "12" }, { name: "Single-leg glute bridge", mw: [50, 50], sets: 3, reps: "15 / lado" } ] },
     { day: t3("Miércoles", "Wednesday", "Quarta"), focus: t3("Glúteo y pierna", "Glutes & legs", "Glúteo e perna"), exercises: [
-      { name: "Alternating back lunge", sets: 4, reps: "12" }, { name: "Bulgarian split squat", sets: 4, reps: "12" }, { name: "Deadlift", sets: 4, reps: "12" }, { name: "Side glute raise", sets: 4, reps: "12" }, { name: "Sumo squat", sets: 4, reps: "12" } ] },
+      { name: "Alternating back lunge", mw: [373, 373], sets: 4, reps: "12" }, { name: "Bulgarian split squat", mw: [317, 42], sets: 4, reps: "12" }, { name: "Deadlift", mw: [39, 291], sets: 4, reps: "12" }, { name: "Side glute raise", mw: [1140, 1140], sets: 4, reps: "12" }, { name: "Sumo squat", mw: [467, 467], sets: 4, reps: "12" } ] },
     { day: t3("Jueves", "Thursday", "Quinta"), focus: t3("Espalda y bíceps", "Back & biceps", "Costas e bíceps"), exercises: [
-      { name: "Reverse flies", sets: 3, reps: "12" }, { name: "Bicep curl", sets: 3, reps: "12" }, { name: "Dumbbell row", sets: 3, reps: "12" }, { name: "Hammer curl", sets: 3, reps: "12" }, { name: "Single-arm row", sets: 3, reps: "12" } ] },
+      { name: "Reverse flies", mw: [407, 407], sets: 3, reps: "12" }, { name: "Bicep curl", mw: [2, 2], sets: 3, reps: "12" }, { name: "Dumbbell row", mw: [26, 26], sets: 3, reps: "12" }, { name: "Hammer curl", mw: [3, 3], sets: 3, reps: "12" }, { name: "Single-arm row", mw: [282, 282], sets: 3, reps: "12" } ] },
     { day: t3("Viernes", "Friday", "Sexta"), focus: t3("Core y cuerpo completo", "Core & full body", "Core e corpo inteiro"), exercises: [
-      { name: "Toe touches", sets: 3, reps: "12" }, { name: "Devil press", sets: 3, reps: "12" }, { name: "Elbow-to-hands plank", sets: 3, reps: "12" }, { name: "Knee tucks", sets: 3, reps: "12" }, { name: "Plank", sets: 3, reps: "45 s" } ] },
+      { name: "Toe touches", mw: [35, 35], sets: 3, reps: "12" }, { name: "Devil press", mw: [475, 475], sets: 3, reps: "12" }, { name: "Elbow-to-hands plank", mw: [1147, 1147], sets: 3, reps: "12" }, { name: "Knee tucks", mw: [882, 882], sets: 3, reps: "12" }, { name: "Plank", mw: [204, 204], sets: 3, reps: "45 s" } ] },
   ],
 };
 
