@@ -14,7 +14,7 @@ const STRIPE_LINKS = {
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen" style={{ background: "#0B0B0F" }}>
+    <div className="min-h-screen overflow-x-hidden" style={{ background: "#0B0B0F" }}>
       {/* HERO PREMIUM */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none" style={{ background: "radial-gradient(55% 55% at 72% 45%, rgba(255,45,138,0.22), transparent 70%), radial-gradient(40% 40% at 15% 80%, rgba(127,194,155,0.12), transparent 70%)" }} />
@@ -24,9 +24,9 @@ export default function HomePage() {
               <p style={{ color: "#FF2D8A", fontSize: "14px", fontWeight: 600 }}>Transformación certificada en 30 días</p>
             </div>
 
-            <h1 className="text-5xl md:text-7xl font-black mb-6" style={{ letterSpacing: "-0.03em", color: "#F5F2F0", lineHeight: 1.02 }}>
+            <h1 className="text-[2.5rem] sm:text-5xl md:text-7xl font-black mb-6 break-words" style={{ letterSpacing: "-0.03em", color: "#F5F2F0", lineHeight: 1.05 }}>
               <span style={{ color: "#FF2D8A" }}>Pequeños</span> hábitos,
-              <br />
+              <br className="hidden sm:block" />{" "}
               <span style={{ color: "#7FC29B" }}>grandes resultados</span>
             </h1>
 
