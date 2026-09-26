@@ -4,6 +4,16 @@ import { stripe } from "@/lib/stripe-sync";
 import { planFromPrice, PLANS, RETO_PRICE } from "@/lib/plan";
 
 const usd = (cents: number) => `$${(cents / 100).toFixed(2)}`;
+const ESTADO: Record<string, string> = { active: "activa", trialing: "en prueba", past_due: "pago pendiente", succeeded: "cobrado", canceled: "cancelada", unpaid: "impagada" };
+const concepto = (desc: string | null, amount: number) => {
+  const d = (desc || "").toLowerCase();
+  if (d.includes("reto") || amount === 4900) return "Reto 30 días";
+  if (d.includes("subscription creation")) return "Nueva suscripción";
+  if (d.includes("subscription update")) return "Cambio de suscripción";
+  if (d.includes("subscription")) return "Renovación de suscripción";
+  return desc || "Suscripción";
+};
+const emailOf = (c: unknown) => (c && typeof c === "object" && "email" in c && !(c as { deleted?: boolean }).deleted ? String((c as { email?: string | null }).email ?? "—") : "—");
 const fmt = (unix: number) => new Date(unix * 1000).toLocaleDateString("es", { day: "numeric", month: "short", year: "numeric" });
 
 export default async function CoachIngresos() {
@@ -18,7 +28,7 @@ export default async function CoachIngresos() {
   try {
     const [a, b] = await Promise.all([
       s.subscriptions.list({ status: "active", limit: 100, expand: ["data.customer"] }),
-      s.paymentIntents.list({ limit: 100, created: { gte: Math.floor(Date.now() / 1000) - 90 * 86400 } }),
+      s.paymentIntents.list({ limit: 100, created: { gte: Math.floor(Date.now() / 1000) - 90 * 86400 }, expand: ["data.customer"] }),
     ]);
     subs = a.data; intents = b.data;
   } catch (e) {
@@ -75,8 +85,8 @@ export default async function CoachIngresos() {
               const item = x.items.data[0];
               return (
                 <div key={x.id} className="flex justify-between py-1 text-sm gap-3">
-                  <span className="truncate">{c && !c.deleted ? c.email : x.customer.toString()}</span>
-                  <span className="num whitespace-nowrap">{PLANS[planFromPrice(item?.price.id) as "basico" | "pro" | "elite"]?.name ?? "—"} · {usd(item?.price.unit_amount ?? 0)} · {x.status}</span>
+                  <span className="truncate">{c && !c.deleted ? c.email : "—"}</span>
+                  <span className="num whitespace-nowrap">{PLANS[planFromPrice(item?.price.id) as "basico" | "pro" | "elite"]?.name ?? "—"} · {usd(item?.price.unit_amount ?? 0)}/mes · {ESTADO[x.status] ?? x.status}</span>
                 </div>
               );
             })}
@@ -92,10 +102,10 @@ export default async function CoachIngresos() {
               {paid.slice(0, 50).map((c) => (
                 <tr key={c.id} style={{ borderTop: "1px solid var(--line)" }}>
                   <td className="px-4 py-2 muted">{fmt(c.created)}</td>
-                  <td className="px-4 py-2">{c.receipt_email || (typeof c.customer === "string" ? c.customer : "—")}</td>
-                  <td className="px-4 py-2 muted">{c.description || "Suscripción"}</td>
+                  <td className="px-4 py-2">{c.receipt_email || emailOf(c.customer)}</td>
+                  <td className="px-4 py-2 muted">{concepto(c.description, c.amount_received)}</td>
                   <td className="px-4 py-2 num">{usd(c.amount_received)}</td>
-                  <td className="px-4 py-2"><span className="pill pill-s">{c.status}</span></td>
+                  <td className="px-4 py-2"><span className="pill pill-s">{ESTADO[c.status] ?? c.status}</span></td>
                 </tr>
               ))}
             </tbody>
