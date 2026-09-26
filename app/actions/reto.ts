@@ -3,6 +3,7 @@
 import { redirect } from "next/navigation";
 import { db, ensureSchema } from "@/lib/db";
 import { getLang } from "@/lib/i18n";
+import { rateLimit, clientIp } from "@/lib/throttle";
 
 const s = (f: FormData, k: string, max = 200) => String(f.get(k) ?? "").trim().slice(0, max);
 
@@ -18,10 +19,12 @@ export async function submitRetoLead(form: FormData) {
   const goal = s(form, "goal", 40);
   const level = s(form, "level", 40);
   const consent = form.get("consent") === "on";
+  if (s(form, "website")) redirect("/reto/gracias");
 
   if (!name || !email.includes("@") || !phone || !address1 || !city || !state || !zip || !goal || !level || !consent) {
     redirect("/reto/inscripcion?error=1");
   }
+  if (!(await rateLimit(`reto:ip:${await clientIp()}`, 5, 3600)).ok) redirect("/reto/gracias");
 
   await ensureSchema();
   await db().query(
