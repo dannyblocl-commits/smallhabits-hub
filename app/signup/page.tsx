@@ -3,6 +3,7 @@ import { redirect } from "next/navigation";
 import { getUser } from "@/lib/auth";
 import { tr } from "@/lib/i18n";
 import { Logo, Glow } from "@/components/Leaves";
+import { isNativeApp } from "@/lib/native";
 import { AuthForm } from "@/components/AuthForm";
 import { LangSwitch } from "@/components/LangSwitch";
 
@@ -16,7 +17,7 @@ export default async function Signup() {
         <div className="flex justify-end mb-2"><LangSwitch lang={lang} next="/signup" /></div>
         <div className="text-center mb-6"><Logo size="text-3xl" /><p className="eyebrow mt-2">{L.auth.signupPill}</p></div>
         <p className="muted text-sm text-center mb-6">{L.auth.signupSub}</p>
-        <AuthForm mode="signup" L={L.auth} goals={L.goals} />
+        <AuthForm mode="signup" L={L.auth} goals={L.goals} native={await isNativeApp()} />
         <p className="fine text-center mt-6">{L.auth.signupFine}</p>
         <p className="text-center text-xs faint mt-3"><Link href="/" className="hover:text-[var(--text)]">{L.common.volver}</Link></p>
       </div>

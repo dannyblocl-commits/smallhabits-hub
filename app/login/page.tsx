@@ -3,6 +3,7 @@ import { redirect } from "next/navigation";
 import { getUser } from "@/lib/auth";
 import { tr } from "@/lib/i18n";
 import { Logo, Glow } from "@/components/Leaves";
+import { isNativeApp } from "@/lib/native";
 import { AuthForm } from "@/components/AuthForm";
 import { LangSwitch } from "@/components/LangSwitch";
 
@@ -15,7 +16,7 @@ export default async function Login() {
       <div className="glass lift p-9 w-full max-w-md relative fade-in">
         <div className="flex justify-end mb-2"><LangSwitch lang={lang} next="/login" /></div>
         <div className="text-center mb-8"><Logo size="text-3xl" /><p className="eyebrow mt-2">{L.auth.hub}</p></div>
-        <AuthForm mode="login" L={L.auth} goals={L.goals} />
+        <AuthForm mode="login" L={L.auth} goals={L.goals} native={await isNativeApp()} />
         <p className="quote text-center muted mt-6">{L.auth.quote}</p>
         <p className="text-center text-xs faint mt-4"><Link href="/" className="hover:text-[var(--text)]">{L.common.volver}</Link></p>
       </div>

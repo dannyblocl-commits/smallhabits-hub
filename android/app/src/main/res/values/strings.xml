@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Small Habits</string>
+    <string name="title_activity_main">Small Habits</string>
+    <string name="package_name">com.smallhabitsbymaleja.app</string>
+    <string name="custom_url_scheme">com.smallhabitsbymaleja.app</string>
+</resources>
