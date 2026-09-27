@@ -358,8 +358,9 @@ export default function HomePage() {
                 Legal
               </h4>
               <ul className="space-y-2 text-sm" style={{ color: "#A8A3AE" }}>
-                <li><Link href="/privacy">Privacidad</Link></li>
-                <li><Link href="/terms">Términos</Link></li>
+                <li><Link href="/privacidad">Privacidad</Link></li>
+                <li><Link href="/terminos">Términos</Link></li>
+                <li><Link href="/eliminar-cuenta">Eliminar cuenta</Link></li>
               </ul>
             </div>
             <div>
