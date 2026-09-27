@@ -2,6 +2,8 @@
 
 import { db } from "@/lib/db";
 import { requireUser } from "@/lib/auth";
+import { after } from "next/server";
+import { sendPush } from "@/lib/push";
 
 export type Msg = { id: string; from_user: string; to_user: string; body: string; at: string; mine: boolean };
 
@@ -35,6 +37,7 @@ export async function sendMessage(body: string, toUserId?: string): Promise<Msg>
   const to = me.role === "coach" ? toUserId : await coachId(me.id);
   if (!to) throw new Error("No hay coach disponible todavía");
   const r = await db().query("insert into messages (from_user, to_user, body) values ($1,$2,$3) returning id, from_user, to_user, body, at", [me.id, to, text]);
+  after(() => sendPush([to], { title: me.name, body: text.slice(0, 140), url: me.role === "coach" ? "/dashboard/chat" : `/coach/${me.id}`, tag: `chat-${me.id}` }));
   return { ...r.rows[0], at: new Date(r.rows[0].at).toISOString(), mine: true };
 }
 

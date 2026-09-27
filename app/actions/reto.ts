@@ -4,6 +4,8 @@ import { redirect } from "next/navigation";
 import { db, ensureSchema } from "@/lib/db";
 import { getLang } from "@/lib/i18n";
 import { rateLimit, clientIp } from "@/lib/throttle";
+import { after } from "next/server";
+import { sendPush, staffIds } from "@/lib/push";
 
 const s = (f: FormData, k: string, max = 200) => String(f.get(k) ?? "").trim().slice(0, max);
 
@@ -35,5 +37,6 @@ export async function submitRetoLead(form: FormData) {
       s(form, "track", 10) === "hombre" ? "hombre" : "mujer", goal, level, s(form, "health", 500) || null, s(form, "notes", 1000) || null, lang,
     ]
   );
+  after(async () => sendPush(await staffIds(), { title: "🏁 Nueva inscripción al reto", body: `${name} · ${city}, ${state}`, url: "/coach/reto", tag: "reto-leads" }));
   redirect("/reto/gracias");
 }

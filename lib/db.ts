@@ -255,6 +255,16 @@ export function ensureSchema() {
       );
       create index if not exists tickets_user_at on tickets(user_id, created_at desc);
       create table if not exists rate_limits (key text primary key, hits int not null default 0, reset_at timestamptz not null);
+      create table if not exists push_subscriptions (
+        id uuid primary key default gen_random_uuid(),
+        user_id uuid references users(id) on delete cascade,
+        endpoint text not null unique,
+        p256dh text not null,
+        auth text not null,
+        ua text,
+        created_at timestamptz default now()
+      );
+      create index if not exists push_user on push_subscriptions(user_id);
 
       create table if not exists payments (
         id uuid primary key default gen_random_uuid(),

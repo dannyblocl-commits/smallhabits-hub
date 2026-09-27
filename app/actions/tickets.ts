@@ -3,6 +3,8 @@
 import { revalidatePath } from "next/cache";
 import { db, ensureSchema } from "@/lib/db";
 import { requireUser, requireStaff } from "@/lib/auth";
+import { after } from "next/server";
+import { sendPush, staffIds } from "@/lib/push";
 
 export type Ticket = { id: string; subject: string; category: string; body: string; status: string; reply: string | null; created_at: string; replied_at: string | null; user_name?: string; user_email?: string; user_plan?: string };
 
@@ -20,6 +22,7 @@ export async function createTicket(form: FormData) {
   if (!subject) return { error: "empty" };
   await ensureSchema();
   await db().query("insert into tickets (user_id, subject, category, body) values ($1,$2,$3,$4)", [u.id, subject, category, body]);
+  after(async () => sendPush(await staffIds(), { title: `🎫 Ticket de ${u.name}`, body: subject, url: "/coach/tickets", tag: "tickets" }));
   revalidatePath("/dashboard/tickets");
   revalidatePath("/coach/tickets");
   return { ok: true };
@@ -48,7 +51,9 @@ export async function replyTicket(form: FormData) {
   const id = String(form.get("id") || "");
   const reply = String(form.get("reply") || "").trim().slice(0, 4000);
   if (!id || !reply) return;
-  await db().query("update tickets set reply=$1, status='respondido', replied_by=$2, replied_at=now() where id=$3", [reply, staff.id, id]);
+  const t = await db().query("update tickets set reply=$1, status='respondido', replied_by=$2, replied_at=now() where id=$3 returning user_id, subject", [reply, staff.id, id]);
+  const row = t.rows[0];
+  if (row) after(() => sendPush([row.user_id], { title: "Respuesta a tu ticket", body: `${row.subject}: ${reply.slice(0, 120)}`, url: "/dashboard/tickets", tag: `ticket-${id}` }));
   revalidatePath("/coach/tickets");
   revalidatePath("/dashboard/tickets");
 }

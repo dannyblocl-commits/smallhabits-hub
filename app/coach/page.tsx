@@ -74,6 +74,7 @@ export default async function CoachPanel() {
             <Link href="/coach/tickets" className="block px-3 py-2 rounded-[12px] muted hover:text-[var(--text)]">Tickets de soporte{openTickets > 0 ? <span className="pill pill-w ml-2">{openTickets}</span> : null}</Link>
             <Link href="/coach/sesiones" className="block px-3 py-2 rounded-[12px] muted hover:text-[var(--text)]">Sesiones 1:1</Link>
             <Link href="/coach/ingresos" className="block px-3 py-2 rounded-[12px] muted hover:text-[var(--text)]">Ingresos</Link>
+            <Link href="/dashboard/app" className="block px-3 py-2 rounded-[12px] muted hover:text-[var(--text)]">📲 App y notificaciones</Link>
           </div>
           <form action={updateCoachProfile} className="card p-4 space-y-2">
             <div className="eyebrow" style={{ color: "var(--sage)" }}>Mi perfil público</div>
