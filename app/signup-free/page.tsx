@@ -10,7 +10,7 @@ async function handleSignupFree(formData: FormData) {
 
 export const metadata = {
   title: "Prueba Gratuita — Small Habits by Maleja",
-  description: "3 días gratis. Sin tarjeta requerida.",
+  description: "7 días gratis del plan Básico. Sin tarjeta.",
 };
 
 export default async function SignupFreePage() {
@@ -23,7 +23,7 @@ export default async function SignupFreePage() {
           <h1 className="text-4xl font-black mb-2" style={{ color: "#FF2D8A" }}>
             Small Habits
           </h1>
-          <p style={{ color: "#A8A3AE" }}>3 días gratis. Sin tarjeta.</p>
+          <p style={{ color: "#A8A3AE" }}>7 días gratis. Sin tarjeta.</p>
         </div>
 
         <form action={handleSignupFree} className="space-y-4">
@@ -84,7 +84,7 @@ export default async function SignupFreePage() {
 
         <p className="text-center text-xs mt-8 px-4" style={{ color: "#7FC29B" }}>
           ✓ Acceso completo al plan Básico<br />
-          ✓ 3 días sin cobro<br />
+          ✓ 7 días sin cobro<br />
           ✓ Puedes cancelar cuando quieras
         </p>
       </div>

@@ -31,7 +31,7 @@ export async function isUserInTrial(userId: string) {
 
 export async function createFreeAccount(email: string, password_hash: string, name: string) {
   const trial_end = new Date();
-  trial_end.setDate(trial_end.getDate() + 3); // 3 días gratis
+  trial_end.setDate(trial_end.getDate() + 7);
 
   try {
     const result = await db().query(

@@ -54,7 +54,7 @@ export function SubscriptionStatus({
           ⏰ Tu prueba gratis vence en {daysRemaining} día{daysRemaining !== 1 ? "s" : ""}
         </p>
         <p className="text-xs mt-1 opacity-80">
-          Después se cobrará automáticamente. Puedes cancelar cuando quieras.
+          Sin tarjeta: al terminar vuelves al plan gratis. Suscríbete cuando quieras para seguir con todo.
         </p>
       </div>
     );

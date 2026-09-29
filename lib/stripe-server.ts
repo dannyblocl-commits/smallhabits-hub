@@ -36,7 +36,7 @@ export async function createCheckoutSession(
     await db().query("update users set stripe_customer_id = $1 where id = $2", [customerId, userId]);
   }
 
-  // Crear sesión de checkout con trial de 3 días
+  // Crear sesión de checkout con trial de 7 días
   const session = await stripe.checkout.sessions.create({
     customer: customerId,
     line_items: [
@@ -64,7 +64,7 @@ export async function createCheckoutSession(
           missing_payment_method: "create_invoice",
         },
       } as any,
-      trial_period_days: 3,
+      trial_period_days: 7,
     } as any,
     metadata: {
       userId,
