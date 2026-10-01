@@ -37,8 +37,16 @@ export const RETO_DAYS = 30;
 export const RETO_LINK = process.env.NEXT_PUBLIC_STRIPE_LINK_RETO || "https://buy.stripe.com/14AbJ09vw29BcAv8Qk8og0b";
 export const RETO_PRICE_LABEL = "$49";
 
+// Planes anuales (Elite solo mensual: incluye horas de Maleja).
+export const ANNUAL: Record<"basico" | "pro", { price: string; perMonth: string; save: string; link: string; priceId: string }> = {
+  basico: { price: "$149", perMonth: "$12.42", save: "38%", link: "https://buy.stripe.com/4gM8wO8rs7tVgQL3w08og0c", priceId: "price_1ULkqPCJarrQxraeue6wOgyi" },
+  pro: { price: "$299", perMonth: "$24.92", save: "36%", link: "https://buy.stripe.com/4gM3cuazA29B7gbgiM8og0d", priceId: "price_1ULkqPCJarrQxraeqpdqHNOc" },
+};
+
 // Precios anteriores ($9.99/$19.99/$49.99): suscripciones ya cobradas siguen valiendo.
 const LEGACY_PRICES: Record<string, Exclude<Plan, "free">> = {
+  price_1ULkqPCJarrQxraeue6wOgyi: "basico",
+  price_1ULkqPCJarrQxraeqpdqHNOc: "pro",
   price_1UGTvcCJarrQxraeRUDSia0k: "basico",
   price_1UGTvdCJarrQxraef7R9OFhH: "pro",
   price_1UGTveCJarrQxraeU4A0s0gx: "elite",

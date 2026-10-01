@@ -9,7 +9,7 @@ export default async function Tickets() {
   const [user, { L }] = await Promise.all([requireUser(), tr()]);
   const tickets = await listMyTickets();
   return (
-    <AppShell title={L.tickets.title} kicker={L.tickets.kicker}>
+    <AppShell tab="/dashboard/tickets" title={L.tickets.title} kicker={L.tickets.kicker}>
       <TicketForm priority={hasPlan(user.plan, "elite")} tickets={tickets} L={L.tickets} />
     </AppShell>
   );

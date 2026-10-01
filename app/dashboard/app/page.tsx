@@ -9,7 +9,7 @@ export default async function AppInstall() {
   const [, { lang }] = await Promise.all([requireUser(), tr()]);
   const t = APP_L[lang];
   return (
-    <AppShell title={t.title} kicker={t.kicker}>
+    <AppShell tab="/dashboard/app" title={t.title} kicker={t.kicker}>
       <div className="grid lg:grid-cols-2 gap-4">
         <div className="card p-5">
           <div className="eyebrow mb-1" style={{ color: "var(--sage)" }}>{t.installH}</div>

@@ -11,7 +11,7 @@ export default async function Food() {
   const [user, { L }] = await Promise.all([requireUser(), tr()]);
   const entries = await listFoodToday();
   return (
-    <AppShell title={L.food.title} kicker={L.food.kicker}>
+    <AppShell tab="/dashboard/food" title={L.food.title} kicker={L.food.kicker}>
       <FoodTracker aiEnabled={hasPlan(user.plan, "basico")} initial={entries} goal={goalKcal[user.goal] ?? 1800} L={L.food} gratis={L.common.gratis} premium={L.common.premium} />
       <div className="mt-4">
         <Locked plan={user.plan} requires="basico" feature={L.food.hist30} L={L}>

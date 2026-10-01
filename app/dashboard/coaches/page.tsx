@@ -8,7 +8,7 @@ export default async function Coaches() {
   const [coaches, mine] = await Promise.all([listCoaches(), myCoach()]);
   const chosenId = user.coach_id;
   return (
-    <AppShell title={L.coaches.title} kicker={L.coaches.kicker}>
+    <AppShell tab="/dashboard/coaches" title={L.coaches.title} kicker={L.coaches.kicker}>
       <p className="muted mb-6 max-w-xl">{L.coaches.intro}</p>
       {!chosenId && mine && <div className="row p-4 mb-5 text-sm muted">{L.coaches.defaultNote} <b className="display text-[var(--text)]">{mine.name}</b>.</div>}
       {coaches.length === 0 && <div className="row p-6 text-center muted">{L.coaches.none}</div>}

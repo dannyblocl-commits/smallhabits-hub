@@ -12,7 +12,7 @@ export default async function Photos() {
   const delta = first && last && first.weight != null && last.weight != null ? Math.round((last.weight - first.weight) * 10) / 10 : null;
 
   return (
-    <AppShell title={P.title} kicker={P.kicker}>
+    <AppShell tab="/dashboard/photos" title={P.title} kicker={P.kicker}>
       <div className="grid lg:grid-cols-[320px_1fr] gap-5">
         <form action={uploadPhoto} className="card p-5 space-y-3">
           <div className="eyebrow" style={{ color: "var(--fucsia)" }}>{P.nueva}</div>

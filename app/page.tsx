@@ -3,7 +3,8 @@ import { HeroVideo } from "@/components/HeroVideo";
 import { LangSwitch } from "@/components/LangSwitch";
 import { getLang } from "@/lib/i18n";
 import { HOME } from "@/lib/home-i18n";
-import { PLANS } from "@/lib/plan";
+import { PLANS, ANNUAL } from "@/lib/plan";
+import { BillingToggle } from "@/components/BillingToggle";
 
 export async function generateMetadata() {
   const t = HOME[await getLang()];
@@ -15,13 +16,14 @@ const STRIPE_LINKS = {
   elite: "https://buy.stripe.com/bJeaEWePQ29B7gb3w08og09",
 };
 
-export default async function HomePage() {
+export default async function HomePage({ searchParams }: { searchParams: Promise<{ anual?: string }> }) {
   const lang = await getLang();
+  const yearly = (await searchParams).anual === "1";
   const t = HOME[lang];
   const plans = [
-    { key: "basico" as const, ...t.plans.basico, price: PLANS.basico.price, href: "/signup-free", external: false, highlight: false },
-    { key: "pro" as const, ...t.plans.pro, price: PLANS.pro.price, href: STRIPE_LINKS.pro, external: true, highlight: true },
-    { key: "elite" as const, ...t.plans.elite, price: PLANS.elite.price, href: STRIPE_LINKS.elite, external: true, highlight: false },
+    { key: "basico" as const, ...t.plans.basico, price: yearly ? ANNUAL.basico.price : PLANS.basico.price, per: yearly ? t.perYear : t.perMonth, note: yearly ? t.equiv.replace("{n}", ANNUAL.basico.perMonth) : t.monthly, href: yearly ? ANNUAL.basico.link : "/signup-free", external: yearly, highlight: false },
+    { key: "pro" as const, ...t.plans.pro, price: yearly ? ANNUAL.pro.price : PLANS.pro.price, per: yearly ? t.perYear : t.perMonth, note: yearly ? t.equiv.replace("{n}", ANNUAL.pro.perMonth) : t.monthly, href: yearly ? ANNUAL.pro.link : STRIPE_LINKS.pro, external: true, highlight: true },
+    { key: "elite" as const, ...t.plans.elite, price: PLANS.elite.price, per: t.perMonth, note: yearly ? t.eliteMonthly : t.monthly, href: STRIPE_LINKS.elite, external: true, highlight: false },
   ];
 
   return (
@@ -160,18 +162,19 @@ export default async function HomePage() {
       <section id="planes" className="py-24 px-6" style={{ background: "#1a1a1f" }}>
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-black text-center mb-4" style={{ color: "#F5F2F0" }}>{t.plansTitle}</h2>
-          <p className="text-center text-lg mb-16" style={{ color: "#A8A3AE" }}>{t.plansSub}</p>
+          <p className="text-center text-lg mb-8" style={{ color: "#A8A3AE" }}>{t.plansSub}</p>
+          <div className="flex justify-center mb-14"><BillingToggle yearly={yearly} base="/#planes" labels={[t.monthlyT, t.yearlyT]} save={t.save.replace("{n}", ANNUAL.basico.save)} /></div>
           <div className="grid md:grid-cols-3 gap-8">
             {plans.map((plan) => (
               <div key={plan.key} className="rounded-2xl p-8" style={{ background: plan.highlight ? "#FF2D8A" : "#0B0B0F", color: plan.highlight ? "#0B0B0F" : "#F5F2F0", border: plan.highlight ? "none" : "2px solid #7FC29B", transform: plan.highlight ? "scale(1.05)" : "scale(1)" }}>
                 {plan.highlight && <div className="text-xs font-black mb-2" style={{ color: "#0B0B0F", opacity: 0.8 }}>{t.popular}</div>}
                 <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
                 <p className="text-sm mb-4" style={{ opacity: 0.8 }}>{plan.desc}</p>
-                <div className="text-4xl font-black mb-1">{plan.price}<span style={{ fontSize: "18px", opacity: 0.7 }}>{t.perMonth}</span></div>
-                <p style={{ opacity: 0.7, marginBottom: "24px", fontSize: "14px" }}>{t.monthly}</p>
+                <div className="text-4xl font-black mb-1">{plan.price}<span style={{ fontSize: "18px", opacity: 0.7 }}>{plan.per}</span></div>
+                <p style={{ opacity: 0.7, marginBottom: "24px", fontSize: "14px" }}>{plan.note}</p>
                 <ul className="space-y-3 mb-8">{plan.features.map((f) => <li key={f} style={{ fontSize: "14px" }}>✓ {f}</li>)}</ul>
                 <a href={plan.href} target={plan.external ? "_blank" : "_self"} rel={plan.external ? "noopener noreferrer" : undefined} className="w-full py-3 font-bold rounded-lg inline-block text-center" style={{ background: plan.highlight ? "#0B0B0F" : "#FF2D8A", color: plan.highlight ? "#FF2D8A" : "#F5F2F0" }}>
-                  {plan.cta}
+                  {yearly && plan.key === "basico" ? t.plans.pro.cta.replace("Pro", t.plans.basico.name) : plan.cta}
                 </a>
               </div>
             ))}

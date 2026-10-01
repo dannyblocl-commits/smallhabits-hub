@@ -12,7 +12,7 @@ export default async function Chat() {
   const thread = await listThread();
   const first = user.name.trim().split(" ")[0];
   return (
-    <AppShell title={L.chat.title} kicker={L.chat.kicker}>
+    <AppShell tab="/dashboard/chat" title={L.chat.title} kicker={L.chat.kicker}>
       <div className="grid lg:grid-cols-2 gap-4">
         <div>
           <div className="flex items-center justify-between mb-2"><div className="eyebrow">{L.chat.ia}</div><span className="pill pill-s">{pro ? L.chat.ilimitado : L.chat.porDia}</span></div>

@@ -22,7 +22,7 @@ export default async function Recipes({ searchParams }: { searchParams: Promise<
   const counts = Object.fromEntries(RECIPE_CATEGORIES.map((c) => [c.id, all.filter((r) => r.category === c.id).length]));
 
   return (
-    <AppShell title={L.recipes.title} kicker={fill(L.recipes.kicker, all.length)}>
+    <AppShell tab="/dashboard/recipes" title={L.recipes.title} kicker={fill(L.recipes.kicker, all.length)}>
       {recs.length > 0 && (
         <div className="card lift-sage p-4 mb-5">
           <div className="eyebrow mb-2" style={{ color: "var(--sage)" }}>{L.recs.title}</div>

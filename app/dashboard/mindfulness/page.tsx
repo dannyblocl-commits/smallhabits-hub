@@ -23,7 +23,7 @@ export default async function Mindfulness({ searchParams }: { searchParams: Prom
   const steps = [L.mind.inhala, L.mind.sosten, L.mind.exhala, L.mind.inhala, L.mind.sosten, L.mind.exhala].map((n, i) => ({ name: n, seconds: [4, 7, 8][i % 3], kind: "rest" as const }));
 
   return (
-    <AppShell title={L.mind.title} kicker={L.mind.kicker}>
+    <AppShell tab="/dashboard/mindfulness" title={L.mind.title} kicker={L.mind.kicker}>
       <div className="relative rounded-[28px] overflow-hidden h-44 md:h-56 mb-5 lift-sage">
         <HeroVideo src="/api/content/video/paz-mental" poster="/img/gal_campo.jpg" className="absolute inset-0 w-full h-full object-cover" label="Maleja" />
         <div className="absolute inset-0 veil" />

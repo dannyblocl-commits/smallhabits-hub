@@ -12,7 +12,7 @@ export default async function Learn({ searchParams }: { searchParams: Promise<{ 
   const openId = lessons.some((x) => x.id === l) ? l : lessons[0]?.id;
 
   return (
-    <AppShell title={L.learn.title} kicker={L.learn.kicker}>
+    <AppShell tab="/dashboard/learn" title={L.learn.title} kicker={L.learn.kicker}>
       <div className="grid lg:grid-cols-[280px_1fr] gap-5">
         <aside className="space-y-1">
           {lessons.map((x, i) => { const t = localizeLesson(x, lang); return (

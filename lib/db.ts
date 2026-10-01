@@ -265,6 +265,7 @@ export function ensureSchema() {
         created_at timestamptz default now()
       );
       create index if not exists push_user on push_subscriptions(user_id);
+      create table if not exists water_log (user_id uuid references users(id) on delete cascade, day date not null, glasses int not null default 0, primary key (user_id, day));
 
       create table if not exists payments (
         id uuid primary key default gen_random_uuid(),

@@ -2,6 +2,7 @@ import { AppShell } from "@/components/AppShell";
 import { ProfileForm } from "@/components/ProfileForm";
 import { requireUser } from "@/lib/auth";
 import { tr, locale } from "@/lib/i18n";
+import { LangSwitch } from "@/components/LangSwitch";
 import { logout, becomeCoach } from "@/app/actions/auth";
 import { PLANS } from "@/lib/plan";
 import Link from "next/link";
@@ -11,7 +12,11 @@ export default async function Profile({ searchParams }: { searchParams: Promise<
   const [user, { lang, L }, sp] = await Promise.all([requireUser(), tr(), searchParams]);
   const planLabel = user.plan === "free" ? L.common.gratis : PLANS[user.plan].name;
   return (
-    <AppShell title={L.profile.title} kicker={`${L.profile.cuenta} ${new Date(user.created_at).toLocaleDateString(locale(lang), { day: "numeric", month: "long", year: "numeric" })} · ${L.profile.plan} ${planLabel}`}>
+    <AppShell tab="/dashboard/profile" title={L.profile.title} kicker={`${L.profile.cuenta} ${new Date(user.created_at).toLocaleDateString(locale(lang), { day: "numeric", month: "long", year: "numeric" })} · ${L.profile.plan} ${planLabel}`}>
+      <div className="card p-5 mb-6 max-w-lg flex items-center justify-between gap-3">
+        <div><div className="eyebrow">{L.nav.idioma}</div><div className="faint text-xs mt-1">ES · EN · PT</div></div>
+        <LangSwitch lang={lang} next="/dashboard/profile" />
+      </div>
       <ProfileForm user={user} L={L.profile} goals={L.goals} />
       {user.role !== "coach" && (
         <form action={becomeCoach} className="card p-6 mt-6 max-w-lg space-y-2">

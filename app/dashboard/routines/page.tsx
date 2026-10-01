@@ -10,7 +10,7 @@ export default async function Routines({ searchParams }: { searchParams: Promise
   const { r } = await searchParams;
   const [routines, recs] = await Promise.all([listRoutines(), listRecommendations(user.id, "entreno", 3)]);
   const sel = routines.find((x) => x.id === r) || routines[0];
-  if (!sel) return <AppShell title={L.routines.title}><div className="row p-6 muted">—</div></AppShell>;
+  if (!sel) return <AppShell tab="/dashboard/routines" title={L.routines.title}><div className="row p-6 muted">—</div></AppShell>;
   const t = (id: string) => L.content.routines[id as keyof typeof L.content.routines] as [string, string] | undefined;
   const loc = (x: typeof sel) => localizeRoutine(x, lang, t(x.id));
   const name = (x: typeof sel) => loc(x).name;
@@ -23,7 +23,7 @@ export default async function Routines({ searchParams }: { searchParams: Promise
   });
 
   return (
-    <AppShell title={L.routines.title} kicker={L.routines.kicker}>
+    <AppShell tab="/dashboard/routines" title={L.routines.title} kicker={L.routines.kicker}>
       {recs.length > 0 && (
         <div className="card lift p-4 mb-5">
           <div className="eyebrow mb-2" style={{ color: "var(--fucsia)" }}>{L.recs.title}</div>

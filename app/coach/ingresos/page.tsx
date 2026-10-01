@@ -42,7 +42,8 @@ export default async function CoachIngresos() {
     const item = x.items.data[0];
     const plan = planFromPrice(item?.price.id);
     if (plan !== "free") byPlan[plan] = (byPlan[plan] ?? 0) + 1;
-    mrr += (item?.price.unit_amount ?? 0) * (item?.quantity ?? 1);
+    const amt = (item?.price.unit_amount ?? 0) * (item?.quantity ?? 1);
+    mrr += item?.price.recurring?.interval === "year" ? Math.round(amt / 12) : amt;
   }
 
   const paid = intents.filter((c) => c.status === "succeeded");

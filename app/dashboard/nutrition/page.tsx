@@ -10,14 +10,14 @@ export default async function Nutrition({ searchParams }: { searchParams: Promis
   const { m } = await searchParams;
   const [menus, recs] = await Promise.all([listMenus(), listRecommendations(user.id, "nutricion", 3)]);
   const sel = menus.find((x) => x.id === m) || menus[0];
-  if (!sel) return <AppShell title={L.nutrition.title}><div className="row p-6 muted">—</div></AppShell>;
+  if (!sel) return <AppShell tab="/dashboard/nutrition" title={L.nutrition.title}><div className="row p-6 muted">—</div></AppShell>;
   const loc = (x: typeof sel) => localizeMenu(x, lang, L.content.menus[x.id as keyof typeof L.content.menus]);
   const name = (x: typeof sel) => loc(x).name;
   const selT = loc(sel);
   const goal = (g: string) => L.goals[g as keyof typeof L.goals] ?? g;
 
   return (
-    <AppShell title={L.nutrition.title} kicker={L.nutrition.kicker}>
+    <AppShell tab="/dashboard/nutrition" title={L.nutrition.title} kicker={L.nutrition.kicker}>
       {recs.length > 0 && (
         <div className="card lift-sage p-4 mb-5">
           <div className="eyebrow mb-2" style={{ color: "var(--sage)" }}>{L.recs.title}</div>

@@ -71,7 +71,7 @@ export default async function RetoDashboard({ searchParams }: { searchParams: Pr
 
   if (!p) {
     return (
-      <AppShell title={t.app.title} kicker={t.app.kicker}>
+      <AppShell tab="/dashboard/reto" title={t.app.title} kicker={t.app.kicker}>
         <div className="card lift p-8 text-center">
           <h2 className="text-2xl mb-2">{t.app.none}</h2>
           <p className="muted mb-5">{t.app.noneBody}</p>
@@ -91,7 +91,7 @@ export default async function RetoDashboard({ searchParams }: { searchParams: Pr
   const gender = track === "hombre" ? "male" : "female";
 
   return (
-    <AppShell title={t.app.title} kicker={t.app.kicker}>
+    <AppShell tab="/dashboard/reto" title={t.app.title} kicker={t.app.kicker}>
       {preview && (
         <div className="card p-4 mb-5 flex flex-wrap items-center justify-between gap-3" style={{ borderColor: "#BA8E54" }}>
           <span className="text-sm" style={{ color: "#BA8E54" }}>Vista previa (coach/admin) — así lo ve una persona en el día {p.day}. Nada se guarda en tu cuenta.</span>

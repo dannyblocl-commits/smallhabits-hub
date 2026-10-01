@@ -9,7 +9,7 @@ export default async function MyMenus() {
   const menus = await listMyMenus();
   const M = L.menus;
   return (
-    <AppShell title={M.title} kicker={M.kicker}>
+    <AppShell tab="/dashboard/menus" title={M.title} kicker={M.kicker}>
       <div className="grid lg:grid-cols-[360px_1fr] gap-5">
         <form action={createMenu} className="card p-5 space-y-3">
           <div className="eyebrow" style={{ color: "var(--sage)" }}>{M.nuevo}</div>

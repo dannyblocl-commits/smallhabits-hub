@@ -13,7 +13,7 @@ export default async function Sessions() {
   }[lang];
 
   return (
-    <AppShell title={t.title} kicker={t.kicker}>
+    <AppShell tab="/dashboard/sessions" title={t.title} kicker={t.kicker}>
       <Locked plan={user.plan} requires="elite" feature={t.title} L={L}>
         {cal ? (
           <div className="card overflow-hidden">

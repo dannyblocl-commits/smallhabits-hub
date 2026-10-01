@@ -11,7 +11,7 @@ export type HomeDict = {
   howTitle: string; howSub: string; how: { title: string; desc: string }[]; howCta: string;
   progressA: string; progressB: string; progressC: string; progressSub: string;
   plansTitle: string; plansSub: string; popular: string; perMonth: string; monthly: string; plans: { basico: Plan; pro: Plan; elite: Plan };
-  trialNote: string;
+  trialNote: string; monthlyT: string; yearlyT: string; save: string; perYear: string; equiv: string; yearly: string; eliteMonthly: string;
   finalTitle: string; finalSub: string; finalCta: string;
   fCoaching: string; fPlans: string; fAbout: string; fReto: string; fSocial: string; fLegal: string; fPrivacy: string; fTerms: string; fDelete: string; fSupport: string; rights: string;
 };
@@ -59,6 +59,7 @@ const es: HomeDict = {
     elite: { name: "Elite", desc: "Transformación guiada", features: ["Todo lo de Pro", "Sesiones 1:1 por video (2 al mes)", "Estrategia de hábitos personalizada", "Acceso VIP a la comunidad", "Ajustes sin límite", "Prioridad máxima"], cta: "Elegir Elite" },
   },
   trialNote: "La prueba gratis de 7 días es del plan Básico y no pide tarjeta. Pro y Elite se cobran al suscribirte; cancelas cuando quieras.",
+  monthlyT: "Mensual", yearlyT: "Anual", save: "Ahorra {n}", perYear: "/año", equiv: "equivale a {n}/mes", yearly: "Facturación anual", eliteMonthly: "Elite es solo mensual: incluye sesiones 1:1 con Maleja.",
   finalTitle: "Tu transformación empieza hoy", finalSub: "Pequeños hábitos, grandes resultados.", finalCta: "Empezar gratis",
   fCoaching: "Coaching", fPlans: "Planes", fAbout: "Sobre Maleja", fReto: "Reto de 30 días", fSocial: "Redes", fLegal: "Legal", fPrivacy: "Privacidad", fTerms: "Términos", fDelete: "Eliminar cuenta", fSupport: "Soporte",
   rights: "© 2026 Small Habits by Maleja. Pequeños hábitos, grandes resultados.",
@@ -107,6 +108,7 @@ const en: HomeDict = {
     elite: { name: "Elite", desc: "Guided transformation", features: ["Everything in Pro", "1:1 video sessions (2 a month)", "Personal habit strategy", "VIP community access", "Unlimited adjustments", "Top priority"], cta: "Choose Elite" },
   },
   trialNote: "The 7-day free trial is for the Basic plan and needs no card. Pro and Elite are charged when you subscribe; cancel anytime.",
+  monthlyT: "Monthly", yearlyT: "Yearly", save: "Save {n}", perYear: "/yr", equiv: "just {n}/mo", yearly: "Billed yearly", eliteMonthly: "Elite is monthly only: it includes 1:1 sessions with Maleja.",
   finalTitle: "Your transformation starts today", finalSub: "Small habits, big results.", finalCta: "Start free",
   fCoaching: "Coaching", fPlans: "Plans", fAbout: "About Maleja", fReto: "30-day challenge", fSocial: "Social", fLegal: "Legal", fPrivacy: "Privacy", fTerms: "Terms", fDelete: "Delete account", fSupport: "Support",
   rights: "© 2026 Small Habits by Maleja. Small habits, big results.",
@@ -155,6 +157,7 @@ const pt: HomeDict = {
     elite: { name: "Elite", desc: "Transformação guiada", features: ["Tudo do Pro", "Sessões 1:1 por vídeo (2 por mês)", "Estratégia de hábitos personalizada", "Acesso VIP à comunidade", "Ajustes ilimitados", "Prioridade máxima"], cta: "Escolher Elite" },
   },
   trialNote: "O teste grátis de 7 dias é do plano Básico e não pede cartão. Pro e Elite são cobrados ao assinar; cancele quando quiser.",
+  monthlyT: "Mensal", yearlyT: "Anual", save: "Economize {n}", perYear: "/ano", equiv: "equivale a {n}/mês", yearly: "Cobrança anual", eliteMonthly: "Elite é só mensal: inclui sessões 1:1 com a Maleja.",
   finalTitle: "Sua transformação começa hoje", finalSub: "Pequenos hábitos, grandes resultados.", finalCta: "Começar grátis",
   fCoaching: "Coaching", fPlans: "Planos", fAbout: "Sobre a Maleja", fReto: "Desafio de 30 dias", fSocial: "Redes", fLegal: "Legal", fPrivacy: "Privacidade", fTerms: "Termos", fDelete: "Excluir conta", fSupport: "Suporte",
   rights: "© 2026 Small Habits by Maleja. Pequenos hábitos, grandes resultados.",

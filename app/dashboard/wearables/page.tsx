@@ -15,7 +15,7 @@ export default async function Wearables({ searchParams }: { searchParams: Promis
   const h = (m: number | null) => (m == null ? "—" : `${Math.floor(m / 60)}h ${m % 60}m`);
 
   return (
-    <AppShell title={W.title} kicker={W.kicker}>
+    <AppShell tab="/dashboard/wearables" title={W.title} kicker={W.kicker}>
       {sp.connected && <div className="row p-4 mb-4 text-sm" style={{ borderColor: "var(--sage)" }}>{W.connectedMsg} {sp.warn ? `· ${W.noDataYet}` : ""}</div>}
       {sp.error && <div className="row p-4 mb-4 text-sm" style={{ color: "#FF8A8A" }}>{W.errorMsg} ({sp.error})</div>}
 
