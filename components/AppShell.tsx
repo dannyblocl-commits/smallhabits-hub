@@ -100,7 +100,7 @@ export async function AppShell({ children, title, kicker, requires, tab = "/dash
         <p className="fine text-center mt-12">{L.common.disclaimer}</p>
       </main>
 
-      <nav className="md:hidden fixed left-0 right-0 z-40 glass !rounded-none !border-x-0 !border-b-0" style={{ bottom: 0, paddingBottom: "env(safe-area-inset-bottom, 0px)" }} aria-label="Principal">
+      <nav className="md:hidden fixed left-0 right-0 z-40" style={{ bottom: 0, paddingBottom: "env(safe-area-inset-bottom, 0px)", background: "rgba(11,11,15,0.94)", backdropFilter: "blur(16px)", WebkitBackdropFilter: "blur(16px)", borderTop: "1px solid rgba(255,255,255,0.08)" }} aria-label="Principal">
         <div className="grid grid-cols-5 px-1 pt-2 pb-1.5">
           {main.map((n) => {
             const on = activeMain === n.key;
